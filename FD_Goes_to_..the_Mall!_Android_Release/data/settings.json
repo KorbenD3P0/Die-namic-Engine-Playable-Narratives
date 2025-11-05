@@ -1,0 +1,36 @@
+[
+    {
+        "type": "title",
+        "title": "Display Settings"
+    },
+    {
+        "type": "numeric",
+        "title": "Text Size",
+        "desc": "Adjust the base text size for the game.",
+        "section": "Display",
+        "key": "text_size",
+        "min": 12,
+        "max": 48
+    },
+    {
+        "type": "options",
+        "title": "Color Theme",
+        "desc": "Choose a color theme.",
+        "section": "Display",
+        "key": "theme",
+        "options": ["Light", "Dark"]
+    },
+    {
+        "type": "title",
+        "title": "Audio Settings"
+    },
+    {
+        "type": "numeric",
+        "title": "Music Volume",
+        "desc": "Set the music volume.",
+        "section": "Audio",
+        "key": "music_volume",
+        "min": 0,
+        "max": 100
+    }
+]

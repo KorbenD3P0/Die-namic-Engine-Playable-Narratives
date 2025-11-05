@@ -1,0 +1,179 @@
+{
+  "achievements": {
+    "dodged_the_sign": {
+      "name": "Dodged the Marquee",
+      "unlocked": true,
+      "icon": "🎟️",
+      "description": "Dodge the falling marquee sign at the McKineplex.",
+      "achievements_to_unlock": [
+        "dodged_the_sign"
+      ],
+      "unlock_date": "2025-11-01T20:11:51.230178"
+    },
+    "first_evidence": {
+      "name": "First Clue",
+      "unlocked": false,
+      "icon": "🔍",
+      "description": "Find your first piece of crucial evidence.",
+      "difficulty": "easy",
+      "points": 10,
+      "unlock_date": null
+    },
+    "collector": {
+      "name": "Collector",
+      "unlocked": false,
+      "icon": "📚",
+      "description": "Collect 5 pieces of evidence.",
+      "difficulty": "medium",
+      "points": 25,
+      "unlock_date": null
+    },
+    "survivor": {
+      "name": "Survivor",
+      "unlocked": false,
+      "icon": "🏆",
+      "description": "Successfully survive a harrowing ordeal.",
+      "difficulty": "hard",
+      "points": 50,
+      "unlock_date": null
+    },
+    "survived_the_house": {
+      "name": "House Escaped",
+      "unlocked": false,
+      "icon": "🏠",
+      "description": "Escape the Bludworth House.",
+      "unlock_date": null
+    },
+    "survived_the_hospital": {
+      "name": "Hospital Survived",
+      "unlocked": false,
+      "icon": "🏥",
+      "description": "Make it through Hope River Hospital.",
+      "unlock_date": null
+    },
+    "quick_reflexes": {
+      "name": "Quick Reflexes",
+      "unlocked": false,
+      "icon": "⚡",
+      "description": "Successfully react to a sudden danger.",
+      "unlock_date": null
+    },
+    "speedrun": {
+      "name": "Speedrun",
+      "unlocked": false,
+      "icon": "⏱️",
+      "description": "Complete a scenario with exceptional speed.",
+      "difficulty": "expert",
+      "points": 100,
+      "unlock_date": null
+    },
+    "vacuum_wrestler": {
+      "name": "Vacuum Wrestler",
+      "unlocked": false,
+      "icon": "🤼",
+      "description": "Successfully disable the robo-vacuum by grabbing it.",
+      "unlock_date": null
+    },
+    "safety_first_hero": {
+      "name": "Safety First, Hero",
+      "unlocked": false,
+      "icon": "🧤",
+      "description": "Safely disable the sparking robo-vacuum with insulated hands.",
+      "unlock_date": null
+    },
+    "quick_thinking": {
+      "name": "Quick Thinking",
+      "unlocked": false,
+      "icon": "💡",
+      "description": "Perform an emergency shutdown on the moving robo-vacuum.",
+      "unlock_date": null
+    },
+    "thermal_management": {
+      "name": "Thermal Management",
+      "unlocked": false,
+      "icon": "❄️",
+      "description": "Prevent a robotic hazard from exploding by cooling it down.",
+      "unlock_date": null
+    },
+    "common_sense": {
+      "name": "Common Sense Prevails",
+      "unlocked": false,
+      "icon": "🔌",
+      "description": "Unplug a hazard before it could become a bigger problem.",
+      "unlock_date": null
+    },
+    "electrical_dodge": {
+      "name": "Dances With Lightning",
+      "unlocked": false,
+      "icon": "💃",
+      "description": "Dodge a direct electrical attack from a malfunctioning machine.",
+      "unlock_date": null
+    },
+    "electrical_engineer": {
+      "name": "Electrical Engineer",
+      "unlocked": false,
+      "icon": "⚡",
+      "description": "Avert a catastrophic electrical explosion by grounding the source.",
+      "unlock_date": null
+    },
+    "lightning_reflexes": {
+      "name": "Lightning Reflexes",
+      "unlocked": false,
+      "icon": "🏃",
+      "description": "Escape an electrical explosion just in the nick of time.",
+      "unlock_date": null
+    },
+    "magnetic_mayhem": {
+      "name": "Magnetic Mayhem",
+      "unlocked": false,
+      "icon": "🧲",
+      "description": "Witness a hazard get destroyed by a powerful magnetic field.",
+      "unlock_date": null
+    },
+    "chaos_redirector": {
+      "name": "Chaos Redirector",
+      "unlocked": false,
+      "icon": "🔄",
+      "description": "Cleverly redirect a rampaging hazard, causing it to destroy itself.",
+      "unlock_date": null
+    },
+    "lore_master": {
+      "name": "Lore Master",
+      "unlocked": false,
+      "icon": "📜",
+      "description": "Unlock your first full story backstory in the journal.",
+      "unlock_date": null
+    },
+    "historian": {
+      "name": "Historian",
+      "unlocked": false,
+      "icon": "🏛️",
+      "description": "Unlock 5 story backstories in the journal.",
+      "unlock_date": null
+    },
+    "franchise_expert": {
+      "name": "Franchise Expert",
+      "unlocked": false,
+      "icon": "🎬",
+      "description": "Unlock all movie storylines.",
+      "unlock_date": null
+    },
+    "bookworm": {
+      "name": "Bookworm",
+      "unlocked": false,
+      "icon": "📖",
+      "description": "Unlock all book storylines.",
+      "unlock_date": null
+    },
+    "completionist": {
+      "name": "Completionist",
+      "unlocked": false,
+      "icon": "💯",
+      "description": "Unlock every single story in the Final Destination universe.",
+      "unlock_date": null
+    }
+  },
+  "evidence_collection": {},
+  "unlocked_stories": [],
+  "last_updated": "2025-11-02T17:51:43.003247"
+}

@@ -1,0 +1,27 @@
+{
+  "a chill evening at the McKineplex": {
+    "description": "You step into the buzzing lobby of the McKinley Cineplex, the smell of popcorn thick in the air and neon lights flickering overhead. {visionary} is already waiting by the ticket counter, waving you over with a grin.\n\n\"{greeting}\"\n\nYou buy your tickets, chat about which movie to see, and let the crowd sweep you toward the theaters. The marquee letters rattle, the popcorn machine sputters, and the soda fountain hisses, but tonight, it all just feels like part of the ambiance. No omens, no warnings—just the promise of a good film and maybe a little adventure.\n\nFor once, nothing goes wrong. The only thing at risk is a sugar rush from too much soda and candy.",
+    "greeting": [
+      "Hey! You made it. Ready for a double feature?",
+      "Popcorn's on me tonight. What are we seeing?",
+      "I grabbed the best seats—center row, no sticky floor!",
+      "You look like you could use a night off. Let's get lost in a movie."
+    ],
+    "killed_count": 0,
+    "warnings": [],
+    "categories": [
+      "public_venue",
+      "slice_of_life",
+      "cinema"
+    ],
+    "related_evidence": [
+      "Movie Ticket"
+    ],
+    "death_narrative": "but tonight, .",
+    "environmental_omens": {
+      "television": "The screen shows you in a CCTV view that appears to be falling before cutting to-\n-mid-movie trailer, showing a chef dodging a sudden burst of flame from a kettle, then comedically slipping on a spilled drink while trying to escape.",
+      "radio": "A commercial warns, 'Watch your step—spills can be slippery!' followed by a burst of static and a faint electrical crackle.",
+      "window": "For a moment, the reflection in the glass shows a brilliant flash of fire and a blue spark flickering above the crowd."
+    }
+  }
+}

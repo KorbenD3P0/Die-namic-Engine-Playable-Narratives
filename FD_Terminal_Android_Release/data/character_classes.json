@@ -1,0 +1,42 @@
+{
+  "Detective": {
+    "description": "Higher perception for finding clues/hazards.\nSkeptical, but capable of seeing signs others miss.",
+    "intuition": 2,
+    "max_hp": 30,
+    "observations": {
+      "inter_level_thought": "The pattern is becoming clear; I can feel it in my gut. This isn't just a coincidence."
+    },
+    "perception": 3,
+    "strength": 5
+  },
+  "EMT": {
+    "description": "More base health, strength and medical knowledge.",
+    "intuition": 1,
+    "max_hp": 35,
+    "observations": {
+      "inter_level_thought": "I can feel the adrenaline coursing through my veins. This is what I was trained for, and now I'll use my skills to keep myself alive."
+    },
+    "perception": 1,
+    "strength": 7
+  },
+  "Journalist": {
+    "description": "Sure does take some good notes? IDK just a regular person.",
+    "intuition": 3,
+    "max_hp": 30,
+    "observations": {
+      "inter_level_thought": "I can't shake the feeling that something terrible is about to happen. I need to stay alert."
+    },
+    "perception": 1,
+    "strength": 6
+  },
+  "Medium": {
+    "description": "Higher intuition for hazard warnings.\nThink Clear Rivers at the end of FD1 before she got all bitchy.",
+    "intuition": 5,
+    "max_hp": 25,
+    "observations": {
+      "inter_level_thought": "Why do I feel like I'm being watched? Something's not right here."
+    },
+    "perception": 5,
+    "strength": 2
+  }
+}

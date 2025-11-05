@@ -1,0 +1,23 @@
+{
+  "1": {
+    "name": "Hospital",
+    "ambient_sounds": ["heart_monitor", "ventilator", "fluorescent_buzz", "gurney_wheels"],
+    "scents": ["antiseptic", "formaldehyde", "latex_gloves", "bleach"],
+    "textures": ["cold_steel", "sterile_plastic", "rough_concrete", "smooth_tile"],
+    "fear_multiplier": 1.0
+  },
+  "2": {
+    "name": "Bludworth's  House", 
+    "ambient_sounds": ["house_settling", "floorboard_creaks", "door_hinges", "wind_through_windows"],
+    "scents": ["dust", "old_wood", "stale_air", "family_cooking"],
+    "textures": ["worn_carpet", "smooth_wood", "cold_metal_doorknobs", "fabric_upholstery"],
+    "fear_multiplier": 1.2
+  },
+  "3": {
+    "name": "McKinley Fairground",
+    "ambient_sounds": ["carousel_music", "tent_flapping", "metal_creaking", "wind_chimes"],
+    "scents": ["cotton_candy", "popcorn", "rust", "hay_and_animals"],
+    "textures": ["splintered_wood", "rusted_metal", "canvas_fabric", "packed_dirt"],
+    "fear_multiplier": 1.5
+  }
+}

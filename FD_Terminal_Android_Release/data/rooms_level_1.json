@@ -1,0 +1,890 @@
+{
+  "Cafeteria Entrance (closed)": {
+    "description": "Double doors leading to the hospital cafeteria are chained shut with a heavy padlock. A sign reads 'Closed Until Further Notice'. The faint, stale smell of old coffee and disinfectant wafts from beneath the doors. There's nothing more for you here.",
+    "examine_details": {
+      "chained doors": "Heavy chains and a robust padlock secure these doors. No getting through here.",
+      "closed sign": "'Closed Until Further Notice'. Seems pretty final."
+    },
+    "exits": {
+      "east": "Main Corridor (North Wing)"
+    },
+    "floor": 1,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "chained_doors",
+      "closed_sign"
+    ],
+    "unlocks_with": null
+  },
+  "Cardiology Wing Access (Blocked)": {
+    "description": "Another set of sealed double doors leading to the Cardiology Wing. A sign reads 'No Unauthorized Access'.",
+    "examine_details": {
+      "sealed double doors": "These doors are sealed tight. There's no way to access this wing."
+    },
+    "exits": {
+      "east": "Upper Floor Hallway"
+    },
+    "floor": 2,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": true,
+    "name": "Cardiology Wing Access - Blocked",
+    "objects": [
+      "sealed_double_doors"
+    ],
+    "unlocks_with": null
+  },
+  "Coroner's Office": {
+    "description": "A surprisingly well-appointed office, a stark contrast to the rest of the hospital. Bookshelves line one wall, a large mahogany desk sits in the center, and framed diplomas adorn the walls. It smells of old books and faint pipe tobacco. This must have been William Bludworth's office.",
+    "examine_details": {
+      "Mahogany Desk": "A large, impressive desk. Its drawers are likely locked. There are strange carvings on its surface.",
+      "bookshelves": "Filled with medical texts, anatomy charts, and more esoteric volumes on folklore and mortality.",
+      "diplomas": "Various degrees and commendations for a Dr. William Bludworth."
+    },
+    "exits": {
+      "west": "Hospital Morgue Hallway"
+    },
+    "first_entry_text": "This room feels different. More personal. Your entry startles the new coroner, Dr. Marcus Hall, who looks up from his paperwork.",
+    "floor": -1,
+    "forceable": true,
+    "force_threshold": 3,
+    "forceable_text": "You can probably force the door open with enough effort, but it will be noisy. (Weak: 3, Strong: 1)",
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locking": {
+      "locked": true,
+      "unlocks_with": "coroners_office_key"
+    },
+    "objects": [
+      "diplomas",
+      "mahogany_desk"
+    ],
+    "furniture": [
+      {
+      "name": "mahogany_desk",
+      "is_container": true,
+      "locked": true,
+      "unlocks_with_item": "desk_drawer_key",
+      "items": [
+      "scalpel"
+      ]
+      }
+    ],
+    "npcs": [
+      {
+        "name": "Dr. Marcus Hall",
+        "role": "Coroner",
+        "description": "A young, slightly anxious coroner in a rumpled lab coat.",
+        "initial_state": "greeting",
+        "dialogue_states": {
+          "greeting": {
+            "text": "Hello there. What brings you to the morgue? I recently took over after Dr. Bludworth passed away.",
+            "options": [
+              {
+                "text": "I'm looking for information about Death's List.",
+                "target_state": "about_deaths_list"
+              },
+              {
+                "text": "Tell me about Dr. Bludworth.",
+                "target_state": "about_bludworth"
+              },
+              {
+                "text": "Do you have anything that might help me?",
+                "target_state": "helpful_items"
+              }
+            ]
+          },
+          "about_deaths_list": {
+            "text": "Death's List? ...shit. Another one?\n*sighs*\nLook, JB was a legend in my line of work. He talked about that more than once, and I used to tell myself it was just folklore; you know this town.\n\nThing is, you're not the first person to come here looking for answers. You might find them in his personal effects.",
+            "options": [
+              {
+                "text": "Where are his personal effects?",
+                "target_state": "bludworth_house"
+              },
+              {
+                "text": "Tell me more about Bludworth.",
+                "target_state": "about_bludworth"
+              }
+            ]
+          },
+          "about_bludworth": {
+            "text": "JB was... unusual. Brilliant, but he had theories about death that went beyond medicine, in addition to a line of acquaintances from here to the ends of the earth\n\n-and more often than not, they visited here upright only once.\nAnything that might provide answers, he kept at his house, not here. Except..",
+            "options": [
+              {
+                "text": "Except.. what?",
+                "target_state": "bludworth_house"
+              },
+              {
+                "text": "What kind of theories?",
+                "target_state": "bludworth_theories"
+              }
+            ]
+          },
+          "bludworth_house": {
+            "text": "His house is scheduled for demolition soon. If you're going to find answers, you need to get there fast if you're not already too late.\n\nHe'd mentioned keeping a spare key to his old place somewhere in his old desk, but I can't find the key to unlock it.",
+            "on_talk_action": {
+              "gives_item": "bludworths_house_address"
+            },
+            "options": [
+              {
+                "text": "Thank you for the information.",
+                "target_state": "farewell"
+              },
+              {
+                "text": "Anything else you can tell me?",
+                "target_state": "final_warnings"
+              }
+            ]
+          },
+          "bludworth_theories": {
+            "text": "He believed death wasn't random - that there was a design, a pattern. He said some people could 'see' it coming.\n\nHonestly, it gave me the fucking creeps, but the amount of people who came to visit him, and then later came to visit ..our table.. well, let's just say it was a lot.",
+            "next_state": "bludworth_house"
+          },
+          "helpful_items": {
+            "text": "I don't have much that would help with... whatever it is you're investigating, but somehow you people keep being drawn here looking for answers.\n\nJB's house might have what you need, but the demolition crew arrives tomorrow so I'd hurry. ..or was it today?",
+            "next_state": "bludworth_house"
+          },
+          "final_warnings": {
+            "text": "Just... be careful. After what happened to the others on that 'list' you mentioned...\n\nI'm hopeful people go back to having regular ass heart attacks and aneurysms instead of whatever the hell is going on here because it is <span style=\"color:red\">messy</span>.",
+            "next_state": "farewell"
+          },
+          "farewell": {
+            "text": "Good luck. I hope you find what you're looking for before you wind up back here in a body bag.\n\n..Sorry."
+          }
+        }
+      }
+    ]
+  },
+  "ER Hallway": {
+    "description": "A long, sterile hallway stretches before you. Doors line either side, labeled with room numbers and department names. The floor is polished linoleum, reflecting the harsh overhead lights. A gurney is parked haphazardly against one wall.",
+    "examine_details": {
+      "exposed wall socket": "A wall socket with its cover missing, wires perilously exposed.",
+      "gurney": "An empty hospital gurney, stained with something dark."
+    },
+    "exits": {
+      "east": "Radiology Wing Access",
+      "north": "Main Corridor (North Wing)",
+      "south": "Hospital Emergency Entrance",
+      "up": "Elevator Lobby (Level 1)",
+      "west": "Supply Closet"
+    },
+    "first_entry_text": null,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [
+    ],
+    "items": [],
+    "locking": {
+      "locked": false,
+      "unlocks_with": null
+    },
+    "name": "ER Hallway",
+    "objects": [
+      "gurney"
+    ],
+    "state_descriptions": {
+      "post_mri": "A long, sterile hallway. Many metallic fixtures on the walls (light sconces, door handles) are bent towards the east, as if by an immense force. The gurney is now slammed against the east wall, its frame twisted."
+    },
+    "state_examine_details": {
+      "post_mri": {
+        "doors": "The metal door frames and handles on the east side of the hallway are slightly warped inwards.",
+        "gurney": "The gurney is mangled against the east wall, clearly pulled by intense magnetism."
+      }
+    },
+    "state_flags": {
+      "floor": 1
+    }
+  },
+  "Elevator Lobby (Level 1)": {
+    "description": "A small lobby with a set of stainless steel elevator doors. The call button is unlit. A directory lists various departments on upper floors, including the ICU.",
+    "examine_details": {
+      "elevator_call_panel": "A standard elevator call panel. It seems to require a key card for upper floor access.",
+      "elevator": "Gleaming stainless steel. It looks operational, but the call button is dark.",
+      "floor_directory": "Lists: L2 - ICU, Cardiology, Surgical Wing. L3 - Pediatrics, Oncology. L4 - Administration."
+    },
+    "exits": {
+      "up": "Upper Floor Hallway",
+      "enter elevator": "Elevator Car"
+
+    },
+    "floor": 1,
+    "furniture": [
+      "elevator_call_panel"
+    ],
+    "has_gas_lines": true,
+    "hazards_present": ["elevator_freefall"],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "elevator",
+      "floor_directory"
+    ],
+    "unlocks_with": null
+  },
+    "Elevator Car": {
+    "description": "A stainless steel elevator car. The panel hums softly; a row of floor buttons glows faintly.",
+    "examine_details": {
+      "floor buttons": "Backlit buttons for floors. You can choose to go up or down.",
+      "emergency stop": "A red switch with a brittle-looking safety cover."
+    },
+    "exits": {
+      "out": "Elevator Lobby (Level 1)",
+      "up": "Upper Floor Hallway",
+      "down": "ER Hallway"
+    },
+    "first_entry_text": "You step into the elevator car. The doors close with a soft chime.",
+    "floor": 1,
+    "furniture": [],
+    "has_gas_lines": false,
+    "hazards_present": [
+      "elevator_freefall"
+    ],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "elevator",
+      "elevator_call_panel",
+      "floor buttons",
+      "emergency stop"
+    ],
+    "unlocks_with": null
+  },
+  "Gift Shop (Closed)": {
+    "description": "The entrance to the hospital gift shop is blocked by a metal security shutter, pulled down and locked. Dust bunnies have gathered along its base. Through the slats, you can vaguely make out shelves of unseen trinkets. There's no way to proceed further.",
+    "examine_details": {
+      "metal security shutter": "A sturdy metal shutter, firmly locked. It's not budging."
+    },
+    "exits": {
+      "west": "Main Corridor (North Wing)"
+    },
+    "floor": 1,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "metal_security_shutter"
+    ],
+    "unlocks_with": null
+  },
+  "Hospital Chapel": {
+    "description": "A small, quiet chapel. Rows of simple wooden pews face a modest altar. Stained glass windows depict serene, non-denominational scenes, casting muted colors across the room. It feels strangely peaceful, yet still unsettlingly empty.",
+    "examine_details": {
+      "altar": "A simple wooden altar with a plain cloth. A few unlit candles sit upon it.",
+      "stained glass windows": "The windows depict scenes of hope and nature, a stark contrast to the hospital's grim reality.",
+      "wooden pews": "Simple but well-maintained pews. Someone might have left something behind."
+    },
+    "exits": {
+      "southwest": "Main Corridor (North Wing)"
+    },
+    "first_entry_text": "A moment of quiet in the chaos. But even here, the silence feels heavy.",
+    "floor": 1,
+    "furniture": [
+      "wooden_pews"
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "altar",
+      "stained_glass_windows"
+    ],
+
+    "unlocks_with": null
+  },
+  "Hospital Emergency Entrance": {
+    "description": "A set of sliding doors opens into a sterile reception area. There's a saltwater fishtank prominently displayed with its lights currently off. Empty chairs line the walls of the waiting room. A large, unattended reception desk sits under a flickering fluorescent light. It's eerily quiet.",
+    "entry_room": false,
+    "evidence": [],
+    "examine_details": {
+      "saltwater tank": "The water is cloudy and the filter hums unevenly, sounding almost like a mechanical ventilator. Several fish drift listlessly, and bubbles rise from a small air stone. The tank's machinery seems to struggle, echoing the labored breath of someone on life support.",
+      "empty chairs": "Rows of plastic chairs, as if waiting for patients who will never arrive.",
+      "flickering fluorescent light": "The light buzzes and flickers, casting unsettling shadows.",
+      "reception desk": "The desk is cluttered with old forms and a dusty computer. Drawers might contain useful items."
+    },
+    "exits": {
+      "north": "ER Hallway",
+      "west": "Waiting Room"
+    },
+    "first_entry_text": "Past reception, you see the gurney holding (most of) the remains of the person you accompanied here - second to last on 'Death's List'. Walking through the metal detectors, your phone makes an audible chirp-\n*NFC Active!*\n-and you slide your phone in your back pocket.\nYou heard people had come here before asking for help like this; look for the Morgue.",
+    "furniture": [
+      {
+        "name": "reception_desk",
+        "is_container": true,
+        "items": [
+          "radiology_key_card",
+          "desk_drawer_key",
+          "scalpel"
+        ]
+      },
+      {
+        "name": "emergency_case",
+        "is_container": true,
+        "locked": false,
+        "items": []
+      }
+    ],
+    "has_gas_lines": true,
+    "hazards_present": ["deaths_breath"],
+    "items": [],
+    "locking": {
+      "locked": false,
+      "unlocks_with": null
+    },
+    "name": "Hospital Emergency Entrance",
+    "objects": [
+      {
+        "name": "countertop radio",
+        "description": "A battered countertop radio sits here. Its display is dark and silent.",
+        "is_omen_provider": "radio",
+        "aliases": [
+          "radio"
+        ]
+      }
+    ],
+    "state_descriptions": {},
+    "state_examine_details": {},
+    "state_flags": {
+      "floor": 1
+    }
+  },
+  "Hospital Morgue Exit": {
+    "name": "Hospital Morgue Exit",
+    "description": "A heavy steel door at the back of the morgue complex opens to a dimly lit corridor. This seems to be the only way out.\n\nA large revolving door dominates the exit, its metal frame gleaming ominously under the flickering service lights. Scorch marks near the top suggest a past electrical issue.",
+    "examine_details": {
+      "revolving door": "A large, institutional revolving door. It looks like the only way to the next area, but something about its heavy construction and the strained electrical hum from above feels wrong. Using it is a risk.",
+      "metal frame": "The revolving door's frame is solid steel—heavy and industrial. Scorch marks near the top suggest a past electrical issue."
+    },
+    "exits": {
+      "north": "Hospital Morgue Hallway"
+    },
+    "objects": [
+      "revolving door"
+    ],
+    "interactable_triggers": {
+      "revolving door": {
+        "on_action": "examine",
+        "requires_all_evidence": true,
+        "triggers_hazard_state_change": {
+          "hazard_type": "hospital_exit",
+          "target_state": "door_jammed_trapped"
+        }
+      }
+    },
+    "first_entry_text": "This door looks like a way out of this nightmare. You have an address and a key, now it's time to find some answers.\n\nThe exit is right there but\n\nwhy does it feel so ..ominous?",
+    "floor": -1,
+    "furniture": [],
+    "has_gas_lines": false,
+    "hazards_present": [
+      "hospital_exit"
+    ],
+    "items": [],
+    "locked": false,
+    "unlocks_with": null
+  },
+  "Hospital Morgue Hallway": {
+    "description": "A cold, dimly lit hallway. The air is stale and carries a faint chemical odor. A sign on a door at the end reads 'MORGUE - AUTHORIZED PERSONNEL ONLY'. Another door is labeled 'Coroner's Office'. Stairs lead upwards to the East Stairwell.",
+    "examine_details": {
+      "sign - Coroner's Office": "This door is more ornate than the others. It looks important.",
+      "sign - MORGUE": "A stark, official sign. No doubt what lies beyond."
+    },
+    "exits": {
+      "east": "Coroner's Office",
+      "north": "Morgue Autopsy Suite",
+      "south": "Hospital Morgue Exit",
+      "upstairs": "Stairwell"
+    },
+    "first_entry_text": "The temperature drops noticeably here. This part of the hospital feels truly grim.",
+    "floor": -1,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "sign - MORGUE",
+      "sign - Coroner's Office",
+      {
+      "name": "morgue hallway window",
+      "description": "A narrow, reinforced window set high in the wall. The glass is frosted, but sometimes you think you see movement—or shadows—on the other side.",
+      "is_omen_provider": "window",
+      "aliases": [
+        "window",
+        "hallway window"
+      ]
+      }
+    ],
+
+    "unlocks_with": null
+  },
+  "ICU Waiting Area": {
+    "description": "A small, somber waiting area outside the ICU. A few uncomfortable chairs are arranged around a low table with old magazines. The air is tense with unspoken anxieties.",
+    "examine_details": {
+      "low table": "Scratched and coffee-stained, holding a few out-of-date magazines.",
+      "waiting room chairs": "Plastic chairs, worn from countless hours of anxious waiting."
+    },
+    "exits": {
+      "north": "Patient Room 101",
+      "south": "Main Corridor (North Wing)"
+    },
+    "floor": 2,
+    "furniture": [
+      "waiting_room_chairs",
+      "low_table"
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "old_magazines"
+    ],
+    "unlocks_with": null
+  },
+  "MRI Control Room": {
+    "description": "A room filled with complex machinery and computer consoles, looking through a large observation window into the MRI Scan Room. Various monitors display technical readouts. This is clearly where the MRI is operated from.",
+    "description_post_mri": "The control room is in disarray. Monitors are cracked, consoles spark intermittently, and metallic objects (like the IV stand and wheelchair) are either missing (pulled into the scan room) or violently pinned against the observation window, which is now starred with cracks.",
+    "examine_details": {
+      "computer_consoles": "A bank of computers used to operate the MRI machine. Many screens show error messages. There's a card reader slot on the main console.",
+      "control_desk": "The main desk for operating the MRI. Full of buttons, switches, and a prominent card reader. An emergency stop button is clearly visible but looks inactive.",
+      "emergency_stop_button": "A large red button labeled 'EMERGENCY STOP'. It doesn't seem to be powered.",
+      "metal_wheelchair": "An empty metal wheelchair, parked near the consoles.",
+      "observation_window": "A large, thick window providing a view into the MRI chamber. You can see the massive MRI machine through it."
+    },
+    "examine_details_post_mri": {
+      "computer_consoles": "The consoles are sparking and many screens are shattered. The card reader is mangled.",
+      "control_desk": "The control desk is damaged, its surface littered with debris from the observation window's partial failure.",
+      "emergency_stop_button": "The emergency stop button is smashed and unresponsive.",
+      "observation_window": "The thick observation window is heavily cracked and bulged inwards. You can see metallic debris plastered against the other side."
+    },
+    "exits": {
+      "east": "MRI Scan Room",
+      "south": "Radiology Wing Access"
+    },
+    "first_entry_text": null,
+    "floor": 1,
+    "force_threshold": 3,
+    "forceable": true,
+    "forceable_text": "You can probably force the door open with enough effort, but it will be noisy.",
+    "furniture": [
+      {
+      "name": "control_desk",
+      "is_container": true,
+      "items": [ 
+        "bludworths_house_key",
+        "bludworths_final_notes"]
+      }
+    ],
+    "has_gas_lines": true,
+    "hazards_present": ["oxygen_tank"],
+    "items": [
+      "fire_extinguisher",
+      "gurney",
+      "wheelchair"
+    ],
+    "locked": false,
+    "objects": [
+      "computer_console",
+      "observation_window"
+    ],
+    "objects_post_mri_removed_or_altered": [
+      "IV_stand",
+      "oxygen_tank",
+      "wheelchair"
+    ],
+    "unlocks_with": null
+  },
+  "MRI Scan Room": {
+    "description": "The stark white room is dominated by a massive, cylindrical MRI machine. You notice gas lines and electrical conduits running along the walls behind service panels. A sturdy door leads to an 'EMPLOYEE ACCESS STAIRWELL' on the east wall. The walls are lined with warning signs about magnetic fields and radiation. An equipment cart sits near the main machine.",
+    "description_post_mri": "The MRI Scan Room is a vortex of destruction. The MRI machine is sparking and groaning, its casing buckled. Metallic objects from this room and the control room are fused to it or scattered violently. The observation window is shattered.",
+    "examine_details": {
+      "MRI machine": "The behemoth of an MRI machine stands before you; its cylindrical shape is imposing. You might want tobe careful around it with any metal items. The machine is currently inactive, but you can see the control panel on the side.",
+      "Stairwell Door": "A sturdy wooden door with a metal handle leading to an employee stairwell. Like any other door, I could try to 'force' it.",
+      "equipment cart": "A metal cart with a few drawers. It looks like it could be easily moved... or pulled.",
+      "observation_window": "A large, thick window providing a view into the MRI control room. You can see the control desk and several items in the opposite room."
+    },
+    "examine_details_post_mri": {
+      "MRI machine": "The MRI machine is a mangled wreck, sparking erratically. Various metallic objects are fused to its surface. The magnetic field, though weaker, still has a slight pull.",
+      "Stairwell Door": "The metal door to the stairwell is warped and buckled, but perhaps weakened.",
+      "equipment cart": "The equipment cart is crushed against the MRI machine, its contents spilled and lost.",
+      "observation_window": "A large, thick window providing a view into the MRI control room. The glass is shattered from metal objects being pulled through when the MRI was malfunctioning."
+    },
+    "entry_room": true,
+    "exits": {
+      "east": "Stairwell",
+      "west": "MRI Control Room"
+    },
+    "first_entry_text": "The low hum of the MRI machine is unnerving, even when it's off. You feel a strange pull on your dental fillings and the various bits of metal on your clothing, but everything goes limp and the moment passes.",
+    "floor": 1,
+    "forceable": true,
+    "forceable_text": "You can probably force the door open with enough effort, but it will be noisy.",
+    "furniture": [
+      {
+        "name": "equipment_cart",
+        "is_container": true,
+        "is_metallic": true,
+        "capacity": 1000,
+        "items": [
+          "coroners_office_key"
+        ]
+      }
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [
+      "mri",
+      "oxygen_tank"
+    ],
+    "items": [
+      "gurney"
+    ],
+    "locked": false,
+    "objects": [
+    ],
+    "unlocks_with": "radiology_key_card"
+  },
+  "Main Corridor (North Wing)": {
+    "description": "A wider corridor than the ER hallway, this seems to be a main thoroughfare. Signs point towards 'Cafeteria', 'Gift Shop', and 'Chapel'. The air is still and quiet.",
+    "description_post_mri": "This main corridor shows signs of the magnetic pulse from the radiology wing. Signs on the south wall are slightly buckled.",
+    "examine_details": {
+      "directional signs": "Signs point to various hospital departments. 'Radiology' is back towards the ER hallway.",
+      "information kiosk (unattended)": "A dusty, metallic kiosk, its screen dark."
+    },
+    "examine_details_post_mri": {
+      "directional signs": "The metal signposts are slightly bent southwards.",
+      "information kiosk (unattended)": "The kiosk seems to have shifted slightly on its base, pulled southward."
+    },
+    "exits": {
+      "east": "Gift Shop (Closed)",
+      "north": "ICU Waiting Area",
+      "northeast": "Hospital Chapel",
+      "south": "ER Hallway",
+      "west": "Cafeteria Entrance (closed)"
+    },
+    "first_entry_text": null,
+    "floor": 1,
+    "furniture": [
+      "information_kiosk_unattended"
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "directional signs"
+    ],
+    "unlocks_with": null
+  },
+  "Morgue Autopsy Suite": {
+    "description": "A cold, sterile room with stainless steel tables and bright overhead lights. Trays of gleaming instruments lie nearby. Several refrigerated body storage units line one wall. The smell of disinfectant and something colder... and older... hangs in the air.",
+    "examine_details": {
+      "instrument cabinet": "A glass-fronted cabinet holding more specialized tools and chemicals.",
+      "refrigerated body storage units": "Silent, cold compartments. Best left undisturbed.",
+      "stainless steel tables": "Cold, gleaming tables designed for one grim purpose.",
+      "trays of instruments": "Scalpels, saws, and other tools of the trade, meticulously arranged."
+    },
+    "exits": {
+      "south": "Hospital Morgue Hallway"
+    },
+    "first_entry_text": null,
+    "floor": -1,
+    "forceable": true,
+    "forceable_text": "You can probably force the door open with enough effort, but it will be noisy.",
+    "furniture": [
+      "instrument_cabinet"
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "stainless steel tables",
+      "trays of instruments",
+      "morgue disposal"
+    ],
+    "unlocks_with": null
+  },
+  "Patient Room 101": {
+    "description": "A typical hospital room. A single bed with crisp white sheets sits against one wall, an IV stand beside it. A small bedside table and a chair are the only other furnishings. The window looks out onto a brick wall.",
+    "description_post_mri": "A typical hospital room. The metal IV stand is bent towards the hallway, and the metal bed frame groans as if strained.",
+    "examine_details": {
+      "ventilator": "A mechanical ventilator sits beside the bed, its screen displays the respiratory rate of the patient. The rhythmic beeping seems to stall momentarily, then rights itself.",
+      "IV_stand": "A metal IV stand with empty bags hanging from it.",
+      "bedside_table": "A small side table with a drawer; a used water bottle sits on top. Might hold personal effects or medical supplies.",
+      "patient_in_bed": "The patient in bed has been through a LOT. There are signs of struggle and distress, burns.. and he's clutching an overstuffed book even in his unconscious state."
+    },
+    "examine_details_post_mri": {
+      "IV_stand": "The IV stand is pressed tightly against the wall facing east, clearly affected by a strong magnetic force from the hallway.",
+      "patient_in_bed": "The metal frame of the bed is slightly warped, pulled towards the hallway. The patient appears to be in distress.",
+      "bedside_table": "The bedside table is slightly askew, as if pulled by the same force. The drawer is slightly open.",
+      "ventilator": "The ventilator is still, its screen dark. It seems to have been affected by the magnetic pulse, as it is now unresponsive."
+    },
+    "exits": {
+      "south": "ICU Waiting Area"
+    },
+    "first_entry_text": null,
+    "floor": 1,
+    "furniture": [
+      "bedside_table"
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [
+      "malfunctioning_ventilator"
+    ],
+    "items": [],
+    "locked": false,
+    "objects": [],
+    "unlocks_with": null
+  },
+  "Radiology Records Room": {
+    "description": "A small, cramped room filled with filing cabinets and shelves overflowing with X-ray films and patient records. A single computer terminal sits on a small desk, its screen dark. The air smells of old paper and dust.",
+    "description_post_mri": "The metal filing cabinets in this room are all slightly skewed, pulled towards the west wall (towards the MRI suite). Some drawers have slid open, spilling X-rays onto the floor.",
+    "examine_details": {
+      "X-ray films": "Stacks and envelopes of old X-ray films. Some are scattered on the floor.",
+      "computer_terminal_desk": "A small desk with a dusty, non-functional computer terminal.",
+      "filing_cabinets": "Rows of metal filing cabinets, mostly labeled with dates and patient IDs."
+    },
+    "examine_details_post_mri": {
+      "X-ray films": "More X-rays have spilled onto the floor, some stuck to the sides of the metal cabinets.",
+      "filing_cabinets": "The metal filing cabinets are visibly warped, leaning towards the MRI suite. Drawers are askew."
+    },
+    "exits": {
+      "west": "Radiology Wing Access"
+    },
+    "floor": 1,
+    "forceable": true,
+    "forceable_text": "You can probably force the door open with enough effort, but it will be noisy.",
+    "furniture": [
+      {
+        "name": "filing_cabinets",
+        "is_container": true,
+        "is_metallic": true,
+        "capacity": 5,
+        "description": "Standard-issue metal filing cabinets filled with patient records.",
+        "items": []
+      },
+      {
+        "name": "computer_terminal_desk",
+        "is_container": true,
+        "is_metallic": true,
+        "weight": 100,
+        "description": "A dusty desk with an old CRT monitor and keyboard.",
+        "items": []
+      }
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "X-ray films",
+      "patient records",
+      "records shelves"
+    ],
+    "unlocks_with": null
+  },
+  "Radiology Wing Access": {
+    "description": "This area serves as an access point to the Radiology department. Heavy, lead-lined doors are visible further in. Warning signs about radiation are posted on the walls.",
+    "description_post_mri": "This radiology access point is a mess. The lead-lined doors to the north are buckled and slightly ajar, their frames warped. Warning signs hang crookedly. Small metallic items from the hallway seem to have been pulled towards this area.",
+    "examine_details": {
+      "lead-lined doors": "Thick, heavy doors ahead, presumably leading to imaging equipment areas.",
+      "radiation warning signs": "Standard trefoil symbols and warnings about magnetic fields and radiation are prominent."
+    },
+    "examine_details_post_mri": {
+      "lead-lined doors": "The heavy lead-lined doors are buckled outwards, as if something immense tried to escape from within the MRI suite. They are jammed.",
+      "radiation warning signs": "The signs are bent and peeling. One has been ripped from the wall and is stuck to a metal door frame."
+    },
+    "exits": {
+      "east": "Radiology Records Room",
+      "north": "MRI Control Room",
+      "south": "Stairwell",
+      "west": "ER Hallway"
+    },
+    "first_entry_text": "A palpable sense of unseen energy emanates from this wing. You feel a slight metallic taste in your mouth.",
+    "floor": 1,
+    "forceable": false,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [
+    ],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "lead-lined_doors",
+      "radiation_warning_signs"
+    ],
+
+    "unlocks_with": null
+  },
+  "Stairwell": {
+    "description": "A dim, cement-lined stairwell. It feels cold and damp. Debris is scattered on the steps. Stairs lead down into darkness.",
+    "description_post_mri": "This stairwell is chaotic. More debris litters the steps, and the metal handrails are bent towards the west (MRI Scan Room). A faint metallic scent hangs in the air.",
+    "examine_details": {
+      "Upper Floor Stairwell Access (Blocked)": "The stairway continues up, but heavy debris blocks the passage.",
+      "emergency exit sign (unlit)": "An exit sign hangs crookedly, its light extinguished.",
+      "metal handrails": "Sturdy metal handrails line the stairs.",
+      "scattered debris": "Chunks of plaster and some unidentifiable fragments litter the stairs."
+    },
+    "examine_details_post_mri": {
+      "metal handrails": "The metal handrails are bent and warped, pulled towards the MRI Scan Room.",
+      "scattered debris": "More debris now, including small twisted pieces of metal."
+    },
+    "exits": {
+      "downstairs": "Hospital Morgue Hallway",
+      "west": "MRI Scan Room",
+      "north": "Radiology Wing Access"
+    },
+    "first_entry_text": null,
+    "floor": 1,
+    "forceable": true,
+    "forceable_text": "You can probably force the door open with enough effort, but it will be noisy.",
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [
+    ],
+    "items": [],
+    "locked": true,
+    "locking": {
+      "locked": true,
+      "unlocks_with": "radiology_key_card"
+    },
+    "name": "Stairwell",
+    "objects": [
+      "emergency exit sign (unlit)",
+      "metal handrails",
+      "Upper Floor Stairwell Access (Blocked)"
+    ],
+    "unlocks_with": null
+  },
+  "Supply Closet": {
+    "description": "A cramped closet filled with shelves stacked high with medical supplies: bandages, syringes, bottles of solution. It smells strongly of disinfectant.",
+    "description_post_mri": "A cramped closet. Many of the metal shelves are bent outwards towards the hallway, and some metallic supplies have been pulled against them or towards the door.",
+    "examine_details": {
+      "metal shelves": "Packed with all sorts of medical supplies. A thorough search might yield something useful."
+    },
+    "examine_details_post_mri": {
+      "metal shelves": "The metal shelves are warped, pulled towards the door. Some metallic instruments are stuck to them."
+    },
+    "exits": {
+      "east": "ER Hallway"
+    },
+    "first_entry_text": null,
+    "floor": 1,
+    "furniture": [
+      {
+      "name": "metal_shelves",
+      "is_container": true,
+      "items": [
+        "duct_tape",
+        "wrench",
+        "screwdriver",
+        "pliers"
+      ]
+      }
+    ],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": false,
+    "objects": [],
+    "unlocks_with": null
+  },
+  "Surgical Wing Access (Blocked)": {
+    "description": "A set of double doors marked 'Surgical Wing - Authorized Personnel Only'. The doors are firmly locked and there's no way through here.",
+    "examine_details": {
+      "locked double doors": "Heavy security doors that require special authorization. No getting through here."
+    },
+    "exits": {
+      "west": "Upper Floor Hallway"
+    },
+    "floor": 2,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [],
+    "items": [],
+    "locked": true,
+    "name": "Surgical Wing Access - BLOCKED",
+    "objects": [
+      "locked double doors"
+    ],
+    "unlocks_with": null
+  },
+  "Upper Floor Hallway": {
+    "description": "You step out of the elevator into a hallway similar to the one downstairs, but perhaps a bit quieter. Signs point towards the ICU and other specialized wings.",
+    "examine_details": {
+      "Cardiology Wing Access (Blocked)": "Another set of sealed double doors.",
+      "Surgical Wing Access (Blocked)": "A set of double doors, firmly shut. A sign reads 'No Unauthorized Access'.",
+      "icu directional sign": "A clear sign points: 'Intensive Care Unit -> North'."
+    },
+    "exits": {
+      "down": "Elevator Lobby (Level 1)",
+      "east": "Surgical Wing Access (Blocked)",
+      "west": "Cardiology Wing Access (Blocked)"
+    },
+    "floor": 2,
+    "furniture": [],
+    "has_gas_lines": true,
+    "hazards_present": [
+    ],
+    "items": [],
+    "locked": false,
+    "objects": [
+      "icu directional sign"
+    ],
+    "unlocks_with": null
+  },
+  "Waiting Room": {
+    "description": "A large waiting area with rows of uncomfortable plastic chairs. Old magazines are scattered on a low table. A wall-mounted TV displays static. The room feels cold and unwelcoming.",
+    "examine_details": {
+      "low table": "A simple table, perhaps with something hidden underneath or within its drawers if it has any.",
+      "old magazines": "Outdated magazines, their pages yellowed and dog-eared."
+    },
+    "exits": {
+      "east": "Hospital Emergency Entrance"
+    },
+    "first_entry_text": "The silence in this waiting room is deafening, apart from the wall-mounted TV.\nThe static on the screen momentarily resolves into a perfume ad for '[i]Magnetique[/i]'. A sultry voice whispers, '[i]...feel the pull![/i]' before the screen dissolves back into noise.\nYou feel a strange tingling on your skin and a prickling sense of being watched.",
+    "furniture": [
+      "plastic_chairs",
+      "low_table"
+    ],
+    "hazards_present": [
+      "oxygen_tank",
+      {
+        "type": "robo_vacuum",
+        "chance": 1.0,
+        "initial_state": "docked"
+      }
+    ],
+    "items": [],
+    "locking": {
+      "locked": false,
+      "unlocks_with": null
+    },
+    "name": "Waiting Room",
+    "objects": [
+      {
+        "name": "wall-mounted TV",
+        "description": "The screen is a mess of 'snow'. The power light is on, though.",
+        "is_omen_provider": "television",
+        "aliases": [
+          "television",
+          "tv"
+        ]
+      },
+      "old magazines"
+    ],
+    "state_descriptions": {},
+    "state_examine_details": {},
+    "state_flags": {
+      "floor": 1
+    }
+  }
+}

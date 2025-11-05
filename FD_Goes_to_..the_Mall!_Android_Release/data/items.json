@@ -1,0 +1,65 @@
+{
+  "note_from_glen": {
+    "name": "Note from Glen",
+    "description": "A crumpled, greasy note, clearly written in a hurry.",
+    "examine_details": "The note reads: 'MGR - Projector bulb in #7 is overheating AGAIN. Smells like burning plastic. This is a fire hazard waiting to happen. -Glen'.",
+    "type": "evidence",
+    "takeable": true,
+    "is_key": true,
+    "is_key_item": true,
+    "weight": "feather",
+    "level": 1
+  },
+  "first_aid_kit": {
+    "name": "First Aid Kit",
+    "description": "A standard wall-mounted first aid kit. Contains bandages and antiseptic.",
+    "examine_details": "Looks like a basic kit. Might have some bandages.",
+    "type": "medical",
+    "takeable": true,
+    "consumable_on_use": true,
+    "heal_amount": 10,
+    "general_use_effect_message": "You apply some antiseptic and bandages to your minor scrapes.",
+    "weight": "light",
+    "level": 1
+  },
+  "bandages": {
+    "name": "Bandages",
+    "description": "Sterile wraps.",
+    "examine_details": "Simple sterile bandages.",
+    "type": "medical",
+    "takeable": true,
+    "consumable_on_use": true,
+    "heal_amount": 5,
+    "general_use_effect_message": "You apply a bandage.",
+    "weight": "feather",
+    "level": 1
+  },
+  "flashlight": {
+    "name": "Flashlight",
+    "description": "A cheap plastic flashlight.",
+    "examine_details": "It feels light and flimsy. Takes standard batteries.",
+    "type": "tool",
+    "takeable": true,
+    "provides_light": true,
+    "weight": "light",
+    "level": 1
+  },
+  "movie_ticket":{
+    "name": "Movie Ticket",
+    "description": "A ticket stub for a movie.",
+    "examine_details": "Hey wait - this ticket is for 'Dead Bitches 3D', showing at 7:00 PM in Auditorium #8.",
+    "type": "misc",
+    "takeable": true,
+    "weight": "feather",
+    "level": 1
+  },
+  "note_from_concessions": {
+    "name": "Note from Concessions",
+    "description": "A note written on a napkin, left at the concessions stand.",
+    "examine_details": "The note is written in blue ink on a napkin. It reads: 'Had to borrow the flashlight - will be at Concessions for a bit.'",
+    "type": "misc",
+    "takeable": true,
+    "weight": "feather",
+    "level": 1
+  }
+}

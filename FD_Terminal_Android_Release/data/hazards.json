@@ -1,0 +1,2314 @@
+{
+  "deaths_breath": {
+    "name": "Unseen Wind",
+    "level_id": "all",
+    "initial_state": "subtle_chill",
+    "progress_while_offscreen": true,
+    "can_be_spawned": true,
+    "spawn_chance_modifier": 1.5,
+    "can_follow_player": true,
+    "follows_at_fear_threshold": 0.7,
+    "placement_object": ["window", "vent", "doorway", "room"],
+    "spawn_entities": ["cold breeze"],
+    "object_name_options": ["cold breeze", "sudden draft", "chilling air"],
+    "initial_aggression": 0.2,
+    "max_aggression": 2.0,
+    "aggression_per_turn_increase": 0.05,
+    "fear_spawn_thresholds": {
+      "0.5": {
+        "chance": 0.3,
+        "starting_state": "subtle_chill"
+      },
+      "0.7": {
+        "chance": 0.6,
+        "starting_state": "cold_breeze"
+      },
+      "0.85": {
+        "chance": 0.9,
+        "starting_state": "icy_presence"
+      }
+    },
+    "action_triggers": {
+      "examine": {
+        "targets": ["mirror", "window", "reflection", "shadow"],
+        "spawn_chance": 0.4,
+        "message": "As you examine the {target}, you feel an icy presence materialize behind you."
+      },
+      "hide": {
+        "targets": ["*"],
+        "spawn_chance": 0.6,
+        "escalate_if_present": true,
+        "message": "Your hiding spot grows unnaturally cold, as if something knows exactly where you are."
+      },
+      "rest": {
+        "targets": ["*"],
+        "spawn_chance": 0.5,
+        "message": "Your moment of rest is interrupted by a bone-chilling cold that seems to seek you out."
+      },
+      "use": {
+        "targets": ["candle", "flashlight", "lighter", "matches"],
+        "spawn_chance": 0.3,
+        "effect": "extinguish_light",
+        "message": "The flame flickers wildly as an unnatural wind extinguishes your light source."
+      }
+    },
+    "player_interaction": {
+      "examine": [
+        {
+          "on_target_name": ["cold breeze", "breeze", "draft", "wind", "chill", "air"],
+          "requires_hazard_state": ["subtle_chill"],
+          "message": "The air feels unnaturally cold in one spot, as if something invisible is watching you.",
+          "effect_on_player": {
+            "fear_increase": 0.1
+          }
+        },
+        {
+          "on_target_name": ["cold breeze", "breeze", "draft", "wind", "chill", "air"],
+          "requires_hazard_state": ["cold_breeze"],
+          "message": "A persistent cold draft moves through the room, seemingly with purpose. Papers flutter and small objects shift slightly.",
+          "effect_on_player": {
+            "fear_increase": 0.2
+          }
+        },
+        {
+          "on_target_name": ["cold breeze", "breeze", "draft", "wind", "chill", "air"],
+          "requires_hazard_state": ["icy_presence"],
+          "message": "The air has grown viciously cold. The breeze circles you like a predator, causing nearby objects to tremble and shift. You feel watched.",
+          "effect_on_player": {
+            "fear_increase": 0.35
+          }
+        },
+        {
+          "on_target_name": ["cold breeze", "breeze", "draft", "wind", "chill", "air"],
+          "requires_hazard_state": ["malevolent_gust"],
+          "message": "An invisible, freezing force moves through the room with unmistakable intent. The cold cuts to your bones, and objects around you respond to its touch. Death is here.",
+          "effect_on_self": {
+            "aggression": "+0.3"
+          },
+          "effect_on_player": {
+            "fear_increase": 0.5
+          }
+        }
+      ]
+    },
+    "states": {
+      "subtle_chill": {
+        "description": "The air temperature drops noticeably in one area of the room. It feels unnatural.",
+        "environmental_effect": {
+          "temperature": "cold"
+        },
+        "sensory_feedback": {
+          "audio": "A faint whisper of wind, barely audible.",
+          "visual": "Your breath mists slightly in the air.",
+          "tactile": "The hairs on your arms stand up."
+        },
+        "chance_to_progress": 0.15,
+        "fear_threshold": 0.5,
+        "fear_triggered_progression_chance": 0.4,
+        "next_state": "cold_breeze"
+      },
+      "cold_breeze": {
+        "description": "A persistent cold breeze moves through the room despite no open windows or vents. Papers flutter ominously.",
+        "environmental_effect": {
+          "temperature": "cold",
+          "noise_level": "+1"
+        },
+        "sensory_feedback": {
+          "audio": "Papers rustle. A low, persistent hum fills the air.",
+          "visual": "Shadows seem to shift at the edges of your vision.",
+          "tactile": "Your skin prickles with goosebumps."
+        },
+        "chance_to_progress": 0.2,
+        "fear_threshold": 0.6,
+        "fear_triggered_progression_chance": 0.5,
+        "next_state": "icy_presence",
+        "hazard_interaction": {
+          "*": {
+            "chance": 0.35,
+            "effect": "increase_aggression",
+            "amount": 0.3,
+            "message": "The cold breeze seems to intensify nearby dangers."
+          },
+          "faulty_wiring": {
+            "chance": 0.8,
+            "target_state": "sparking",
+            "message": "The cold draft disturbs loose wires, causing them to spark dangerously!"
+          },
+          "oxygen_tank": {
+            "chance": 0.7,
+            "target_state": "leaking",
+            "message": "The sudden temperature drop stresses the tank’s valve—gas starts to hiss!"
+          },
+          "malfunctioning_ventilator": {
+            "chance": 0.6,
+            "effect": "accelerate_progression",
+            "message": "The cold air causes the ventilator to stutter and spark!"
+          },
+          "faulty_wiring_patch": {
+            "chance": 0.8,
+            "target_state": "sparking",
+            "message": "The temperature drop causes condensation on exposed wires—they begin to arc!"
+          }
+        }
+      },
+      "icy_presence": {
+        "description": "The air is frigid. Small objects shift of their own accord as if pushed by invisible fingers. The cold seems to follow you.",
+        "environmental_effect": {
+          "temperature": "freezing",
+          "noise_level": "+2",
+          "lighting": "flickering"
+        },
+        "sensory_feedback": {
+          "audio": "A rhythmic creaking, like ice forming on metal. Whispers in a language you don't recognize.",
+          "visual": "Frost patterns spread across surfaces. Your breath comes out in thick clouds.",
+          "tactile": "Your fingers are going numb. Your joints ache with cold."
+        },
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["felt_deaths_presence"]
+        },
+        "chance_to_progress": 0.2,
+        "fear_threshold": 0.75,
+        "fear_triggered_progression_chance": 0.7,
+        "next_state": "malevolent_gust",
+        "poltergeist_events": {
+          "chance": 0.25,
+          "effects": [
+            "furniture_rattles",
+            "furniture_shifts",
+            "objects_fall",
+            "furniture_tips"
+          ]
+        },
+        "hazard_interaction": {
+          "*": {
+            "chance": 0.5,
+            "effect": "increase_aggression",
+            "amount": 0.5,
+            "message": "Nearby dangers seem to intensify in the presence of this unnatural cold."
+          },
+          "unstable_ceiling": {
+            "chance": 0.9,
+            "target_state": "cracking",
+            "message": "The extreme cold causes the ceiling materials to contract and crack!"
+          },
+          "flickering_lights": {
+            "chance": 0.9,
+            "target_state": "electrical_surge",
+            "message": "The freezing air causes the electrical system to malfunction violently!"
+          },
+          "oxygen_tank": {
+            "chance": 0.85,
+            "target_state": "projectile_jet",
+            "message": "The violent gust snaps the weakened valve—an oxygen tank rockets free!"
+          },
+          "*_patch": {
+            "chance": 0.4,
+            "effect": "reduce_qte_duration",
+            "amount": 0.8,
+            "message": "The freezing cold slows your reactions!"
+          },
+          "elevator_freefall": {
+            "chance": 0.9,
+            "target_state": "cable_snap",
+            "message": "Ice forms on the elevator cables, causing them to snap!"
+          }
+        }
+      },
+      "malevolent_gust": {
+        "description": "A powerful, arctic wind howls through the room with malicious intent, knocking over objects and creating a targeted path of destruction.",
+        "environmental_effect": {
+          "temperature": "freezing",
+          "noise_level": "+3",
+          "is_windy": true,
+          "lighting": "dark"
+        },
+        "sensory_feedback": {
+          "audio": "A roaring wind that sounds almost like a scream. Objects clatter and fall.",
+          "visual": "The air distorts as if something massive and invisible is moving through it.",
+          "tactile": "The cold is painful, burning your exposed skin."
+        },
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "random",
+            "options": ["unstable_ceiling", "faulty_wiring", "gas_leak"],
+            "chance": 0.9,
+            "message": "Death's presence manifests physically, setting off a deadly chain reaction!"
+          }
+        ],
+        "is_terminal_state": false,
+        "hazard_interaction": {
+          "*": {
+            "chance": 0.7,
+            "effect": "instant_progression",
+            "message": "Death's presence accelerates the danger around you!"
+          },
+          "wrecking_ball": {
+            "chance": 1.0,
+            "effect": "summon_hazard",
+            "message": "The malevolent wind seems to guide the wrecking ball's trajectory!"
+          }
+        }
+      },
+      "banished": {
+        "description": "The unnatural cold dissipates rapidly. The air returns to normal temperature. Death's presence has been temporarily driven away.",
+        "is_terminal_state": false,
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["exorcist"],
+          "score_bonus": 100
+        },
+        "persistence_effect": {
+          "record_banishment": true,
+          "respawn_delay_turns": 20,
+          "next_spawn_aggression_bonus": 0.3
+        }
+      }
+    },
+    "environmental_omens": {
+      "window": [
+        "The glass frosts over from the inside, forming a pattern that looks disturbingly like skeletal fingers.",
+        "Your breath fogs the window, but so does something else's—from the other side.",
+        "The window reflects not just your image, but a shadow behind you that shouldn't exist."
+      ],
+      "mirror": [
+        "Your reflection in the mirror appears to shiver before you do, as if feeling a chill you haven't yet noticed.",
+        "The mirror fogs at the edges, but the center remains clear—as if something is breathing on it from within.",
+        "For just a moment, your reflection's eyes are completely black."
+      ],
+      "curtains": [
+        "The curtains billow inward despite all windows being firmly closed.",
+        "The curtains sway in a rhythm that almost seems like breathing.",
+        "Frost begins to form on the curtain fabric in a spreading pattern."
+      ],
+      "lights": [
+        "The lights flicker in a pattern: three quick flashes, pause, three more—almost like a heartbeat.",
+        "Every light in the room dims simultaneously, as if something is drawing their energy.",
+        "The light bulbs frost over, their glow turning a sickly blue-white."
+      ],
+      "furniture": [
+        "The furniture creaks and settles as if the temperature has suddenly dropped.",
+        "Frost patterns appear on wooden surfaces, spreading like veins.",
+        "Small objects on shelves shift position with no apparent cause."
+      ],
+      "doors": [
+        "The door rattles in its frame despite no wind.",
+        "The doorknob is cold enough to burn your skin.",
+        "You hear the sound of slow, deliberate footsteps approaching from the other side, but when you open it, nothing is there."
+      ]
+    },
+    "cumulative_omens": {
+      "first_manifestation": [
+        "You notice your breath is visible, though the room wasn't cold a moment ago."
+      ],
+      "second_manifestation": [
+        "The cold is more intense now. Your fingers are starting to go numb."
+      ],
+      "third_manifestation": [
+        "The temperature has dropped so drastically that your teeth are chattering. Something is definitely here with you."
+      ],
+      "fourth_manifestation": [
+        "The cold is painful now, seeping into your bones. Death's presence is undeniable."
+      ]
+    },
+    "persistence_tracking": {
+      "tracks_manifestations": true,
+      "tracks_banishments": true,
+      "tracks_rooms_haunted": true,
+      "adaptive_starting_state": {
+        "manifestations_0_to_2": "subtle_chill",
+        "manifestations_3_to_5": "cold_breeze",
+        "manifestations_6_plus": "icy_presence"
+      }
+    }
+  },
+  "oxygen_tank": {
+    "name": "Oxygen Tank",
+    "level_id": "all",
+    "initial_state": "sealed",
+    "progress_while_offscreen": false,
+    "placement_object": ["oxygen_tank"],
+    "spawn_entities": ["oxygen tank"],
+    "object_name_options": ["oxygen tank", "steel oxygen cylinder", "pressurized tank"],
+    "initial_aggression": 0.1,
+    "max_aggression": 2.0,
+    "aggression_per_turn_increase": 0.05,
+
+    "player_interaction": {
+      "examine": [
+        {
+          "on_target_name": ["oxygen tank", "pressurized tank"],
+          "requires_hazard_state": ["sealed", "leaking", "jostled"],
+          "message": "A pressurized oxygen tank stands upright, secured—or so it seems. The valve assembly rattles faintly.",
+          "no_state_change": true
+        },
+        {
+          "on_target_name": ["oxygen tank", "pressurized tank"],
+          "requires_hazard_state": ["empty"],
+          "message": "The tank is spent—just an empty steel cylinder now.",
+          "no_state_change": true
+        }
+      ],
+      "use": [
+        {
+          "on_target_name": ["oxygen tank", "pressurized tank"],
+          "requires_hazard_state": ["sealed"],
+          "message": "You jostle the tank. The valve starts to hiss ominously...",
+          "effect_on_self": {
+            "target_state": "leaking"
+          },
+          "pause_before_next_state": true,
+          "next_state_after_pause": "projectile_jet"
+        },
+        {
+          "on_target_name": ["oxygen tank", "pressurized tank"],
+          "requires_hazard_state": ["empty"],
+          "message": "The tank is empty. There's nothing left to use.",
+          "no_state_change": true
+        }
+      ]
+    },
+    "states": {
+      "sealed": {
+      "description": "A pressurized oxygen tank stands upright, secured—or so it seems.",
+      "autonomous_action": "_check_progression_by_flags",
+      "progression_condition": {
+        "requires_any_flags": [
+        "oxygen_tank_jostled",
+        "oxygen_tank_used"
+        ]
+      },
+      "chance_to_progress": 1,
+      "next_state": "jostled"
+      },
+      "jostled": {
+      "description": "Something disturbed the tank’s position. It rattles against the floor.",
+      "environmental_effect": {
+        "noise_level": "+1"
+      },
+      "duration_in_state": 3,
+      "pause_for_player_acknowledgement": true,
+      "chance_to_progress": 1,
+      "next_state": "leaking"
+      },
+      "leaking": {
+      "description": "A high‑pressure hiss escapes the valve as it starts to fail. The cylinder twitches on the floor.",
+      "environmental_effect": { "noise_level": 2 },
+      "duration_in_state": 4,
+      "pause_for_player_acknowledgement": true,
+      "chance_to_progress": 1,
+      "next_state": "projectile_jet"
+      },
+      "projectile_jet": {
+      "description": "The valve shears—an icy jet blasts sideways! The tank rockets across the room like a torpedo!",
+      "triggers_qte_on_entry": {
+        "qte_type": "input",
+        "duration": 3.5,
+        "qte_context": {
+        "ui_mode": "in-screen",
+        "ui_prompt_message": "OXYGEN TANK INBOUND! Type 'dodge' or 'duck'!",
+        "valid_responses": ["dodge", "duck", "roll", "sidestep"],
+        "success_message": "You throw yourself aside as the steel cylinder howls past!",
+        "failure_message_wrong_input": "You hesitate—the tank slams into you with bone‑shattering force!",
+        "is_fatal_on_failure": false,
+        "hp_damage_on_failure": 10,
+        "next_state_after_qte_success": "empty",
+        "next_state_after_qte_failure": "empty"
+        }
+      },
+      "triggers_hazard_on_state_change": [
+        {
+        "type": "gas_leak",
+        "chance": 0.5,
+        "target_state": "damaged_wall",
+        "description": "The tank punches into a wall, rupturing a hidden gas line—hissing fills the room!",
+        "message": "The tank punches into a wall, rupturing a hidden gas line—hissing fills the room!"
+        }
+      ],
+      "duration_in_state": 2,
+      "chance_to_progress": 1,
+      "next_state": "empty"
+      },
+      "empty": {
+      "description": "The cylinder spins to a halt—pressure spent. The room smells faintly of oxygen and frost.",
+      "is_terminal_state": false
+      },
+      "death_by_tank_impact": {
+      "description": "The heavy cylinder smashes you aside with lethal force.",
+      "instant_death_in_room": true,
+      "death_message": "Killed by a rocketting oxygen tank.",
+      "is_terminal_state": true
+      }
+    }
+  },
+  "mri": {
+    "name": "Magnetic Resonance Imager",
+    "description": "A massive MRI machine, powered down but still dominating in the small room.",
+    "initial_state": "powered_down",
+    "progress_while_offscreen": false,
+    "spawn_entities": [
+      "MRI machine"
+    ],
+    "object_name_options": [
+      "MRI machine",
+      "massive scanner",
+      "magnetic imager"
+    ],
+    "triggered_by_room_action": [
+      {
+        "action_verb": "take",
+        "on_target_name": "coroners_office_key",
+        "requires_hazard_state": ["powered_down"],
+        "effect_on_self": {
+          "target_state": "field_active_doors_locked"
+        },
+        "ui_popup_event": {
+          "type": "show_popup",
+          "title": "Chain Reaction!",
+          "message": "As your fingers touch the key, the door you entered through slams shut with a deafening BANG! The vibration knocks a clipboard in the control room from a hook... it slides across a console, its metal clip dragging across the keyboard...\nThe key is pulled from your grasp and clatters against the machine's casing as faint lights on the MRI machine flicker to life with an ominous hum.\nThe exits are now sealed shut by the magnetic force! You approach the machine; you need that key to escape!"
+        },
+        "blocks_action_success": true
+      }
+    ],
+    "player_interaction": {
+      "force": [
+        {
+          "on_target_name": ["door", "west door", "east door", "stairwell door", "control room door"],
+          "requires_hazard_state": ["field_active_doors_locked", "projectile_stage_1_cart", "projectile_stage_2_window", "final_barrage_1_wheelchair", "final_barrage_2_oxygen_tank", "final_barrage_3_gurney"],
+          "qte_type": "button_mash",
+          "qte_context": {
+            "ui_prompt_message": "The magnetic field is immense! MASH to force the door!",
+            "duration": 4.0,
+            "target_mash_count": 20,
+            "success_message": "You wrench the metal door open enough to slip into the crack, just as your phone slips from your back pocket...",
+            "failure_message_wrong_input": "You can't fight the pull! The door remains sealed shut!",
+            "next_state_after_qte_success": "death_by_door_bisection",
+            "next_state_after_qte_failure": "field_active_doors_locked"
+          }
+        }
+      ],
+      "take": [
+        {
+          "on_target_name": "coroners_office_key",
+          "requires_hazard_state": ["field_active_doors_locked"],
+          "target_state": "projectile_stage_1_cart",
+          "chance_to_progress": 1,
+          "pause_for_player_acknowledgement": true,
+          "description": "You cautiously approach the roaring machine to retrieve the key. The magnetic field intensifies, and you hear the screech of metal as loose objects in the equipment cart begin to vibrate violently!",
+          "blocks_action_success": true
+        }
+      ]
+    },
+
+    "states": {
+      "powered_down": {
+        "description": "The {object_name} is silent and dark. It seems inactive for now."
+      },
+      "field_active_doors_locked": {
+        "description": "",
+        "environmental_effect": { "noise_level": 3 },
+        "fear_threshold": 0.75,
+        "on_state_entry_special_action": "mri_lock_doors_and_initiate_qtes",
+        "doors_to_lock": [
+          {"room": "MRI Scan Room", "exit": "west", "target": "MRI Control Room"},
+          {"room": "MRI Scan Room", "exit": "south", "target": "Stairwell"}
+        ],
+        "pause_for_player_acknowledgement": true
+      },
+      "projectile_stage_1_cart": {
+        "description": "In front of the active MRI, you're right where Death wants you!\n\nA metal cart tears loose from its position and rockets toward you with lethal speed!",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 5.0,
+          "qte_context": {
+            "ui_prompt_message": "A metal cart hurtles toward you! Type 'dodge' to avoid it!",
+            "success_message": "You leap aside as the cart slams into the MRI!",
+            "valid_responses": ["dodge"],
+            "failure_message": "The cart slams into you! You're pinned against the MRI!",
+            "hp_damage_on_failure": 15,
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "qte_pause_1",
+            "next_state_after_qte_failure": "projectile_stage_1_damaged"
+          }
+        }
+      },
+      "projectile_stage_1_damaged": {
+        "description": "Bruised and bleeding from the cart impact, you struggle to pull yourself free from the wreckage. The observation window above is cracking...",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "projectile_stage_2_window"
+      },
+      "qte_pause_1": {
+        "description": "You barely avoid the cart, which smashes into the MRI with a shower of sparks. The impact causes the control room's observation window to crack!",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "projectile_stage_2_window"
+      },
+      "projectile_stage_2_window": {
+        "description": "With a deafening CRASH, the observation window shatters! The magnetic field now extends into the control room, seeking heavier prey!",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 5.0,
+          "qte_context": {
+            "ui_prompt_message": "A heavy oxygen tank is pulled through the window! Type 'duck' to avoid!",
+            "valid_responses": ["duck", "roll"],
+            "success_message": "You duck clear as the oxygen tank smashes against the MRI!",
+            "failure_message": "The tank clips you hard! You go sprawling!",
+            "hp_damage_on_failure": 20,
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "final_barrage_wheelchair",
+            "next_state_after_qte_failure": "projectile_stage_2_damaged"
+          }
+        }
+      },
+      "projectile_stage_2_damaged": {
+        "description": "You struggle to your feet, gasping for breath. Blood runs from a gash on your forehead. The magnetic field continues to intensify...",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "final_barrage_wheelchair"
+      },
+      "final_barrage_wheelchair": {
+        "description": "A metal wheelchair is ripped from the control room and hurtles through the shattered window directly at you!",
+        "ui_popup_event": {
+          "type": "show_popup",
+          "title": "Wheelchair Incoming",
+          "message": "A metal wheelchair is ripped from the control room and hurtles through the shattered window directly at you!",
+          "output_panel": true
+        },
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 5.0,
+          "qte_context": {
+            "ui_prompt_message": "A WHEELCHAIR is flying at you! DIP!",
+            "expected_input_word": "dip",
+            "valid_responses": ["dip", "dive"],
+            "success_message": "You dive aside as the wheelchair smashes into the MRI machine!",
+            "failure_message": "The wheelchair catches you! Metal spokes tear into your side!",
+            "hp_damage_on_failure": 25,
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "final_barrage_gurney",
+            "next_state_after_qte_failure": "final_barrage_wheelchair_damaged"
+          }
+        }
+      },
+      "final_barrage_wheelchair_damaged": {
+        "description": "You're badly hurt, barely staying conscious. The room spins. A final, massive object is being pulled from the control room...",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "final_barrage_gurney"
+      },
+      "final_barrage_gurney": {
+        "description": "A gurney from the control room is pulled through the wall, shedding parts as it comes for you!",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 5.0,
+          "qte_context": {
+            "ui_prompt_message": "A GURNEY is tumbling through the air! DIVE!",
+            "expected_input_word": "dive",
+            "valid_responses": ["dive", "roll"],
+            "success_message": "You dive under the tumbling gurney as it crashes into the growing pile of metallic debris!",
+            "failure_message": "The gurney crashes into you! You're buried under the debris!",
+            "hp_damage_on_failure": 30,
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "safely_powered_down",
+            "next_state_after_qte_failure": "critically_injured"
+          }
+        }
+      },
+      "critically_injured": {
+        "description": "You lie buried under the wreckage, critically injured. The MRI machine groans and sparks violently above you. If you survive this, it will be a miracle...",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "safely_powered_down"
+      },
+      "safely_powered_down": {
+        "description": "With a final, deafening GROAN and a shower of sparks, the MRI machine shudders to a halt, overloaded by the impacts. The magnetic field collapses. Silence falls, broken only by the crackle of fried electronics.",
+        "ui_popup_event": {
+          "type": "show_popup",
+          "title": "MRI Shutdown",
+          "message": "With a final, deafening GROAN and a shower of sparks, the MRI machine shudders to a halt, overloaded by the impacts. The magnetic field collapses. Silence falls, broken only by the crackle of fried electronics.",
+          "output_panel": true
+        },
+        "is_terminal_state": false,
+        "on_state_entry_special_action": "mri_unlock_doors_and_release_items",
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["magnetic_personality"],
+          "score_bonus": 100
+        }
+      },
+      "death_by_door_bisection": {
+        "description": "The air crackles. The magnet power surges. WHOMP! The metal door leaps at you - otherwise light but driven with mad force into you from groin to face, the cartilage in your nose exploding as you're sandwiched in place.\n\nYou're held tight in the last embrace you'll ever know.\nBlunt.\nForceful.\nAgonizingly slow.\nIt bisects you, hotdog style, until the door finally clicks shut with a final *squelch*.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "You force the door open just enough. As you jam into the gap, you feel a violent tug - a split-second of weightlessness in your back pocket... and thwip!\nYour phone is ripped away. It rockets across the room, SMASHING against the touchscreen as you remember earlier - the metal detector, the NFC setting. *DING!*\n\n'Safety thresholds: removed.'"
+      }
+    }
+  },
+  "malfunctioning_ventilator": {
+    "name": "Malfunctioning Ventilator",
+    "level_id": "all",
+    "initial_state": "stable_rhythm",
+    "progress_while_offscreen": false,
+    "requires_player_interaction_to_start": true,
+    "initial_aggression": 0.0,
+    "max_aggression": 3.0,
+    "aggression_per_turn_increase": 0.1,
+    "tags": ["mechanical", "medical_equipment", "electrical", "escalating", "qte_driven", "plot_critical"],
+    "spawn_entities": [
+      "ventilator",
+      "patient_in_bed",
+      "vital_signs_monitor",
+      "call_button",
+      "bedside_table",
+      "iv_stand",
+      "power_cord"
+    ],
+    "object_name_options": [
+      "ventilator",
+      "breathing_machine",
+      "life_support_unit"
+    ],
+    "environmental_omens": {
+      "television": [
+        "A daytime soap opera shows a dramatic scene where a character on life support flatlines. The monitor emits a long, piercing BEEP before the screen cuts to static.",
+        "A commercial for 'Breathe-EZ' allergy medication shows a field of flowers, but the audio is a distorted, rhythmic hissing sound, like a failing respirator.",
+        "A home improvement show demonstrates electrical wiring. The host says, '...and if you cross these wires, you'll get a real light show!' as a shower of sparks erupts from the panel."
+      ],
+      "radio": [
+        "A news report mentions a city-wide power surge, causing 'unexpected electrical failures in critical equipment'.",
+        "A slow, rhythmic song plays, but it's interrupted by bursts of static that sound like a stuttering breath."
+      ]
+    },
+    "player_interaction": {
+      "examine": [
+        {
+          "on_target_name": ["patient_in_bed", "patient"],
+          "requires_hazard_state": ["stable_rhythm"],
+          "message": "The patient's skin is pallid, almost translucent, under the harsh ICU lights. His chest rises and falls in a rhythm not his own, dictated by the machine beside him. A metal dog tag rests on his collarbone: 'WAINWRIGHT, CORBIN - O NEG'.",
+          "sets_interaction_flag": "patient_examined_icu_bay"
+        },
+        {
+          "on_target_name": ["ventilator", "breathing_machine"],
+          "requires_hazard_state": ["stable_rhythm"],
+          "message": "The ventilator hums quietly, its rhythm steady. But as you lean in to examine it more closely, a new, sharp cracking sound comes from within its casing. The rhythm falters for a moment before catching itself. You may have made things worse.",
+          "sets_interaction_flag": "ventilator_examined_icu_bay"
+        }
+      ]
+    },
+    "examine_responses": {
+      "call_button": {
+      "base_description": "A small call button hangs from a cord beside the bed, within easy reach of the patient."
+      },
+      "bedside_table": {
+      "base_description": "A small side table with a drawer. A half-full cup of water sits precariously near the edge."
+      },
+      "iv_stand": {
+      "base_description": "A tall metal IV stand with a nearly full saline bag hanging from it. The stand's base is heavy, but the top-heavy design makes it unstable when moved."
+      },
+      "power_cord": {
+      "base_description": "The ventilator's thick power cord runs along the wall to an outlet near the patient's head."
+      },
+      "vital_signs_monitor": {
+      "base_description": "A vital signs monitor displays the patient's heart rate, oxygen saturation, and other critical metrics in real-time."
+      },
+      "patient_in_bed": {
+      "miraculous_save": "Corbin Wainwright lies in bed, breathing on his own. His eyes are open, and a faint smile plays at the corners of his mouth. The journal he gave you rests nearby.",
+      "electrical_death": "Corbin's body lies motionless in the bed. The ventilator is dark, and the monitors display a flatline. The air is thick with the smell of burnt plastic.",
+      "death_by_impalement": "Corbin's body is still, the IV stand protruding grotesquely from his eye socket. Blood stains the pillow and sheets.",
+      "death_by_deintubation": "Corbin's throat is torn open, blood pooling on the bed. The breathing tube lies discarded, and the monitors are silent."
+      }
+    },
+    "states": {
+      "stable_rhythm": {
+        "description": "The rhythmic hiss of the ventilator is the only sound, a fragile barrier against the room's oppressive silence. Corbin lies unconscious, his chest rising and falling in mechanical precision.",
+        "autonomous_action": "_check_progression_by_flags",
+        "progression_condition": {
+          "requires_all_flags": [
+            "patient_examined_icu_bay",
+            "ventilator_examined_icu_bay"
+          ]
+        },
+        "chance_to_progress": 1,
+        "next_state": "call_button_falls"
+      },
+      "call_button_falls": {
+        "description": "As if disturbed by your examination, the call button slips from its precarious position on the bed rail. It swings down and KNOCKS the cup of water from the bedside table! Water splashes across the wall outlet where the ventilator is plugged in. Sparks begin to arc from the wet outlet!",
+        "environmental_effect": {
+          "is_sparking": true,
+          "noise_level": "+2"
+        },
+        "duration_in_state": 5,
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "electrical_hazard_qte"
+      },
+      "electrical_hazard_qte": {
+        "description": "The wet outlet is sparking dangerously! The ventilator could short out at any moment, killing Corbin! You need to unplug it NOW!",
+        "triggers_qte_on_entry": {
+          "qte_type": "button_mash",
+          "duration": 6.0,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "SPARKING OUTLET! Mash keys to yank the power cord!",
+            "target_mash_count": 15,
+            "success_message": "You grab the cord and yank it from the sparking outlet just in time! But the sudden release sends you stumbling backward...",
+            "failure_message": "You're too slow! The outlet shorts out with a brilliant flash, and the ventilator dies with a pathetic wheeze.",
+            "timeout_message": "The sparks intensify! You hesitate too long!",
+            "next_state_after_qte_success": "cord_whips_back",
+            "next_state_after_qte_failure": "electrical_death",
+            "next_state_after_timeout": "electrical_death"
+          }
+        }
+      },
+      "cord_whips_back": {
+        "description": "Your forceful yank sends the heavy power cord whipping back through the air like a rubber band. It strikes the IV stand with a metallic CLANG, and the top-heavy stand begins to topple toward Corbin's face!",
+        "environmental_effect": {
+          "noise_level": "+1"
+        },
+        "duration_in_state": 4,
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "iv_stand_toppling_qte"
+      },
+      "iv_stand_toppling_qte": {
+        "description": "The IV stand is falling toward Corbin! The spiral metal tip at the top is aimed directly at his eye socket!",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 6.0,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "IV STAND FALLING! Type 'catch stand' to save him!",
+            "expected_input_word": "catch stand",
+            "input_type": "word",
+            "success_message": "Pure instinct takes over! You lunge forward and catch the heavy stand just inches from Corbin's face. But your momentum carries you forward, and your leg slams into the bed's control panel!",
+            "failure_message": "You're not fast enough! The metal tip punches through Corbin's eye socket with a sickening crunch.",
+            "timeout_message": "You freeze, unable to react! The stand completes its deadly arc.",
+            "next_state_after_qte_success": "bed_controls_hit",
+            "next_state_after_qte_failure": "death_by_impalement",
+            "next_state_after_timeout": "death_by_impalement"
+          }
+        }
+      },
+      "bed_controls_hit": {
+        "description": "Your heroic save worked, but at a cost! Your leg has struck the bed's electronic control panel, and sparks fly from the damaged console. With a mechanical whirring sound, the bed's head section begins to rise automatically! This will pull the breathing tube taut and could deintubate Corbin violently!",
+        "environmental_effect": {
+          "is_sparking": true,
+          "noise_level": "+2"
+        },
+        "duration_in_state": 4,
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "deintubation_crisis_qte"
+      },
+      "deintubation_crisis_qte": {
+        "description": "The bed is rising! Corbin's breathing tube is being pulled taut! If it's yanked out incorrectly, the metal connector will tear his throat open! You need to support his head and ease the tube out safely!",
+        "triggers_qte_on_entry": {
+          "qte_type": "button_mash",
+          "duration": 7.0,
+          "qte_context": {
+        "ui_mode": "in-screen",
+        "ui_prompt_message": "TUBE PULLING TAUT! Mash keys to ease it out safely!",
+        "target_mash_count": { "default": 25, "EMT": 15 },
+        "success_message": "With desperate precision, you support Corbin's head and guide the tube out safely as the bed rises. He gasps, taking his first unassisted breath in days. His eyes flutter open, filled with gratitude.",
+        "failure_message": "You can't keep up with the bed's movement! The tube is yanked out violently, the metal connector tearing through throat tissue. Blood fountains from the wound.",
+        "timeout_message": "The bed continues rising inexorably! The tube tears free with a wet, horrible sound.",
+        "next_state_after_qte_success": "miraculous_save",
+        "next_state_after_qte_failure": "death_by_deintubation",
+        "next_state_after_timeout": "death_by_deintubation"
+          }
+        }
+      },
+      "miraculous_save": {
+        "description": "Against all odds, you've saved Corbin Wainwright from Death's elaborate trap! He breathes on his own now, weak but alive. With trembling hands, he reaches under his pillow and pulls out a leather-bound journal, pressing it into your hands. His eyes convey what his voice cannot yet manage: gratitude, and a warning about what's to come.",
+        "on_state_entry_special_action": "_award_gammy_death_book",
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["death_cheater", "medical_hero"],
+          "items_granted": ["gammy_death_book"],
+          "score_bonus": 100
+        }
+      },
+      "electrical_death": {
+        "description": "The outlet explodes in a shower of sparks! The ventilator dies instantly, its screen going dark. Corbin's eyes snap open in terror as he realizes he can no longer breathe. You watch helplessly as the monitors flatline and the room fills with the piercing tone of cardiac arrest. Death's first move was checkmate.",
+        "death_message": "Corbin Wainwright died of respiratory failure when his ventilator was destroyed by an electrical short circuit.",
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["witness_to_death"],
+          "score_bonus": -25
+        }
+      },
+      "death_by_impalement": {
+        "description": "The IV stand completes its deadly arc. The spiral metal tip punches through Corbin's eye socket with a sickening crunch, penetrating deep into his brain. His body convulses once, then goes still. Your attempt to help led directly to this gruesome end.",
+        "death_message": "Corbin Wainwright died when a falling IV stand impaled him through the eye after you failed to catch it.",
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["failed_hero", "witness_to_death"],
+          "score_bonus": -50
+        }
+      },
+      "death_by_deintubation": {
+        "description": "The breathing tube is ripped from Corbin's throat with brutal force. The metal connector tears through delicate tissue, opening his trachea like a second mouth. Blood pours from the wound as he drowns in his own blood, his eyes wide with betrayal. Your heroic efforts only delayed and worsened his death.",
+        "death_message": "Corbin Wainwright died of massive throat trauma when his breathing tube was violently removed by a malfunctioning hospital bed.",
+        "on_state_entry_rewards": {
+          "achievements_to_unlock": ["pyrrhic_hero", "witness_to_death"],
+          "score_bonus": -10
+          }
+        }
+      }
+    },
+  "hospital_exit": {
+    "name": "Hospital Exit Sequence",
+    "level_id": "all",
+    "initial_state": "off",
+    "progress_while_offscreen": false,
+    "spawn_entities": [
+      {
+        "name": "revolving door",
+        "type": "hazard_entity",
+        "hazard_key": "hospital_exit",
+        "description": "The revolving door's frame is solid steel—heavy and industrial.\nScorch marks near the top suggest a past electrical issue."
+      },
+      {
+        "name": "hospital sign",
+        "type": "hazard_entity",
+        "hazard_key": "hospital_exit",
+        "first_examine_description": "The 'L' in 'Hospital' is flickering weakly. As you look up, the motion makes it appear as if the sign were coming down at you.\nA cold breeze brushes past you. You shiver, and the sensation passes.",
+        "description": "A massive sign for 'Hope River Hospital' hangs precariously from the facade above the exit. It creaks softly in the wind."
+      },
+      {
+        "name": "ambulance",
+        "type": "hazard_entity",
+        "hazard_key": "hospital_exit",
+        "first_examine_description": "As you glance toward the street, you see a blur of flashing lights and motion—a speeding ambulance bearing down on you!\nYou blink, and the illusion vanishes.",
+        "description": "An ambulance is parked near the loading dock, its engine silent. It seems ready for a call that will never come."
+      }
+    ],
+    "object_name_options": [
+      "revolving door",
+      "the exit",
+      "the hospital sign"
+    ],
+    "player_interaction": {
+      "examine": [
+      {
+        "on_target_name": ["revolving door", "the exit", "door"],
+        "requires_hazard_state": ["off"],
+        "effect_on_self": {
+        "target_state": "door_jammed_trapped"
+        },
+        "ui_popup_event": {
+        "type": "show_popup",
+        "title": "Trapped!",
+        "message": "You step into the revolving door and push.\nSuddenly, with a gut-wrenching screech, it jams solid, trapping you inside!"
+        }
+      }
+      ]
+    },
+    "examine_responses": {
+        "revolving door": {
+            "base_description": "The revolving door's frame is solid steel—heavy and industrial.\nScorch marks near the top suggest a past electrical issue."
+        },
+        "hospital sign": {
+            "base_description": "A massive sign for 'Hope River Hospital' hangs precariously from the facade above the exit. It creaks softly in the wind.",
+            "first_examine_description": "The 'L' in 'Hospital' is flickering weakly. As you look up, the motion makes it appear as if the sign were coming down at you.\nA cold breeze brushes past you. You shiver, and the sensation passes."
+        },
+        "ambulance": {
+            "first_examine_description": "As you glance toward the street, you see a blur of flashing lights and motion—a speeding ambulance bearing down on you!\nYou blink, and the illusion vanishes.",
+            "base_description": "An ambulance is parked near the loading dock, its engine silent. It seems ready for a call that will never come."
+        }
+    },
+    "states": {
+      "off": {
+        "description": "The hospital exit appears to be functioning normally."
+      },
+      "door_jammed_trapped": {
+        "description": "You push your way into the revolving door.\n\nIt rotates once, then with a gut-wrenching SCREECH of tortured metal, it jams solid, trapping you inside!",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "door_force_qte"
+      },
+      "door_force_qte": {
+        "description": "You are trapped inside the jammed revolving door! The glass panel ahead is thick and the frame is unyielding, but you hear a grinding noise as the panels behind you try to continue forward.\nYou have to force your way out!",
+        "triggers_qte_on_entry": {
+          "qte_type": "button_mash",
+          "duration": 5.0,
+          "qte_context": {
+            "ui_prompt_message": "TRAPPED! MASH to force the door open!",
+            "target_mash_count": 15,
+            "success_message": "With a final, desperate shove and a groan of metal, the door gives way and you stumble out onto the pavement!",
+            "failure_message_wrong_input": "You can't budge it! The mechanism begins to grind as the door panel ahead of you breaks free from the base and sticks firmly in place!\nThe compartment is shrinking around you as the rest of the door frame continues to rotate...",
+            "next_state_after_qte_success": "falling_sign_qte",
+            "next_state_after_qte_failure": "death_by_door_crush"
+          }
+        }
+      },
+        "falling_sign_qte": {
+          "description": "The vibration from your forceful escape travels up the building's facade. High above, you hear a sickening series of SNAPS.\n\nThe massive hospital sign, its supports already weakened by the MRI incident, breaks free and plummets directly toward you!",
+          "triggers_qte_on_entry": {
+            "qte_type": "timed_choice",
+            "duration": 4,
+            "qte_context": {
+              "ui_prompt_message": "THE SIGN IS FALLING! Where do you go?! Type 'DIVE' (into street), 'BACK' (toward door), or 'SIDESTEP'!",
+              "choices": ["dive", "back", "sidestep"],
+              "input_to_next_state": {
+                "dive": "dodge_success_dive",
+                "back": "dodge_success_back",
+                "sidestep": "safe_exit_ending"
+              },
+            "failure_message_wrong_input": "You hesitate, a fatal mistake. The sign crushes you against the pavement.",
+            "next_state_after_qte_failure": "death_by_sign_crush"
+          }
+        }
+      },
+      "dodge_success_dive": {
+        "description": "You dive headlong into the street as the sign obliterates the sidewalk behind you.\nYou look up when you hear the deafening blare of a horn and the screech of tires as an ambulance, speeding toward the ER, bears down on you!",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "ambulance_qte"
+      },
+      "dodge_success_back": {
+        "description": "The sign crashes down where you just were and an ambulance, barreling towards the ER, drives over the spot you would have landed on if you jumped forward!\nThe impact and metal debris sends a violent shudder through the revolving door and shatters the glass panels. The motor shrieks and it begins to spin at an impossible speed, turning the door into a human-sized blender you're about to fall into!",
+        "pause_for_player_acknowledgement": true,
+        "chance_to_progress": 1,
+        "next_state": "spinning_blades_qte"
+      },
+      "ambulance_qte": {
+        "description": "The ambulance is seconds from impact!",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 6,
+          "qte_context": {
+            "ui_prompt_message": "AMBULANCE! Type 'roll' to get out of the way!",
+            "valid_responses": ["roll", "jump", "scramble"],
+            "success_message": "You roll out of the way just as the ambulance screams past, its tires missing your head by inches!",
+            "failure_message_wrong_input": "There's no time. The front grille of the ambulance is the last thing you see.",
+            "next_state_after_qte_success": "blast_wave_ending",
+            "next_state_after_qte_failure": "death_by_ambulance"
+          }
+        }
+      },
+      "spinning_blades_qte": {
+        "description": "The revolving door has become a spinning blender of glass and steel!",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 6,
+          "qte_context": {
+            "ui_prompt_message": "BLENDER DOOR! Type 'jump' to leap away from the entrance!",
+            "valid_responses": ["jump", "leap", "scramble"],
+            "success_message": "You throw yourself away from the entrance as a piece of the door breaks off and flies past you!",
+            "failure_message_wrong_input": "You move back too slowly. The spinning frame catches your leg and pulls you in.",
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "narrow_escape_ending",
+            "next_state_after_qte_failure": "death_by_blades"
+          }
+        }
+      },
+      "safe_exit_ending": {
+        "description": "You sidestep along the building wall; the sign crashes down where you just were and an ambulance recklessly barrels over the spot you would have landed if you jumped forward!\nDebris from the sign lodges in the door and mangles the frame as it grounds to a halt. You are shaken as hell, but alive. \n\nSuck on that, Death, you Fuck!",
+        "on_state_entry_special_action": "trigger_level_transition",
+        "is_terminal_state": true,
+        "on_state_entry_rewards": { "achievements_to_unlock": ["level_headed_escape"], "score_bonus": 75 }
+      },
+      "narrow_escape_ending": {
+        "description": "You scramble away from the horrifyingly fast revolving door as it continues to spin itself into a frenzy.\n\nOne door panel jams and breaks loose from the base as the remaining three panels make one final grinding revolution, slamming into it one at a time with a 'WHAM!-WHAM!-WHAM!' like a book made of metal and glass coming to a violent close.\n\nWith an address, a key, and a purpose, you are safe. For now.",
+        "on_state_entry_special_action": "trigger_level_transition",
+        "is_terminal_state": true,
+        "on_state_entry_rewards": { "achievements_to_unlock": ["out_of_the_blender"], "score_bonus": 60 }
+      },
+      "blast_wave_ending": {
+        "description": "You lie panting on the asphalt, the smell of diesel fumes filling your lungs. You survived. The sign is rubble, the door is silent, and you are alive. You've made it out.",
+        "on_state_entry_special_action": "trigger_level_transition",
+        "is_terminal_state": true,
+        "on_state_entry_rewards": { "achievements_to_unlock": ["road_hazard"], "score_bonus": 60 }
+      },
+      "death_by_door_crush": {
+        "description": "You can't force the door. The mechanism grinds and whirs, grinding inexorably as the compartment you are in begins to compress.\n\nThe glass cracks as the panels slowly compress your body, then shatters outward as the metal frame crushes you.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Crushed to death inside a malfunctioning revolving door."
+      },
+      "death_by_sign_crush": {
+        "description": "Your hesitation is fatal. The massive sign crashes down with the force of a guillotine, ending your story in a final, brutal impact.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Crushed by the falling hospital sign."
+      },
+      "death_by_ambulance": {
+        "description": "There's no time to escape. Your successful dodge from one fate only served to deliver you directly to another. The front grille of the ambulance is the last thing you ever see - lucky for you, you already know where the morgue is.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Struck and killed by a speeding ambulance after dodging a falling sign."
+      },
+      "death_by_blades": {
+        "description": "You overestimate your ability to correct your balance, so you try to lean away from the door. A warped metal edge catches your leg and drags you into the vortex.\nIt is a messy, mechanical, and mercifully brief end.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Shredded by a haywire revolving door after dodging a falling sign."
+      }
+    }
+  },
+
+  "gas_leak": {
+    "name": "Gas Leak",
+    "initial_state": "faint_smell",
+    "level_id": "all",
+    "max_aggression": 3,
+    "aggression_per_turn_increase": 0.05,
+    "progress_while_offscreen": true,
+    "can_move_between_rooms": false,
+    "placement_object": [
+      "gas pipe", "stove knob", "furnace valve", "gas meter", "pipe junction",
+      "damaged wall section", "ruptured pipe fitting", "cracked gas meter", "loose pipe junction", "deteriorated valve", "corroded connection"
+    ],
+    "object_name_options": [
+      "corroded gas pipe", "loose stove knob", "faulty furnace valve", "damaged gas meter", "leaking pipe junction",
+      "a ruptured gas line in the wall", "a cracked section of the wall hissing faintly", "fractured piping behind the wall"
+    ],
+    "player_interaction": {
+      "examine": [
+        {
+          "chance_to_trigger": 0.15,
+          "target_state": "hissing_leak",
+          "message": "You investigate the {object_name}. The smell of gas intensifies, and you hear a faint hiss.",
+          "sets_interaction_flag": "gas_leak_examined"
+        }
+      ],
+      "use": [
+        {
+          "required_item_type": "tool",
+          "required_item_name": "wrench",
+          "target_state": "sealed_leak",
+          "success_chance": 0.8,
+          "message_success": "You manage to tighten the {object_name}, and the hissing stops. The smell of gas lessens.",
+          "message_failure": "The wrench slips! The valve is too corroded to turn properly.",
+          "failure_escalation": "moderate_leak"
+        },
+        {
+          "required_item_type": "tool",
+          "required_item_name": "duct_tape",
+          "target_state": "temporarily_patched",
+          "success_chance": 0.6,
+          "message_success": "You wrap duct tape around the leak. It's a temporary fix, but the hissing stops.",
+          "message_failure": "The tape won't stick properly to the gas-slicked surface!"
+        },
+        {
+          "required_item_subtype": "ignition_source",
+          "target_state": "ignited",
+          "success_chance": 0.95,
+          "message_success": "You flick the lighter near the {object_name}. The gas ignites with a terrifying WHOOSH!",
+          "message_failure": "You try to ignite the gas, but the lighter sputters out. The leak continues."
+        }
+      ],
+      "force": [
+        {
+          "target_state": "ruptured_pipe",
+          "message": "You attempt to force the valve, but it snaps! Gas begins pouring out rapidly!",
+          "always_triggers": true
+        }
+      ],
+      "wall_damage": [
+        {
+          "target_state": "damaged_wall",
+          "message": "A violent impact or explosion has damaged the wall! You hear a new hiss as gas escapes from fractured piping."
+        }
+      ]
+    },
+    "hazard_interaction": {
+      "faulty_wiring": {
+        "trigger_conditions": ["arcing", "sparking"],
+        "reaction": "ignite_gas",
+        "target_state": "ignited",
+        "message": "A spark from the faulty wiring ignites the accumulated gas!"
+      },
+      "spreading_fire": {
+        "trigger_conditions": ["burning_low", "burning_high"],
+        "reaction": "explosive_ignition",
+        "target_state": "explosive_ignition",
+        "message": "The fire reaches the gas leak with catastrophic results!"
+      },
+      "wall_collapse": {
+        "trigger_conditions": ["collapse", "impact", "explosion"],
+        "reaction": "cause_gas_leak",
+        "target_state": "damaged_wall",
+        "message": "The collapsing wall ruptures a hidden gas line, starting a new leak!"
+      }
+    },
+    "states": {
+      "faint_smell": {
+        "description": "There's a faint, sweet smell of gas near the {object_name} on the {support_object}.",
+        "environmental_effect": { "gas_level": 1 },
+        "chance_to_progress": 0.15,
+        "next_state": "hissing_leak",
+        "duration_in_state": 8
+      },
+      "hissing_leak": {
+        "description": "A steady hiss comes from the {object_name} on the {support_object}, and the smell of gas is stronger.",
+        "environmental_effect": { "gas_level": 1, "noise_level": 1 },
+        "chance_to_progress": 0.2,
+        "next_state": "moderate_leak",
+        "duration_in_state": 6
+      },
+      "damaged_wall": {
+        "description": "A section of wall is cracked and leaking gas! The hiss is loud and the air smells strongly of mercaptan.",
+        "environmental_effect": { "gas_level": 2, "noise_level": 2 },
+        "chance_to_progress": 0.3,
+        "next_state": "critical_accumulation",
+        "duration_in_state": 3
+      },
+      "moderate_leak": {
+        "description": "Gas hisses loudly from the {object_name} on the {support_object}. The air shimmers slightly with vapors.",
+        "environmental_effect": { "gas_level": 2, "noise_level": 2, "visibility": "hazy" },
+        "chance_to_progress": 0.25,
+        "next_state": "heavy_leak",
+        "duration_in_state": 5
+      },
+      "heavy_leak": {
+        "description": "The smell of gas from the {object_name} on the {support_object} is overpowering. The air feels thick and dangerous.",
+        "environmental_effect": { "gas_level": 3, "noise_level": 2, "visibility": "hazy" },
+        "chance_to_progress": 0.3,
+        "next_state": "critical_accumulation",
+        "duration_in_state": 4
+      },
+      "critical_accumulation": {
+        "description": "Gas pours from the {object_name} on the {support_object} in a visible stream. The air is dangerously saturated.",
+        "environmental_effect": { "gas_level": 4, "noise_level": 3, "visibility": "dense_haze" },
+        "chance_to_progress": 0.4,
+        "next_state": "imminent_explosion",
+        "duration_in_state": 3
+      },
+      "imminent_explosion": {
+        "description": "The {object_name} on the {support_object} screams with escaping gas. The air is a deadly cocktail waiting for ignition.",
+        "environmental_effect": { "gas_level": 5, "noise_level": 4, "visibility": "very_hazy" },
+        "chance_to_progress": 1,
+        "next_state": "explosive_ignition",
+        "duration_in_state": 2,
+        "triggers_qte_on_entry": {
+          "qte_type": "sequence_input",
+          "duration": 5,
+          "qte_context": {
+            "ui_prompt_message": "Type 'EVACUATE' to flee the ROOM before the gas explodes!",
+            "expected_input_word": "evacuate",
+            "success_message": "You escape just in time!",
+            "failure_message": "You're too slow! The explosion catches you!",
+            "hp_damage_on_failure": 25,
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "post_explosion_safe",
+            "next_state_after_qte_failure": "explosive_ignition"
+          }
+        }
+      },
+      "ignited": {
+        "description": "The leaking gas from the {object_name} on the {support_object} ignites with a terrifying WHOOSH!",
+        "instant_death_in_room": true,
+        "death_message": "The room erupts in a fireball as the gas ignites! You're instantly incinerated.",
+        "environmental_effect": { "is_on_fire": true, "gas_level": 0, "noise_level": "+5", "visibility": "dense_smoke" },
+        "sets_room_on_fire": true
+      },
+      "explosive_ignition": {
+        "description": "The accumulated gas explodes in a devastating fireball that rocks the entire building!",
+        "instant_death_in_room": true,
+        "death_message": "The gas explosion tears through the room with the force of a bomb! You're vaporized instantly.",
+        "environmental_effect": { "is_on_fire": true, "gas_level": 0, "noise_level": "+10", "visibility": "blinding" },
+        "sets_room_on_fire": true
+      },
+      "post_explosion_safe": {
+        "description": "The area where the {object_name} was located is now a blackened, destroyed mess.",
+        "environmental_effect": { "gas_level": 0, "is_on_fire": false, "visibility": "smoky" }
+      },
+      "temporarily_patched": {
+        "description": "The {object_name} on the {support_object} is wrapped in duct tape, temporarily stopping the leak.",
+        "environmental_effect": { "gas_level": 0 },
+        "chance_to_progress": 0.1,
+        "next_state": "patch_failing",
+        "duration_in_state": 10
+      },
+      "patch_failing": {
+        "description": "The duct tape on the {object_name} is starting to peel away. Gas begins to seep out again.",
+        "environmental_effect": { "gas_level": 1 },
+        "chance_to_progress": 0.3,
+        "next_state": "moderate_leak"
+      },
+      "sealed_leak": {
+        "description": "The {object_name} on the {support_object} appears to be properly sealed. The smell of gas is fading.",
+        "environmental_effect": { "gas_level": 0 },
+        "chance_to_progress": 0.05,
+        "next_state": "new_leak_developing"
+      },
+      "new_leak_developing": {
+        "description": "Despite your repairs, a new leak has developed in the {object_name} on the {support_object}.",
+        "environmental_effect": { "gas_level": 1 },
+        "chance_to_progress": 0.2,
+        "next_state": "faint_smell"
+      },
+      "ruptured_pipe": {
+        "description": "The {object_name} on the {support_object} is completely ruptured, spewing gas into the air!",
+        "environmental_effect": { "gas_level": 4, "noise_level": "+4" },
+        "chance_to_progress": 0.5,
+        "next_state": "critical_accumulation",
+        "duration_in_state": 2
+      }
+    },
+    "removal_message": "The {object_name} has been permanently sealed or destroyed."
+  },
+  "robo_vacuum": {
+    "name": "Robo-Vacuum",
+    "level_id": "all",
+    "initial_state": "docked",
+    "can_move_between_rooms": true,
+    "progress_while_offscreen": true,
+    "spawn_entities": [
+      "robot vacuum",
+      "charging dock"
+    ],
+    "placement_object": ["charging dock", "corner alcove", "wall mount", "storage shelf"],
+    "object_name_options": [
+      "erratic robot vacuum", "rogue Doomba", "malfunctioning Roomba"
+    ],
+    "movement_logic": "seek_target_type_then_player",
+    "seekable_target_types": [
+      "gas_leak", "damaged_wall_gas_leak", "water_puddle", "electrical_appliance"
+    ],
+    "player_seek_chance_if_no_primary_target": 0.2,
+    "states": {
+      "docked": {
+      "description": "A {object_name} sits quietly on its charging dock.",
+      "chance_to_progress": 0.12,
+      "next_state": "patrolling"
+      },
+      "patrolling": {
+      "description": "The {object_name} hums as it navigates the area.",
+      "chance_to_progress": 0.08,
+      "next_state": "sparking_malfunction"
+      },
+      "sparking_malfunction": {
+      "description": "The {object_name} emits sparks and moves erratically.",
+      "chance_to_progress": 0.3,
+      "next_state": "berserker_mode"
+      },
+      "player_detected": {
+      "description": "The {object_name} has locked onto you!",
+      "chance_to_progress": 0.4,
+      "next_state": "berserker_mode"
+      },
+      "damaged_aggressive": {
+      "description": "Your kick has damaged the {object_name}! Now it's angry, moving aggressively with sparks flying!",
+      "chance_to_progress": 0.4,
+      "next_state": "berserker_mode"
+      },
+      "berserker_mode": {
+      "description": "The {object_name} is in berserker mode, moving with predatory intent!",
+      "chance_to_progress": 0.2,
+      "next_state": "overheating_shutdown_qte"
+      },
+      "overheating_shutdown_qte": {
+      "description": "The {object_name} is overheating! It's about to shut down or explode!",
+      "triggers_qte_on_entry": {
+        "qte_type": "button_mash",
+        "duration": 4,
+        "qte_context": {
+        "ui_mode": "in-screen",
+        "ui_prompt_message": "THE VACUUM IS OVERHEATING! Mash keys to cool it down or take cover!",
+        "target_mash_count": 20,
+        "success_message": "You manage to cool it down just in time!",
+        "failure_message": "It explodes in a shower of sparks! You are hit by flying debris!",
+        "hp_damage_on_failure": 15,
+        "next_state_after_qte_success": "powered_down_safe",
+        "next_state_after_qte_failure": "explosive_destruction"
+        }
+      },
+      "on_state_entry_apply_damage": 0,
+      "terminal_if_player_dead": true
+      },
+      "defensive_spin_qte": {
+      "description": "The {object_name} spins its brushes at high speed, trying to defend itself!",
+      "triggers_qte_on_entry": {
+        "qte_type": "input",
+        "duration": 10,
+        "qte_context": {
+        "ui_mode": "in-screen",
+        "ui_prompt_message": "The vacuum spins up! Type 'grab' to snatch it safely!",
+        "expected_input_word": "grab",
+        "success_message": "You grab the vacuum and power it down.",
+        "failure_message": "The spinning brush whacks your hand painfully!",
+        "hp_damage_on_failure": 5,
+        "next_state_after_qte_success": "powered_down_safe",
+        "next_state_after_qte_failure": "damaged_aggressive"
+        }
+      },
+      "on_state_entry_apply_damage": 0,
+      "terminal_if_player_dead": true
+      },
+      "ignition_cascade_qte": {
+      "description": "The {object_name} sparks near a gas leak! The air is about to ignite!",
+      "triggers_qte_on_entry": {
+        "qte_type": "input",
+        "duration": 5,
+        "qte_context": {
+        "ui_mode": "in-screen",
+        "ui_prompt_message": "GAS IGNITION! Type 'dive' to escape the blast!",
+        "expected_input_word": "dive",
+        "success_message": "You dive away as the gas ignites behind you!",
+        "failure_message": "The gas explodes, engulfing you in flames! You are badly burned!",
+        "hp_damage_on_failure": 30,
+        "next_state_after_qte_success": "explosive_destruction",
+        "next_state_after_qte_failure": "death_by_gas_explosion"
+        }
+      },
+      "on_state_entry_apply_damage": 0,
+      "terminal_if_player_dead": true
+      },
+      "explosive_destruction": {
+      "description": "The {object_name} explodes, sending debris everywhere.",
+      "is_terminal_state": false,
+      "death_message": "Killed by a robot vacuum explosion.",
+      "despawn_hazard_entities_on_entry": true,
+      "item_to_spawn_on_entry": "broken_vacuum_parts",
+      "on_state_entry_apply_damage": 25,
+      "terminal_if_player_dead": true
+      },
+      "powered_down_safe": {
+      "description": "You safely powered down the {object_name}.",
+      "is_terminal_state": false,
+      "on_state_entry_rewards": {
+        "achievements_to_unlock": ["vacuum_wrestler"],
+        "score_bonus": 25
+      },
+      "despawn_hazard_entities_on_entry": true,
+      "item_to_spawn_on_entry": "robot_vacuum_item"
+      },
+      "death_by_gas_explosion": {
+      "description": "The gas ignites with a deafening roar. You are caught in the explosion.",
+      "is_terminal_state": true,
+      "death_message": "Killed in a gas explosion triggered by a malfunctioning robot vacuum."
+      }
+    },
+    "collision_effects": {
+      "player": {
+        "chance": 0.25,
+        "effect": "trip_and_entangle",
+        "status_effect": {
+          "name": "entangled",
+          "duration": 2,
+          "movement_penalty": true
+        },
+        "message": "The {object_name} tangles you up!"
+      },
+      "water_puddle": {
+        "chance": 0.8,
+        "effect": "short_circuit",
+        "target_state": "sparking_malfunction",
+        "message": "The {object_name} drives into a puddle and starts sparking!"
+      },
+      "gas_leak": {
+        "chance": 0.7,
+        "effect": "ignite_gas",
+        "target_state": "ignition_cascade_qte",
+        "message": "The {object_name} ignites the leaking gas!"
+      },
+      "damaged_wall_gas_leak": {
+        "chance": 0.7,
+        "effect": "ignite_gas",
+        "target_state": "ignition_cascade_qte",
+        "message": "The {object_name} sparks near a damaged gas line!"
+      }
+    },
+    "player_interaction": {
+      "examine": [
+        {
+          "requires_hazard_state": ["docked"],
+          "on_target_name": ["robot vacuum", "charging dock"], 
+          "message": "The robot vacuum sits quietly on its charging dock."
+        },
+        {
+          "requires_hazard_state": ["patrolling", "sparking_malfunction"],
+          "on_target_name": ["robot vacuum"],
+          "message": "The robot vacuum emits sparks and moves erratically."
+        },
+        {
+          "requires_hazard_state": ["player_detected"],
+          "on_target_name": ["robot vacuum"],
+          "message": "The robot vacuum has locked onto you!"
+        }
+      ],
+      "kick": [
+        {
+          "requires_hazard_state": ["patrolling", "sparking_malfunction"],
+          "chance_to_trigger": 0.7,
+          "target_state": "damaged_aggressive",
+          "message": "You kick the {object_name}! It becomes aggressive!"
+        }
+      ],
+      "take": [
+        {
+          "requires_hazard_state": ["docked", "patrolling"],
+          "chance_to_trigger": 0.4,
+          "target_state": "defensive_spin_qte",
+          "message": "As you try to pick up the {object_name}, it spins its brushes defensively!"
+        }
+      ],
+      "unplug": [
+        {
+          "requires_hazard_state": ["docked"],
+          "chance_to_trigger": 1,
+          "target_state": "powered_down_safe",
+          "message": "You unplug the {object_name}. It powers down safely."
+        }
+      ]
+    }
+  },
+  "elevator_freefall": {
+    "name": "Elevator Freefall",
+    "initial_state": "idle",
+    "progress_while_offscreen": false,
+    "placement_object": ["elevator", "elevator_call_panel"],
+    "object_name_options": ["hospital elevator"],
+    "states": {
+      "idle": {
+        "description": "The elevator hums quietly. It seems safe... for now."
+      },
+      "moving": {
+        "description": "The elevator starts moving. A faint rattle creeps into the cabin.",
+        "chance_to_progress": 0.25,
+        "next_state": "shaking"
+      },
+      "shaking": {
+        "description": "The elevator lurches violently! Cables groan above.",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 3.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "ELEVATOR JERK! Type 'brace'!",
+            "expected_input_word": "brace",
+            "success_message": "You brace and stay on your feet.",
+            "failure_message": "You slam into the wall painfully!",
+            "hp_damage_on_failure": 5,
+            "next_state_after_qte_success": "moving",
+            "next_state_after_qte_failure": "moving"
+          }
+        },
+        "chance_to_progress": 0.20,
+        "next_state": "cable_snap_qte"
+      },
+      "cable_snap_qte": {
+        "description": "A horrific SNAP echoes above. The elevator drops!",
+        "triggers_qte_on_entry": {
+          "qte_type": "button_mash",
+          "duration": 4.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "CABLE SNAP! Mash to hit the emergency stop!",
+            "target_mash_count": 22,
+            "success_message": "You slam the emergency stop—grinding brakes bite!",
+            "failure_message": "The car keeps plunging!",
+            "next_state_after_qte_success": "emergency_brake_catches",
+            "next_state_after_qte_failure": "plunge"
+          }
+        }
+      },
+      "emergency_brake_catches": {
+        "description": "Sparks shower the shaft as the brakes howl. The car shudders to a stop.",
+        "is_terminal_state": true
+      },
+      "plunge": {
+        "description": "The elevator screams downward at breakneck speed!",
+        "chance_to_progress": 1.0,
+        "next_state": "impact",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 2.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "PLUNGING! Type 'jump' at the last moment!",
+            "expected_input_word": "jump",
+            "success_message": "Your knees bend on impact—painful, but you live.",
+            "failure_message": "You crumple as the floor slams up into you!",
+            "hp_damage_on_failure": 999,
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "hard_landing_survival",
+            "next_state_after_qte_failure": "impact"
+          }
+        }
+      },
+      "hard_landing_survival": {
+        "description": "Bruised and shaking, you pry the doors open. You're alive.",
+        "is_terminal_state": true
+      },
+      "impact": {
+        "description": "With a deafening crash, the car slams into the pit.",
+        "instant_death_in_room": true,
+        "death_message": "Killed in an elevator crash.",
+        "is_terminal_state": true
+      }
+    },
+    "player_interaction": {
+      "enter": [
+        {
+          "on_target_name": ["elevator", "elevator car", "revolving door"], 
+          "requires_hazard_state": ["idle"],
+          "message": "You step into the elevator.",
+          "no_state_change": true
+        }
+      ],
+      "move": [
+        {
+          "on_target_name": ["up", "down"],
+          "requires_hazard_state": ["idle", "moving"],
+          "message": "You press the floor button.",
+          "effect_on_self": { "target_state": "moving" }
+        }
+      ]
+    }
+  },
+  "wrecking_ball": {
+    "name": "Wrecking Ball",
+    "progress_while_offscreen": false,
+    "initial_state": "swinging_for_qte",
+    "states": {
+      "swinging_for_qte": {
+        "description": "As you step toward the street, a shadow detaches from a construction crane parked across the way. A massive wrecking ball swings silently and directly towards you!",
+        "triggers_qte_on_entry": {
+          "qte_type": "input",
+          "duration": 5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "A WRECKING BALL IS HURTLING TOWARDS YOU! 'DODGE' TO SIDESTEP OR 'DIVE' FOR A MORE DESPERATE LEAP!",
+            "expected_input_word": "dodge",
+            "alternative_input": "dive",
+            "input_type": "word",
+            "success_message": "You lunge aside, the wind from the passing wrecking ball tearing at your clothes! It smashes through the porch where you were standing, sending splinters everywhere...",
+            "alternative_success_message": "With a desperate, sprawling dive, you hit the dirt hard as the wrecking ball screams through the space your head occupied moments before! It obliterates the porch with a deafening CRUNCH.",
+            "hp_damage_on_failure": 200,
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "return_swing_warning",
+            "next_state_after_alternative_success": "miraculous_escape_positioning",
+            "next_state_after_qte_failure": "obliterated_by_first_swing",
+            "failure_message_wrong_input": "You freeze for a fraction of a second too long. The wrecking ball connects with a sickening, final thud, turning you into little more than a red stain on its grim surface."
+          }
+        }
+      },
+      "return_swing_warning": {
+        "description": "The massive wrecking ball, having demolished the house's facade, reaches the apex of its swing. The chain groans as it reverses direction, racing back towards you with terrifying speed!",
+        "environmental_effect": {
+          "noise_level": "+4"
+        },
+        "duration_in_state": 1.5,
+        "chance_to_progress": 1,
+        "next_state": "return_swing_qte",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "return_swing_qte": {
+        "description": "The wrecking ball hurtles back toward you with unstoppable momentum!",
+        "triggers_qte_on_entry": {
+          "qte_type": "dodge_wrecking_ball",
+          "duration": 5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "THE BALL IS SWINGING BACK! DODGE AGAIN!",
+            "expected_input_word": "dodge",
+            "input_type": "word",
+            "success_message": "You scramble backwards as the wrecking ball whooshes past, missing you by inches! The impact has severely damaged the front of the house...",
+            "next_state_after_qte_success": "falling_facade_qte",
+            "next_state_after_qte_failure": "impact_return_swing_death",
+            "failure_message_wrong_input": "You can't escape the return arc. The wrecking ball catches you as you try to stand, and all you see is darkness."
+          }
+        }
+      },
+      "falling_facade_qte": {
+        "description": "You survived the ball, but the impacts have shattered the house's structural integrity. A heavy decorative gutter, torn loose from the roof, plummets down directly towards you!",
+        "triggers_qte_on_entry": {
+          "qte_type": "dodge_projectile",
+          "duration": 5.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "DEBRIS FALLING! JUMP BACK!",
+            "expected_input_word": "jump",
+            "input_type": "word",
+            "success_message": "You leap back as the iron gutter impales the ground where you stood. The area is finally silent.",
+            "next_state_after_qte_success": "level_complete_survival",
+            "next_state_after_qte_failure": "death_by_falling_debris",
+            "failure_message_wrong_input": "You look up just in time to see the jagged piece of iron fill your vision."
+          }
+        }
+      },
+      "miraculous_escape_positioning": {
+        "description": "Your desperate dive took you further away from the house, giving you a precious extra second. As the wrecking ball completes its return swing, you hear a high-pitched SCREECH of tortured metal from the crane itself!",
+        "duration_in_state": 2,
+        "chance_to_progress": 1,
+        "next_state": "cable_snap_qte",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "cable_snap_qte": {
+        "description": "The main cable holding the ball begins to smoke and unravel with a series of sharp, whip-like cracks! The entire wrecking ball is about to plummet to the ground!",
+        "triggers_qte_on_entry": {
+          "qte_type": "sprint_to_safety",
+          "duration": 2.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "THE CABLE IS BREAKING! Type 'run' to sprint to safety!",
+            "expected_input_word": "run",
+            "input_type": "word",
+            "success_message": "You sprint away just as the cable snaps completely! The wrecking ball crashes to the ground behind you with earth-shaking force. You've escaped.",
+            "next_state_after_qte_success": "level_complete_survival",
+            "next_state_after_qte_failure": "death_by_falling_ball",
+            "failure_message_wrong_input": "You hesitate, misjudging the danger. The falling wrecking ball finds its mark after all."
+          }
+        }
+      },
+      "impact_floor_break": {
+        "description": "Your combined weight is too much for the rotted porch! With a sharp crack, the floorboards give way and you stumble into the space beneath. As you look up, dazed, you see the massive wrecking ball swing silently through the space you just occupied... directly into you.",
+        "instant_death_in_room": true,
+        "death_message": "The collapsing porch didn't kill you, but it put you right in Death's path. The wrecking ball finishes the job.",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "level_complete_survival": {
+        "description": "You stand panting, adrenaline coursing through you, amid the wreckage of Bludworth's porch. The crane operator, horrified, quickly secures the crane and drives away before anyone can ask questions. You're alive... and you have a new destination in mind.",
+        "is_terminal_state": true,
+        "on_state_entry_special_action": "win_game_and_unlock_level_3",
+        "achievement_unlock": "wrecking_ball_survivor",
+        "score_bonus": 75,
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "obliterated_by_first_swing": {
+        "description": "Your hesitation was fatal. The world dissolves into a symphony of crushing force and blinding pain.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Obliterated by the initial swing of the wrecking ball.",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "impact_return_swing_death": {
+        "description": "The return swing was faster, more brutal. You couldn't react in time.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "You cheated death for a second, but it always comes back around. The returning wrecking ball obliterates you.",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "death_by_falling_debris": {
+        "description": "After all that, it wasn't the ball that got you. A jagged piece of the house's own facade, shaken loose by the chaos, plummets down and ends your story with an abrupt, brutal impact.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Killed by falling debris after surviving the wrecking ball.",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      },
+      "death_by_falling_ball": {
+        "description": "The massive wrecking ball plummets from the broken crane, crushing you beneath its tremendous weight. So close to escape, yet Death found a way.",
+        "is_terminal_state": true,
+        "instant_death_in_room": true,
+        "death_message": "Crushed by a falling wrecking ball after the crane cable snapped.",
+        "triggers_qte_on_entry": {
+          "qte_context": {}
+        }
+      }
+    }
+  },
+  "faulty_generator": {
+    "name": "Faulty Generator",
+    "initial_state": "flickering",
+    "progress_while_offscreen": false,
+    "placement_object": ["generator", "electrical box"],
+    "object_name_options": ["carnival generator", "power generator"],
+    "player_interaction": {
+      "examine": [
+        {
+          "message": "The portable generator powers several game stalls. It's making an irregular thumping sound, and the lights connected to it flicker ominously."
+        }
+      ],
+      "use": [
+        {
+          "chance_to_trigger": 0.8,
+          "target_state": "repair_attempt_qte",
+          "message": "You approach the malfunctioning generator, wondering if you can fix it before it causes problems."
+        }
+      ],
+      "fix": [
+        {
+          "chance_to_trigger": 1.0,
+          "target_state": "repair_attempt_qte",
+          "message": "You decide to try fixing the sputtering generator before it gets worse."
+        }
+      ]
+    },
+    "states": {
+      "flickering": {
+        "description": "The generator sputters, causing the lights on the game to flicker.",
+        "chance_to_progress": 0.2,
+        "next_state": "sparking_intermittently"
+      },
+      "repair_attempt_qte": {
+        "description": "You kneel beside the generator and open its access panel. Inside, you see exposed wires and a smoking capacitor. This needs immediate attention!",
+        "triggers_qte_on_entry": {
+          "qte_type": "sequence_input_qte",
+          "duration": 6.0,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "The generator needs urgent repair! Type 'disconnect' to cut power or 'bypass' to attempt a quick fix!",
+            "expected_input_word": "disconnect",
+            "alternative_input": "bypass",
+            "input_type": "word",
+            "success_message": "You quickly disconnect the main power line, shutting down the generator safely before it can short circuit completely.",
+            "alternative_success_message": "You attempt to bypass the damaged capacitor, but your actions cause an immediate power surge!",
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "safely_disabled",
+            "next_state_after_alternative_success": "major_short_circuit",
+            "next_state_after_qte_failure": "sparking_intermittently",
+            "failure_message_wrong_input": "Your hesitation allows the generator to deteriorate further!"
+          }
+        }
+      },
+      "sparking_intermittently": {
+        "description": "The generator now emits occasional, sharp zaps of electricity. The situation is worsening rapidly.",
+        "environmental_effect": {
+          "is_sparking": true
+        },
+        "chance_to_progress": 0.2,
+        "next_state": "major_short_circuit"
+      },
+      "major_short_circuit": {
+        "description": "With a loud POP, the generator shorts out completely, sending a powerful electrical charge down its main cable!",
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "electrified_fence",
+            "chance": 1,
+            "target_state": "live_and_arcing",
+            "message": "The electrical surge travels down the cable and into the wet ground, energizing the nearby metal fence in the Livestock Pavilion!"
+          }
+        ],
+        "is_terminal_state": true
+      },
+      "safely_disabled": {
+        "description": "The generator sits quietly, its power cut off. You've prevented what could have been a dangerous chain reaction.",
+        "is_terminal_state": true,
+        "achievement_unlock": "circuit_breaker",
+        "score_bonus": 25
+      }
+    }
+  },
+  "electrified_fence": {
+    "name": "Electrified Fence",
+    "initial_state": "inert",
+    "progress_while_offscreen": false,
+    "placement_object": ["metal fence", "bull pen"],
+    "object_name_options": ["metal fence", "livestock enclosure"],
+    "player_interaction": {
+      "examine": [
+        {
+          "message": "A sturdy metal fence surrounds the bull pen. It's currently safe to touch."
+        },
+        {
+          "requires_hazard_state": ["live_and_arcing"],
+          "message": "The metal fence crackles with electricity, blue arcs jumping between the metal bars! Anyone touching it would be severely shocked!"
+        }
+      ]
+    },
+    "states": {
+      "inert": {
+        "description": "A normal metal fence surrounds the prize bull's enclosure."
+      },
+      "live_and_arcing": {
+        "description": "The metal fence is now live, electricity arcing dangerously where it touches the damp ground.",
+        "environmental_effect": {
+          "is_electrified": true,
+          "is_sparking": true
+        },
+        "hazard_interaction": {
+          "prize_bull": {
+            "chance": 1,
+            "target_state": "panicked",
+            "message": "The live current shocks the prize bull! The massive animal bellows in pain and rage!"
+          }
+        },
+        "triggers_qte_on_entry": {
+          "qte_type": "reaction_key",
+          "duration": 3.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "Electric current jumps toward you! Type 'jump back' to avoid electrocution!",
+            "expected_input_word": "jump back",
+            "input_type": "word",
+            "success_message": "You leap away from the electrified fence just as a blue arc of electricity snaps through the air where you were standing!",
+            "hp_damage_on_failure": 15,
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "sustained_current",
+            "next_state_after_qte_failure": "shocked_but_alive",
+            "failure_message_wrong_input": "A painful electrical shock courses through your body as you touch the electrified metal!"
+          }
+        },
+        "chance_to_progress": 1.0,
+        "next_state": "sustained_current"
+      },
+      "sustained_current": {
+        "description": "The fence continues to pulse with dangerous electricity. The bull inside becomes increasingly agitated.",
+        "environmental_effect": {
+          "is_electrified": true
+        },
+        "is_terminal_state": true
+      },
+      "shocked_but_alive": {
+        "description": "You stumble back from the fence, your muscles spasming from the electrical shock. The fence continues to crackle with energy.",
+        "environmental_effect": {
+          "is_electrified": true
+        },
+        "is_terminal_state": true
+      }
+    }
+  },
+  "prize_bull": {
+    "name": "Prize Bull",
+    "initial_state": "docile",
+    "progress_while_offscreen": false,
+    "placement_object": ["bull", "livestock"],
+    "object_name_options": ["prize bull", "massive bull", "angry bull"],
+    "player_interaction": {
+      "examine": [
+        {
+          "message": "A massive prize bull with gleaming horns. It's currently calm, chewing lazily on hay."
+        },
+        {
+          "requires_hazard_state": ["panicked"],
+          "message": "The bull is now in a frenzy, pawing the ground and looking for anything to charge! Its eyes are wild with fear and rage!"
+        }
+      ]
+    },
+    "states": {
+      "docile": {
+        "description": "The bull chews its cud, occasionally snorting. A blue ribbon hangs on its pen."
+      },
+      "panicked": {
+        "description": "Zapped with electricity, the bull bellows in pain and rage! It charges the fence repeatedly, weakening the structure!",
+        "triggers_qte_on_entry": {
+          "qte_type": "bull_escape_qte",
+          "duration": 4.0,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "The bull is breaking free! Type 'clear path' to move away or 'warn crowd' to alert others!",
+            "expected_input_word": "clear path",
+            "alternative_input": "warn crowd",
+            "input_type": "word",
+            "success_message": "You quickly move out of the charging path as the bull breaks through the damaged fence!",
+            "alternative_success_message": "You shout warnings to the nearby fairgoers, helping them escape the bull's path!",
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "escaped_charging_toward_food_court",
+            "next_state_after_alternative_success": "escaped_people_warned",
+            "next_state_after_qte_failure": "trampled_to_death",
+            "failure_message_wrong_input": "You freeze in panic as the enraged bull breaks free and charges directly at you!"
+          }
+        }
+      },
+      "escaped_charging_toward_food_court": {
+        "description": "The bull has broken free! It charges blindly through the fairgrounds toward the food court, sending people screaming in all directions!",
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "food_stall_structure",
+            "chance": 1.0,
+            "target_state": "bull_impact",
+            "message": "The rampaging bull crashes into the central food stall with devastating force!"
+          }
+        ],
+        "is_terminal_state": true
+      },
+      "escaped_people_warned": {
+        "description": "The bull has broken free, but thanks to your warning, most people have cleared the area! The bull charges toward the food court, with fewer people in its path.",
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "food_stall_structure",
+            "chance": 1.0,
+            "target_state": "bull_impact",
+            "message": "The rampaging bull crashes into the central food stall with devastating force!"
+          }
+        ],
+        "achievement_unlock": "lifesaver",
+        "score_bonus": 20,
+        "is_terminal_state": true
+      },
+      "trampled_to_death": {
+        "description": "The bull's massive body slams into you at full speed. You feel a moment of crushing impact before everything goes black.",
+        "instant_death_in_room": true,
+        "death_message": "Trampled to death by an electrified and enraged prize bull.",
+        "is_terminal_state": true
+      }
+    }
+  },
+  "food_stall_structure": {
+    "name": "Food Stall Structure",
+    "initial_state": "stable",
+    "progress_while_offscreen": false,
+    "placement_object": ["food stall", "concession stand"],
+    "object_name_options": ["food stall", "concession stand"],
+    "player_interaction": {
+      "examine": [
+        {
+          "message": "A large food stall with multiple fryers and propane tanks. It's doing brisk business selling fried carnival foods."
+        },
+        {
+          "requires_hazard_state": ["wobbling"],
+          "message": "The food stall structure is creaking and wobbling alarmingly. It looks like it could collapse at any moment!"
+        }
+      ]
+    },
+    "states": {
+      "stable": {
+        "description": "The food stall seems sturdy enough, busy with customers buying fried treats."
+      },
+      "bull_impact": {
+        "description": "The charging bull slams into one of the support beams of the food stall! The entire structure wobbles precariously!",
+        "chance_to_progress": 1.0,
+        "next_state": "wobbling"
+      },
+      "wobbling": {
+        "description": "The food stall support beams are cracking! Workers and customers flee as the structure begins to tilt!",
+        "triggers_qte_on_entry": {
+          "qte_type": "food_stall_collapse_qte",
+          "duration": 3.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "The stall is collapsing! Type 'dodge debris' to avoid being crushed!",
+            "expected_input_word": "dodge debris",
+            "input_type": "word",
+            "success_message": "You dive clear as the food stall collapses in a shower of wood splinters and metal!",
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "collapsing",
+            "next_state_after_qte_failure": "crushed_by_debris",
+            "failure_message_wrong_input": "You fail to move in time as the heavy structure crashes down!"
+          }
+        }
+      },
+      "collapsing": {
+        "description": "The supports give way and the entire food stall comes crashing down! Deep fryers overturn, spilling their scalding contents!",
+        "on_state_entry_special_action": "_spill_deep_fryers",
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "spilled_hot_oil",
+            "chance": 1.0,
+            "message": "Scalding hot oil from multiple deep fryers cascades across the ground!"
+          }
+        ],
+        "is_terminal_state": true
+      },
+      "crushed_by_debris": {
+        "description": "The heavy food stall structure collapses directly onto you, crushing you beneath splintered wood and metal.",
+        "instant_death_in_room": true,
+        "death_message": "Crushed beneath a collapsing food stall after a bull rampage.",
+        "is_terminal_state": true
+      }
+    }
+  },
+  "spilled_hot_oil": {
+    "name": "Spilled Hot Oil",
+    "initial_state": "spreading",
+    "progress_while_offscreen": false,
+    "placement_object": ["ground", "floor"],
+    "object_name_options": ["pool of hot oil", "spilled fryer oil"],
+    "player_interaction": {
+      "examine": [
+        {
+          "message": "Scalding hot oil spreads across the ground from multiple overturned deep fryers. Steam rises from where it touches the cool ground."
+        }
+      ]
+    },
+    "states": {
+      "spreading": {
+        "description": "Screaming hot oil from the deep fryers spreads rapidly across the ground, releasing clouds of burning steam.",
+        "triggers_qte_on_entry": {
+          "qte_type": "hot_oil_dodge_qte",
+          "duration": 2.5,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "Scalding oil rushes toward your feet! Type 'jump back' to avoid severe burns!",
+            "expected_input_word": "jump back",
+            "input_type": "word",
+            "success_message": "You leap onto a nearby bench just as the wave of hot oil passes beneath you!",
+            "hp_damage_on_failure": 20,
+            "is_fatal_on_failure": false,
+            "next_state_after_qte_success": "spreading_toward_propane",
+            "next_state_after_qte_failure": "severe_burns",
+            "failure_message_wrong_input": "The scalding oil washes over your feet and ankles, causing immediate, agonizing burns!"
+          }
+        }
+      },
+      "spreading_toward_propane": {
+        "description": "From your safer position, you watch in horror as the oil flows toward a rack of propane tanks!",
+        "hazard_interaction": {
+          "propane_tanks": {
+            "chance": 1.0,
+            "target_state": "valve_melting",
+            "message": "The searing hot oil reaches the propane tanks, melting the plastic valve fittings!"
+          }
+        },
+        "is_terminal_state": true
+      },
+      "severe_burns": {
+        "description": "You howl in pain as the oil burns your skin! Through tear-filled eyes, you see the oil continuing to spread toward a rack of propane tanks!",
+        "hazard_interaction": {
+          "propane_tanks": {
+            "chance": 1.0,
+            "target_state": "valve_melting",
+            "message": "The searing hot oil reaches the propane tanks, melting the plastic valve fittings!"
+          }
+        },
+        "is_terminal_state": true
+      }
+    }
+  },
+  "propane_tanks": {
+    "name": "Propane Tanks",
+    "initial_state": "stable",
+    "progress_while_offscreen": false,
+    "placement_object": ["gas tanks", "propane cylinders"],
+    "object_name_options": ["propane tanks", "gas cylinders"],
+    "player_interaction": {
+      "examine": [
+        {
+          "message": "Several large propane tanks sit ready for the grills. They're securely stored in a metal rack."
+        },
+        {
+          "requires_hazard_state": ["valve_melting"],
+          "message": "The propane tanks' valve fittings are melting in the hot oil! Gas is beginning to hiss and escape!"
+        }
+      ]
+    },
+    "states": {
+      "stable": {
+        "description": "Several large propane tanks sit ready for the grills, safely stored away from heat sources."
+      },
+      "valve_melting": {
+        "description": "The plastic valve fittings on the propane tanks are melting in the hot oil! Gas is beginning to escape with an ominous hiss!",
+        "triggers_qte_on_entry": {
+          "qte_type": "propane_escape_qte",
+          "duration": 4.0,
+          "qte_context": {
+            "ui_mode": "in-screen",
+            "ui_prompt_message": "The propane tanks are about to explode! Type 'run' to flee or 'close valve' to attempt a heroic fix!",
+            "expected_input_word": "run",
+            "alternative_input": "close valve",
+            "input_type": "word",
+            "success_message": "You sprint away from the leaking propane tanks, putting as much distance as possible between you and the inevitable explosion!",
+            "alternative_success_message": "Against all odds, you lunge forward and manage to tighten the main valve, stopping the gas leak!",
+            "hp_damage_on_alternative_success": 10,
+            "is_fatal_on_failure": true,
+            "next_state_after_qte_success": "escaped_explosion",
+            "next_state_after_alternative_success": "heroic_save",
+            "next_state_after_qte_failure": "ignited",
+            "failure_message_wrong_input": "You hesitate too long as the leaking propane finds an ignition source!"
+          }
+        }
+      },
+      "ignited": {
+        "description": "The leaking propane ignites in a massive, fiery explosion that tears the midway apart!",
+        "instant_death_in_room": true,
+        "environmental_effect": {
+          "is_on_fire": true
+        },
+        "death_message": "Killed in a devastating propane tank explosion at the county fair.",
+        "is_terminal_state": true
+      },
+      "escaped_explosion": {
+        "description": "Behind you, the propane tanks detonate in a massive fireball, but you've put enough distance between yourself and the explosion to survive!",
+        "environmental_effect": {
+          "is_on_fire": true
+        },
+        "on_state_entry_apply_damage": 5,
+        "achievement_unlock": "quick_escape_artist",
+        "score_bonus": 35,
+        "is_terminal_state": true
+      },
+      "heroic_save": {
+        "description": "Despite the burns on your hands, you've managed to prevent a catastrophic explosion! The crisis is over, though several fairgoers were injured in the chaos.",
+        "achievement_unlock": "propane_hero",
+        "score_bonus": 50,
+        "is_terminal_state": true
+      }
+    }
+  },
+    "test_your_strength_game": {
+    "name": "Test-Your-Strength Game",
+    "initial_state": "operational",
+    "placement_object": [
+      "Games Area"
+    ],
+    "object_name_options": [
+      "the strength tester",
+      "the high-striker"
+    ],
+    "player_interaction": {
+      "use": [
+        {
+          "message": "You swing the mallet and hit the pad. The puck shoots up and rings the bell. You win a small prize.",
+          "grants_item": "cheap_prize"
+        }
+      ],
+      "force": [
+        {
+          "chance_to_trigger": 1.0,
+          "target_state": "bell_falls",
+          "message": "With a surge of adrenaline, you slam the mallet down with incredible force! The puck rockets upwards, shattering the bell mechanism. The heavy bell teeters for a moment before falling backward off the stall with a deafening CRASH!"
+        }
+      ]
+    },
+    "states": {
+      "operational": {
+        "description": "A classic 'Test-Your-Strength' carnival game stands ready for challengers. A heavy bell sits at the top."
+      },
+      "bell_falls": {
+        "description": "The strength-tester is broken, its bell missing from the top.",
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "bull_pen_gate",
+            "chance": 1.0,
+            "target_state": "impacted_by_bell",
+            "message": "The falling bell crashes onto the roof of the livestock pen fence line!"
+          }
+        ],
+        "is_terminal_state": true
+      }
+    }
+  },
+  "bull_pen_gate": {
+    "name": "Bull Pen Gate",
+    "initial_state": "latched",
+    "placement_object": [
+      "prize bull pen"
+    ],
+    "object_name_options": [
+      "the bull pen gate",
+      "the metal gate"
+    ],
+    "states": {
+      "latched": {
+        "description": "A heavy steel gate, secured by a simple but sturdy-looking slide-bolt latch. A metal crossbar keeps the latch from vibrating loose."
+      },
+      "impacted_by_bell": {
+        "description": "The impact of the bell has dislodged the crossbar! The slide-bolt is now the only thing holding the gate closed, and it's rattling violently from the agitated movements of the bull inside.",
+        "duration_in_state": 1,
+        "chance_to_progress": 1.0,
+        "next_state": "latch_failed"
+      },
+      "latch_failed": {
+        "description": "The vibrations were too much! The latch slides free and the gate swings open!",
+        "triggers_hazard_on_state_change": [
+          {
+            "type": "stampeding_bull",
+            "chance": 1.0,
+            "target_state": "charging_midway",
+            "message": "The prize bull, enraged and freed, charges out of its pen and into the crowded midway!"
+          }
+        ],
+        "is_terminal_state": true
+      }
+    }
+  },
+  "stampeding_bull": {
+    "name": "Stampeding Bull",
+    "initial_state": "charging_midway",
+    "can_move_between_rooms": true,
+    "movement_logic": "follow_path",
+    "movement_path": [
+      "Livestock Pavilion",
+      "Midway (West)",
+      "Midway (Center)"
+    ],
+    "states": {
+      "charging_midway": {
+        "description": "A massive, enraged bull is stampeding through the midway, goring people and destroying everything in its path!",
+        "on_reach_destination_state": "final_rampage"
+      },
+      "final_rampage": {
+        "description": "The bull continues its rampage, its path of destruction leading toward the Food Court.",
+        "is_terminal_state": true
+      }
+    },
+    "collision_effects": {
+      "Rusty": {
+        "chance": 1.0,
+        "effect": "fatal_gore",
+        "death_message": "The bull gores Rusty, the carny, throwing him back into his own stall, which then collapses and crushes him."
+      },
+      "electrical_junction_box": {
+        "chance": 1.0,
+        "effect": "trigger_hazard",
+        "target_hazard_type": "photo_booth_electrocution",
+        "target_hazard_state": "live_current"
+      },
+      "overturned_deep_fryer": {
+        "chance": 1.0,
+        "effect": "trigger_hazard",
+        "target_hazard_type": "propane_tank_explosion",
+        "target_hazard_state": "valve_melting"
+      }
+    }
+  },
+  "photo_booth_electrocution": {
+    "name": "Photo Booth Electrocution",
+    "initial_state": "dormant",
+    "placement_object": [
+      "photo booth"
+    ],
+    "states": {
+      "dormant": {
+        "description": "A vintage-style metal photo booth, offering a moment of privacy from the chaos."
+      },
+      "live_current": {
+        "description": "The photo booth crackles with deadly electrical energy! A live wire is touching its metal frame.",
+        "instant_death_on_contact": true,
+        "death_message": "The moment Brittany touched the inside of the metal photo booth, thousands of volts coursed through her body, killing her instantly.",
+        "is_terminal_state": true
+      }
+    },
+    "environmental_omens": {
+      "dropped_phone": [
+        "A saved photo on the phone shows a girl in a photo booth, but her image is distorted by what looks like a massive electrical arc."
+      ],
+      "carnival_game_prize": [
+        "A cheap plastic keychain of a lightning bolt."
+      ]
+    }
+  },
+  "propane_tank_explosion": {
+    "name": "Propane Tank Explosion",
+    "initial_state": "stable",
+    "placement_object": [
+      "Food Stall"
+    ],
+    "states": {
+      "stable": {
+        "description": "Large propane tanks sit connected to the deep fryers, ready for the dinner rush."
+      },
+      "valve_melting": {
+        "description": "Scalding oil from an overturned deep fryer is melting the valve on a propane tank!",
+        "duration_in_state": 1,
+        "chance_to_progress": 1.0,
+        "next_state": "jetting_propane"
+      },
+      "jetting_propane": {
+        "description": "The valve fails! The tank turns into a rocket, shooting across the midway propelled by a jet of flammable gas!",
+        "duration_in_state": 1,
+        "chance_to_progress": 1.0,
+        "next_state": "explosion"
+      },
+      "explosion": {
+        "description": "The propane tank explodes in a massive, searing fireball!",
+        "instant_death_in_room": true,
+        "death_message": "Chad and several other fair-goers are incinerated in the propane tank explosion.",
+        "is_terminal_state": true
+      }
+    },
+    "environmental_omens": {
+      "food_wrapper": [
+        "A discarded hotdog wrapper has a cartoon chef on it saying, 'It's explosively delicious!'"
+      ],
+      "fair_pamphlet": [
+        "An ad for the nightly fireworks display is circled. Next to it, someone has scrawled, 'The grand finale will be bigger than they expect.'"
+      ]
+    }
+  }
+}

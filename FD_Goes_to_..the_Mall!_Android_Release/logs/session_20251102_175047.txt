@@ -1,0 +1,266 @@
+2025-11-02 17:50:47,801 - FinalDestinationApp - INFO - Logging configured. Session log: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\logs\session_20251102_175047.txt
+2025-11-02 17:50:47,801 - fd_terminal.resource_manager - INFO - ResourceManager initialized with app_root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release
+2025-11-02 17:50:47,802 - fd_terminal.resource_manager - INFO - Loading and validating all master data...
+2025-11-02 17:50:47,802 - fd_terminal.resource_manager - INFO - Discovering data directory...
+2025-11-02 17:50:47,802 - fd_terminal.resource_manager - INFO - Found data directory at app root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\data
+2025-11-02 17:50:47,805 - fd_terminal.resource_manager - WARNING - No schema defined for '#BACKUP_hazards.json'. Skipping validation.
+2025-11-02 17:50:47,805 - fd_terminal.resource_manager - INFO - Successfully loaded and validated '#BACKUP_hazards.json'.
+2025-11-02 17:50:47,805 - fd_terminal.resource_manager - INFO - Validating 'character_classes.json' against schema 'CharacterClassTypedDict'...
+2025-11-02 17:50:47,805 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'character_classes.json'.
+2025-11-02 17:50:47,806 - fd_terminal.resource_manager - INFO - Validating 'constants.json' against schema 'ConstantsTypedDict'...
+2025-11-02 17:50:47,806 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'constants.json'.
+2025-11-02 17:50:47,806 - fd_terminal.resource_manager - INFO - Validating 'disasters.json' against schema 'DisasterTypedDict'...
+2025-11-02 17:50:47,807 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'disasters.json'.
+2025-11-02 17:50:47,807 - fd_terminal.resource_manager - INFO - Validating 'evidence_by_source.json' against schema 'EvidenceSourceTypedDict'...
+2025-11-02 17:50:47,808 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'evidence_by_source.json'.
+2025-11-02 17:50:47,809 - fd_terminal.resource_manager - INFO - Validating 'furniture.json' against schema 'FurnitureTypedDict'...
+2025-11-02 17:50:47,811 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'furniture.json'.
+2025-11-02 17:50:47,811 - fd_terminal.resource_manager - INFO - Validating 'game_config.json' against schema 'GameConfigTypedDict'...
+2025-11-02 17:50:47,811 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'game_config.json'.
+2025-11-02 17:50:47,811 - fd_terminal.resource_manager - INFO - Validating 'hazards.json' against schema 'HazardTypedDict'...
+2025-11-02 17:50:47,812 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazards.json'.
+2025-11-02 17:50:47,812 - fd_terminal.resource_manager - INFO - Validating 'hazard_synergies.json' against schema 'HazardSynergiesTypedDict'...
+2025-11-02 17:50:47,812 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazard_synergies.json'.
+2025-11-02 17:50:47,813 - fd_terminal.resource_manager - INFO - Validating 'items.json' against schema 'ItemTypedDict'...
+2025-11-02 17:50:47,813 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'items.json'.
+2025-11-02 17:50:47,814 - fd_terminal.resource_manager - WARNING - No schema defined for 'level_ambiance.json'. Skipping validation.
+2025-11-02 17:50:47,814 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_ambiance.json'.
+2025-11-02 17:50:47,814 - fd_terminal.resource_manager - INFO - Validating 'level_requirements.json' against schema 'LevelRequirementTypedDict'...
+2025-11-02 17:50:47,815 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_requirements.json'.
+2025-11-02 17:50:47,815 - fd_terminal.resource_manager - INFO - Validating 'npcs.json' against schema 'NPCTypedDict'...
+2025-11-02 17:50:47,815 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'npcs.json'.
+2025-11-02 17:50:47,816 - fd_terminal.resource_manager - INFO - Validating 'player_achievements.json' against schema 'PlayerAchievementsFileTypedDict'...
+2025-11-02 17:50:47,816 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'player_achievements.json'.
+2025-11-02 17:50:47,816 - fd_terminal.resource_manager - INFO - Validating 'qte_definitions.json' against schema 'QTEDefinitionTypedDict'...
+2025-11-02 17:50:47,817 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'qte_definitions.json'.
+2025-11-02 17:50:47,817 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_1.json' against schema 'RoomTypedDict'...
+2025-11-02 17:50:47,818 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_1.json'.
+2025-11-02 17:50:47,819 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_2.json' against schema 'RoomTypedDict'...
+2025-11-02 17:50:47,821 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_2.json'.
+2025-11-02 17:50:47,822 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_3.json' against schema 'RoomTypedDict'...
+2025-11-02 17:50:47,822 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_3.json'.
+2025-11-02 17:50:47,823 - fd_terminal.resource_manager - WARNING - No schema defined for 'rooms_level_house.json'. Skipping validation.
+2025-11-02 17:50:47,823 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_house.json'.
+2025-11-02 17:50:47,824 - fd_terminal.resource_manager - WARNING - No schema defined for 'settings.json'. Skipping validation.
+2025-11-02 17:50:47,824 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'settings.json'.
+2025-11-02 17:50:47,824 - fd_terminal.resource_manager - INFO - Validating 'status_effects.json' against schema 'StatusEffectsFileTypedDict'...
+2025-11-02 17:50:47,825 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'status_effects.json'.
+2025-11-02 17:50:47,825 - fd_terminal.resource_manager - INFO - Validating 'survivor_fates.json' against schema 'SurvivorFatesFileTypedDict'...
+2025-11-02 17:50:47,825 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'survivor_fates.json'.
+2025-11-02 17:50:47,826 - fd_terminal.resource_manager - INFO - Validating 'temperature_mappings.json' against schema 'TemperatureMappingsFileTypedDict'...
+2025-11-02 17:50:47,826 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'temperature_mappings.json'.
+2025-11-02 17:50:47,826 - fd_terminal.resource_manager - INFO - Validating 'visionaries.json' against schema 'VisionariesFileTypedDict'...
+2025-11-02 17:50:47,826 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'visionaries.json'.
+2025-11-02 17:50:47,826 - fd_terminal.resource_manager - INFO - All master data has been successfully loaded and validated.
+2025-11-02 17:50:47,826 - AchievementsSystem - INFO - Chronicler of Deeds initialized.
+2025-11-02 17:50:47,826 - HazardEngine - INFO - Engine of Calamity initialized.
+2025-11-02 17:50:47,829 - root - INFO - Registered thematic font: 'mybleedingscars_tt copy'
+2025-11-02 17:50:47,829 - root - INFO - Selected thematic font: mybleedingscars_tt copy
+2025-11-02 17:50:47,831 - kivy - DEBUG - App: Loading configuration <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\finaldestination.ini>
+2025-11-02 17:50:47,832 - kivy - DEBUG - App: Loading kv <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\finaldestination.kv>
+2025-11-02 17:50:47,832 - kivy - WARNING - Lang: The file c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\finaldestination.kv is loaded multiples times, you might have unwanted behaviors.
+2025-11-02 17:50:47,842 - kivy - DEBUG - Resource: add <C:\windows\Fonts> in path list
+2025-11-02 17:50:47,842 - kivy - DEBUG - Resource: add <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\fonts> in path list
+2025-11-02 17:50:47,853 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme.atlas>
+2025-11-02 17:50:47,853 - kivy - DEBUG - Atlas: Need to load 1 images
+2025-11-02 17:50:47,853 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-02 17:50:47,854 - kivy - DEBUG - ImageSDL2: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-02 17:50:47,862 - root - INFO - IntroScreen initializing
+2025-11-02 17:50:47,886 - fd_terminal.main - INFO - FinalDestinationApp build() completed successfully.
+2025-11-02 17:50:47,887 - fd_terminal.main - INFO - Application starting.
+2025-11-02 17:50:47,887 - fd_terminal.main - INFO - Checking for corrupted save files...
+2025-11-02 17:50:47,901 - AchievementsSystem - INFO - Loaded 23 achievements, 0 evidence pieces, 0 unlocked stories
+2025-11-02 17:50:47,901 - kivy - DEBUG - Base: Create provider from mouse,disable_multitouch
+2025-11-02 17:50:47,902 - kivy - DEBUG - Base: Create provider from 
+2025-11-02 17:50:47,902 - kivy - WARNING - Base: Unknown <> provider
+2025-11-02 17:50:47,902 - kivy - DEBUG - Base: Create provider from 
+2025-11-02 17:50:47,902 - kivy - WARNING - Base: Unknown <> provider
+2025-11-02 17:50:47,902 - kivy - INFO - Base: Start application main loop
+2025-11-02 17:50:47,917 - kivy - INFO - GL: NPOT texture support is available
+2025-11-02 17:50:49,438 - root - INFO - CharacterSelectScreen: on_enter called. Populating character classes.
+2025-11-02 17:50:49,716 - fd_terminal.ui.CharacterSelectScreen - INFO - Character selected: You. Checking for existing session.
+2025-11-02 17:50:49,716 - fd_terminal.ui.CharacterSelectScreen - INFO - No valid session found, creating new one.
+2025-11-02 17:50:49,716 - GameLogic - INFO - Player flag set: 'has_initialized'
+2025-11-02 17:50:49,716 - GameLogic - INFO - GameLogic instance created with a lean, focused design.
+2025-11-02 17:50:49,717 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-02 17:50:49,717 - GameLogic - INFO - start_new_game: Starting new game with character: You on level 1...
+2025-11-02 17:50:49,717 - GameLogic - INFO - _generate_intro_disaster: Generating fully detailed random introductory disaster...
+2025-11-02 17:50:49,717 - GameLogic - INFO - _generate_intro_disaster: Generated disaster: 'a chill evening at the McKineplex' claiming '0' lives.
+2025-11-02 17:50:49,717 - GameLogic - INFO - _initialize_level_data: Executing Rite of Genesis for Level 1...
+2025-11-02 17:50:49,718 - GameLogic - INFO - Building room coordinate map...
+2025-11-02 17:50:49,718 - GameLogic - INFO - Coordinate map built with 7 locations.
+2025-11-02 17:50:49,718 - GameLogic - INFO - _initialize_level_data: Step 1: Forged 7 rooms.
+2025-11-02 17:50:49,718 - GameLogic - INFO - _populate_level_with_items: Step 2: Placed static items. Step 3 will distribute 0 random items.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - Hazard Engine (re)initialized for Level 1.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - Spawned hazard 'falling_marquee_letters' in 'Cineplex Lobby' (id=falling_marquee_letters#87f98ad1) at state 'hairline_rattle'.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'hairline_rattle' for hazard 'falling_marquee_letters#87f98ad1'
+2025-11-02 17:50:49,718 - HazardEngine - INFO - Spawned hazard 'popcorn_oil_flareup' in 'Concessions' (id=popcorn_oil_flareup#0cac6d97) at state 'thermostat_stick'.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'thermostat_stick' for hazard 'popcorn_oil_flareup#0cac6d97'
+2025-11-02 17:50:49,718 - HazardEngine - INFO - Spawned hazard 'sparking_neon_transformer' in 'Projection Corridor' (id=sparking_neon_transformer#e333ae46) at state 'occasional_arc'.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'occasional_arc' for hazard 'sparking_neon_transformer#e333ae46'
+2025-11-02 17:50:49,718 - HazardEngine - INFO - Spawned hazard 'soda_spill_slip' in 'Hallway to Theater 7' (id=soda_spill_slip#773e61c3) at state 'glossy_spread'.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'glossy_spread' for hazard 'soda_spill_slip#773e61c3'
+2025-11-02 17:50:49,718 - HazardEngine - INFO - Spawned hazard 'overheating_projector_chain' in 'Theater 7' (id=overheating_projector_chain#edc3561e) at state 'flickering'.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'flickering' for hazard 'overheating_projector_chain#edc3561e'
+2025-11-02 17:50:49,718 - GameLogic - INFO - _compile_level_omens: Compiling Omen Library for level 1...
+2025-11-02 17:50:49,718 - GameLogic - INFO - _compile_level_omens: Omen Library compiled with 10 trigger types.
+2025-11-02 17:50:49,718 - GameLogic - INFO - _initialize_level_data: Rite of Genesis for Level 1 is complete.
+2025-11-02 17:50:49,718 - GameLogic - INFO - New game started successfully. Player is in 'Cineplex Lobby'.
+2025-11-02 17:50:49,718 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:50:49,718 - GameLogic - INFO - start_new_game: Game initialization complete.
+2025-11-02 17:50:49,718 - fd_terminal.main - INFO - Game session created. HazardEngine.game_logic set: True
+2025-11-02 17:50:50,139 - fd_terminal.ui.IntroScreen - INFO - IntroScreen on_enter: Generating and displaying intro text.
+2025-11-02 17:50:50,439 - root - INFO - IntroScreen: Proceeding to GameScreen.
+2025-11-02 17:50:50,440 - GameScreen - INFO - GameScreen: Engine references attached.
+2025-11-02 17:50:50,874 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:50:50,874 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:50:50,874 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Cineplex Lobby[/color][/b]
+A wide, glossy l...
+2025-11-02 17:50:50,876 - MapDisplayWidget - INFO - Updating map (length=275)
+2025-11-02 17:50:51,244 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-02 17:50:51,244 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:50:52,126 - OutputPanelWidget - INFO - Appending text: > move north
+2025-11-02 17:50:52,126 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:50:52,126 - HazardEngine - INFO - [get_hazard_state] Found hazard 'falling_marquee_letters' in 'Cineplex Lobby' with state 'hairline_rattle'
+2025-11-02 17:50:52,126 - GameLogic - INFO - _command_move: Moving player from 'Cineplex Lobby' to 'Hallway to Theater 7'
+2025-11-02 17:50:52,126 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Hallway to Theater 7
+2025-11-02 17:50:52,126 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hallway to Theater 7': ['soda_spill_slip']
+2025-11-02 17:50:52,126 - GameLogic - INFO - _command_move: First entry text found for room 'Hallway to Theater 7'
+2025-11-02 17:50:52,126 - DeathAI - INFO - Analyzing player action: 'move' in 'Hallway to Theater 7'
+2025-11-02 17:50:52,127 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Hallway to Theater 7[/color][/b]
+Theater po...
+2025-11-02 17:50:52,127 - GameScreen - INFO - _handle_show_popup: Showing info popup with title 'Hallway To Theater 7'.
+2025-11-02 17:50:52,129 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:50:52,129 - MapDisplayWidget - INFO - Updating map (length=303)
+2025-11-02 17:50:52,131 - GameScreen - INFO - GameScreen: Finished processing command 'move north'
+2025-11-02 17:50:52,131 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-02 17:50:52,131 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:50:53,721 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-02 17:50:53,721 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:50:56,412 - OutputPanelWidget - INFO - Appending text: > move north
+2025-11-02 17:50:56,412 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hallway to Theater 7': ['soda_spill_slip']
+2025-11-02 17:50:56,412 - HazardEngine - INFO - [get_hazard_state] Found hazard 'soda_spill_slip' in 'Hallway to Theater 7' with state 'glossy_spread'
+2025-11-02 17:50:56,412 - OutputPanelWidget - INFO - Appending text: [color=ff0000]The door to Theater 7 is locked.[/color]
+2025-11-02 17:50:56,419 - GameScreen - INFO - GameScreen: Finished processing command 'move north'
+2025-11-02 17:50:56,419 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-02 17:50:56,420 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:50:57,794 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-02 17:50:57,794 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:50:58,717 - OutputPanelWidget - INFO - Appending text: > move south
+2025-11-02 17:50:58,717 - HazardEngine - INFO - [set_hazard_state] Hazard 'soda_spill_slip#773e61c3' state changed from 'glossy_spread' to 'player_slip'.
+2025-11-02 17:50:58,717 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hallway to Theater 7': ['soda_spill_slip']
+2025-11-02 17:50:58,717 - HazardEngine - INFO - [get_hazard_state] Found hazard 'soda_spill_slip' in 'Hallway to Theater 7' with state 'player_slip'
+2025-11-02 17:50:58,717 - GameLogic - INFO - _command_move: Moving player from 'Hallway to Theater 7' to 'Cineplex Lobby'
+2025-11-02 17:50:58,717 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Cineplex Lobby
+2025-11-02 17:50:58,718 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:50:58,718 - DeathAI - INFO - Analyzing player action: 'move' in 'Cineplex Lobby'
+2025-11-02 17:50:58,718 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Cineplex Lobby[/color][/b]
+A wide, glossy l...
+2025-11-02 17:50:58,718 - OutputPanelWidget - INFO - Appending text: [color=007ba7]Damnit, you forgot about the soda spill[/color...
+2025-11-02 17:50:58,718 - MapDisplayWidget - INFO - Updating map (length=275)
+2025-11-02 17:50:58,718 - GameScreen - INFO - _handle_show_popup: Showing info popup with title 'Notice'.
+2025-11-02 17:50:58,720 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:50:58,723 - GameScreen - INFO - GameScreen: Finished processing command 'move south'
+2025-11-02 17:50:58,723 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-02 17:50:58,723 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:51:01,698 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-02 17:51:01,698 - GameScreen - INFO - Starting deferred QTE 'balance_meter' after popup
+2025-11-02 17:51:01,700 - QTE_Engine - INFO - QTE 'balance_meter' started. Duration: 3.0s. Input type: alternate. Prompt: You step right into the soda spill! Keep your balance!
+2025-11-02 17:51:01,710 - GameScreen - INFO - _handle_show_qte: Attempting to show QTE popup.
+2025-11-02 17:51:01,712 - QTEPopup - INFO - QTEPopup initialized and ready
+2025-11-02 17:51:01,713 - GameScreen - INFO - QTE popup shown successfully.
+2025-11-02 17:51:02,100 - QTEPopup - INFO - Alternation correct: alt_count=1, next_key='d'
+2025-11-02 17:51:02,233 - QTEPopup - INFO - Alternation correct: alt_count=2, next_key='a'
+2025-11-02 17:51:02,968 - QTE_Engine - INFO - Alternate QTE failed: wrong input.
+2025-11-02 17:51:02,968 - QTE_Engine - INFO - QTE 'Balance Meter' resolved. Success: False. Message: Your feet go out from under you! You slam onto the sticky floor! You lose 10 HP.
+2025-11-02 17:51:02,968 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-02 17:51:02,968 - QTEPopup - INFO - Dismissing QTEPopup and cleaning up event bindings
+2025-11-02 17:51:02,968 - GameScreen - INFO - QTE popup destroyed successfully
+2025-11-02 17:51:02,968 - GameScreen - INFO - _handle_show_popup: Showing info popup with title 'QTE Result'.
+2025-11-02 17:51:02,970 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:51:03,365 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-02 17:51:03,365 - GameScreen - INFO - Applying deferred state change: soda_spill_slip#773e61c3 -> hard_fall
+2025-11-02 17:51:03,365 - HazardEngine - INFO - [set_hazard_state] Hazard 'soda_spill_slip#773e61c3' state changed from 'player_slip' to 'hard_fall'.
+2025-11-02 17:51:03,365 - GameScreen - INFO - Sequential consequence: Showing popup 'Notice' with message 'You're sprawled on the sticky, wet carpet, your knee throbbing....'
+2025-11-02 17:51:03,370 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:51:05,414 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-02 17:51:07,560 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-02 17:51:07,561 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:51:12,457 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-02 17:51:12,457 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:51:13,980 - ContextualActionsWidget - INFO - Populating use targets for ContextualActionsWidget
+2025-11-02 17:51:13,980 - ContextualActionsWidget - INFO - Clearing all buttons from ContextualActionsWidget
+2025-11-02 17:51:13,980 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:51:13,980 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:51:13,980 - ContextualActionsWidget - INFO - ContextualActionsWidget: Populated 0 use targets
+2025-11-02 17:51:15,048 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-02 17:51:15,049 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:51:16,335 - OutputPanelWidget - INFO - Appending text: > move east
+2025-11-02 17:51:16,336 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:51:16,336 - HazardEngine - INFO - [get_hazard_state] Found hazard 'falling_marquee_letters' in 'Cineplex Lobby' with state 'hairline_rattle'
+2025-11-02 17:51:16,336 - GameLogic - INFO - _command_move: Moving player from 'Cineplex Lobby' to 'Concessions'
+2025-11-02 17:51:16,336 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Concessions
+2025-11-02 17:51:16,336 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Concessions': ['popcorn_oil_flareup']
+2025-11-02 17:51:16,336 - DeathAI - INFO - Analyzing player action: 'move' in 'Concessions'
+2025-11-02 17:51:16,336 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Concessions[/color][/b]
+Stainless steel cou...
+2025-11-02 17:51:16,336 - MapDisplayWidget - INFO - Updating map (length=272)
+2025-11-02 17:51:16,339 - GameScreen - INFO - GameScreen: Finished processing command 'move east'
+2025-11-02 17:51:16,339 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-02 17:51:16,339 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:51:17,996 - ContextualActionsWidget - INFO - Populating use targets for ContextualActionsWidget
+2025-11-02 17:51:17,996 - ContextualActionsWidget - INFO - Clearing all buttons from ContextualActionsWidget
+2025-11-02 17:51:17,997 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Concessions': ['popcorn_oil_flareup']
+2025-11-02 17:51:17,997 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Concessions': ['popcorn_oil_flareup']
+2025-11-02 17:51:17,997 - ContextualActionsWidget - INFO - Adding single button: Popcorn Machine
+2025-11-02 17:51:17,997 - ContextualActionsWidget - INFO - ContextualActionsWidget: Populated 1 use targets
+2025-11-02 17:51:19,457 - OutputPanelWidget - INFO - Appending text: > use Popcorn Machine
+2025-11-02 17:51:19,458 - HazardEngine - INFO - [set_hazard_state] Hazard 'popcorn_oil_flareup#0cac6d97' state changed from 'thermostat_stick' to 'flash_flare'.
+2025-11-02 17:51:19,458 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Concessions': ['popcorn_oil_flareup']
+2025-11-02 17:51:19,458 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Concessions': ['popcorn_oil_flareup']
+2025-11-02 17:51:19,458 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Concessions': ['popcorn_oil_flareup']
+2025-11-02 17:51:19,458 - GameLogic - INFO - _use_direct_entity: Fallback use for 'Popcorn machine'.
+2025-11-02 17:51:19,458 - DeathAI - INFO - Analyzing player action: 'use' in 'Concessions'
+2025-11-02 17:51:19,458 - OutputPanelWidget - INFO - Appending text: You use the Popcorn machine.
+2025-11-02 17:51:19,458 - OutputPanelWidget - INFO - Appending text: [color=007ba7]You reach for the emergency shutoff button as ...
+2025-11-02 17:51:19,458 - MapDisplayWidget - INFO - Updating map (length=272)
+2025-11-02 17:51:19,458 - GameScreen - INFO - _handle_show_popup: Showing info popup with title 'Notice'.
+2025-11-02 17:51:19,461 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:51:19,463 - GameScreen - INFO - GameScreen: Finished processing command 'use Popcorn Machine'
+2025-11-02 17:51:19,463 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-02 17:51:19,463 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-02 17:51:21,056 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-02 17:51:21,057 - GameScreen - INFO - Starting deferred QTE 'rhythm_timing' after popup
+2025-11-02 17:51:21,057 - QTE_Engine - INFO - QTE 'rhythm_timing' started. Duration: 3.0s. Input type: rhythm. Prompt: Oil flare-up! Press the button at the RIGHT MOMENT when the indicator enters the safe zone!
+2025-11-02 17:51:21,069 - GameScreen - INFO - _handle_show_qte: Attempting to show QTE popup.
+2025-11-02 17:51:21,074 - QTEPopup - INFO - QTEPopup initialized and ready
+2025-11-02 17:51:21,074 - GameScreen - INFO - QTE popup shown successfully.
+2025-11-02 17:51:21,702 - QTE_Engine - INFO - Tap event: count=1, need=10
+2025-11-02 17:51:21,916 - QTE_Engine - INFO - Tap event: count=2, need=10
+2025-11-02 17:51:22,050 - QTE_Engine - INFO - Tap event: count=3, need=10
+2025-11-02 17:51:22,617 - QTE_Engine - INFO - Tap event: count=4, need=10
+2025-11-02 17:51:23,134 - QTE_Engine - INFO - Tap event: count=5, need=10
+2025-11-02 17:51:23,701 - QTE_Engine - INFO - Tap event: count=6, need=10
+2025-11-02 17:51:24,067 - QTE_Engine - INFO - QTE timed out for 'Rhythm Timing'.
+2025-11-02 17:51:24,067 - QTE_Engine - INFO - QTE 'Rhythm Timing' resolved. Success: False. Message: Your timing is off! The flare intensifies! You lose 10 HP.
+2025-11-02 17:51:24,084 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-02 17:51:24,084 - QTEPopup - INFO - Dismissing QTEPopup and cleaning up event bindings
+2025-11-02 17:51:24,084 - GameScreen - INFO - QTE popup destroyed successfully
+2025-11-02 17:51:24,084 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-02 17:51:24,084 - GameScreen - INFO - _handle_show_popup: Showing info popup with title 'QTE Result'.
+2025-11-02 17:51:24,087 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:51:24,087 - GameScreen - INFO - _handle_show_popup: Showing info popup with title 'QTE Result'.
+2025-11-02 17:51:24,087 - GameScreen - INFO - Applying deferred state change: popcorn_oil_flareup#0cac6d97 -> scattered_sparks
+2025-11-02 17:51:24,087 - HazardEngine - INFO - [set_hazard_state] Hazard 'popcorn_oil_flareup#0cac6d97' state changed from 'flash_flare' to 'scattered_sparks'.
+2025-11-02 17:51:24,087 - GameScreen - INFO - Sequential consequence: Showing popup 'Notice' with message 'The flare spits burning oil onto the counter and floor near the machine....'
+2025-11-02 17:51:24,089 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:51:24,090 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-02 17:51:24,312 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-02 17:51:24,312 - GameScreen - INFO - Applying deferred state change: popcorn_oil_flareup#0cac6d97 -> scattered_sparks
+2025-11-02 17:51:24,312 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'scattered_sparks' for hazard 'popcorn_oil_flareup#0cac6d97'
+2025-11-02 17:51:24,313 - GameScreen - INFO - Applying deferred state change: popcorn_oil_flareup#0cac6d97 -> scattered_sparks
+2025-11-02 17:51:24,313 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'scattered_sparks' for hazard 'popcorn_oil_flareup#0cac6d97'
+2025-11-02 17:51:26,298 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-02 17:51:43,002 - kivy - INFO - Base: Leaving application in progress...
+2025-11-02 17:51:43,003 - fd_terminal.main - INFO - Application stopping.
+2025-11-02 17:51:43,004 - AchievementsSystem - INFO - Achievements saved successfully.

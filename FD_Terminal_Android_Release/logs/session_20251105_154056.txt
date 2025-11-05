@@ -1,0 +1,159 @@
+2025-11-05 15:40:56,829 - FinalDestinationApp - INFO - Logging configured. Session log: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\logs\session_20251105_154056.txt
+2025-11-05 15:40:56,830 - fd_terminal.resource_manager - INFO - ResourceManager initialized with app_root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR
+2025-11-05 15:40:56,830 - fd_terminal.resource_manager - INFO - Loading and validating all master data...
+2025-11-05 15:40:56,830 - fd_terminal.resource_manager - INFO - Discovering data directory...
+2025-11-05 15:40:56,830 - fd_terminal.resource_manager - INFO - Found data directory at app root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\data
+2025-11-05 15:40:56,832 - fd_terminal.resource_manager - INFO - Validating 'character_classes.json' against schema 'CharacterClassTypedDict'...
+2025-11-05 15:40:56,832 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'character_classes.json'.
+2025-11-05 15:40:56,833 - fd_terminal.resource_manager - INFO - Validating 'constants.json' against schema 'ConstantsTypedDict'...
+2025-11-05 15:40:56,834 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'constants.json'.
+2025-11-05 15:40:56,835 - fd_terminal.resource_manager - INFO - Validating 'disasters.json' against schema 'DisasterTypedDict'...
+2025-11-05 15:40:56,839 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'disasters.json'.
+2025-11-05 15:40:56,840 - fd_terminal.resource_manager - INFO - Validating 'evidence_by_source.json' against schema 'EvidenceSourceTypedDict'...
+2025-11-05 15:40:56,841 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'evidence_by_source.json'.
+2025-11-05 15:40:56,842 - fd_terminal.resource_manager - INFO - Validating 'furniture.json' against schema 'FurnitureTypedDict'...
+2025-11-05 15:40:56,846 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'furniture.json'.
+2025-11-05 15:40:56,847 - fd_terminal.resource_manager - INFO - Validating 'game_config.json' against schema 'GameConfigTypedDict'...
+2025-11-05 15:40:56,847 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'game_config.json'.
+2025-11-05 15:40:56,849 - fd_terminal.resource_manager - INFO - Validating 'hazards.json' against schema 'HazardTypedDict'...
+2025-11-05 15:40:56,861 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazards.json'.
+2025-11-05 15:40:56,862 - fd_terminal.resource_manager - INFO - Validating 'hazard_synergies.json' against schema 'HazardSynergiesTypedDict'...
+2025-11-05 15:40:56,862 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazard_synergies.json'.
+2025-11-05 15:40:56,865 - fd_terminal.resource_manager - INFO - Validating 'items.json' against schema 'ItemTypedDict'...
+2025-11-05 15:40:56,886 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'items.json'.
+2025-11-05 15:40:56,887 - fd_terminal.resource_manager - WARNING - No schema defined for 'level_ambiance.json'. Skipping validation.
+2025-11-05 15:40:56,887 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_ambiance.json'.
+2025-11-05 15:40:56,888 - fd_terminal.resource_manager - INFO - Validating 'level_requirements.json' against schema 'LevelRequirementTypedDict'...
+2025-11-05 15:40:56,888 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_requirements.json'.
+2025-11-05 15:40:56,889 - fd_terminal.resource_manager - INFO - Validating 'npcs.json' against schema 'NPCTypedDict'...
+2025-11-05 15:40:56,890 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'npcs.json'.
+2025-11-05 15:40:56,892 - fd_terminal.resource_manager - INFO - Validating 'player_achievements.json' against schema 'PlayerAchievementsFileTypedDict'...
+2025-11-05 15:40:56,893 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'player_achievements.json'.
+2025-11-05 15:40:56,894 - fd_terminal.resource_manager - INFO - Validating 'qte_definitions.json' against schema 'QTEDefinitionTypedDict'...
+2025-11-05 15:40:56,894 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'qte_definitions.json'.
+2025-11-05 15:40:56,895 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_1.json' against schema 'RoomTypedDict'...
+2025-11-05 15:40:56,899 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_1.json'.
+2025-11-05 15:40:56,900 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_2.json' against schema 'RoomTypedDict'...
+2025-11-05 15:40:56,902 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_2.json'.
+2025-11-05 15:40:56,903 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_3.json' against schema 'RoomTypedDict'...
+2025-11-05 15:40:56,906 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_3.json'.
+2025-11-05 15:40:56,907 - fd_terminal.resource_manager - INFO - Validating 'status_effects.json' against schema 'StatusEffectsFileTypedDict'...
+2025-11-05 15:40:56,908 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'status_effects.json'.
+2025-11-05 15:40:56,908 - fd_terminal.resource_manager - INFO - Validating 'survivor_fates.json' against schema 'SurvivorFatesFileTypedDict'...
+2025-11-05 15:40:56,909 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'survivor_fates.json'.
+2025-11-05 15:40:56,909 - fd_terminal.resource_manager - INFO - Validating 'temperature_mappings.json' against schema 'TemperatureMappingsFileTypedDict'...
+2025-11-05 15:40:56,909 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'temperature_mappings.json'.
+2025-11-05 15:40:56,910 - fd_terminal.resource_manager - INFO - Validating 'visionaries.json' against schema 'VisionariesFileTypedDict'...
+2025-11-05 15:40:56,910 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'visionaries.json'.
+2025-11-05 15:40:56,910 - fd_terminal.resource_manager - INFO - All master data has been successfully loaded and validated.
+2025-11-05 15:40:56,910 - AchievementsSystem - INFO - Chronicler of Deeds initialized.
+2025-11-05 15:40:56,910 - HazardEngine - INFO - Engine of Calamity initialized.
+2025-11-05 15:40:56,912 - root - INFO - Registered thematic font: 'Zombified'
+2025-11-05 15:40:56,912 - root - INFO - Selected thematic font: Zombified
+2025-11-05 15:40:56,915 - kivy - DEBUG - App: Loading configuration <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.ini>
+2025-11-05 15:40:56,916 - kivy - DEBUG - App: Loading kv <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.kv>
+2025-11-05 15:40:56,916 - kivy - WARNING - Lang: The file c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.kv is loaded multiples times, you might have unwanted behaviors.
+2025-11-05 15:40:56,928 - kivy - DEBUG - Resource: add <C:\windows\Fonts> in path list
+2025-11-05 15:40:56,929 - kivy - DEBUG - Resource: add <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\fonts> in path list
+2025-11-05 15:40:56,951 - fd_terminal.main - INFO - App.reset_session: wiping current session state.
+2025-11-05 15:40:56,952 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-05 15:40:56,952 - fd_terminal.main - INFO - App.reset_session: done.
+2025-11-05 15:40:56,959 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme.atlas>
+2025-11-05 15:40:56,960 - kivy - DEBUG - Atlas: Need to load 1 images
+2025-11-05 15:40:56,960 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-05 15:40:56,961 - kivy - DEBUG - ImageSDL2: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-05 15:40:56,971 - root - INFO - IntroScreen initializing
+2025-11-05 15:40:57,001 - fd_terminal.main - INFO - FinalDestinationApp build() completed successfully.
+2025-11-05 15:40:57,004 - fd_terminal.main - INFO - Application starting.
+2025-11-05 15:40:57,004 - fd_terminal.main - INFO - Checking for corrupted save files...
+2025-11-05 15:40:57,021 - AchievementsSystem - INFO - Loaded 5 achievements, 165 evidence pieces, 15 unlocked stories
+2025-11-05 15:40:57,021 - kivy - DEBUG - Base: Create provider from mouse,disable_multitouch
+2025-11-05 15:40:57,021 - kivy - DEBUG - Base: Create provider from 
+2025-11-05 15:40:57,021 - kivy - WARNING - Base: Unknown <> provider
+2025-11-05 15:40:57,021 - kivy - DEBUG - Base: Create provider from 
+2025-11-05 15:40:57,021 - kivy - WARNING - Base: Unknown <> provider
+2025-11-05 15:40:57,021 - kivy - INFO - Base: Start application main loop
+2025-11-05 15:40:57,035 - kivy - INFO - GL: NPOT texture support is available
+2025-11-05 15:40:58,318 - root - INFO - CharacterSelectScreen: on_enter called. Populating character classes.
+2025-11-05 15:40:58,717 - fd_terminal.ui.CharacterSelectScreen - INFO - Character selected: Medium. Checking for existing session.
+2025-11-05 15:40:58,717 - fd_terminal.ui.CharacterSelectScreen - INFO - No valid session found, creating new one.
+2025-11-05 15:40:58,717 - GameLogic - INFO - Player flag set: 'has_initialized'
+2025-11-05 15:40:58,717 - GameLogic - INFO - GameLogic instance created with a lean, focused design.
+2025-11-05 15:40:58,717 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-05 15:40:58,717 - GameLogic - INFO - start_new_game: Starting new game with character: Medium on level 1...
+2025-11-05 15:40:58,717 - GameLogic - INFO - _generate_intro_disaster: Generating fully detailed random introductory disaster...
+2025-11-05 15:40:58,717 - GameLogic - INFO - _generate_intro_disaster: Generated disaster: 'a sinkhole that opened under the McKinley business district' claiming '248' lives.
+2025-11-05 15:40:58,717 - GameLogic - INFO - _initialize_level_data: Executing Rite of Genesis for Level 1...
+2025-11-05 15:40:58,718 - GameLogic - INFO - Building room coordinate map...
+2025-11-05 15:40:58,718 - GameLogic - INFO - Coordinate map built with 24 locations.
+2025-11-05 15:40:58,718 - GameLogic - INFO - _initialize_level_data: Step 1: Forged 24 rooms.
+2025-11-05 15:40:58,718 - GameLogic - INFO - _populate_level_with_items: Step 2: Placed static items. Step 3 will distribute 160 random items.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - Hazard Engine (re)initialized for Level 1.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - Spawned hazard 'elevator_freefall' in 'Elevator Lobby (Level 1)' (id=elevator_freefall#4cd81ca6) at state 'idle'.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'idle' for hazard 'elevator_freefall#4cd81ca6'
+2025-11-05 15:40:58,719 - HazardEngine - INFO - Spawned hazard 'elevator_freefall' in 'Elevator Car' (id=elevator_freefall#ded4fa04) at state 'idle'.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'idle' for hazard 'elevator_freefall#ded4fa04'
+2025-11-05 15:40:58,719 - HazardEngine - INFO - Spawned hazard 'deaths_breath' in 'Hospital Emergency Entrance' (id=deaths_breath#f3810f90) at state 'subtle_chill'.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'subtle_chill' for hazard 'deaths_breath#f3810f90'
+2025-11-05 15:40:58,719 - HazardEngine - INFO - Spawned hazard 'hospital_exit' in 'Hospital Morgue Exit' (id=hospital_exit#02765210) at state 'off'.
+2025-11-05 15:40:58,719 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'revolving door' as key.
+2025-11-05 15:40:58,719 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'hospital sign' as key.
+2025-11-05 15:40:58,719 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'ambulance' as key.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'off' for hazard 'hospital_exit#02765210'
+2025-11-05 15:40:58,719 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'revolving door' as key.
+2025-11-05 15:40:58,719 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'hospital sign' as key.
+2025-11-05 15:40:58,719 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'ambulance' as key.
+2025-11-05 15:40:58,719 - HazardEngine - INFO - Spawned hazard 'oxygen_tank' in 'MRI Control Room' (id=oxygen_tank#fb9b52bc) at state 'sealed'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'sealed' for hazard 'oxygen_tank#fb9b52bc'
+2025-11-05 15:40:58,720 - HazardEngine - INFO - Spawned hazard 'mri' in 'MRI Scan Room' (id=mri#f08ae46f) at state 'powered_down'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'powered_down' for hazard 'mri#f08ae46f'
+2025-11-05 15:40:58,720 - HazardEngine - INFO - Spawned hazard 'oxygen_tank' in 'MRI Scan Room' (id=oxygen_tank#577cf00a) at state 'sealed'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'sealed' for hazard 'oxygen_tank#577cf00a'
+2025-11-05 15:40:58,720 - HazardEngine - INFO - Spawned hazard 'malfunctioning_ventilator' in 'Patient Room 101' (id=malfunctioning_ventilator#36d0be82) at state 'stable_rhythm'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'stable_rhythm' for hazard 'malfunctioning_ventilator#36d0be82'
+2025-11-05 15:40:58,720 - HazardEngine - INFO - Spawned hazard 'oxygen_tank' in 'Waiting Room' (id=oxygen_tank#4b03a1c0) at state 'sealed'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'sealed' for hazard 'oxygen_tank#4b03a1c0'
+2025-11-05 15:40:58,720 - HazardEngine - INFO - Spawned hazard 'robo_vacuum' in 'Waiting Room' (id=robo_vacuum#4b8f2250) at state 'docked'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'docked' for hazard 'robo_vacuum#4b8f2250'
+2025-11-05 15:40:58,720 - GameLogic - INFO - _compile_level_omens: Compiling Omen Library for level 1...
+2025-11-05 15:40:58,720 - GameLogic - INFO - _compile_level_omens: Omen Library compiled with 13 trigger types.
+2025-11-05 15:40:58,720 - GameLogic - INFO - _initialize_level_data: Rite of Genesis for Level 1 is complete.
+2025-11-05 15:40:58,720 - GameLogic - INFO - New game started successfully. Player is in 'MRI Scan Room'.
+2025-11-05 15:40:58,720 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:40:58,720 - GameLogic - INFO - start_new_game: Adding first_entry popup for 'MRI Scan Room'
+2025-11-05 15:40:58,721 - GameLogic - INFO - start_new_game: Game initialization complete.
+2025-11-05 15:40:58,721 - fd_terminal.main - INFO - Game session created. HazardEngine.game_logic set: True
+2025-11-05 15:40:59,133 - fd_terminal.ui.IntroScreen - INFO - IntroScreen on_enter: Generating and displaying intro text.
+2025-11-05 15:40:59,415 - root - INFO - IntroScreen: Proceeding to GameScreen.
+2025-11-05 15:40:59,416 - GameScreen - INFO - GameScreen: Engine references attached.
+2025-11-05 15:40:59,827 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:40:59,828 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:40:59,830 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:40:59,830 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]MRI Scan Room[/color][/b]
+The stark white r...
+2025-11-05 15:40:59,836 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:41:00,559 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:41:01,856 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:41:01,857 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:41:01,857 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:41:02,464 - OutputPanelWidget - INFO - Appending text: > search equipment cart
+2025-11-05 15:41:02,465 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:41:02,465 - GameLogic - INFO - Interaction flag set: 'searched_equipment_cart'
+2025-11-05 15:41:02,465 - GameLogic - INFO - _command_search: Found items in 'Equipment cart': ["Coroner's Office Key", 'Broken Ivory Piano Key', 'Wrench', 'Cigarette Lighter', 'Press Pass', 'Magnifying Glass', 'Scalpel', 'Newspaper Clipping about Flight 180', 'Hairpin', 'Headphones', "'Chablis''s Cat Toy", 'Basement Key', 'Bone Saw', 'Camera Lens Cap', 'Airplane Ticket (Paris)', 'Security Guard Flashlight', "Chef's Knife", 'Fireworks Wrapper', 'Corkscrew', 'Ink Pen', 'Photo of Officer Burke', 'Candy Wrapper', "Woman's Shoe", 'Confederate Flag Patch', 'Spanish Phrasebook', 'Can of Hice Pale Ale', 'Dirty Hair Tie', 'Splintered Log Piece (Stefani)', 'Drumstick', 'Surf Wax (Black)', 'Work Gloves', "Carly Hagan's Notebook", '(Un)Lucky Coin', 'Compact', 'Bloody Piece of Metal', 'Bloody Arm Cast', 'Clove Cigarette', 'Construction Pin', 'bottle of water', 'Desk Drawer Key', "Gammy's Death Book", 'Storage Room Key', 'syringe', 'Tacky Souvenir T-Shirt', 'Business Card', 'Wine Bottle Stopper', 'Strip of Nails', 'Flask', 'Movie Ticket Stub', 'Cobra Totem', 'Old Patient Chart', 'Broken Train Handhold', 'bandages', 'Crushed Beer Can', 'Nipple Ring', 'Picket Fence Splinter', 'Lawnmower Blade Piece', 'Cracked RV Side Mirror', 'Miniature Garbage Truck', 'Compact Mirror', 'Ukulele String', 'Glass Shard', 'Skateboard Wheel', 'Metal Spike', 'Nail Gun', 'Demolition Derby Ticket Stub', 'Skeleton Figurine', "Dreena's Necklace", 'Torn Sanitation Worker Vest Fragment', 'Morgue Key Card', 'Propeller Blade', 'Circuit City Name Tag', 'Locket', 'Display Skeleton Piece', 'Photo of Amber', 'Rubber Ducky', 'Suicide Note', 'Photo of Julie Giving the Finger', "'Chardonnay''s Lighter", 'Surfboard Fin', "Sherry's Cellphone", 'Swimsuit Piece', "Photo of Jason on Devil's Flight", 'Shattered Light Bulb', 'Toy Pigeon', 'Photo of Ian with Banners', 'Turquoise Charm', 'Patient Wristband', 'Charred Mug', 'Bent Meat Skewer', 'Retractable Clothesline Piece', 'Crowbar', 'Floral Hair Decoration', 'Mud Flap Girl Necklace', 'Sunglasses', 'rubber gloves', 'Prize Ribbon', 'Scuffed Dress Shoe', 'Metal Sculpture Piece', 'Camera', 'Damaged Police Badge', 'Fuzzy Red Dice', 'Poker Chip', 'Eyedrops', 'Pair of Glasses', 'Blurry Photo', 'Bloodied Lawn Mower Spark Plug', 'Detective Notepad', 'Binocular Flask', 'Rubber Band', 'Small Football Trophy', 'Bicycle Brake Handle', "'Shiraz' Edelstein's Braid", 'Medical Director Key Card', 'Seashell Necklace Fragment', 'Charred Vintage Earrings', 'Temporary Tattoo Sheet', 'White Rose', 'iPod', 'Overexposed Photo of Kevin', 'first aid kit', 'Brooch', 'Small Microphone', 'Attic Key', 'Photo of Lewis from Ring-The-Bell Game', 'Photo of Kimberly Corman', 'Damaged Prom Corsage', "Macy's Name Tag", 'Bent Elevator Call Button', 'Miniature Toy Bus', 'Photo of the Ashleys', "Teenager's Dropped Phone", 'Rusty Fishing Hook', 'Male Wedding Band', 'Bloody Brick', 'Accupuncture Needle', 'Military Dog Tag', 'wooden baseball bat', 'Photo of Perry', 'Small Mirror', 'defibrillator pads', 'Cowboy Hat', 'Hospital Directory Pamphlet', 'Pool Ball Keychain', "Bill Sangster's Knife", 'Costume Feather', 'Female Wedding Band', 'Train Ticket', 'Hair Clip', 'Septum Ring', 'Horseshoe Ornament', 'Navel Piercing with Crystal', 'Used syringe', "Officer Hewlett's Badge", 'Car Keys', 'Detective Badge', 'Safety Goggles', 'Tattered Book', 'Bridge Piece', 'Radiology Key Card', 'painkillers']
+2025-11-05 15:41:02,466 - DeathAI - INFO - Analyzing player action: 'search' in 'MRI Scan Room'
+2025-11-05 15:41:02,467 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:41:02,467 - OutputPanelWidget - INFO - Appending text: You search the Equipment cart and find: [color=00ff00]Corone...
+2025-11-05 15:41:02,467 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:41:02,470 - GameScreen - INFO - GameScreen: Finished processing command 'search equipment cart'
+2025-11-05 15:41:02,470 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:41:02,470 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:41:05,007 - OutputPanelWidget - INFO - Appending text: > TAKE ALL
+2025-11-05 15:41:05,052 - DeathAI - INFO - Analyzing player action: 'take' in 'MRI Scan Room'
+2025-11-05 15:41:05,052 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:41:05,052 - OutputPanelWidget - INFO - Appending text: You take: Coroner's Office Key, Broken Ivory Piano Key, Wren...
+2025-11-05 15:41:05,052 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:41:05,056 - GameScreen - INFO - GameScreen: Finished processing command 'TAKE ALL'
+2025-11-05 15:41:05,056 - ActionInputWidget - INFO - Submit triggered with text: ''
+2025-11-05 15:59:51,691 - kivy - INFO - Base: Leaving application in progress...
+2025-11-05 15:59:51,718 - fd_terminal.main - INFO - Application stopping.
+2025-11-05 15:59:51,743 - AchievementsSystem - INFO - Achievements saved successfully.

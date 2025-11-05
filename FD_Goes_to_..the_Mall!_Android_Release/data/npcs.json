@@ -1,0 +1,37 @@
+{
+  "name": "Your Friend",
+  "description": "Your companion for the night — here to watch the movie and comment on strange events.",
+  "initial_state": "default",
+  "location": "Cineplex Lobby",
+  "dialogue_states": {
+    "default": {
+      "text": "Ready for the movie?",
+      "options": [
+        {"text": "Let's go!", "target_state": "default"}
+      ]
+    },
+    "marquee_near_miss": {
+      "text": "Whoa! That sign almost got you! Are you okay?",
+      "options": [
+        {"text": "I'm fine.", "target_state": "default"}
+      ]
+    },
+    "popcorn_flare": {
+      "text": "Did you see that popcorn machine? That was way too close!",
+      "options": [
+        {"text": "Yeah, that was wild.", "target_state": "default"}
+      ]
+    },
+    "soda_fall": {
+      "text": "You totally wiped out on that soda spill. Classic.",
+      "options": [
+        {"text": "Very funny.", "target_state": "default"}
+      ]
+    }
+  },
+  "triggers": {
+    "marquee_event": "marquee_near_miss",
+    "popcorn_event": "popcorn_flare",
+    "soda_event": "soda_fall"
+  }
+}

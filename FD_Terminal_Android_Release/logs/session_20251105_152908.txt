@@ -1,0 +1,524 @@
+2025-11-05 15:29:08,137 - FinalDestinationApp - INFO - Logging configured. Session log: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\logs\session_20251105_152908.txt
+2025-11-05 15:29:08,137 - fd_terminal.resource_manager - INFO - ResourceManager initialized with app_root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR
+2025-11-05 15:29:08,138 - fd_terminal.resource_manager - INFO - Loading and validating all master data...
+2025-11-05 15:29:08,138 - fd_terminal.resource_manager - INFO - Discovering data directory...
+2025-11-05 15:29:08,138 - fd_terminal.resource_manager - INFO - Found data directory at app root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\data
+2025-11-05 15:29:08,139 - fd_terminal.resource_manager - INFO - Validating 'character_classes.json' against schema 'CharacterClassTypedDict'...
+2025-11-05 15:29:08,139 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'character_classes.json'.
+2025-11-05 15:29:08,140 - fd_terminal.resource_manager - INFO - Validating 'constants.json' against schema 'ConstantsTypedDict'...
+2025-11-05 15:29:08,140 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'constants.json'.
+2025-11-05 15:29:08,141 - fd_terminal.resource_manager - INFO - Validating 'disasters.json' against schema 'DisasterTypedDict'...
+2025-11-05 15:29:08,142 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'disasters.json'.
+2025-11-05 15:29:08,143 - fd_terminal.resource_manager - INFO - Validating 'evidence_by_source.json' against schema 'EvidenceSourceTypedDict'...
+2025-11-05 15:29:08,144 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'evidence_by_source.json'.
+2025-11-05 15:29:08,145 - fd_terminal.resource_manager - INFO - Validating 'furniture.json' against schema 'FurnitureTypedDict'...
+2025-11-05 15:29:08,148 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'furniture.json'.
+2025-11-05 15:29:08,149 - fd_terminal.resource_manager - INFO - Validating 'game_config.json' against schema 'GameConfigTypedDict'...
+2025-11-05 15:29:08,149 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'game_config.json'.
+2025-11-05 15:29:08,151 - fd_terminal.resource_manager - INFO - Validating 'hazards.json' against schema 'HazardTypedDict'...
+2025-11-05 15:29:08,161 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazards.json'.
+2025-11-05 15:29:08,161 - fd_terminal.resource_manager - INFO - Validating 'hazard_synergies.json' against schema 'HazardSynergiesTypedDict'...
+2025-11-05 15:29:08,162 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazard_synergies.json'.
+2025-11-05 15:29:08,165 - fd_terminal.resource_manager - INFO - Validating 'items.json' against schema 'ItemTypedDict'...
+2025-11-05 15:29:08,179 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'items.json'.
+2025-11-05 15:29:08,180 - fd_terminal.resource_manager - WARNING - No schema defined for 'level_ambiance.json'. Skipping validation.
+2025-11-05 15:29:08,181 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_ambiance.json'.
+2025-11-05 15:29:08,181 - fd_terminal.resource_manager - INFO - Validating 'level_requirements.json' against schema 'LevelRequirementTypedDict'...
+2025-11-05 15:29:08,181 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_requirements.json'.
+2025-11-05 15:29:08,182 - fd_terminal.resource_manager - INFO - Validating 'npcs.json' against schema 'NPCTypedDict'...
+2025-11-05 15:29:08,183 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'npcs.json'.
+2025-11-05 15:29:08,183 - fd_terminal.resource_manager - INFO - Validating 'player_achievements.json' against schema 'PlayerAchievementsFileTypedDict'...
+2025-11-05 15:29:08,184 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'player_achievements.json'.
+2025-11-05 15:29:08,185 - fd_terminal.resource_manager - INFO - Validating 'qte_definitions.json' against schema 'QTEDefinitionTypedDict'...
+2025-11-05 15:29:08,185 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'qte_definitions.json'.
+2025-11-05 15:29:08,186 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_1.json' against schema 'RoomTypedDict'...
+2025-11-05 15:29:08,190 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_1.json'.
+2025-11-05 15:29:08,191 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_2.json' against schema 'RoomTypedDict'...
+2025-11-05 15:29:08,192 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_2.json'.
+2025-11-05 15:29:08,193 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_3.json' against schema 'RoomTypedDict'...
+2025-11-05 15:29:08,196 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_3.json'.
+2025-11-05 15:29:08,197 - fd_terminal.resource_manager - INFO - Validating 'status_effects.json' against schema 'StatusEffectsFileTypedDict'...
+2025-11-05 15:29:08,197 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'status_effects.json'.
+2025-11-05 15:29:08,198 - fd_terminal.resource_manager - INFO - Validating 'survivor_fates.json' against schema 'SurvivorFatesFileTypedDict'...
+2025-11-05 15:29:08,198 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'survivor_fates.json'.
+2025-11-05 15:29:08,198 - fd_terminal.resource_manager - INFO - Validating 'temperature_mappings.json' against schema 'TemperatureMappingsFileTypedDict'...
+2025-11-05 15:29:08,198 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'temperature_mappings.json'.
+2025-11-05 15:29:08,198 - fd_terminal.resource_manager - INFO - Validating 'visionaries.json' against schema 'VisionariesFileTypedDict'...
+2025-11-05 15:29:08,199 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'visionaries.json'.
+2025-11-05 15:29:08,199 - fd_terminal.resource_manager - INFO - All master data has been successfully loaded and validated.
+2025-11-05 15:29:08,199 - AchievementsSystem - INFO - Chronicler of Deeds initialized.
+2025-11-05 15:29:08,199 - HazardEngine - INFO - Engine of Calamity initialized.
+2025-11-05 15:29:08,200 - root - INFO - Registered thematic font: 'BloodyMary'
+2025-11-05 15:29:08,200 - root - INFO - Selected thematic font: BloodyMary
+2025-11-05 15:29:08,204 - kivy - DEBUG - App: Loading configuration <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.ini>
+2025-11-05 15:29:08,204 - kivy - DEBUG - App: Loading kv <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.kv>
+2025-11-05 15:29:08,205 - kivy - WARNING - Lang: The file c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.kv is loaded multiples times, you might have unwanted behaviors.
+2025-11-05 15:29:08,210 - kivy - DEBUG - Resource: add <C:\windows\Fonts> in path list
+2025-11-05 15:29:08,210 - kivy - DEBUG - Resource: add <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\fonts> in path list
+2025-11-05 15:29:08,226 - fd_terminal.main - INFO - App.reset_session: wiping current session state.
+2025-11-05 15:29:08,226 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-05 15:29:08,226 - fd_terminal.main - INFO - App.reset_session: done.
+2025-11-05 15:29:08,229 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme.atlas>
+2025-11-05 15:29:08,230 - kivy - DEBUG - Atlas: Need to load 1 images
+2025-11-05 15:29:08,230 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-05 15:29:08,231 - kivy - DEBUG - ImageSDL2: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-05 15:29:08,238 - root - INFO - IntroScreen initializing
+2025-11-05 15:29:08,265 - fd_terminal.main - INFO - FinalDestinationApp build() completed successfully.
+2025-11-05 15:29:08,267 - fd_terminal.main - INFO - Application starting.
+2025-11-05 15:29:08,268 - fd_terminal.main - INFO - Checking for corrupted save files...
+2025-11-05 15:29:08,297 - AchievementsSystem - INFO - Loaded 5 achievements, 165 evidence pieces, 15 unlocked stories
+2025-11-05 15:29:08,297 - kivy - DEBUG - Base: Create provider from mouse,disable_multitouch
+2025-11-05 15:29:08,297 - kivy - DEBUG - Base: Create provider from 
+2025-11-05 15:29:08,297 - kivy - WARNING - Base: Unknown <> provider
+2025-11-05 15:29:08,297 - kivy - DEBUG - Base: Create provider from 
+2025-11-05 15:29:08,297 - kivy - WARNING - Base: Unknown <> provider
+2025-11-05 15:29:08,297 - kivy - INFO - Base: Start application main loop
+2025-11-05 15:29:08,326 - kivy - INFO - GL: NPOT texture support is available
+2025-11-05 15:29:09,566 - root - INFO - CharacterSelectScreen: on_enter called. Populating character classes.
+2025-11-05 15:29:10,497 - fd_terminal.ui.CharacterSelectScreen - INFO - Character selected: Medium. Checking for existing session.
+2025-11-05 15:29:10,497 - fd_terminal.ui.CharacterSelectScreen - INFO - No valid session found, creating new one.
+2025-11-05 15:29:10,497 - GameLogic - INFO - Player flag set: 'has_initialized'
+2025-11-05 15:29:10,497 - GameLogic - INFO - GameLogic instance created with a lean, focused design.
+2025-11-05 15:29:10,497 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-05 15:29:10,497 - GameLogic - INFO - start_new_game: Starting new game with character: Medium on level 1...
+2025-11-05 15:29:10,497 - GameLogic - INFO - _generate_intro_disaster: Generating fully detailed random introductory disaster...
+2025-11-05 15:29:10,497 - GameLogic - INFO - _generate_intro_disaster: Generated disaster: 'a shopping mall escalator suddenly reversing at high speed' claiming '15' lives.
+2025-11-05 15:29:10,497 - GameLogic - INFO - _initialize_level_data: Executing Rite of Genesis for Level 1...
+2025-11-05 15:29:10,498 - GameLogic - INFO - Building room coordinate map...
+2025-11-05 15:29:10,498 - GameLogic - INFO - Coordinate map built with 24 locations.
+2025-11-05 15:29:10,498 - GameLogic - INFO - _initialize_level_data: Step 1: Forged 24 rooms.
+2025-11-05 15:29:10,499 - GameLogic - INFO - _populate_level_with_items: Step 2: Placed static items. Step 3 will distribute 160 random items.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Hazard Engine (re)initialized for Level 1.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'elevator_freefall' in 'Elevator Lobby (Level 1)' (id=elevator_freefall#6f524671) at state 'idle'.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'idle' for hazard 'elevator_freefall#6f524671'
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'elevator_freefall' in 'Elevator Car' (id=elevator_freefall#5d708d90) at state 'idle'.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'idle' for hazard 'elevator_freefall#5d708d90'
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'deaths_breath' in 'Hospital Emergency Entrance' (id=deaths_breath#964bf0a1) at state 'subtle_chill'.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'subtle_chill' for hazard 'deaths_breath#964bf0a1'
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'hospital_exit' in 'Hospital Morgue Exit' (id=hospital_exit#0b1d156c) at state 'off'.
+2025-11-05 15:29:10,499 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'revolving door' as key.
+2025-11-05 15:29:10,499 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'hospital sign' as key.
+2025-11-05 15:29:10,499 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'ambulance' as key.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'off' for hazard 'hospital_exit#0b1d156c'
+2025-11-05 15:29:10,499 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'revolving door' as key.
+2025-11-05 15:29:10,499 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'hospital sign' as key.
+2025-11-05 15:29:10,499 - root - WARNING - _choose_display_name_for_entity: entity_key was dict, using 'ambulance' as key.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'oxygen_tank' in 'MRI Control Room' (id=oxygen_tank#f54d57f7) at state 'sealed'.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'sealed' for hazard 'oxygen_tank#f54d57f7'
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'mri' in 'MRI Scan Room' (id=mri#6c8c5c2f) at state 'powered_down'.
+2025-11-05 15:29:10,499 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'powered_down' for hazard 'mri#6c8c5c2f'
+2025-11-05 15:29:10,499 - HazardEngine - INFO - Spawned hazard 'oxygen_tank' in 'MRI Scan Room' (id=oxygen_tank#7383a381) at state 'sealed'.
+2025-11-05 15:29:10,500 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'sealed' for hazard 'oxygen_tank#7383a381'
+2025-11-05 15:29:10,500 - HazardEngine - INFO - Spawned hazard 'malfunctioning_ventilator' in 'Patient Room 101' (id=malfunctioning_ventilator#471ad6dd) at state 'stable_rhythm'.
+2025-11-05 15:29:10,500 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'stable_rhythm' for hazard 'malfunctioning_ventilator#471ad6dd'
+2025-11-05 15:29:10,500 - HazardEngine - INFO - Spawned hazard 'oxygen_tank' in 'Waiting Room' (id=oxygen_tank#aca9bb6f) at state 'sealed'.
+2025-11-05 15:29:10,500 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'sealed' for hazard 'oxygen_tank#aca9bb6f'
+2025-11-05 15:29:10,500 - HazardEngine - INFO - Spawned hazard 'robo_vacuum' in 'Waiting Room' (id=robo_vacuum#eca4fa28) at state 'docked'.
+2025-11-05 15:29:10,500 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'docked' for hazard 'robo_vacuum#eca4fa28'
+2025-11-05 15:29:10,500 - GameLogic - INFO - _compile_level_omens: Compiling Omen Library for level 1...
+2025-11-05 15:29:10,500 - GameLogic - INFO - _compile_level_omens: Omen Library compiled with 13 trigger types.
+2025-11-05 15:29:10,500 - GameLogic - INFO - _initialize_level_data: Rite of Genesis for Level 1 is complete.
+2025-11-05 15:29:10,500 - GameLogic - INFO - New game started successfully. Player is in 'MRI Scan Room'.
+2025-11-05 15:29:10,500 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:29:10,500 - GameLogic - INFO - start_new_game: Adding first_entry popup for 'MRI Scan Room'
+2025-11-05 15:29:10,500 - GameLogic - INFO - start_new_game: Game initialization complete.
+2025-11-05 15:29:10,500 - fd_terminal.main - INFO - Game session created. HazardEngine.game_logic set: True
+2025-11-05 15:29:10,910 - fd_terminal.ui.IntroScreen - INFO - IntroScreen on_enter: Generating and displaying intro text.
+2025-11-05 15:29:11,330 - root - INFO - IntroScreen: Proceeding to GameScreen.
+2025-11-05 15:29:11,330 - GameScreen - INFO - GameScreen: Engine references attached.
+2025-11-05 15:29:11,749 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:29:11,749 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:29:11,751 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:11,751 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]MRI Scan Room[/color][/b]
+The stark white r...
+2025-11-05 15:29:11,754 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:29:12,416 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:13,287 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:29:13,288 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:29:13,288 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:13,927 - OutputPanelWidget - INFO - Appending text: > search equipment cart
+2025-11-05 15:29:13,928 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:29:13,928 - GameLogic - INFO - Interaction flag set: 'searched_equipment_cart'
+2025-11-05 15:29:13,928 - GameLogic - INFO - _command_search: Found items in 'Equipment cart': ["Coroner's Office Key", 'Eyedrops', 'Photo of Julie Giving the Finger', 'White Rose', 'Morgue Key Card', 'Car Keys', "Officer Hewlett's Badge", 'wooden baseball bat', "Teenager's Dropped Phone", "Bill Sangster's Knife", 'Bloodied Lawn Mower Spark Plug', 'Photo of Amber', 'Attic Key', 'Can of Hice Pale Ale', "'Shiraz' Edelstein's Braid", "Woman's Shoe", "Dreena's Necklace", 'Rubber Band', 'Demolition Derby Ticket Stub', 'Broken Train Handhold', 'Temporary Tattoo Sheet', 'Camera Lens Cap', 'Security Guard Flashlight', 'Bloody Brick', 'Navel Piercing with Crystal', 'painkillers', 'Spanish Phrasebook', 'bandages', "Macy's Name Tag", 'Small Mirror', 'Headphones', 'Storage Room Key', 'Candy Wrapper', 'Floral Hair Decoration', 'Compact', 'Safety Goggles', 'Wine Bottle Stopper', 'Compact Mirror', 'Turquoise Charm', 'Splintered Log Piece (Stefani)', 'Patient Wristband', 'Charred Mug', 'Surf Wax (Black)', 'Fireworks Wrapper', 'Retractable Clothesline Piece', "Photo of Jason on Devil's Flight", 'Miniature Toy Bus', 'Skateboard Wheel', 'Female Wedding Band', 'Bridge Piece', 'Binocular Flask', 'Cobra Totem', 'Damaged Prom Corsage', 'Hospital Directory Pamphlet', "Carly Hagan's Notebook", 'Scalpel', 'Crowbar', 'Basement Key', "'Chablis''s Cat Toy", 'Bicycle Brake Handle', 'Charred Vintage Earrings', 'Hair Clip', "Sherry's Cellphone", 'Dirty Hair Tie', 'Used syringe', 'Newspaper Clipping about Flight 180', 'Small Football Trophy', 'Fuzzy Red Dice', 'Train Ticket', 'Brooch', 'Bent Meat Skewer', 'Flask', 'Bloody Arm Cast', 'Shattered Light Bulb', 'Photo of Perry', 'Camera', 'Toy Pigeon', 'Lawnmower Blade Piece', 'Seashell Necklace Fragment', 'Photo of Lewis from Ring-The-Bell Game', 'first aid kit', 'Strip of Nails', 'Medical Director Key Card', 'Cigarette Lighter', 'Wrench', 'Business Card', 'Overexposed Photo of Kevin', 'Photo of Ian with Banners', 'Torn Sanitation Worker Vest Fragment', 'Horseshoe Ornament', 'Rubber Ducky', 'Old Patient Chart', '(Un)Lucky Coin', 'Metal Spike', 'Poker Chip', 'bottle of water', 'Construction Pin', 'Photo of Kimberly Corman', 'Picket Fence Splinter', 'Hairpin', 'Bone Saw', 'iPod', "'Chardonnay''s Lighter", 'defibrillator pads', 'Rusty Fishing Hook', 'Bent Elevator Call Button', 'Cracked RV Side Mirror', 'Magnifying Glass', 'Detective Notepad', 'Pair of Glasses', 'Costume Feather', 'Movie Ticket Stub', 'Confederate Flag Patch', 'Glass Shard', 'Pool Ball Keychain', "Chef's Knife", 'syringe', 'Drumstick', 'Circuit City Name Tag', 'Sunglasses', 'Male Wedding Band', 'Accupuncture Needle', 'Nipple Ring', 'Suicide Note', 'Prize Ribbon', 'Mud Flap Girl Necklace', 'Clove Cigarette', 'Airplane Ticket (Paris)', 'Work Gloves', 'Propeller Blade', 'Miniature Garbage Truck', 'Military Dog Tag', 'Photo of the Ashleys', 'Crushed Beer Can', 'Detective Badge', 'Septum Ring', 'Skeleton Figurine', 'Surfboard Fin', 'Corkscrew', 'Ukulele String', 'Damaged Police Badge', 'Broken Ivory Piano Key', 'Photo of Officer Burke', 'Blurry Photo', 'Display Skeleton Piece', 'Tacky Souvenir T-Shirt', 'Tattered Book', 'Swimsuit Piece', 'Cowboy Hat', 'Radiology Key Card', 'Ink Pen', "Gammy's Death Book", 'Bloody Piece of Metal', 'Metal Sculpture Piece', 'Desk Drawer Key', 'Small Microphone', 'Nail Gun', 'Locket', 'rubber gloves', 'Scuffed Dress Shoe', 'Press Pass']
+2025-11-05 15:29:13,929 - HazardEngine - INFO - [robo_vacuum#eca4fa28] No primary target found; seeking player in 'MRI Scan Room'
+2025-11-05 15:29:13,929 - HazardEngine - INFO - [robo_vacuum#eca4fa28] Moving from 'Waiting Room' to 'Hospital Emergency Entrance' (toward 'MRI Scan Room')
+2025-11-05 15:29:13,929 - DeathAI - INFO - Analyzing player action: 'search' in 'MRI Scan Room'
+2025-11-05 15:29:13,929 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:13,930 - OutputPanelWidget - INFO - Appending text: You search the Equipment cart and find: [color=00ff00]Corone...
+2025-11-05 15:29:13,930 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:29:13,932 - GameScreen - INFO - GameScreen: Finished processing command 'search equipment cart'
+2025-11-05 15:29:13,932 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:13,932 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:17,078 - OutputPanelWidget - INFO - Appending text: > TAKE ALL
+2025-11-05 15:29:17,122 - DeathAI - INFO - Analyzing player action: 'take' in 'MRI Scan Room'
+2025-11-05 15:29:17,122 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:17,123 - OutputPanelWidget - INFO - Appending text: You take: Coroner's Office Key, Eyedrops, Photo of Julie Giv...
+2025-11-05 15:29:17,123 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:29:17,126 - GameScreen - INFO - GameScreen: Finished processing command 'TAKE ALL'
+2025-11-05 15:29:17,126 - ActionInputWidget - INFO - Submit triggered with text: ''
+2025-11-05 15:29:18,987 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:29:18,987 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:19,655 - OutputPanelWidget - INFO - Appending text: > unlock east
+2025-11-05 15:29:19,656 - GameLogic - INFO - _command_unlock: Unlocked Stairwell with morgue_key_card
+2025-11-05 15:29:19,657 - DeathAI - INFO - Analyzing player action: 'unlock' in 'MRI Scan Room'
+2025-11-05 15:29:19,657 - root - INFO - [DeathAI] Threat score for MRI Scan Room increased by 1.44 (now 3.12)
+2025-11-05 15:29:19,657 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:19,657 - OutputPanelWidget - INFO - Appending text: [color=00ff00]You unlock the door to Stairwell with the Morg...
+2025-11-05 15:29:19,657 - MapDisplayWidget - INFO - Updating map (length=296)
+2025-11-05 15:29:19,660 - GameScreen - INFO - GameScreen: Finished processing command 'unlock east'
+2025-11-05 15:29:19,660 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:19,660 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:20,543 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-05 15:29:20,543 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:21,089 - OutputPanelWidget - INFO - Appending text: > move east
+2025-11-05 15:29:21,091 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'MRI Scan Room': ['mri', 'oxygen_tank']
+2025-11-05 15:29:21,091 - HazardEngine - INFO - [get_hazard_state] Found hazard 'mri' in 'MRI Scan Room' with state 'powered_down'
+2025-11-05 15:29:21,091 - HazardEngine - INFO - [get_hazard_state] Found hazard 'oxygen_tank' in 'MRI Scan Room' with state 'sealed'
+2025-11-05 15:29:21,091 - GameLogic - INFO - _command_move: Moving player from 'MRI Scan Room' to 'Stairwell'
+2025-11-05 15:29:21,091 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Stairwell
+2025-11-05 15:29:21,091 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Stairwell': []
+2025-11-05 15:29:21,092 - DeathAI - INFO - Analyzing player action: 'move' in 'Stairwell'
+2025-11-05 15:29:21,092 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:21,092 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Stairwell[/color][/b]
+A dim, cement-lined s...
+2025-11-05 15:29:21,092 - MapDisplayWidget - INFO - Updating map (length=270)
+2025-11-05 15:29:21,097 - GameScreen - INFO - GameScreen: Finished processing command 'move east'
+2025-11-05 15:29:21,097 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:21,097 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:21,685 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 4 buttons
+2025-11-05 15:29:21,685 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:22,233 - OutputPanelWidget - INFO - Appending text: > move downstairs
+2025-11-05 15:29:22,234 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Stairwell': []
+2025-11-05 15:29:22,234 - GameLogic - INFO - _command_move: Moving player from 'Stairwell' to 'Hospital Morgue Hallway'
+2025-11-05 15:29:22,234 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Hospital Morgue Hallway
+2025-11-05 15:29:22,234 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Hallway': []
+2025-11-05 15:29:22,234 - GameLogic - INFO - _command_move: First entry text found for room 'Hospital Morgue Hallway'
+2025-11-05 15:29:22,235 - DeathAI - INFO - Analyzing player action: 'move' in 'Hospital Morgue Hallway'
+2025-11-05 15:29:22,235 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:22,235 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Hospital Morgue Hallway[/color][/b]
+A cold,...
+2025-11-05 15:29:22,237 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:22,237 - MapDisplayWidget - INFO - Updating map (length=306)
+2025-11-05 15:29:22,239 - GameScreen - INFO - GameScreen: Finished processing command 'move downstairs'
+2025-11-05 15:29:22,239 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:22,239 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:22,795 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:23,151 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 5 buttons
+2025-11-05 15:29:23,152 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:23,805 - OutputPanelWidget - INFO - Appending text: > move south
+2025-11-05 15:29:23,807 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Hallway': []
+2025-11-05 15:29:23,807 - GameLogic - INFO - _command_move: Moving player from 'Hospital Morgue Hallway' to 'Hospital Morgue Exit'
+2025-11-05 15:29:23,807 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Hospital Morgue Exit
+2025-11-05 15:29:23,807 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Exit': ['hospital_exit']
+2025-11-05 15:29:23,807 - GameLogic - INFO - _command_move: First entry text found for room 'Hospital Morgue Exit'
+2025-11-05 15:29:23,808 - DeathAI - INFO - Analyzing player action: 'move' in 'Hospital Morgue Exit'
+2025-11-05 15:29:23,808 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:23,808 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Hospital Morgue Exit[/color][/b]
+A heavy st...
+2025-11-05 15:29:23,810 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:23,810 - MapDisplayWidget - INFO - Updating map (length=281)
+2025-11-05 15:29:23,812 - GameScreen - INFO - GameScreen: Finished processing command 'move south'
+2025-11-05 15:29:23,812 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:23,812 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:24,450 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:25,414 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Exit': ['hospital_exit']
+2025-11-05 15:29:25,419 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 5 buttons
+2025-11-05 15:29:25,420 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:29,010 - OutputPanelWidget - INFO - Appending text: > examine hospital sign
+2025-11-05 15:29:29,011 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Exit': ['hospital_exit']
+2025-11-05 15:29:29,012 - HazardEngine - INFO - [get_hazard_state] Found hazard 'hospital_exit' in 'Hospital Morgue Exit' with state 'off'
+2025-11-05 15:29:29,012 - HazardEngine - INFO - [robo_vacuum#eca4fa28] No primary target found; seeking player in 'Hospital Morgue Exit'
+2025-11-05 15:29:29,012 - HazardEngine - INFO - [robo_vacuum#eca4fa28] Moving from 'Hospital Emergency Entrance' to 'ER Hallway' (toward 'Hospital Morgue Exit')
+2025-11-05 15:29:29,012 - DeathAI - INFO - Analyzing player action: 'examine' in 'Hospital Morgue Exit'
+2025-11-05 15:29:29,013 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:29,013 - OutputPanelWidget - INFO - Appending text: The hospital exit appears to be functioning normally.
+2025-11-05 15:29:29,014 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:29,015 - MapDisplayWidget - INFO - Updating map (length=281)
+2025-11-05 15:29:29,017 - GameScreen - INFO - GameScreen: Finished processing command 'examine hospital sign'
+2025-11-05 15:29:29,017 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:29,017 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:30,410 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:31,380 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Exit': ['hospital_exit']
+2025-11-05 15:29:31,381 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 5 buttons
+2025-11-05 15:29:31,382 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:32,174 - OutputPanelWidget - INFO - Appending text: > examine ambulance
+2025-11-05 15:29:32,175 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Exit': ['hospital_exit']
+2025-11-05 15:29:32,175 - HazardEngine - INFO - [get_hazard_state] Found hazard 'hospital_exit' in 'Hospital Morgue Exit' with state 'off'
+2025-11-05 15:29:32,176 - DeathAI - INFO - Analyzing player action: 'examine' in 'Hospital Morgue Exit'
+2025-11-05 15:29:32,176 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:32,176 - OutputPanelWidget - INFO - Appending text: The hospital exit appears to be functioning normally.
+2025-11-05 15:29:32,178 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:32,178 - MapDisplayWidget - INFO - Updating map (length=281)
+2025-11-05 15:29:32,180 - GameScreen - INFO - GameScreen: Finished processing command 'examine ambulance'
+2025-11-05 15:29:32,180 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:32,180 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:33,155 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:34,134 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Hospital Morgue Exit': ['hospital_exit']
+2025-11-05 15:29:34,140 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 5 buttons
+2025-11-05 15:29:34,140 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:44,168 - OutputPanelWidget - INFO - Appending text: > examine revolving door
+2025-11-05 15:29:44,170 - HazardEngine - INFO - [_update_hazard_state] Hazard 'hospital_exit#0b1d156c' state changed from 'off' to 'door_jammed_trapped'.
+2025-11-05 15:29:44,170 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:44,170 - GameLogic - INFO - _try_trigger_room_interactable_examine: requires_all_evidence -> met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:44,170 - GameLogic - INFO - _examine_main: Room interactable examine triggered.
+2025-11-05 15:29:44,171 - DeathAI - INFO - Analyzing player action: 'examine' in 'Hospital Morgue Exit'
+2025-11-05 15:29:44,171 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['bludworths_house_key', 'bludworths_final_notes']
+2025-11-05 15:29:44,173 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:44,174 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:44,174 - GameScreen - INFO - Applying deferred state change: hospital_exit#0b1d156c -> door_force_qte
+2025-11-05 15:29:44,175 - HazardEngine - INFO - [_update_hazard_state] Hazard 'hospital_exit#0b1d156c' state changed from 'door_jammed_trapped' to 'door_force_qte'.
+2025-11-05 15:29:44,175 - GameScreen - INFO - Sequential consequence: Showing popup 'Notice' with message 'You are trapped inside the jammed revolving door! The glass panel ahead is thick...'
+2025-11-05 15:29:44,176 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:44,177 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:44,179 - GameScreen - INFO - GameScreen: Finished processing command 'examine revolving door'
+2025-11-05 15:29:44,179 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:44,179 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:45,456 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:46,207 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:46,207 - GameScreen - INFO - Starting deferred QTE 'button_mash' after popup
+2025-11-05 15:29:46,208 - QTE_Engine - INFO - QTE 'button_mash' started. Duration: 3.0s. Input type: mash. Prompt: TRAPPED! MASH to force the door open!
+2025-11-05 15:29:46,220 - GameScreen - INFO - _handle_show_qte: Attempting to show QTE popup.
+2025-11-05 15:29:46,222 - QTEPopup - INFO - QTEPopup initialized and ready
+2025-11-05 15:29:46,222 - GameScreen - INFO - QTE popup shown successfully.
+2025-11-05 15:29:46,651 - QTE_Engine - INFO - Mash event: count=1, target=15
+2025-11-05 15:29:47,099 - QTEPopup - INFO - Mash QTE: mash_count=1
+2025-11-05 15:29:47,099 - QTE_Engine - INFO - Mash event: count=1, target=15
+2025-11-05 15:29:47,099 - QTEPopup - INFO - Mash QTE: mash_count=2
+2025-11-05 15:29:47,099 - QTE_Engine - INFO - Mash event: count=2, target=15
+2025-11-05 15:29:47,231 - QTEPopup - INFO - Mash QTE: mash_count=3
+2025-11-05 15:29:47,231 - QTE_Engine - INFO - Mash event: count=3, target=15
+2025-11-05 15:29:47,339 - QTEPopup - INFO - Mash QTE: mash_count=4
+2025-11-05 15:29:47,339 - QTE_Engine - INFO - Mash event: count=4, target=15
+2025-11-05 15:29:47,439 - QTEPopup - INFO - Mash QTE: mash_count=5
+2025-11-05 15:29:47,439 - QTE_Engine - INFO - Mash event: count=5, target=15
+2025-11-05 15:29:47,548 - QTEPopup - INFO - Mash QTE: mash_count=6
+2025-11-05 15:29:47,548 - QTE_Engine - INFO - Mash event: count=6, target=15
+2025-11-05 15:29:47,681 - QTEPopup - INFO - Mash QTE: mash_count=7
+2025-11-05 15:29:47,681 - QTE_Engine - INFO - Mash event: count=7, target=15
+2025-11-05 15:29:47,792 - QTEPopup - INFO - Mash QTE: mash_count=8
+2025-11-05 15:29:47,792 - QTE_Engine - INFO - Mash event: count=8, target=15
+2025-11-05 15:29:47,900 - QTEPopup - INFO - Mash QTE: mash_count=9
+2025-11-05 15:29:47,900 - QTE_Engine - INFO - Mash event: count=9, target=15
+2025-11-05 15:29:48,008 - QTEPopup - INFO - Mash QTE: mash_count=10
+2025-11-05 15:29:48,008 - QTE_Engine - INFO - Mash event: count=10, target=15
+2025-11-05 15:29:48,128 - QTEPopup - INFO - Mash QTE: mash_count=11
+2025-11-05 15:29:48,128 - QTE_Engine - INFO - Mash event: count=11, target=15
+2025-11-05 15:29:48,238 - QTEPopup - INFO - Mash QTE: mash_count=12
+2025-11-05 15:29:48,239 - QTE_Engine - INFO - Mash event: count=12, target=15
+2025-11-05 15:29:48,348 - QTEPopup - INFO - Mash QTE: mash_count=13
+2025-11-05 15:29:48,349 - QTE_Engine - INFO - Mash event: count=13, target=15
+2025-11-05 15:29:48,470 - QTEPopup - INFO - Mash QTE: mash_count=14
+2025-11-05 15:29:48,470 - QTE_Engine - INFO - Mash event: count=14, target=15
+2025-11-05 15:29:48,578 - QTEPopup - INFO - Mash QTE: mash_count=15
+2025-11-05 15:29:48,578 - QTE_Engine - INFO - Mash event: count=15, target=15
+2025-11-05 15:29:48,578 - QTE_Engine - INFO - Mash QTE succeeded.
+2025-11-05 15:29:48,578 - QTE_Engine - INFO - QTE 'Button Mash' resolved. Success: True. Message: With a final, desperate shove and a groan of metal, the door gives way and you stumble out onto the pavement!
+2025-11-05 15:29:48,578 - GameLogic - INFO - _handle_qte_resolution: Processing QTE result
+2025-11-05 15:29:48,589 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-05 15:29:48,589 - QTEPopup - INFO - Dismissing QTEPopup and cleaning up event bindings
+2025-11-05 15:29:48,589 - GameScreen - INFO - QTE popup destroyed successfully
+2025-11-05 15:29:48,589 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-05 15:29:48,595 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:48,596 - GameScreen - INFO - Applying deferred state change: hospital_exit#0b1d156c -> falling_sign_qte
+2025-11-05 15:29:48,596 - HazardEngine - INFO - [_update_hazard_state] Hazard 'hospital_exit#0b1d156c' state changed from 'door_force_qte' to 'falling_sign_qte'.
+2025-11-05 15:29:48,596 - GameScreen - INFO - Sequential consequence: Showing popup 'Notice' with message 'The vibration from your forceful escape travels up the building's facade. High a...'
+2025-11-05 15:29:48,597 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:48,599 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:49,554 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:49,554 - GameScreen - INFO - Applying deferred state change: hospital_exit#0b1d156c -> falling_sign_qte
+2025-11-05 15:29:49,554 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'falling_sign_qte' for hazard 'hospital_exit#0b1d156c'
+2025-11-05 15:29:50,144 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:50,144 - GameScreen - INFO - Starting deferred QTE 'timed_choice' after popup
+2025-11-05 15:29:50,144 - QTE_Engine - INFO - QTE 'timed_choice' started. Duration: 3.0s. Input type: choice. Prompt: THE SIGN IS FALLING! Where do you go?! Type 'DIVE' (into street), 'BACK' (toward door), or 'SIDESTEP'!
+2025-11-05 15:29:50,155 - GameScreen - INFO - _handle_show_qte: Attempting to show QTE popup.
+2025-11-05 15:29:50,158 - QTEPopup - INFO - QTEPopup initialized and ready
+2025-11-05 15:29:50,158 - GameScreen - INFO - QTE popup shown successfully.
+2025-11-05 15:29:50,777 - QTEPopup - INFO - Choice QTE: selected 'sidestep'
+2025-11-05 15:29:50,777 - QTE_Engine - INFO - Choice event: selected='sidestep', choices=['dive', 'back', 'sidestep'], mapping={'dive': 'dodge_success_dive', 'back': 'dodge_success_back', 'sidestep': 'safe_exit_ending'}
+2025-11-05 15:29:50,777 - QTE_Engine - INFO - Choice QTE succeeded via input_to_next_state mapping.
+2025-11-05 15:29:50,777 - QTE_Engine - INFO - QTE 'Timed Choice' resolved. Success: True. Message: Good call!
+2025-11-05 15:29:50,777 - GameLogic - INFO - _handle_qte_resolution: Processing QTE result
+2025-11-05 15:29:50,789 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-05 15:29:50,789 - QTEPopup - INFO - Dismissing QTEPopup and cleaning up event bindings
+2025-11-05 15:29:50,789 - GameScreen - INFO - QTE popup destroyed successfully
+2025-11-05 15:29:50,789 - GameScreen - INFO - _handle_destroy_qte_popup: Attempting to destroy QTE popup.
+2025-11-05 15:29:50,791 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:50,791 - GameScreen - INFO - Applying deferred state change: hospital_exit#0b1d156c -> safe_exit_ending
+2025-11-05 15:29:50,791 - HazardEngine - INFO - [_update_hazard_state] Hazard 'hospital_exit#0b1d156c' state changed from 'falling_sign_qte' to 'safe_exit_ending'.
+2025-11-05 15:29:50,791 - HazardEngine - INFO - Executing special action 'trigger_level_transition' for hazard 'hospital_exit#0b1d156c'
+2025-11-05 15:29:50,791 - HazardEngine - INFO - [special] trigger_level_transition emitted level_complete UI event.
+2025-11-05 15:29:50,791 - AchievementsSystem - WARNING - Achievement 'level_headed_escape' not found in master data
+2025-11-05 15:29:50,791 - HazardEngine - WARNING - Achievement 'level_headed_escape' not unlocked (missing or already unlocked).
+2025-11-05 15:29:50,791 - HazardEngine - INFO - Added score bonus: 75
+2025-11-05 15:29:50,791 - GameScreen - INFO - Sequential consequence: Showing popup 'Level Complete' with message 'You sidestep along the building wall; the sign crashes down where you just were ...'
+2025-11-05 15:29:50,793 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:50,797 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:50,802 - GameScreen - INFO - _handle_level_complete: Transitioning to InterLevelScreen.
+2025-11-05 15:29:50,802 - GameScreen - INFO - Level complete: Hope River Hospital, Score: 0, Turns: 9, Evidence: 0, Next Level: 2
+2025-11-05 15:29:50,802 - GameScreen - INFO - Scheduled transition to 'inter_level' screen.
+2025-11-05 15:29:50,802 - GameScreen - INFO - _handle_hide_qte: Hiding QTE popup and resetting QTE state.
+2025-11-05 15:29:51,235 - GameScreen - INFO - GameScreen.on_leave: Cleaning up QTE popups and resetting transition state.
+2025-11-05 15:29:51,394 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:51,394 - GameScreen - INFO - Applying deferred state change: hospital_exit#0b1d156c -> safe_exit_ending
+2025-11-05 15:29:51,394 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'safe_exit_ending' for hazard 'hospital_exit#0b1d156c'
+2025-11-05 15:29:51,858 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:51,870 - GameScreen - INFO - _handle_level_complete: Transitioning to InterLevelScreen.
+2025-11-05 15:29:51,871 - GameScreen - INFO - Level complete: Hope River Hospital, Score: 75, Turns: 9, Evidence: 0, Next Level: 2
+2025-11-05 15:29:51,871 - GameScreen - INFO - Scheduled transition to 'inter_level' screen.
+2025-11-05 15:29:52,872 - fd_terminal.ui.InterLevelScreen - INFO - InterLevelScreen: Proceeding to level 2.
+2025-11-05 15:29:52,872 - GameLogic - INFO - _initialize_level_data: Executing Rite of Genesis for Level 2...
+2025-11-05 15:29:52,873 - GameLogic - INFO - Building room coordinate map...
+2025-11-05 15:29:52,873 - GameLogic - INFO - Coordinate map built with 16 locations.
+2025-11-05 15:29:52,873 - GameLogic - INFO - _initialize_level_data: Step 1: Forged 16 rooms.
+2025-11-05 15:29:52,873 - GameLogic - INFO - _populate_level_with_items: Step 2: Placed static items. Step 3 will distribute 160 random items.
+2025-11-05 15:29:52,873 - HazardEngine - INFO - Hazard Engine (re)initialized for Level 2.
+2025-11-05 15:29:52,873 - HazardEngine - INFO - Spawned hazard 'wrecking_ball' in 'Kitchen' (id=wrecking_ball#bbc82bc3) at state 'swinging_for_qte'.
+2025-11-05 15:29:52,873 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'swinging_for_qte' for hazard 'wrecking_ball#bbc82bc3'
+2025-11-05 15:29:52,873 - HazardEngine - INFO - Spawned hazard 'gas_leak' in 'Kitchen' (id=gas_leak#d051d1e3) at state 'faint_smell'.
+2025-11-05 15:29:52,874 - HazardEngine - INFO - [_validate_state_transition] Ignoring repeated transition to state 'faint_smell' for hazard 'gas_leak#d051d1e3'
+2025-11-05 15:29:52,874 - GameLogic - INFO - _compile_level_omens: Compiling Omen Library for level 2...
+2025-11-05 15:29:52,874 - GameLogic - INFO - _compile_level_omens: Omen Library compiled with 13 trigger types.
+2025-11-05 15:29:52,874 - GameLogic - INFO - _initialize_level_data: Rite of Genesis for Level 2 is complete.
+2025-11-05 15:29:52,874 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Front Porch': []
+2025-11-05 15:29:52,874 - GameScreen - INFO - GameScreen: Engine references attached.
+2025-11-05 15:29:52,886 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:53,293 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Front Porch': []
+2025-11-05 15:29:53,295 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:53,295 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Front Porch[/color][/b]
+The rotted wooden p...
+2025-11-05 15:29:53,298 - MapDisplayWidget - INFO - Updating map (length=272)
+2025-11-05 15:29:53,777 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:55,245 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:29:55,245 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:55,951 - OutputPanelWidget - INFO - Appending text: > move inside
+2025-11-05 15:29:55,952 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Front Porch': []
+2025-11-05 15:29:55,952 - GameLogic - INFO - _command_move: Moving player from 'Front Porch' to 'Foyer'
+2025-11-05 15:29:55,952 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Foyer
+2025-11-05 15:29:55,953 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Foyer': []
+2025-11-05 15:29:55,953 - GameLogic - INFO - _command_move: First entry text found for room 'Foyer'
+2025-11-05 15:29:55,953 - DeathAI - INFO - Analyzing player action: 'move' in 'Foyer'
+2025-11-05 15:29:55,953 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:29:55,953 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Foyer[/color][/b]
+You step into a grand, ye...
+2025-11-05 15:29:55,955 - InfoPopup - INFO - InfoPopup initialized and ready to display
+2025-11-05 15:29:55,955 - MapDisplayWidget - INFO - Updating map (length=288)
+2025-11-05 15:29:55,961 - GameScreen - INFO - GameScreen: Finished processing command 'move inside'
+2025-11-05 15:29:55,961 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:55,961 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:56,606 - InfoPopup - INFO - Close button pressed, dismissing InfoPopup
+2025-11-05 15:29:57,085 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 7 buttons
+2025-11-05 15:29:57,086 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:29:58,831 - OutputPanelWidget - INFO - Appending text: > move west
+2025-11-05 15:29:58,832 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Foyer': []
+2025-11-05 15:29:58,832 - GameLogic - INFO - _command_move: Moving player from 'Foyer' to 'Living Room'
+2025-11-05 15:29:58,832 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Living Room
+2025-11-05 15:29:58,832 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:29:58,833 - DeathAI - INFO - Analyzing player action: 'move' in 'Living Room'
+2025-11-05 15:29:58,833 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:29:58,833 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Living Room[/color][/b]
+Dusty sheets cover ...
+2025-11-05 15:29:58,833 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:29:58,836 - GameScreen - INFO - GameScreen: Finished processing command 'move west'
+2025-11-05 15:29:58,836 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:29:58,836 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:00,566 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:00,567 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:30:00,567 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:01,234 - OutputPanelWidget - INFO - Appending text: > search fireplace
+2025-11-05 15:30:01,235 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:01,235 - GameLogic - INFO - Interaction flag set: 'searched_fireplace'
+2025-11-05 15:30:01,236 - GameLogic - INFO - _command_search: Found items in 'Fireplace': ['loose brick']
+2025-11-05 15:30:01,236 - DeathAI - INFO - Analyzing player action: 'search' in 'Living Room'
+2025-11-05 15:30:01,236 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:01,236 - OutputPanelWidget - INFO - Appending text: You search the Fireplace and find: [color=00ff00]loose brick...
+2025-11-05 15:30:01,236 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:30:01,239 - GameScreen - INFO - GameScreen: Finished processing command 'search fireplace'
+2025-11-05 15:30:01,239 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:01,239 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:02,593 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:02,595 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-05 15:30:02,595 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:03,558 - OutputPanelWidget - INFO - Appending text: > take loose brick
+2025-11-05 15:30:03,560 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:03,560 - DeathAI - INFO - Analyzing player action: 'take' in 'Living Room'
+2025-11-05 15:30:03,560 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:03,561 - OutputPanelWidget - INFO - Appending text: You take the loose brick.
+2025-11-05 15:30:03,561 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:30:03,567 - GameScreen - INFO - GameScreen: Finished processing command 'take loose brick'
+2025-11-05 15:30:03,567 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:03,567 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:04,527 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:04,528 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-05 15:30:04,528 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:05,300 - OutputPanelWidget - INFO - Appending text: > examine fireplace cavity
+2025-11-05 15:30:05,302 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:05,302 - DeathAI - INFO - Analyzing player action: 'examine' in 'Living Room'
+2025-11-05 15:30:05,302 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:05,302 - OutputPanelWidget - INFO - Appending text: A dark, empty space within the fireplace where a loose brick...
+2025-11-05 15:30:05,302 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:30:05,305 - GameScreen - INFO - GameScreen: Finished processing command 'examine fireplace cavity'
+2025-11-05 15:30:05,305 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:05,305 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:08,143 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:08,144 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:30:08,144 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:09,563 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:09,564 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:11,905 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:30:11,905 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:12,743 - OutputPanelWidget - INFO - Appending text: > move east
+2025-11-05 15:30:12,744 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:12,744 - GameLogic - INFO - _command_move: Moving player from 'Living Room' to 'Foyer'
+2025-11-05 15:30:12,744 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Foyer
+2025-11-05 15:30:12,744 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Foyer': []
+2025-11-05 15:30:12,745 - DeathAI - INFO - Analyzing player action: 'move' in 'Foyer'
+2025-11-05 15:30:12,745 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:12,745 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Foyer[/color][/b]
+You step into a grand, ye...
+2025-11-05 15:30:12,745 - MapDisplayWidget - INFO - Updating map (length=288)
+2025-11-05 15:30:12,748 - GameScreen - INFO - GameScreen: Finished processing command 'move east'
+2025-11-05 15:30:12,748 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:12,748 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:13,478 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 7 buttons
+2025-11-05 15:30:13,478 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:14,676 - OutputPanelWidget - INFO - Appending text: > move west
+2025-11-05 15:30:14,678 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Foyer': []
+2025-11-05 15:30:14,678 - GameLogic - INFO - _command_move: Moving player from 'Foyer' to 'Living Room'
+2025-11-05 15:30:14,678 - GameLogic - WARNING - Companion 'your_friend' not found; cannot move to Living Room
+2025-11-05 15:30:14,678 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:14,678 - DeathAI - INFO - Analyzing player action: 'move' in 'Living Room'
+2025-11-05 15:30:14,678 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:14,678 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Living Room[/color][/b]
+Dusty sheets cover ...
+2025-11-05 15:30:14,678 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:30:14,686 - GameScreen - INFO - GameScreen: Finished processing command 'move west'
+2025-11-05 15:30:14,686 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:14,686 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:15,493 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:15,494 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 2 buttons
+2025-11-05 15:30:15,494 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:16,887 - OutputPanelWidget - INFO - Appending text: > search fireplace
+2025-11-05 15:30:16,889 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:16,889 - GameLogic - INFO - _command_search: No items found in 'Fireplace'
+2025-11-05 15:30:16,889 - DeathAI - INFO - Analyzing player action: 'search' in 'Living Room'
+2025-11-05 15:30:16,889 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:16,889 - OutputPanelWidget - INFO - Appending text: You search the Fireplace but find nothing.
+2025-11-05 15:30:16,889 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:30:16,893 - GameScreen - INFO - GameScreen: Finished processing command 'search fireplace'
+2025-11-05 15:30:16,893 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:16,893 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:19,505 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:19,507 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 3 buttons
+2025-11-05 15:30:19,507 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:20,075 - OutputPanelWidget - INFO - Appending text: > examine fireplace cavity
+2025-11-05 15:30:20,077 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Living Room': []
+2025-11-05 15:30:20,077 - DeathAI - INFO - Analyzing player action: 'examine' in 'Living Room'
+2025-11-05 15:30:20,077 - GameLogic - INFO - _requirements_met_for_level_exit: met=False, missing=['newspaper_clipping']
+2025-11-05 15:30:20,077 - OutputPanelWidget - INFO - Appending text: A dark, empty space within the fireplace where a loose brick...
+2025-11-05 15:30:20,078 - MapDisplayWidget - INFO - Updating map (length=294)
+2025-11-05 15:30:20,081 - GameScreen - INFO - GameScreen: Finished processing command 'examine fireplace cavity'
+2025-11-05 15:30:20,081 - ContextualActionsWidget - INFO - Populating ContextualActionsWidget with 0 buttons
+2025-11-05 15:30:20,081 - ContextualActionsWidget - INFO - Finished populating ContextualActionsWidget
+2025-11-05 15:30:36,788 - kivy - INFO - Base: Leaving application in progress...
+2025-11-05 15:30:36,790 - fd_terminal.main - INFO - Application stopping.
+2025-11-05 15:30:36,793 - AchievementsSystem - INFO - Achievements saved successfully.

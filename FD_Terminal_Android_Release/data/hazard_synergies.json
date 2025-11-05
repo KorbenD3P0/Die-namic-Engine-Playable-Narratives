@@ -1,0 +1,31 @@
+{
+  "water": [
+    "electrical",
+    "slip_and_fall"
+  ],
+  "electrical": [
+    "water",
+    "flammable_gas"
+  ],
+  "fire": [
+    "flammable_gas",
+    "flammable_liquid"
+  ],
+  "flammable_gas": [
+    "fire",
+    "electrical",
+    "sparking"
+  ],
+  "flammable_liquid": [
+    "fire",
+    "sparking"
+  ],
+  "obstruct": [
+    "trip_wire",
+    "slip_and_fall"
+  ],
+  "slip_and_fall": [
+    "projectile",
+    "sharp_object"
+  ]
+}

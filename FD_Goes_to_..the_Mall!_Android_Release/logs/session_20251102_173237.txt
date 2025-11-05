@@ -1,0 +1,182 @@
+2025-11-02 17:32:37,890 - FinalDestinationApp - INFO - Logging configured. Session log: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\logs\session_20251102_173237.txt
+2025-11-02 17:32:37,890 - fd_terminal.resource_manager - INFO - ResourceManager initialized with app_root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release
+2025-11-02 17:32:37,891 - fd_terminal.resource_manager - INFO - Loading and validating all master data...
+2025-11-02 17:32:37,891 - fd_terminal.resource_manager - INFO - Discovering data directory...
+2025-11-02 17:32:37,891 - fd_terminal.resource_manager - INFO - Found data directory at app root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\data
+2025-11-02 17:32:37,895 - fd_terminal.resource_manager - WARNING - No schema defined for '#BACKUP_hazards.json'. Skipping validation.
+2025-11-02 17:32:37,895 - fd_terminal.resource_manager - INFO - Successfully loaded and validated '#BACKUP_hazards.json'.
+2025-11-02 17:32:37,895 - fd_terminal.resource_manager - INFO - Validating 'character_classes.json' against schema 'CharacterClassTypedDict'...
+2025-11-02 17:32:37,896 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'character_classes.json'.
+2025-11-02 17:32:37,896 - fd_terminal.resource_manager - INFO - Validating 'constants.json' against schema 'ConstantsTypedDict'...
+2025-11-02 17:32:37,896 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'constants.json'.
+2025-11-02 17:32:37,896 - fd_terminal.resource_manager - INFO - Validating 'disasters.json' against schema 'DisasterTypedDict'...
+2025-11-02 17:32:37,896 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'disasters.json'.
+2025-11-02 17:32:37,896 - fd_terminal.resource_manager - INFO - Validating 'evidence_by_source.json' against schema 'EvidenceSourceTypedDict'...
+2025-11-02 17:32:37,897 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'evidence_by_source.json'.
+2025-11-02 17:32:37,897 - fd_terminal.resource_manager - INFO - Validating 'furniture.json' against schema 'FurnitureTypedDict'...
+2025-11-02 17:32:37,899 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'furniture.json'.
+2025-11-02 17:32:37,900 - fd_terminal.resource_manager - INFO - Validating 'game_config.json' against schema 'GameConfigTypedDict'...
+2025-11-02 17:32:37,900 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'game_config.json'.
+2025-11-02 17:32:37,900 - fd_terminal.resource_manager - INFO - Validating 'hazards.json' against schema 'HazardTypedDict'...
+2025-11-02 17:32:37,901 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazards.json'.
+2025-11-02 17:32:37,901 - fd_terminal.resource_manager - INFO - Validating 'hazard_synergies.json' against schema 'HazardSynergiesTypedDict'...
+2025-11-02 17:32:37,901 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazard_synergies.json'.
+2025-11-02 17:32:37,901 - fd_terminal.resource_manager - INFO - Validating 'items.json' against schema 'ItemTypedDict'...
+2025-11-02 17:32:37,902 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'items.json'.
+2025-11-02 17:32:37,902 - fd_terminal.resource_manager - WARNING - No schema defined for 'level_ambiance.json'. Skipping validation.
+2025-11-02 17:32:37,902 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_ambiance.json'.
+2025-11-02 17:32:37,902 - fd_terminal.resource_manager - INFO - Validating 'level_requirements.json' against schema 'LevelRequirementTypedDict'...
+2025-11-02 17:32:37,902 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_requirements.json'.
+2025-11-02 17:32:37,903 - fd_terminal.resource_manager - INFO - Validating 'npcs.json' against schema 'NPCTypedDict'...
+2025-11-02 17:32:37,903 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'npcs.json'.
+2025-11-02 17:32:37,903 - fd_terminal.resource_manager - INFO - Validating 'player_achievements.json' against schema 'PlayerAchievementsFileTypedDict'...
+2025-11-02 17:32:37,903 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'player_achievements.json'.
+2025-11-02 17:32:37,903 - fd_terminal.resource_manager - INFO - Validating 'qte_definitions.json' against schema 'QTEDefinitionTypedDict'...
+2025-11-02 17:32:37,904 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'qte_definitions.json'.
+2025-11-02 17:32:37,904 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_1.json' against schema 'RoomTypedDict'...
+2025-11-02 17:32:37,906 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_1.json'.
+2025-11-02 17:32:37,906 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_2.json' against schema 'RoomTypedDict'...
+2025-11-02 17:32:37,909 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_2.json'.
+2025-11-02 17:32:37,910 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_3.json' against schema 'RoomTypedDict'...
+2025-11-02 17:32:37,911 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_3.json'.
+2025-11-02 17:32:37,911 - fd_terminal.resource_manager - WARNING - No schema defined for 'rooms_level_house.json'. Skipping validation.
+2025-11-02 17:32:37,911 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_house.json'.
+2025-11-02 17:32:37,912 - fd_terminal.resource_manager - WARNING - No schema defined for 'settings.json'. Skipping validation.
+2025-11-02 17:32:37,912 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'settings.json'.
+2025-11-02 17:32:37,912 - fd_terminal.resource_manager - INFO - Validating 'status_effects.json' against schema 'StatusEffectsFileTypedDict'...
+2025-11-02 17:32:37,912 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'status_effects.json'.
+2025-11-02 17:32:37,912 - fd_terminal.resource_manager - INFO - Validating 'survivor_fates.json' against schema 'SurvivorFatesFileTypedDict'...
+2025-11-02 17:32:37,913 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'survivor_fates.json'.
+2025-11-02 17:32:37,913 - fd_terminal.resource_manager - INFO - Validating 'temperature_mappings.json' against schema 'TemperatureMappingsFileTypedDict'...
+2025-11-02 17:32:37,913 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'temperature_mappings.json'.
+2025-11-02 17:32:37,913 - fd_terminal.resource_manager - INFO - Validating 'visionaries.json' against schema 'VisionariesFileTypedDict'...
+2025-11-02 17:32:37,913 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'visionaries.json'.
+2025-11-02 17:32:37,913 - fd_terminal.resource_manager - INFO - All master data has been successfully loaded and validated.
+2025-11-02 17:32:37,913 - AchievementsSystem - INFO - Chronicler of Deeds initialized.
+2025-11-02 17:32:37,913 - HazardEngine - INFO - Engine of Calamity initialized.
+2025-11-02 17:32:37,915 - root - INFO - Registered thematic font: 'Horrorfind'
+2025-11-02 17:32:37,915 - root - INFO - Selected thematic font: Horrorfind
+2025-11-02 17:32:37,919 - kivy - DEBUG - App: Loading configuration <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\finaldestination.ini>
+2025-11-02 17:32:37,920 - kivy - DEBUG - App: Loading kv <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\finaldestination.kv>
+2025-11-02 17:32:37,920 - kivy - WARNING - Lang: The file c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\finaldestination.kv is loaded multiples times, you might have unwanted behaviors.
+2025-11-02 17:32:37,925 - kivy - DEBUG - Resource: add <C:\windows\Fonts> in path list
+2025-11-02 17:32:37,926 - kivy - DEBUG - Resource: add <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\fonts> in path list
+2025-11-02 17:32:37,942 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme.atlas>
+2025-11-02 17:32:37,945 - kivy - DEBUG - Atlas: Need to load 1 images
+2025-11-02 17:32:37,945 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-02 17:32:37,945 - kivy - DEBUG - ImageSDL2: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-02 17:32:37,954 - root - INFO - IntroScreen initializing
+2025-11-02 17:32:37,981 - fd_terminal.main - INFO - FinalDestinationApp build() completed successfully.
+2025-11-02 17:32:37,982 - fd_terminal.main - INFO - Application starting.
+2025-11-02 17:32:37,983 - fd_terminal.main - INFO - Checking for corrupted save files...
+2025-11-02 17:32:37,993 - AchievementsSystem - INFO - Loaded 23 achievements, 0 evidence pieces, 0 unlocked stories
+2025-11-02 17:32:37,993 - kivy - DEBUG - Base: Create provider from mouse,disable_multitouch
+2025-11-02 17:32:37,993 - kivy - DEBUG - Base: Create provider from 
+2025-11-02 17:32:37,993 - kivy - WARNING - Base: Unknown <> provider
+2025-11-02 17:32:37,993 - kivy - DEBUG - Base: Create provider from 
+2025-11-02 17:32:37,994 - kivy - WARNING - Base: Unknown <> provider
+2025-11-02 17:32:37,994 - kivy - INFO - Base: Start application main loop
+2025-11-02 17:32:37,998 - kivy - INFO - GL: NPOT texture support is available
+2025-11-02 17:32:39,337 - root - INFO - CharacterSelectScreen: on_enter called. Populating character classes.
+2025-11-02 17:32:39,725 - fd_terminal.ui.CharacterSelectScreen - INFO - Character selected: You. Checking for existing session.
+2025-11-02 17:32:39,725 - fd_terminal.ui.CharacterSelectScreen - INFO - No valid session found, creating new one.
+2025-11-02 17:32:39,725 - GameLogic - INFO - Player flag set: 'has_initialized'
+2025-11-02 17:32:39,725 - GameLogic - INFO - GameLogic instance created with a lean, focused design.
+2025-11-02 17:32:39,725 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-02 17:32:39,725 - GameLogic - INFO - start_new_game: Starting new game with character: You on level 1...
+2025-11-02 17:32:39,725 - GameLogic - INFO - _generate_intro_disaster: Generating fully detailed random introductory disaster...
+2025-11-02 17:32:39,726 - GameLogic - INFO - _generate_intro_disaster: Generated disaster: 'a chill evening at the McKineplex' claiming '0' lives.
+2025-11-02 17:32:39,726 - GameLogic - INFO - _initialize_level_data: Executing Rite of Genesis for Level 1...
+2025-11-02 17:32:39,726 - GameLogic - INFO - Building room coordinate map...
+2025-11-02 17:32:39,726 - GameLogic - INFO - Coordinate map built with 7 locations.
+2025-11-02 17:32:39,726 - GameLogic - INFO - _initialize_level_data: Step 1: Forged 7 rooms.
+2025-11-02 17:32:39,726 - GameLogic - INFO - _populate_level_with_items: Step 2: Placed static items. Step 3 will distribute 0 random items.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - Hazard Engine (re)initialized for Level 1.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - Spawned hazard 'falling_marquee_letters' in 'Cineplex Lobby' (id=falling_marquee_letters#79c42e5d) at state 'hairline_rattle'.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'hairline_rattle' for hazard 'falling_marquee_letters#79c42e5d'
+2025-11-02 17:32:39,726 - HazardEngine - INFO - Spawned hazard 'popcorn_oil_flareup' in 'Concessions' (id=popcorn_oil_flareup#31f9a8b4) at state 'thermostat_stick'.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'thermostat_stick' for hazard 'popcorn_oil_flareup#31f9a8b4'
+2025-11-02 17:32:39,726 - HazardEngine - INFO - Spawned hazard 'soda_spill_slip' in 'Hallway to Theater 7' (id=soda_spill_slip#7ea6763d) at state 'glossy_spread'.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'glossy_spread' for hazard 'soda_spill_slip#7ea6763d'
+2025-11-02 17:32:39,726 - HazardEngine - INFO - Spawned hazard 'overheating_projector_chain' in 'Theater 7' (id=overheating_projector_chain#3e3fd181) at state 'flickering'.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'flickering' for hazard 'overheating_projector_chain#3e3fd181'
+2025-11-02 17:32:39,726 - HazardEngine - INFO - Spawned hazard 'jammed_exit_bar' in 'Emergency Exit Corridor' (id=jammed_exit_bar#9e75f1b5) at state 'stuck_paint'.
+2025-11-02 17:32:39,726 - HazardEngine - INFO - [set_hazard_state] Ignoring repeated transition to state 'stuck_paint' for hazard 'jammed_exit_bar#9e75f1b5'
+2025-11-02 17:32:39,726 - GameLogic - INFO - _compile_level_omens: Compiling Omen Library for level 1...
+2025-11-02 17:32:39,726 - GameLogic - INFO - _compile_level_omens: Omen Library compiled with 10 trigger types.
+2025-11-02 17:32:39,726 - GameLogic - INFO - _initialize_level_data: Rite of Genesis for Level 1 is complete.
+2025-11-02 17:32:39,727 - GameLogic - INFO - New game started successfully. Player is in 'Cineplex Lobby'.
+2025-11-02 17:32:39,727 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:32:39,727 - GameLogic - INFO - start_new_game: Game initialization complete.
+2025-11-02 17:32:39,727 - fd_terminal.main - INFO - Game session created. HazardEngine.game_logic set: True
+2025-11-02 17:32:40,139 - fd_terminal.ui.IntroScreen - INFO - IntroScreen on_enter: Generating and displaying intro text.
+2025-11-02 17:32:40,626 - root - INFO - IntroScreen: Proceeding to GameScreen.
+2025-11-02 17:32:40,627 - GameScreen - INFO - GameScreen: Engine references attached.
+2025-11-02 17:32:41,040 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:32:41,040 - HazardEngine - INFO - [get_active_hazards_for_room] Found hazards in 'Cineplex Lobby': ['falling_marquee_letters']
+2025-11-02 17:32:41,040 - OutputPanelWidget - INFO - Appending text: [b][color=ffff00]Cineplex Lobby[/color][/b]
+A wide, glossy l...
+2025-11-02 17:32:41,043 - MapDisplayWidget - INFO - Updating map (length=275)
+2025-11-02 17:32:53,054 - OutputPanelWidget - INFO - Appending text: > help
+2025-11-02 17:32:53,054 - OutputPanelWidget - INFO - Appending text: [b]Available Actions:[/b]
+<lambda>, Break, Debug_room, Exami...
+2025-11-02 17:32:53,056 - GameScreen - INFO - GameScreen: Finished processing command 'help'
+2025-11-02 17:32:53,056 - ActionInputWidget - INFO - Submit triggered with text: ''
+2025-11-02 17:35:32,366 - OutputPanelWidget - INFO - Appending text: > test_qte rhythm_timing
+2025-11-02 17:35:32,378 - GameLogic - INFO - _command_test_qte: Final test_context for 'rhythm_timing': {'duration': 6.0, 'success_message': 'DEBUG: Test Succeeded!', 'failure_message': 'DEBUG: Test Failed!', 'next_state_on_qte_success': None, 'next_state_on_qte_failure': None, 'target_beats': 5, 'ui_prompt_message': "Test of 'rhythm_timing' (rhythm)\nType 'hit' 5 times in rhythm (any timing accepted in test)."}
+2025-11-02 17:35:32,378 - GameLogic - INFO - _command_test_qte: Initiating test QTE 'rhythm_timing' with context.
+2025-11-02 17:35:32,380 - QTE_Engine - INFO - QTE 'rhythm_timing' started. Duration: 6.0s. Input type: rhythm. Prompt: Test of 'rhythm_timing' (rhythm)
+Type 'hit' 5 times in rhythm (any timing accepted in test).
+2025-11-02 17:35:32,383 - OutputPanelWidget - INFO - Appending text: Initiating test QTE: rhythm_timing
+2025-11-02 17:35:32,384 - GameScreen - INFO - _handle_show_qte: Attempting to show QTE popup.
+2025-11-02 17:35:32,405 - QTEPopup - INFO - QTEPopup initialized and ready
+2025-11-02 17:35:32,406 - GameScreen - INFO - QTE popup shown successfully.
+2025-11-02 17:35:32,411 - GameScreen - INFO - GameScreen: Finished processing command 'test_qte rhythm_timing'
+2025-11-02 17:35:32,411 - ActionInputWidget - INFO - Submit triggered with text: ''
+2025-11-02 17:35:34,490 - QTE_Engine - INFO - Tap event: count=1, need=10
+2025-11-02 17:35:35,104 - QTE_Engine - INFO - Tap event: count=2, need=10
+2025-11-02 17:35:35,319 - QTE_Engine - INFO - Tap event: count=3, need=10
+2025-11-02 17:35:35,754 - QTE_Engine - INFO - Tap event: count=4, need=10
+2025-11-02 17:35:36,087 - QTE_Engine - INFO - Tap event: count=5, need=10
+2025-11-02 17:35:36,471 - QTE_Engine - INFO - Tap event: count=6, need=10
+2025-11-02 17:35:36,788 - QTE_Engine - INFO - Tap event: count=7, need=10
+2025-11-02 17:35:37,471 - QTE_Engine - INFO - Tap event: count=8, need=10
+2025-11-02 17:35:38,106 - QTE_Engine - INFO - Tap event: count=9, need=10
+2025-11-02 17:35:38,354 - QTE_Engine - INFO - QTE timed out for 'Rhythm Timing'.
+2025-11-02 17:35:38,354 - QTE_Engine - INFO - QTE 'Rhythm Timing' resolved. Success: False. Message: DEBUG: Test Failed! You lose 7 HP.
+2025-11-02 17:35:38,354 - QTE_Engine - WARNING - resolve_qte: No hazard_id found in QTE data
+2025-11-02 17:35:38,357 - kivy - INFO - Base: Leaving application in progress...
+2025-11-02 17:35:38,359 - root - CRITICAL - An unexpected fatal error occurred during launch.
+Traceback (most recent call last):
+  File "c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\main.py", line 51, in main
+    FinalDestinationApp().run()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\app.py", line 956, in run
+    runTouchApp()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\base.py", line 574, in runTouchApp
+    EventLoop.mainloop()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\base.py", line 339, in mainloop
+    self.idle()
+    ~~~~~~~~~^^
+  File "C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\base.py", line 379, in idle
+    Clock.tick()
+    ~~~~~~~~~~^^
+  File "C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\clock.py", line 733, in tick
+    self.post_idle(ts, self.idle())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\clock.py", line 776, in post_idle
+    self._process_events()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "kivy\\_clock.pyx", line 620, in kivy._clock.CyClockBase._process_events
+  File "kivy\\_clock.pyx", line 653, in kivy._clock.CyClockBase._process_events
+  File "kivy\\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
+  File "kivy\\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
+  File "c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\qte_engine.py", line 523, in _on_qte_timeout
+    self.game_logic._handle_qte_resolution(result)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Goes_to_..the_Mall!_Android_Release\fd_terminal\game_logic.py", line 1551, in _handle_qte_resolution
+    if not qte_result['success'] and qte_result.get('hp_damage', 0) > 0:
+           ~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'success'

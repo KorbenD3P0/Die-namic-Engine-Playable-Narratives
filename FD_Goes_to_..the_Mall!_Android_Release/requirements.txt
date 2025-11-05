@@ -1,0 +1,13 @@
+kivy>=2.1.0
+cython
+# For Android packaging (optional, for dev/build only)
+buildozer
+# For Windows/Mac/Linux packaging (optional, for dev/build only)
+pyinstaller
+# For type hints and compatibility
+typing-extensions
+# For logging and JSON schema validation (if used)
+jsonschema
+requests
+pillow
+setuptools

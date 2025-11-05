@@ -1,0 +1,522 @@
+{
+  "falling_marquee_letters": {
+    "name": "Falling Marquee Letters",
+    "level_id": 1,
+    "initial_state": "hairline_rattle",
+    "tags": ["structural", "gravity", "qte_driven"],
+    "object_name_options": ["marquee letter", "dangling letter"],
+    "description": "Large letters seem to hang precariously from the cineplex marquee above.",
+    "player_interaction": {
+      "examine": [{
+        "on_target_name": ["loose screws"],
+        "requires_hazard_state": ["hairline_rattle"],
+        "message": "You notice the marquee letter rattling dangerously overhead.",
+        "target_state": "sudden_drop"
+        }]
+      },
+    "states": {
+      "hairline_rattle": {
+        "description": "Metallic rattling echoes from the marquee above. A screw pings off the sidewalk near you.",
+        "chance_to_progress": 0.35,
+        "next_state": "sudden_drop"
+      },
+      "sudden_drop": {
+        "description": "With a sickening screech of metal, a huge letter shears free from the sign above and plummets directly toward you!\n\nGET READY TO REACT (this is how dangers will present themselves so these popups are your warning to get ready to POSSIBLY react however the prompt says)",
+        "triggers_qte_on_entry": {
+          "qte_type": "timed_choice",
+          "duration": 3.0,
+          "qte_context": {
+            "ui_prompt_message": "A marquee letter snaps loose! Go 'LEFT', 'RIGHT', or step 'BACK'!",
+            "choices": ["left", "right", "back"],
+            "input_to_next_state": {
+              "left": "near_miss",
+              "right": "near_miss",
+              "back": "near_miss"
+            },
+            "failure_message_wrong_input": "You freeze—the massive letter smashes into you!",
+            "is_fatal_on_failure": true,
+             "death_narrative": "Crushed beneath the weight of poor civic planning before you even got to your seat."
+          }
+        }
+      },
+      "near_miss": {
+        "description": "The letter slams into the ground where you just stood, shattering tile.\nYou look over and see the ticket booth girl's mouth is agape.\n\nSharp fragments pepper your ankles as onlookers briefly see you as the main attraction.",
+        "on_state_entry_apply_damage": 3,
+        "on_state_entry_rewards": { "achievements_to_unlock": ["dodged_the_sign"] },
+        "chance_to_progress": 0.8,
+        "next_state": "settled"
+      },
+      "settled": {
+        "description": "The remaining letters hang silently. For now.",
+        "is_terminal_state": false
+      }
+    }
+  },
+  "popcorn_oil_flareup": {
+    "name": "Popcorn Kettle Flare",
+    "level_id": 1,
+    "initial_state": "thermostat_stick",
+    "tags": ["thermal", "fire_related", "qte_driven"],
+    "object_name_options": ["popcorn kettle", "greasy kettle", "popcorn machine", "Popcorn Machine"],
+    "description": "The popcorn kettle heats up, oil shimmering dangerously above the self serve machine.",
+    "environmental_omens": {
+      "television": "The TV in the lobby flickers, briefly showing flames leaping from a popcorn machine.",
+      "radio": "A radio crackles, and for a moment you hear the sound of oil sizzling.",
+      "window": "A reflection in the glass shows the 'Let's all go to the lobby' jingle, but it looks overlaid in flames for a brief moment."
+    },
+    "player_interaction": {
+      "use": [{
+        "on_target_name": ["popcorn kettle", "greasy kettle", "Popcorn Machine","popcorn machine"],
+        "requires_hazard_state": ["thermostat_stick"],
+        "message": "You reach for the emergency shutoff button as the oil flares up!",
+        "target_state": "flash_flare"
+        }]
+    },
+    "states": {
+      "thermostat_stick": {
+        "description": "The popcorn kettle's thermostat seems stuck. The oil inside is shimmering and smoking slightly.",
+        "environmental_effect": {"smell": "burning_oil"},
+        "next_state": "flash_flare"
+      },
+      "flash_flare": {
+        "description": "WHOOMPH! With a sudden surge, the hot oil inside the kettle ignites in a terrifying flare-up!\n\nGet ready to react with precision timing!",
+        "environmental_effect": { "temperature_celsius_increase": 10 },
+        "triggers_qte_on_entry": {
+          "qte_type": "rhythm_timing",
+          "duration": 10.0,
+          "qte_context": {
+        "ui_prompt_message": "Oil flare-up! Press the button at the RIGHT MOMENT when the indicator enters the safe zone!",
+        "beats_required": 3,
+        "success_message": "You time it perfectly—hitting the emergency shutoff at just the right moment. The heating element cuts out and the flames subside.",
+        "failure_message_wrong_input": "Your timing is off! The flare intensifies!",
+        "is_fatal_on_failure": false,
+        "hp_damage_on_failure_default": 10,
+        "next_state_after_qte_success": "simmer_down",
+        "next_state_after_qte_failure": "scattered_sparks"
+          }
+        }
+      },
+      "scattered_sparks": {
+        "description": "The flare spits burning oil onto the counter and floor near the machine.",
+        "environmental_effect": {"is_on_fire": true}, 
+        "on_state_entry_apply_damage": 5, 
+        "chance_to_progress": 0.35,
+        "next_state": "simmer_down"
+      },
+      "simmer_down": {
+        "description": "The kettle cools, leaving behind the acrid smell of burnt oil and corn.",
+        "is_terminal_state": false
+      }
+    }
+  },
+  "soda_spill_slip": {
+    "name": "Soda Slip Hazard",
+    "level_id": 1,
+    "initial_state": "glossy_spread",
+    "tags": ["environmental", "slip_hazard", "qte_driven"],
+    "object_name_options": ["sticky soda spill", "syrup slick"],
+    "description": "A sticky soda spill spread across the hallway floor.",
+    "player_interaction": {
+      "move": [{
+        "on_target_name": ["south", "east", "west"],
+        "requires_hazard_state": ["glossy_spread"],
+        "message": "Damnit, you forgot about the soda spill",
+        "target_state": "player_slip"
+        }]
+    },
+    "states": {
+      "glossy_spread": {
+        "description": "A wide, glossy puddle of spilled soda covers the tiled floor.",
+        "environmental_effect": {"is_wet": true},
+        "slip_chance": 0.6, 
+        "next_state": "player_slip"
+      },
+      "player_slip": {
+        "description": "You turn to head back in the opposite direction and feel your foot slip out from under you.\n\nNobody cleaned up that fucking soda?!\nGet ready to catch your balance!",
+        "triggers_qte_on_entry": {
+           "qte_type": "balance_meter",
+           "duration": 5.0,
+           "qte_context": {
+            "ui_prompt_message": "You step right into the soda spill! Keep your balance!",
+            "target_alternations_default": 12,
+            "keys_default": ["l", "r"],
+            "success_message": "You windmill your arms and manage to stay upright despite the slick floor!",
+            "failure_message_wrong_input": "Your feet go out from under you! You slam onto the sticky floor!",
+            "is_fatal_on_failure": false,
+            "hp_damage_on_failure_default": 10,
+            "next_state_after_qte_success": "sticky_save",
+            "next_state_after_qte_failure": "hard_fall",
+            "status_effect_on_slip_failure": {"name": "prone", "duration": 2}
+        }
+        }
+      },
+      "hard_fall": {
+        "description": "You're sprawled on the sticky, wet carpet, your knee throbbing.",
+        "environmental_effect": {"noise_level": 1},
+        "is_terminal_state": false
+      },
+      "sticky_save": {
+        "description": "Your shoes make unpleasant sticking sounds, but you remain standing.",
+        "is_terminal_state": false
+      }
+    }
+  },
+  "sparking_neon_transformer": {
+    "name": "Sparking Transformer",
+    "level_id": 1,
+    "initial_state": "occasional_arc",
+    "progress_while_offscreen": true,
+    "tags": ["electrical", "sparking", "qte_driven"],
+    "object_name_options": ["neon transformer", "buzzing transformer"],
+    "description": "An old neon sign transformer high on the wall crackles intermittently.",
+    "player_interaction": {
+      "examine": [{
+        "on_target_name": ["neon transformer", "buzzing transformer"],
+        "requires_hazard_state": ["angry_buzz"],
+        "message": "The transformer crackles violently. You should step back!",
+        "target_state": "angry_buzz"
+      }]
+    },
+    "states": {
+      "occasional_arc": {
+        "description": "A blue spark occasionally spits from the old transformer.",
+        "environmental_effect": {"is_sparking": true},
+        "chance_to_progress": 0.25,
+        "next_state": "angry_buzz"
+      },
+      "angry_buzz": {
+        "description": "The transformer emits a loud, angry buzz. The smell of ozone is strong, and your hair feels like it's standing on end.",
+        "environmental_effect": {"noise_level": 2, "smell": "ozone"},
+        "triggers_qte_on_entry": {
+          "qte_type": "sequence_input",
+          "duration": 3.0,
+          "qte_context": {
+            "ui_prompt_message": "The transformer is about to arc! Type 'BACK' to jump away!",
+            "expected_input_word": "back",
+            "success_message": "You instinctively leap back just as a large arc of electricity jumps from the transformer!",
+            "failure_message_wrong_input": "You hesitate and the electrical arc lashes out, jolting you!",
+            "is_fatal_on_failure": false,
+            "hp_damage_on_failure_default": 7,
+            "next_state_after_qte_success": "cooldown",
+            "next_state_after_qte_failure": "cooldown"
+          }
+        }
+      },
+      "cooldown": {
+        "description": "The transformer settles back into an occasional crackle.",
+        "is_terminal_state": false 
+      }
+    }
+  },
+  "jammed_exit_bar": {
+    "name": "Jammed Crash Bar",
+    "level_id": 1,
+    "initial_state": "stuck_paint",
+    "tags": ["mechanical", "obstacle", "qte_driven"],
+    "object_name_options": ["jammed crash bar", "stuck exit door"],
+    "description": "The emergency exit's crash bar is stuck fast, likely painted over.",
+    "player_interaction": {
+        "use": [{ 
+            "on_target_name": ["emergency_exit_door", "jammed_crash_bar", "scuffed_crash_bar"],
+            "requires_hazard_state": ["stuck_paint"],
+            "chance_to_trigger": 1.0, 
+            "target_state": "shoulder_check" 
+        }]
+    },
+    "states": {
+      "stuck_paint": {
+        "description": "The crash bar on the emergency exit feels completely solid, as if painted or rusted shut."
+      },
+      "shoulder_check": {
+        "description": "You need to force this door open! Get ready!",
+        "triggers_qte_on_entry": {
+          "qte_type": "button_mash",
+          "duration": 4.0,
+          "qte_context": {
+            "ui_prompt_message": "MASH THE ACTION KEY to force the door!",
+            "target_mash_count_default": 22,
+            "success_message": "With a scream of protesting metal and flaking paint, the crash bar gives way and the door bursts open!",
+            "failure_message_wrong_input": "You slam against the door but bounce off, seeing stars. It's jammed tight.",
+            "is_fatal_on_failure": false,
+            "hp_damage_on_failure_default": 6,
+            "next_state_after_qte_success": "open_air",
+            "next_state_after_qte_failure": "dazed"
+          }
+        }
+      },
+      "dazed": {
+        "description": "You sag against the stubbornly jammed bar, your shoulder aching and ears ringing.",
+        "is_terminal_state": false,
+        "next_state": "stuck_paint" 
+      },
+      "open_air": {
+        "description": "Cold night air floods in through the now open emergency exit.",
+        "is_terminal_state": false,
+        "on_state_entry_move_player_to": "Cineplex Parking Lot"
+
+      }
+    }
+  },
+  "short_circuiting_appliance": { 
+    "name": "Short-Circuiting Appliance",
+    "initial_state": "sparking",
+    "tags": ["electrical", "catalyst"],
+    "object_name_options": ["sparking nacho cheese machine"],
+    "player_interaction": {
+    "examine": [{ 
+        "on_target_name": "sparking nacho cheese machine",
+        "message": "You hit the side of the machine. It stops sparking for a second, then erupts in a much larger shower of sparks with a loud ZAP! A wave of energy surges through the building's wiring, causing lights elsewhere to flicker.",
+        "on_trigger_special_action": "_accelerate_projector_hazard" 
+    }]
+    },
+    "states": {
+    "sparking": {
+        "description": "The {object_name} sparks intermittently, smelling faintly of ozone.",
+        "environmental_effect": {"is_sparking": true, "smell": "ozone"}
+    }
+    }
+    },
+"overheating_projector_chain": {
+  "name": "Overheating Projector Catastrophe",
+  "initial_state": "flickering",
+  "progress_while_offscreen": true,
+  "tags": ["mechanical", "thermal", "chain_reaction", "plot_critical"],
+  "object_name_options": ["overheating projector", "sprinkler", "light rig", "screen rig"],
+  "player_interaction": {
+    "examine": [{
+      "on_target_name": ["projector", "overheating projector", "Overheating Projector", "Film Projector"],
+      "requires_hazard_state": ["flickering"],
+      "duration_in_state": 1,
+      "message": "The projector is flickering and smoking. Something's wrong!",
+      "target_state": "ignites_dust"
+    }]
+  },
+  "states": {
+    "smoking": {
+      "description": "A thin curl of smoke is now visible from the projection booth vent. The smell of burning plastic is faint but undeniable.",
+      "global_message_on_entry": "A faint haze seems to drift down from the ceiling near the back of the theater.",
+      "environmental_effect": {"smell": "burning_plastic", "visibility": "hazy"},
+      "chance_to_progress": 1,
+      "next_state": "ignites_dust"
+    },
+    "ignites_dust": {
+      "description": "The smoldering projector ignites a thick layer of flammable dust in the booth! A small fire has started! Get ready to react!\n\nTyping QTEs have a known bug where you must hit 'enter/return' TWICE to submit your answer.",
+      "global_message_on_entry": "Someone shouts 'FIRE!' from the back of the theater.",
+      "environmental_effect": {"smell": "smoke", "is_on_fire": true, "noise_level": 1},
+      "triggers_qte_on_entry": {
+      "qte_type": "input",
+      "duration": 3.0,
+      "qte_context": {
+        "ui_prompt_message": "The fire is spreading! Type 'PULL' to activate the fire alarm and sprinkler system!",
+        "expected_input_word": "pull",
+        "success_message": "You pull the fire alarm lever! The sprinklers activate, dousing the flames.",
+        "failure_message_wrong_input": "You fumble with the alarm! The fire grows rapidly.",
+        "is_fatal_on_failure": false,
+        "hp_damage_on_failure_default": 10,
+        "next_state_after_qte_success": "sprinkler_spraying",
+        "next_state_after_qte_failure": "sprinkler_spraying"
+      }
+      }
+    },
+    "sprinkler_spraying": {
+      "description": "Ice-cold water begins to rain down from the ceiling, directly onto the sparking lighting rig below! Water pours onto the lighting rig's frayed wiring! It erupts in a shower of violent blue sparks and the massive rig groans loudly, its support winch whining under the electrical surge!",
+      "global_message_on_entry": "Suddenly, freezing water starts spraying down from the ceiling in the theater! The lights in the theater explode in a shower of sparks!",
+      "environmental_effect": {"is_wet": true, "temperature_celsius_decrease": 10, "is_sparking": true, "noise_level": 3, "visibility": "strobe"},
+      "triggers_qte_on_entry": {
+      "qte_type": "input",
+      "duration": 3.0,
+      "qte_context": {
+        "ui_prompt_message": "The rig is about to overload! Type 'DUCK' to take cover from the sparks!",
+        "expected_input_word": "duck",
+        "success_message": "You duck just in time as a shower of sparks rains down! The winch begins to overload.",
+        "failure_message_wrong_input": "You hesitate and are struck by a burst of sparks!",
+        "is_fatal_on_failure": false,
+        "hp_damage_on_failure_default": 8,
+        "next_state_after_qte_success": "winch_overload",
+        "next_state_after_qte_failure": "winch_overload"
+      }
+      }
+    },
+    "winch_overload": {
+      "description": "The electrical surge overloads the main support winch! With a sound like tearing metal and a gunshot-crack, the main support cable snaps! The entire screen and lighting rig is plummeting towards the audience before-\n*SPLAT*!\n-your idiot friend is crushed instantly! Get ready to react!",
+      "global_message_on_entry": "A sound like thunder rips through the theater as something massive breaks overhead!",
+      "environmental_effect": {"noise_level": 5, "visibility": "dusty"},
+      "triggers_qte_on_entry": {
+      "qte_type": "timed_choice",
+      "duration": 4,
+      "qte_context": {
+        "ui_prompt_message": "THE RIG IS COLLAPSING! Go 'LEFT' towards the emergency exit or 'RIGHT' towards the main doors!",
+        "choices": ["left", "right"],
+        "input_to_next_state": {
+        "left": "escaped_clean",
+        "right": "escape_blocked_qte"
+        },
+        "failure_message_wrong_input": "You're paralyzed by fear! The last thing you see is tons of metal and screen hurtling towards you.",
+        "is_fatal_on_failure": true,
+        "death_message": "Crushed by the falling screen rig."
+      }
+      }
+    },
+    "escape_blocked_qte": {
+      "description": "You run right, towards the main exit, but the narrow hallway is jammed with panicked people! You have to push through!",
+      "triggers_qte_on_entry": {
+        "qte_type": "button_mash",
+        "duration": 3,
+        "qte_context": {
+          "ui_prompt_message": "PUSH THROUGH THE CROWD! MASH ACTION!",
+          "target_mash_count_default": 15,
+          "success_message": "You shove your way through the bottleneck and burst into the lobby just as the theater implodes behind you. You take some bruises in the crush.",
+          "failure_message_wrong_input": "You're caught in the panicked crush of bodies and can't break free as the ceiling comes down...",
+          "is_fatal_on_failure": true,
+          "on_state_entry_move_player_to": "Cineplex Lobby",
+          "death_message": "Trampled and crushed in the panicked escape.",
+          "on_success_apply_damage": 5
+        }
+      }
+    },
+    "escaped_clean": {
+      "description": "You dive through the side emergency exit just as the massive rig crashes down with a deafening roar, crushing everything. The force of the impact slams the heavy door shut behind you, striking your arm.",
+      "on_state_entry_apply_damage": 8,
+      "on_state_entry_move_player_to": "emergency exit corridor",
+      "is_terminal_state": false
+    }
+    }
+  },
+  "robo_vacuum": {
+    "name": "Robo-Vacuum",
+    "level_id": "all",
+    "initial_state": "docked",
+    "can_move_between_rooms": true,
+    "progress_while_offscreen": true,
+    "object_name_options": [
+      "erratic robot vacuum",
+      "whirring floor cleaner",
+      "rogue Doomba",
+      "malfunctioning Roomba",
+      "autonomous cleaning unit",
+      "robotic dust devil"
+    ],
+    "tags": ["mechanical", "mobile", "qte_driven"],
+    "player_interaction": {
+      "examine": [
+        {
+          "requires_hazard_state": ["docked"],
+          "message": "The {object_name} sits innocuously on its charging dock. Its sensors gleam with an almost predatory intelligence, and you notice scorch marks around its charging contacts."
+        },
+        {
+          "requires_hazard_state": ["patrolling"],
+          "message": "The {object_name} hums contentedly as it navigates the area. Its movements are methodical but seem slightly... too intelligent."
+        },
+        {
+          "requires_hazard_state": ["sparking_malfunction"],
+          "message": "The {object_name} is clearly malfunctioning, sparks flying from its damaged chassis as it moves erratically. Approaching it would be extremely dangerous."
+        }
+      ],
+      "kick": [
+        {
+          "requires_hazard_state": ["patrolling"],
+          "chance_to_trigger": 0.7,
+          "target_state": "damaged_aggressive",
+          "message": "You kick the {object_name}! It spins wildly, emits an angry beep, and its cleaning brushes start spinning at maximum speed. You've made it mad!"
+        }
+      ],
+      "take": [
+        {
+          "requires_hazard_state": ["docked", "patrolling"],
+          "chance_to_trigger": 0.4,
+          "target_state": "defensive_spin_qte",
+          "message": "As you try to pick up the {object_name}, its brushes suddenly spin to life, trying to escape your grasp!"
+        }
+      ],
+      "unplug": [
+        {
+          "requires_hazard_state": ["docked"],
+          "chance_to_trigger": 1,
+          "target_state": "powered_down_safe",
+          "message": "You unplug the {object_name} from its charging dock. It powers down with a sad little beep."
+        }
+      ]
+    },
+    "states": {
+      "docked": {
+        "description": "A {object_name} sits quietly on its charging dock. Its sensors gleam with an almost predatory intelligence.",
+        "chance_to_progress": 0.12,
+        "next_state": "patrolling"
+      },
+      "patrolling": {
+        "description": "The {object_name} hums contentedly as it navigates the area. Its movements are methodical but seem slightly... too intelligent.",
+        "autonomous_action": "_move_and_interact",
+        "chance_to_progress": 0.08,
+        "next_state": "sparking_malfunction"
+      },
+      "damaged_aggressive": {
+        "description": "Your kick has damaged the {object_name}! Now it's angry, moving aggressively with sparks flying!",
+        "chance_to_progress": 0.4,
+        "next_state": "sparking_malfunction"
+      },
+      "sparking_malfunction": {
+        "description": "The {object_name} emits showers of sparks from its damaged motor housing! It moves erratically, bumping into obstacles and spinning in tight circles.",
+        "autonomous_action": "_move_and_interact",
+        "chance_to_progress": 0.3,
+        "next_state": "berserker_mode"
+      },
+      "berserker_mode": {
+        "description": "The {object_name} has entered a terrifying berserker state! Its brushes spin at maximum speed, sparks fly constantly, and it moves with aggressive, predatory intent!",
+        "autonomous_action": "_move_hazard_toward_player",
+        "chance_to_progress": 0.2,
+        "next_state": "overheating_shutdown_qte"
+      },
+      "defensive_spin_qte": {
+        "description": "As you try to grab it, the {object_name} spins its brushes violently!",
+        "triggers_qte_on_entry": {
+          "qte_type": "button_mash",
+          "duration": 3,
+          "qte_context": {
+            "ui_prompt_message": "THE VACUUM IS FIGHTING BACK! MASH ACTION to hold on!",
+            "target_mash_count_default": 10,
+            "success_message": "You maintain your grip! Its brushes slow down and it powers off.",
+            "failure_message_wrong_input": "The spinning brushes tear at your hands! You drop the {object_name} and it falls, damaged and sparking!",
+            "next_state_after_qte_success": "manually_disabled",
+            "next_state_after_qte_failure": "damaged_aggressive",
+            "is_fatal_on_failure": false,
+            "hp_damage_on_failure_default": 8
+          }
+        }
+      },
+      "overheating_shutdown_qte": {
+        "description": "The berserk {object_name} is smoking heavily! It's about to either shut down or explode!",
+        "triggers_qte_on_entry": {
+          "qte_type": "timed_choice",
+          "duration": 4,
+          "qte_context": {
+            "ui_prompt_message": "THE VACUUM IS OVERHEATING! Choose: 'take cover' or 'spray water'!",
+            "choices": ["take cover", "spray water"],
+            "input_to_next_state": {
+              "take cover": "explosive_destruction",
+              "spray water": "water_cooled_shutdown"
+            },
+            "failure_message_wrong_input": "You're too close when the {object_name} suffers thermal failure! Hot debris peppers your body!",
+            "is_fatal_on_failure": false,
+            "hp_damage_on_failure_default": 18
+          }
+        }
+      },
+      "manually_disabled": {
+        "description": "You successfully disabled the {object_name} by hand. It sits quietly, no longer a threat.",
+        "is_terminal_state": true
+      },
+      "powered_down_safe": {
+        "description": "You safely unplugged the {object_name}. Sometimes the simplest solutions are the best.",
+        "is_terminal_state": true
+      },
+      "explosive_destruction": {
+        "description": "The {object_name} has exploded spectacularly! Plastic debris and electronic components are scattered across the area.",
+        "is_terminal_state": true
+      },
+      "water_cooled_shutdown": {
+        "description": "The water successfully cooled the overheating {object_name}, preventing an explosion. It's now safely shut down.",
+        "is_terminal_state": true
+      }
+    }
+  }
+  }

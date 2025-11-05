@@ -1,0 +1,1381 @@
+{
+  "achievements": {
+    "first_evidence": {
+      "name": "First Clue",
+      "unlocked": true,
+      "icon": "🔍",
+      "description": "Find your first piece of crucial evidence.",
+      "difficulty": "easy",
+      "points": 10,
+      "unlock_date": "2025-10-17T18:47:55.793166"
+    },
+    "lore_master": {
+      "name": "Lore Master",
+      "unlocked": true,
+      "icon": "📜",
+      "description": "Unlock your first full story backstory in the journal.",
+      "unlock_date": "2025-10-17T18:48:22.899446"
+    },
+    "historian": {
+      "name": "Historian",
+      "unlocked": true,
+      "icon": "🏛️",
+      "description": "Unlock 5 story backstories in the journal.",
+      "unlock_date": "2025-10-17T18:48:22.932763"
+    },
+    "magnetic_personality": {
+      "name": "Magnetic Personality",
+      "unlocked": true,
+      "icon": "🧲",
+      "description": "Bring the MRI hazard to its final state.",
+      "unlock_date": "2025-10-26T13:30:55.580929"
+    },
+    "vacuum_wrestler": {
+      "name": "Vacuum Wrestler",
+      "unlocked": true,
+      "icon": "🤼",
+      "description": "Successfully disable the robo-vacuum by grabbing it.",
+      "unlock_date": "2025-11-04T13:46:46.068293"
+    }
+  },
+  "evidence_collection": {
+    "coroners_office_key": {
+      "name": "Coroner's Office Key",
+      "description": "A small, ornate key. 'Lakeview Hospital - Do Not Copy' is etched on the side.",
+      "examine_details": "The ornate design suggests it's for an important room. This key must be for Bludworth's office; finding what's inside feels critical.",
+      "character_connection": "William Bludworth",
+      "found_date": "2025-10-17T18:47:55.792853",
+      "type": "key"
+    },
+    "radiology_key_card": {
+      "name": "Radiology Key Card",
+      "description": "A plastic key card labeled 'Radiology'.",
+      "examine_details": "Grants access to restricted areas in the hospital's radiology wing and can activate certain equipment.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.796159",
+      "type": "key"
+    },
+    "bludworths_house_key": {
+      "name": "Bludworth's House Key",
+      "description": "A tarnished brass key labeled 'Bludworth Residence'.",
+      "examine_details": "A tarnished brass key labeled 'Bludworth Residence'.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.796714",
+      "type": "key"
+    },
+    "bludworths_final_notes": {
+      "name": "Bludworth's Final Notes",
+      "description": "A sheaf of hastily scribbled notes by William Bludworth, detailing his final, desperate theories on disrupting Death's design and the potential cost. Some passages are circled, others violently crossed out.",
+      "examine_details": "The notes are increasingly frantic as they progress, showing Bludworth's growing desperation to find a way to cheat Death. References to 'the Corman method' and 'lake confrontation' appear repeatedly. His final entry mentions that time is running out - for everyone.",
+      "character_connection": "William Bludworth",
+      "found_date": "2025-10-17T18:47:55.797114",
+      "type": "evidence"
+    },
+    "desk_drawer_key": {
+      "name": "Desk Drawer Key",
+      "description": "A small, ornate key with a customized skull-shaped hilt. 'Hope River Hospital - Do Not Copy' is etched on the side.",
+      "examine_details": "This key looks custom-made. It's likely for a specific piece of furniture, probably the large desk in the Coroner's Office.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.797568",
+      "type": "key"
+    },
+    "scalpel": {
+      "name": "Scalpel",
+      "description": "A small, sterile scalpel. Stewart Tubbs survived the Mornington Crescent explosion but he was mistakenly pronounced dead after chemical bottles broke and created a gas that rendered him unconscious; he was later autopsied alive by his co-worker.",
+      "examine_details": "An extremely old scalpel, rusted or covered in.. some other grime. Despite its old appearance, it still looks menacingly sharp.",
+      "character_connection": "Stewart Tubbs",
+      "found_date": "2025-10-17T18:47:55.797966",
+      "type": "evidence"
+    },
+    "can_of_hice_pale_ale": {
+      "name": "Can of Hice Pale Ale",
+      "description": "A can of cheap Hice Pale Ale. Carter Daniels was drinking this shortly before he was dragged by his tow truck and then obliterated in the ensuing explosion.",
+      "examine_details": "The beer can is dented and empty. The label promises refreshment, but delivered only death.",
+      "character_connection": "Carter Daniels",
+      "found_date": "2025-10-17T18:47:55.798346",
+      "type": "evidence"
+    },
+    "hairpin": {
+      "name": "Hairpin",
+      "description": "A simple hairpin, used for picking locks. Louise King survived the train crash with her twin Danny but was later attacked and survived alongside him.",
+      "examine_details": "A standard metal hairpin. It looks like it could be useful for more than just hair.",
+      "character_connection": "Louise King",
+      "found_date": "2025-10-17T18:47:55.798741",
+      "type": "evidence"
+    },
+    "rubber_band": {
+      "name": "Rubber Band",
+      "description": "A broken rubber band, snapped with force. Candice Hooper, a gymnast, survived the bridge collapse but died during practice when a series of unfortunate events led to her landing badly, snapping her spine.",
+      "examine_details": "The rubber band is snapped cleanly in half, much like the gymnast's spine.",
+      "character_connection": "Candice Hooper",
+      "found_date": "2025-10-17T18:47:55.799099",
+      "type": "evidence"
+    },
+    "detective_badge": {
+      "name": "Detective Badge",
+      "description": "A gold detective's badge. Warren Ackerman survived the casino elevator crash but was later electrocuted by damaged cables while pursuing a suspect.",
+      "examine_details": "A gold-plated detective's badge. The name 'W. Ackerman' is engraved on it.",
+      "character_connection": "Warren Ackerman",
+      "found_date": "2025-10-17T18:47:55.799458",
+      "type": "evidence"
+    },
+    "sunglasses": {
+      "name": "Sunglasses",
+      "description": "A pair of broken sunglasses. Jake, Carly's arrogant party-hard boyfriend... was later shredded by helicopter blades.",
+      "examine_details": "A pair of stylish sunglasses. One of the lenses is missing and the frame is bent.",
+      "character_connection": "Jake",
+      "found_date": "2025-10-17T18:47:55.799865",
+      "type": "evidence"
+    },
+    "drumstick": {
+      "name": "Drumstick",
+      "description": "A drumstick belonging to Jamie. He survived the Club Kitty collapse but later died after being shot in the chest while saving Eric.",
+      "examine_details": "A standard wooden drumstick, scuffed from use. It feels unnaturally heavy in your hand.",
+      "character_connection": "Jamie",
+      "found_date": "2025-10-17T18:47:55.800249",
+      "type": "evidence"
+    },
+    "toy_pigeon": {
+      "name": "Toy Pigeon",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A small, battered toy pigeon. Tim Carpenter, survived the Route 23 pile-up only to be crushed by falling plate glass window at the dentist. Tim was warned to watch for pigeons just before his death",
+      "character_connection": "Tim Carpenter",
+      "found_date": "2025-10-17T18:47:55.800659",
+      "type": "evidence"
+    },
+    "unlucky_coin": {
+      "name": "(Un)Lucky Coin",
+      "description": "A half dollar, covered in what might be dried blood. Associated with Hunt Wynorski's death by internal organ suction removal by a pool filtration system after he lost this coin.",
+      "examine_details": "The coin is stained with something dark and crusted. Definitely not lucky for its previous owner.",
+      "character_connection": "Hunt Wynorski",
+      "found_date": "2025-10-17T18:47:55.801064",
+      "type": "evidence"
+    },
+    "bloodied_lawn_mower_spark_plug": {
+      "name": "Bloodied Lawn Mower Spark Plug",
+      "description": "A spark plug from a lawnmower, coated in blood and grime. Howard Campbell, Iris's son, received an extremely deep exfoliating facial from a lawnmower during a family barbecue.",
+      "examine_details": "The spark plug is covered in dried blood and bits of... other things you'd rather not identify.",
+      "character_connection": "Howard Campbell",
+      "found_date": "2025-10-17T18:47:55.801465",
+      "type": "evidence"
+    },
+    "temporary_tattoo_Sheet": {
+      "name": "Temporary Tattoo Sheet",
+      "description": "A sheet of cheap, glittery temporary tattoos, one partially used. Mandy... was later electrocuted in a hotel hot tub...",
+      "examine_details": "A sheet of temporary tattoos with glittery dolphin and flower designs. One is missing.",
+      "character_connection": "Mandy Robertson",
+      "found_date": "2025-10-17T18:47:55.801932",
+      "type": "evidence"
+    },
+    "metal_sculpture_piece": {
+      "name": "Metal Sculpture Piece",
+      "description": "A small, sharp piece from a metal sculpture. Officer Amy Tom survived a near-fatal encounter but later bled to death after being impaled by her own art.",
+      "examine_details": "A twisted piece of metal, sharp as a knife. It looks like it was broken off a larger sculpture.",
+      "character_connection": "Officer Amy Tom",
+      "found_date": "2025-10-17T18:47:55.802411",
+      "type": "evidence"
+    },
+    "miniature_toy_bus": {
+      "name": "Miniature Toy Bus",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A small, miniature model of a city bus. Terry Chaney was fatally struck by a bus moments after telling Carter off.",
+      "character_connection": "Terry Chaney",
+      "found_date": "2025-10-17T18:47:55.802884",
+      "type": "evidence"
+    },
+    "display_skeleton_piece": {
+      "name": "Display Skeleton Piece",
+      "description": "A small, plastic piece from a medical display skeleton. Katie... was later impaled on the ribs of a medical display skeleton.",
+      "examine_details": "A plastic rib bone from a life-sized anatomical skeleton.",
+      "character_connection": "Katie",
+      "found_date": "2025-10-17T18:47:55.803318",
+      "type": "evidence"
+    },
+    "hair_clip": {
+      "name": "Hair Clip",
+      "description": "A simple, slightly singed hair clip. Samantha Lane died at a salon when a rock, propelled by a lawnmower, perforated her eye shortly after the speedway disaster. She had moments before put tampons in her children's ears to block the noise at the track.",
+      "examine_details": "The hair clip is singed around the edges, possibly from the heat of the salon equipment.",
+      "character_connection": "Samantha Lane",
+      "found_date": "2025-10-17T18:47:55.803751",
+      "type": "evidence"
+    },
+    "costume_feather": {
+      "name": "Costume Feather",
+      "description": "A single feather from a stage costume. Shawna Engels survived the casino elevator crash but was later... impaled... by a coin dispenser.",
+      "examine_details": "A long, bright pink feather, likely from a showgirl's costume.",
+      "character_connection": "Shawna Engels",
+      "found_date": "2025-10-17T18:47:55.804182",
+      "type": "evidence"
+    },
+    "charred_mug": {
+      "name": "Charred Mug",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A ceramic mug, blackened and cracked by intense heat. Ms. Lewton died in a house fire triggered by a series of 'accidents' involving her computer monitor and vodka.",
+      "character_connection": "Valerie Lewton",
+      "found_date": "2025-10-17T18:47:55.804634",
+      "type": "evidence"
+    },
+    "defibrillator_pads": {
+      "name": "defibrillator pads",
+      "description": "A pair of defibrillator pads, still sealed in their sterile packaging. They look like they connect to a larger machine.",
+      "examine_details": "These pads are meant to deliver a powerful electrical shock to restart a heart. They're useless without the main defibrillator unit, but the conductive gel and metal contacts might have other applications.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.805176",
+      "type": "medical_equipment"
+    },
+    "nail_gun": {
+      "name": "Nail Gun",
+      "description": "A heavy-duty nail gun, capable of driving nails with dangerous force. It can be loaded with a strip of nails and used as a tool or weapon.",
+      "examine_details": "The nail gun is currently {state}. Handle with care—misfires can be deadly.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.805630",
+      "type": "tool"
+    },
+    "fireworks_wrapper": {
+      "name": "Fireworks Wrapper",
+      "description": "A piece of a colorful fireworks wrapper. Matt, Amanda's relaxed boyfriend... was later incinerated by fireworks.",
+      "examine_details": "The colorful paper wrapper from a large firework. It smells of gunpowder.",
+      "character_connection": "Matt",
+      "found_date": "2025-10-17T18:47:55.806134",
+      "type": "evidence"
+    },
+    "bloody_piece_of_metal": {
+      "name": "Bloody Piece of Metal",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A jagged piece of metal, stained dark brown. Billy Hitchcock was decapitated by shrapnel from a train wreck after Alex intervened and saved Carter Horton from an oncoming train.",
+      "character_connection": "Billy Hitchcock",
+      "found_date": "2025-10-17T18:47:55.806635",
+      "type": "evidence"
+    },
+    "glass_shard": {
+      "name": "Glass Shard",
+      "description": "A sharp shard of glass. Gino, the smart one... was later impaled through the mouth by a glass shard.",
+      "examine_details": "A wicked-looking shard of thick glass. The edges are incredibly sharp.",
+      "character_connection": "Gino",
+      "found_date": "2025-10-17T18:47:55.807215",
+      "type": "evidence"
+    },
+    "floral_hair_decoration": {
+      "name": "Floral Hair Decoration",
+      "description": "A floral hair decoration. Rinoka Aratsu survived the train crash (despite a vision of her death) but was severely burned and later crushed by an overflowing bathtub.",
+      "examine_details": "A silk flower meant to be worn in the hair. The petals are singed at the edges.",
+      "character_connection": "Rinoka Aratsu",
+      "found_date": "2025-10-17T18:47:55.807725",
+      "type": "evidence"
+    },
+    "carly_hagans_notebook": {
+      "name": "Carly Hagan's Notebook",
+      "description": "A small notebook filled with notes and theories about Death. Carly Hagan... was supposedly the last to die, vanishing into thin air.",
+      "examine_details": "The notebook is filled with frantic sketches, names, and theories about Death's design. The last page is blank.",
+      "character_connection": "Carly Hagan",
+      "found_date": "2025-10-17T18:47:55.808283",
+      "type": "evidence"
+    },
+    "movie_ticket_stub": {
+      "name": "Movie Ticket Stub",
+      "description": "A ticket stub for 'Love Lays Dying in 3D'. Janet Cunningham survived the speedway crash but died after being run over by an 18-wheeler that crashed into the coffee shop she was in.",
+      "examine_details": "The ticket is for a 3D movie about death. How ironic.",
+      "character_connection": "Janet Cunningham",
+      "found_date": "2025-10-17T18:47:55.808799",
+      "type": "evidence"
+    },
+    "male_wedding_band": {
+      "name": "Male Wedding Band",
+      "description": "A plain wedding band. Tom survived the casino elevator crash but was later hit by a speeding truck while changing a tire.",
+      "examine_details": "A plain tungsten wedding band. It feels heavier than it looks.",
+      "character_connection": "Tom",
+      "found_date": "2025-10-17T18:47:55.809328",
+      "type": "evidence"
+    },
+    "surf_wax_black": {
+      "name": "Surf Wax (Black)",
+      "description": "A chunk of black surf wax, smelling faintly of coconut and something metallic... like blood. Ravyn survived the beach plane crash but was later impaled by her own surfboard...",
+      "examine_details": "A block of black surf wax, used for grip. It has a strange, coppery smell underneath the coconut scent.",
+      "character_connection": "Ravyn Blackthorne",
+      "found_date": "2025-10-17T18:47:55.809853",
+      "type": "evidence"
+    },
+    "work_gloves": {
+      "name": "Work Gloves",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A pair of worn leather work gloves. Brian Gibbons survived the Lakeview apartment fire, as well as a run in with a news van on his family's farm, but was later incinerated by an exploding barbecue grill.",
+      "character_connection": "Brian Gibbons",
+      "found_date": "2025-10-17T18:47:55.810379",
+      "type": "evidence"
+    },
+    "rubber_ducky": {
+      "name": "Rubber Ducky",
+      "description": "A small, yellow rubber ducky. A female factory worker survived the explosion... only to be electrocuted in her bathtub.",
+      "examine_details": "A classic yellow rubber ducky. It squeaks when you squeeze it.",
+      "character_connection": "Unnamed Factory Worker (Bathing)",
+      "found_date": "2025-10-17T18:47:55.810901",
+      "type": "evidence"
+    },
+    "medical_director_key_card": {
+      "name": "Medical Director Key Card",
+      "description": "A master key card for Lakeview Hospital. Bears the insignia of the Medical Director.",
+      "examine_details": "This master key card grants access to almost all secure areas on this level. It seems very powerful. The card is pristine white with gold lettering and an official hospital seal. This level of access is reserved for only the highest-ranking medical staff.",
+      "character_connection": "Hospital Administration",
+      "found_date": "2025-10-17T18:47:55.811437",
+      "type": "key"
+    },
+    "dirty_hair_tie": {
+      "name": "Dirty Hair Tie",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A blue hair tie speckled with brown..or dark red? Nora Carpenter survived the Route 23 pile-up but was decapitated by a malfunctioning elevator.",
+      "character_connection": "Nora Carpenter",
+      "found_date": "2025-10-17T18:47:55.812020",
+      "type": "evidence"
+    },
+    "bottle_of_water": {
+      "name": "bottle of water",
+      "description": "A plastic bottle partially filled with clear water.",
+      "examine_details": "It's a standard plastic water bottle, about half full. The water looks clean enough to drink, or perhaps use for other purposes.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.812580",
+      "type": "consumable"
+    },
+    "splintered_log_piece_stefani": {
+      "name": "Splintered Log Piece (Stefani)",
+      "description": "A heavy, splintered piece of wood, smelling of pine and recent trauma. Stefani Reyes, who inherited her grandmother's sensitivity to Death's design, was crushed by falling logs from a derailed train.",
+      "examine_details": "The wood splinter is sharp and jagged, with the fresh scent of pine mixed with something more ominous.",
+      "character_connection": "Stefani Reyes",
+      "found_date": "2025-10-17T18:47:55.813134",
+      "type": "evidence"
+    },
+    "chablis_cat_toy": {
+      "name": "'Chablis''s Cat Toy",
+      "description": "A small, fluffy cat toy. Ruby 'Chablis' survived the yacht foundering but later died from cyanide gas exposure, biting off her tongue.",
+      "examine_details": "A small toy mouse with a bell inside. It's covered in catnip.",
+      "character_connection": "Ruby 'Chablis'",
+      "found_date": "2025-10-17T18:47:55.813854",
+      "type": "evidence"
+    },
+    "old_patient_chart": {
+      "name": "Old Patient Chart",
+      "description": "A yellowed medical chart with faded handwriting and coffee stains.",
+      "examine_details": "The chart contains medical information from years past. Some entries mention unusual accident patterns and 'anomalous death circumstances' in the margins. Several names are highlighted, and there are notes about 'intervention attempts' and 'design failures'.",
+      "character_connection": "Unknown Patient",
+      "found_date": "2025-10-17T18:47:55.814480",
+      "type": "evidence"
+    },
+    "clove_cigarette": {
+      "name": "Clove Cigarette",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A half-smoked clove cigarette, the distinctive sweet smell still lingering. Kat Jennings survived the Route 23 pile-up but was killed when an airbag deployed, impaling her head on a pipe protruding through the headrest.",
+      "character_connection": "Kat Jennings",
+      "found_date": "2025-10-17T18:47:55.815083",
+      "type": "evidence"
+    },
+    "press_pass": {
+      "name": "Press Pass",
+      "description": "A laminated press pass for 'Borderlands Patrol'. Patricia 'Patti' Fuller survived the train bombing but later died of an intentional overdose of anesthesia, though she was revived.",
+      "examine_details": "A laminated press pass. The photo shows a determined-looking woman named Patricia Fuller.",
+      "character_connection": "Patricia 'Patti' Fuller",
+      "found_date": "2025-10-17T18:47:55.815678",
+      "type": "evidence"
+    },
+    "compact_mirror": {
+      "name": "Compact Mirror",
+      "description": "A small makeup compact. Rosemarie 'Rose' Dupree survived the yacht foundering but later had (most of) her internal organs pumped out during liposuction.",
+      "examine_details": "A fancy makeup compact with a mirror. Some of the powder is loose inside.",
+      "character_connection": "Rosemarie 'Rose' Dupree",
+      "found_date": "2025-10-17T18:47:55.816270",
+      "type": "evidence"
+    },
+    "lawnmower_blade_piece": {
+      "name": "Lawnmower Blade Piece",
+      "description": "A jagged piece of a metal blade. Another factory worker... was later killed when his legs were shredded by his own lawnmower.",
+      "examine_details": "A broken piece of a lawnmower blade, rusted and stained with something that looks like grass... and blood.",
+      "character_connection": "Unnamed Factory Worker (Lawnmower)",
+      "found_date": "2025-10-17T18:47:55.816852",
+      "type": "evidence"
+    },
+    "demolition_derby_ticket_stub": {
+      "name": "Demolition Derby Ticket Stub",
+      "description": "A soggy ticket stub from a demolition derby event. Hal Ward survived the train bombing but later drowned during a flash-flood.",
+      "examine_details": "A water-logged ticket stub for a demolition derby. The date and time are illegible.",
+      "character_connection": "Hal Ward",
+      "found_date": "2025-10-17T18:47:55.817445",
+      "type": "evidence"
+    },
+    "charred_vintage_earrings": {
+      "name": "Charred Vintage Earrings",
+      "description": "A pair of elegant earrings from the late 1960s, warped and partially melted by intense heat. Evie Bludworth would have burned to death in the Skyview Tower explosion premonition, and still wound up burning to death.",
+      "examine_details": "The earrings are twisted and blackened by extreme heat, their original beauty destroyed by flame.",
+      "character_connection": "Evie Bludworth",
+      "found_date": "2025-10-17T18:47:55.818175",
+      "type": "evidence"
+    },
+    "photo_of_officer_burke": {
+      "name": "Photo of Officer Burke",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A photo of Officer Thomas Burke. Survived the Route 23 pile-up. Rumored to have met a grisly end involving a wood chipper much later.",
+      "character_connection": "Thomas Burke",
+      "found_date": "2025-10-17T18:47:55.818809",
+      "type": "evidence"
+    },
+    "locket": {
+      "name": "Locket",
+      "description": "A small, tarnished locket. Juliet Collins survived the Mornington Crescent explosion but later drowned after being thrown into the River Thames, though she was revived.",
+      "examine_details": "A small, heart-shaped silver locket, tarnished with age. It refuses to open.",
+      "character_connection": "Juliet Collins",
+      "found_date": "2025-10-17T18:47:55.819410",
+      "type": "evidence"
+    },
+    "pool_ball_keychain": {
+      "name": "Pool Ball Keychain",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "An orange striped pool ball keychain. Eugene Dix survived the pile-up but died in a really implausible hospital oxygen explosion along with Clear Rivers.",
+      "character_connection": "Eugene Dix",
+      "found_date": "2025-10-17T18:47:55.820012",
+      "type": "evidence"
+    },
+    "crowbar": {
+      "name": "Crowbar",
+      "description": "A sturdy steel crowbar. Good for prying or as a makeshift weapon.",
+      "examine_details": "It's a heavy steel crowbar, about two feet long. One end is flattened and split for prying, the other is pointed. It feels substantial in your hands.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.820642",
+      "type": "tool"
+    },
+    "damaged_prom_corsage": {
+      "name": "Damaged Prom Corsage",
+      "description": "A prom corsage, its flowers crushed and petals torn, with a faint scent of train oil. Charlie Reyes was killed alongside his sister Stefani by falling logs on the way to his senior prom, moments after they thought they had cheated Death another time.",
+      "examine_details": "The corsage is completely ruined, its flowers crushed and stained with what looks like oil... or blood.",
+      "character_connection": "Charlie Reyes",
+      "found_date": "2025-10-17T18:47:55.821265",
+      "type": "evidence"
+    },
+    "overexposed_photo_of_kevin": {
+      "name": "Overexposed Photo of Kevin",
+      "description": "An overexposed photo showing Kevin Fischer. He survived the Devil's Flight coaster crash, helped Wendy, but died later in a subway crash.",
+      "examine_details": "The overexposure makes Kevin's face appear ghostly and pale, as if he's already dead.",
+      "character_connection": "Kevin Fischer",
+      "found_date": "2025-10-17T18:47:55.822129",
+      "type": "evidence"
+    },
+    "rubber_gloves": {
+      "name": "rubber gloves",
+      "description": "Thick, insulated rubber gloves. Might offer protection from electricity.",
+      "examine_details": "Heavy-duty rubber gloves rated for electrical work. The faded label claims protection up to 1000 volts, though you're not sure how much you trust that rating. They look reasonably intact with no visible tears.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.822824",
+      "type": "protective_gear"
+    },
+    "camera": {
+      "name": "Camera",
+      "description": "An early 2000's digital camera, lens cracked. Wendy Christensen used this camera, capturing photos that predicted the deaths of the Devil's Flight coaster survivors.",
+      "examine_details": "The camera's LCD screen is cracked, but you can still make out some disturbing images stored in its memory. Photos of carnival rides and people who look... doomed.",
+      "character_connection": "Wendy Christensen",
+      "found_date": "2025-10-17T18:47:55.823466",
+      "type": "evidence"
+    },
+    "mud_flap_girl_necklace": {
+      "name": "Mud Flap Girl Necklace",
+      "description": "A chrome necklace of a mud flap girl silhouette almost as cheap as the person who wore it. Won by Franklin Cheeks; he avoided the Devil's Flight coaster crash, but was killed in a drive-thru when a multi-car accident found its way into his backseat, burying a radiator fan in his skull. Couldn't have happened to a better guy.",
+      "examine_details": "The chrome is tarnished and the design is tacky. There's a small dent that might be from impact damage.",
+      "character_connection": "Franklin Cheeks",
+      "found_date": "2025-10-17T18:47:55.824158",
+      "type": "evidence"
+    },
+    "photo_of_kimberly_corman": {
+      "name": "Photo of Kimberly Corman",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A photo of Kimberly Corman. She had the premonition of the Route 23 pile-up and saved a group of people who started dying immediately afterwards. Survived after confronting Death at the lake. She is one of the only people to have found a successful escape from Death. This is who you need to find!!",
+      "character_connection": "Kimberly Corman",
+      "found_date": "2025-10-17T18:47:55.824811",
+      "type": "evidence"
+    },
+    "dreenas_necklace": {
+      "name": "Dreena's Necklace",
+      "description": "A broken necklace. Dreena... later had her neck snapped in a bridge collapse alongside Jeremy.",
+      "examine_details": "A silver necklace with a small charm, snapped in the middle.",
+      "character_connection": "Dreena",
+      "found_date": "2025-10-17T18:47:55.825464",
+      "type": "evidence"
+    },
+    "flask": {
+      "name": "Flask",
+      "description": "A small hip flask. Ben survived the Club Kitty collapse but later died after falling down an open manhole.",
+      "examine_details": "A stainless steel hip flask, dented on one side. It's empty, but smells faintly of cheap whiskey.",
+      "character_connection": "Ben",
+      "found_date": "2025-10-17T18:47:55.826149",
+      "type": "evidence"
+    },
+    "propeller_blade": {
+      "name": "Propeller Blade",
+      "description": "A jagged piece of metal from a boat propeller. Kris... was the first of the Spring Break survivors to die... eviscerated by a boat propeller.",
+      "examine_details": "The bent and broken tip of a boat's propeller blade. It's stained with something dark and oily.",
+      "character_connection": "Kris",
+      "found_date": "2025-10-17T18:47:55.826801",
+      "type": "evidence"
+    },
+    "skeleton_figurine": {
+      "name": "Skeleton Figurine",
+      "description": "A small plastic skeleton figurine from a hotel desk. Mary-Beth Bradbury survived the train crash but was later brutally decapitated by a flailing chainsaw.",
+      "examine_details": "A cheap, plastic skeleton figurine, the kind you might find in a gift shop. Its smile is unnerving.",
+      "character_connection": "Mary-Beth Bradbury",
+      "found_date": "2025-10-17T18:47:55.827455",
+      "type": "evidence"
+    },
+    "chardonnay_lighter": {
+      "name": "'Chardonnay''s Lighter",
+      "description": "A well-used lighter. Darla 'Chardonnay' survived the yacht foundering but later drowned in her hottub after being knocked unconscious by the lid falling on her.",
+      "examine_details": "A cheap, disposable lighter. It's almost out of fluid.",
+      "character_connection": "Darla 'Chardonnay'",
+      "found_date": "2025-10-17T18:47:55.828216",
+      "type": "evidence"
+    },
+    "rusty_fishing_hook": {
+      "name": "Rusty Fishing Hook",
+      "description": "A large, rusty fishing hook, barbed and bent. Karl... later... fell onto a gaff hook that pierced his eye and skull.",
+      "examine_details": "A large, rusty gaff hook. The point is still sharp despite the rust.",
+      "character_connection": "Karl Windsor",
+      "found_date": "2025-10-17T18:47:55.828930",
+      "type": "evidence"
+    },
+    "torn_vest_fragment": {
+      "name": "Torn Sanitation Worker Vest Fragment",
+      "description": "A bright orange sanitation worker's vest, stained and smelling faintly of refuse. Julia Campbell, Howard's daughter, was crushed to death inside a garbage truck.",
+      "examine_details": "The vest fragment is torn and stained, with an unpleasant smell that seems to cling to it.",
+      "character_connection": "Julia Campbell",
+      "found_date": "2025-10-17T18:47:55.829627",
+      "type": "evidence"
+    },
+    "white_rose": {
+      "name": "White Rose",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A pressed white rose. Isabella Hudson survived the Route 23 pile-up because she was actually never supposed to die. She was an example of Death using a red herring to keep survivors busy as it cleaned up.",
+      "character_connection": "Isabella Hudson",
+      "found_date": "2025-10-17T18:47:55.830641",
+      "type": "evidence"
+    },
+    "small_football_trophy": {
+      "name": "Small Football Trophy",
+      "description": "A small, tarnished football trophy. Jack Curtis foresaw 'John Doe's' murder spree based on the five senses, prevented it, and survived the subsequent attempts on his life, only to be shot to death by a jealous police officer. Truly a shame to have lost this one; he could have been a lot of help.",
+      "examine_details": "A small trophy of a football player. The plaque on the base is blank.",
+      "character_connection": "Jack Curtis",
+      "found_date": "2025-10-17T18:47:55.831438",
+      "type": "evidence"
+    },
+    "hospital_directory_pamphlet": {
+      "name": "Hospital Directory Pamphlet",
+      "description": "A tri-fold pamphlet showing the layout of Hope River Hospital.",
+      "examine_details": "A glossy pamphlet, slightly worn. It details the hospital layout:\n\n[b]LEVEL 1 (Ground Floor):[/b]\n  - Emergency Entrance & Waiting Room\n  - Main North Wing (Chapel, Gift Shop, Cafeteria Access)\n  - Radiology Wing (X-Ray, [color=ff0000]MRI Suite[/color])\n  - Morgue & Coroner's Office (via Stairwell)\n\n[b]LEVEL 2 (Upper Floors):[/b]\n  - [color=ff0000]Intensive Care Unit (ICU)[/color]\n  - Surgical Wing\n  - Cardiology Wing\n\nThis gives you a much clearer idea of where everything is.",
+      "character_connection": "Hospital Administration",
+      "found_date": "2025-10-17T18:47:55.832254",
+      "type": "evidence"
+    },
+    "bone_saw": {
+      "name": "Bone Saw",
+      "description": "A visceral-looking bone saw, stained with something dark.",
+      "examine_details": "A visceral-looking bone saw, stained with something dark.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.834867",
+      "type": "tool"
+    },
+    "sherrys_cellphone": {
+      "name": "Sherry's Cellphone",
+      "description": "A cellphone with the name 'DEATH' on the 'recent calls' caller ID. Stephanie 'Sherry' Pulaski survived the yacht foundering but was later run over by a bus after a phone call from Death distracted her.",
+      "examine_details": "An older model cellphone. The screen is cracked, but the last call log is chillingly clear: 'DEATH'.",
+      "character_connection": "Stephanie 'Sherry' Pulaski",
+      "found_date": "2025-10-17T18:47:55.835612",
+      "type": "evidence"
+    },
+    "strip_of_nails": {
+      "name": "Strip of Nails",
+      "description": "A strip of collated nails, some missing, faint blood traces. Erin Ulmer survived the Devil's Flight coaster crash, but died after her hand was nailed to her face through the back of her head at the hardware store.",
+      "examine_details": "Some of the nails are missing from the strip, and there are dark stains that look suspiciously like dried blood.",
+      "character_connection": "Erin Ulmer",
+      "found_date": "2025-10-17T18:47:55.836383",
+      "type": "evidence"
+    },
+    "earbud": {
+      "name": "Earbud",
+      "description": "A single earbud. Joshua Cornell III, the representative of hearing, survived multiple attempts on his life in his home, but later had his head cut off by a platinum record.",
+      "examine_details": "A single white earbud. The wire has been cleanly severed.",
+      "character_connection": "Joshua Cornell III",
+      "found_date": "2025-10-17T18:47:55.837166",
+      "type": "evidence"
+    },
+    "first_aid_kit": {
+      "name": "first aid kit",
+      "description": "A standard wall-mounted first aid kit. Contains basic medical supplies.",
+      "examine_details": "A wall-mounted first aid kit, filled with some exceptional wound care.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.837943",
+      "type": "medical_supply"
+    },
+    "chefs_knife": {
+      "name": "Chef's Knife",
+      "description": "A sharp chef's knife, surprisingly clean. Dennis Lapman, Sam's boss, survived the bridge collapse but was later killed by a wrench propelled through his head, an accident triggered by Roy Carson's death.",
+      "examine_details": "The knife is pristine and sharp, unlike the messy death of its associated victim.",
+      "character_connection": "Dennis Lapman",
+      "found_date": "2025-10-17T18:47:55.838686",
+      "type": "evidence"
+    },
+    "photo_of_lewis_from_ring_the_bell_game": {
+      "name": "Photo of Lewis from Ring-The-Bell Game",
+      "description": "A photo of Lewis Romero hitting the bell at a strength tester game. He survived the Devil's Flight coaster crash, but had his head crushed by weights at the gym.",
+      "examine_details": "Lewis looks proud and strong in the photo, flexing as he rings the bell. Ironic, considering how he died.",
+      "character_connection": "Lewis Romero",
+      "found_date": "2025-10-17T18:47:55.839463",
+      "type": "evidence"
+    },
+    "photo_of_ian_with_banners": {
+      "name": "Photo of Ian with Banners",
+      "description": "A photo of Ian McKinley standing near banners that foreshadowed his death. He survived the Devil's Flight coaster crash, but was crushed by a falling cherry picker sign.",
+      "examine_details": "Looking at this photo, you can see warning signs everywhere - literally. The banners around Ian seem to predict his doom.",
+      "character_connection": "Ian McKinley",
+      "found_date": "2025-10-17T18:47:55.840224",
+      "type": "evidence"
+    },
+    "detective_notepad": {
+      "name": "Detective Notepad",
+      "description": "A small police notepad. Detective Isabelle Montoya survived the casino elevator crash but later died from being drenched in contaminated blood...",
+      "examine_details": "A small, spiral-bound notepad. The last page has some hastily scrawled notes about 'unusual circumstances'.",
+      "character_connection": "Detective Isabelle Montoya",
+      "found_date": "2025-10-17T18:47:55.840979",
+      "type": "evidence"
+    },
+    "ink_pen": {
+      "name": "Ink Pen",
+      "description": "A heavy fountain pen, stained with ink. Matthew Upton survived the Mornington Crescent explosion but was later impaled in the stomach by a chemical-coated pipe.",
+      "examine_details": "An expensive-looking fountain pen. It has leaked dark blue ink into its cap.",
+      "character_connection": "Matthew Upton",
+      "found_date": "2025-10-17T18:47:55.841731",
+      "type": "evidence"
+    },
+    "gammy_death_book": {
+      "name": "Gammy's Death Book",
+      "description": "A leather-bound book filled with chilling handwritten notes, sketches of omens, and names. Iris Campbell, who disrupted Death's design in 1968, was documenting its patterns before being fatally impaled through the mouth by a weather vane.",
+      "examine_details": "The book contains detailed notes about Death's design, with disturbing sketches and a growing list of names. Many entries are written in urgent, shaky handwriting.",
+      "character_connection": "Iris Campbell",
+      "found_date": "2025-10-17T18:47:55.842506",
+      "type": "evidence"
+    },
+    "charlie_delgado_car_keys": {
+      "name": "Charlie Delgado's Car Keys",
+      "description": "A set of car keys. Charlie Delgado survived the Club Kitty collapse but was later crushed when an elevator fell on him.",
+      "examine_details": "A single car key on a simple ring. The logo on the key is for a vintage muscle car.",
+      "character_connection": "Charlie Delgado",
+      "found_date": "2025-10-17T18:47:55.843297",
+      "type": "evidence"
+    },
+    "female_wedding_band": {
+      "name": "Female Wedding Band",
+      "description": "A plain wedding band. Allie Gaines survived the casino elevator crash but later died from being drenched in contaminated blood...",
+      "examine_details": "A simple gold wedding band. There's a small inscription on the inside, but it's too small to read.",
+      "character_connection": "Allie Gaines",
+      "found_date": "2025-10-17T18:47:55.844115",
+      "type": "evidence"
+    },
+    "cracked_rv_side_mirror": {
+      "name": "Cracked RV Side Mirror",
+      "description": "A cracked side mirror from an RV, reflecting a distorted image. Darlene Campbell, Stefani's mother, was bisected/smashed (hard to tell in the aftermath tbh) by a falling lamp post after their RV crashed during an attempt to get inside Iris' home.",
+      "examine_details": "The mirror is spider-webbed with cracks, creating a distorted reflection that's somehow fitting.",
+      "character_connection": "Darlene Campbell",
+      "found_date": "2025-10-17T18:47:55.844914",
+      "type": "evidence"
+    },
+    "teenagers_dropped_phone": {
+      "name": "Teenager's Dropped Phone",
+      "description": "A smartphone with a cracked screen. The lock screen shows a frantic, half-finished text message: 'MOM I SAW IT ALL THE BULLS THE FIRE EVERY'.",
+      "examine_details": "The phone's battery is nearly dead. The last message is a desperate warning. There are smudges of dirt and what might be blood on the case.",
+      "character_connection": "Unknown Teenager",
+      "found_date": "2025-10-17T18:47:55.845693",
+      "type": "evidence"
+    },
+    "syringe": {
+      "name": "syringe",
+      "description": "A sterile, disposable syringe with a fine needle, still in its packaging.",
+      "examine_details": "The syringe is new and appears to be medical grade. The needle is capped for safety. It could be used to inject something... or someone. The packaging indicates it's a 10ml capacity.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.846563",
+      "type": "medical_tool"
+    },
+    "photo_of_amber": {
+      "name": "Photo of Amber",
+      "description": "A photo of Amber Regan. Briefly thought to have survived the Devil's Flight coaster premonition. Current status unknown.",
+      "examine_details": "Amber's fate remains a mystery. The photo offers no clues about what happened to her.",
+      "character_connection": "Amber Regan",
+      "found_date": "2025-10-17T18:47:55.847406",
+      "type": "evidence"
+    },
+    "morgue_key_card": {
+      "name": "Morgue Key Card",
+      "description": "A plastic key card labeled 'Morgue'.",
+      "examine_details": "Used by hospital staff to access the morgue and related areas. Has a magnetic strip on the back. The card shows signs of frequent use, with slightly worn edges and a few scratches on the magnetic strip.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.849912",
+      "type": "key"
+    },
+    "ukelele_string": {
+      "name": "Ukulele String",
+      "description": "A snapped ukulele string. Drew... was later strangled when her scarf got caught in the gears of a sugar cane harvester...",
+      "examine_details": "A single, snapped nylon ukulele string. It's surprisingly strong.",
+      "character_connection": "Drew Perkin",
+      "found_date": "2025-10-17T18:47:55.850781",
+      "type": "evidence"
+    },
+    "painkillers": {
+      "name": "painkillers",
+      "description": "A small bottle of generic painkillers.",
+      "examine_details": "A plastic bottle of over-the-counter pain-relief pills. The label shows it's ibuprofen, 200mg tablets. Might help take the edge off minor injuries and pain.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.851628",
+      "type": "medical_supply"
+    },
+    "photo_of_the_ashleys": {
+      "name": "Photo of the Ashleys",
+      "description": "A photo showing Ashley Freund and Ashlyn Halperin at a carnival game. They survived the coaster but were burned alive in malfunctioning tanning beds (though some say they almost made it out and got electrocuted instead).",
+      "examine_details": "The two girls look happy and carefree in the photo, unaware of the horrible fate that awaited them.",
+      "character_connection": "Ashley Freund & Ashlyn Halperin",
+      "found_date": "2025-10-17T18:47:55.852589",
+      "type": "evidence"
+    },
+    "bill_sangster_knife": {
+      "name": "Bill Sangster's Knife",
+      "description": "A sharp, well-maintained knife. Bill Sangster had a complicated history; he survived the Mornington Crescent explosion, was inside the gears of a drawbridge when it was raised -crushing him as he was pursuing Juliet Collins-, and it was revealed that he was London's own Jack the Ripper.",
+      "examine_details": "A well-cared-for pocket knife. The blade is sharp enough to shave with.",
+      "character_connection": "Bill Sangster",
+      "found_date": "2025-10-17T18:47:55.853446",
+      "type": "evidence"
+    },
+    "broken_train_handhold": {
+      "name": "Broken Train Handhold",
+      "description": "A piece of a broken handhold from the train. James Barker survived the train crash but later seemingly died after being flung into a department store and impaled by umbrellas.",
+      "examine_details": "A piece of hard plastic from a train's overhead handhold, snapped in two.",
+      "character_connection": "James Barker",
+      "found_date": "2025-10-17T18:47:55.854341",
+      "type": "evidence"
+    },
+    "storage_room_key": {
+      "name": "Storage Room Key",
+      "description": "A small brass key labeled 'Storage Room'.",
+      "examine_details": "This key looks like it opens a storage room somewhere in the hospital. The brass has a dull patina, suggesting it's been used frequently. Small scratches around the keyhole indicate regular use.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.855217",
+      "type": "key"
+    },
+    "attic_key": {
+      "name": "Attic Key",
+      "description": "A small, tarnished brass key labeled 'Attic'.",
+      "examine_details": "An old, simple key. The label is slightly faded but readable.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:47:55.856093",
+      "type": "key"
+    },
+    "skateboard_wheel": {
+      "name": "Skateboard Wheel",
+      "description": "A single skateboard wheel, cracked and gritty with sand. Bobby... later fell from a hotel balcony, landing on decorative spiked railings below...",
+      "examine_details": "A skateboard wheel, heavily worn and cracked down the middle. It's covered in sand and grime.",
+      "character_connection": "Bobby Fraider",
+      "found_date": "2025-10-17T18:47:55.856969",
+      "type": "evidence"
+    },
+    "safety_goggles": {
+      "name": "Safety Goggles",
+      "description": "A pair of cracked safety goggles, typical for auto work. Andy Kewzer, who worked at an auto shop, survived the speedway crash only to be launched through a chain-link fence by a flying CO2 tank.",
+      "examine_details": "The goggles are cracked and scratched from heavy use. They didn't provide much safety in the end.",
+      "character_connection": "Andy Kewzer",
+      "found_date": "2025-10-17T18:47:55.857838",
+      "type": "evidence"
+    },
+    "photo_of_perry": {
+      "name": "Photo of Perry",
+      "description": "A photo of Perry Malinowski. Survived the Devil's Flight coaster premonition but was impaled by a flagpole at the tricentennial celebration.",
+      "examine_details": "Perry looks happy and relaxed in the photo, completely unaware of the deadly flagpole in his future.",
+      "character_connection": "Perry Malinowski",
+      "found_date": "2025-10-17T18:47:55.858696",
+      "type": "evidence"
+    },
+    "navel_piercing_with_crystal": {
+      "name": "Navel Piercing with Crystal",
+      "description": "A small navel piercing with a dangling crystal. Belonged to Carrie Dreyer, would-be independent woman, who died in the Devil's Flight roller coaster crash.",
+      "examine_details": "The crystal catches the light ominously, and there's a small amount of dried blood on the metal.",
+      "character_connection": "Carrie Dreyer",
+      "found_date": "2025-10-17T18:47:55.859551",
+      "type": "evidence"
+    },
+    "newspaper_clipping_about_flight_180": {
+      "name": "Newspaper Clipping about Flight 180",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A newspaper clipping detailing the Flight 180 disaster and the subsequent deaths of the survivors. Clear Rivers, a survivor of Flight 180, died trying to help the Route 23 survivors.",
+      "character_connection": "Clear Rivers",
+      "found_date": "2025-10-17T18:47:55.860457",
+      "type": "evidence"
+    },
+    "miniature_garbage_truck": {
+      "name": "Miniature Garbage Truck",
+      "description": "A small toy garbage truck. Dawson Donahue, the representative of smell, survived but was later crushed against a wall when his car exploded.",
+      "examine_details": "A die-cast metal toy garbage truck. The paint is chipped in several places.",
+      "character_connection": "Dawson Donahue",
+      "found_date": "2025-10-17T18:47:55.861341",
+      "type": "evidence"
+    },
+    "patient_wristband": {
+      "name": "Patient Wristband",
+      "description": "A hospital patient wristband. Andrew Williams was a patient in the hospital whose overflowing bathtub broke through the hospital floor and crushed Rinoka Aratsu beneath it.",
+      "examine_details": "A plastic hospital wristband. The name 'Andrew Williams' is faded but legible.",
+      "character_connection": "Andrew Williams",
+      "found_date": "2025-10-17T18:47:55.862215",
+      "type": "evidence"
+    },
+    "suicide_note": {
+      "name": "Suicide Note",
+      "description": "A crumpled piece of paper, a suicide note. It details the visions of a tormented narrator...",
+      "examine_details": "The note is written in a frantic, almost illegible hand. It speaks of inescapable visions and a final, desperate act.",
+      "character_connection": "John Doe (Narrator)",
+      "found_date": "2025-10-17T18:47:55.863133",
+      "type": "evidence"
+    },
+    "swimsuit_piece": {
+      "name": "Swimsuit Piece",
+      "description": "A small piece of swimsuit fabric. Amanda... became increasingly paranoid... and was later trapped and drowned in a pool.",
+      "examine_details": "A small scrap of floral-patterned swimsuit fabric.",
+      "character_connection": "Amanda",
+      "found_date": "2025-10-17T18:47:55.864036",
+      "type": "evidence"
+    },
+    "scuffed_dress_shoe": {
+      "name": "Scuffed Dress Shoe",
+      "description": "A single, scuffed men's dress shoe from the 1960s, its sole nearly detached. Chet was foreseen to fall to his death in the Skyview Tower elevator shaft.",
+      "examine_details": "The shoe is heavily scuffed and the sole is hanging by a thread, much like its owner's life was.",
+      "character_connection": "Chet",
+      "found_date": "2025-10-17T18:48:22.873991",
+      "type": "evidence"
+    },
+    "security_guard_flashlight": {
+      "name": "Security Guard Flashlight",
+      "description": "A heavy-duty security guard's flashlight, its lens cracked. George Lanter, a security guard and one of the survivors, was later fatally struck by a speeding ambulance.",
+      "examine_details": "The flashlight is heavy and well-built, but the cracked lens renders it nearly useless.",
+      "character_connection": "George Lanter",
+      "found_date": "2025-10-17T18:48:22.876046",
+      "type": "evidence"
+    },
+    "turquoise_charm": {
+      "name": "Turquoise Charm",
+      "description": "A small turquoise charm. Bodil Raden survived the train crash but later seemingly died after being flung into a department store and impaled by umbrellas.",
+      "examine_details": "A small, polished turquoise stone on a broken chain. It's cold to the touch.",
+      "character_connection": "Bodil Raden",
+      "found_date": "2025-10-17T18:48:22.877307",
+      "type": "evidence"
+    },
+    "brooch": {
+      "name": "Brooch",
+      "description": "An ornate silver brooch. Jane Stanley survived the Mornington Crescent explosion but was later bitten on the tongue by a poisonous cobra.",
+      "examine_details": "An antique silver brooch in the shape of a serpent. The pin on the back is slightly bent.",
+      "character_connection": "Jane Stanley",
+      "found_date": "2025-10-17T18:48:22.878301",
+      "type": "evidence"
+    },
+    "airplane_ticket_paris": {
+      "name": "Airplane Ticket (Paris)",
+      "description": "An airplane ticket for Volée Airlines Flight 180 to Paris. Sam Lawton, Molly Harper, Peter Friedkin, and Nathan Sears all survived the North Bay Bridge collapse, only to tragically die when this flight exploded shortly after takeoff, prequeling the events of the first film.",
+      "examine_details": "The ticket is for Flight 180 - the same flight from the original disaster. Death came full circle.",
+      "character_connection": "Sam Lawton, Molly Harper, Peter Friedkin, Nathan Sears",
+      "found_date": "2025-10-17T18:48:22.879292",
+      "type": "evidence"
+    },
+    "military_dog_tag": {
+      "name": "Military Dog Tag",
+      "description": "A dented military dog tag. Corbin Wainright... His fate... is unknown, but this suggests he may not have been so lucky either.",
+      "examine_details": "A standard issue military dog tag. The name 'Corbin Wainright' is clearly stamped on it, along with other service details.",
+      "character_connection": "Corbin Wainright",
+      "found_date": "2025-10-17T18:48:22.880381",
+      "type": "evidence"
+    },
+    "business_card": {
+      "name": "Business Card",
+      "description": "A glossy business card for a talent agent. Al Kinsey survived the train bombing but was later beheaded by a dislodged hubcap.",
+      "examine_details": "A slick business card for 'Al Kinsey, Talent Management'. There's a small, dark stain on one corner.",
+      "character_connection": "Al Kinsey",
+      "found_date": "2025-10-17T18:48:22.881393",
+      "type": "evidence"
+    },
+    "crushed_beer_can": {
+      "name": "Crushed Beer Can",
+      "description": "A crushed aluminum beer can. Corey... was later crushed by a falling vending machine...",
+      "examine_details": "An aluminum beer can, crushed almost flat.",
+      "character_connection": "Corey Micheals",
+      "found_date": "2025-10-17T18:48:22.882737",
+      "type": "evidence"
+    },
+    "construction_pin": {
+      "name": "Construction Pin",
+      "description": "A metal pin shaped like a miniature hard hat. Zack Halloran survived the train bombing but was later vertically severed in half by a falling glass pane.",
+      "examine_details": "A small lapel pin in the shape of a yellow hard hat. It's surprisingly heavy.",
+      "character_connection": "Zack Halloran",
+      "found_date": "2025-10-17T18:48:22.883803",
+      "type": "evidence"
+    },
+    "basement_key": {
+      "name": "Basement Key",
+      "description": "A heavy iron key labeled 'Basement'. Feels cold to the touch.",
+      "examine_details": "A standard, sturdy-looking key. The label is clear and deeply etched. It should unlock the basement entrance. The metal feels unnaturally cold, as if it's been sitting in a freezer.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:48:22.884795",
+      "type": "key"
+    },
+    "shattered_light_bulb": {
+      "name": "Shattered Light Bulb",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "Fragments of a large industrial light bulb, like from a neon sign. Carter Horton was crushed by a falling sign after surviving Flight 180.",
+      "character_connection": "Carter Horton",
+      "found_date": "2025-10-17T18:48:22.885777",
+      "type": "evidence"
+    },
+    "eyedrops": {
+      "name": "Eyedrops",
+      "description": "A small bottle of eyedrops. Chelsea Cox, the representative of sight, survived but was later impaled through the eyes by icicles.",
+      "examine_details": "A small plastic bottle of eyedrops. It's about half full.",
+      "character_connection": "Chelsea Cox",
+      "found_date": "2025-10-17T18:48:22.886822",
+      "type": "evidence"
+    },
+    "prize_ribbon": {
+      "name": "Prize Ribbon",
+      "description": "A large, blue ribbon awarded for 'Best in Show'. It has a small metal clasp.",
+      "examine_details": "The ribbon is slightly frayed at the edges. The clasp is tarnished but still functional.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:48:22.887868",
+      "type": "item"
+    },
+    "compact": {
+      "name": "Compact",
+      "description": "A small makeup compact. Amber survived the Club Kitty collapse but was later smeared into a makeshift parking brake by Charlie's out of control car.",
+      "examine_details": "A silver makeup compact. The mirror inside is cracked.",
+      "character_connection": "Amber",
+      "found_date": "2025-10-17T18:48:22.888854",
+      "type": "evidence"
+    },
+    "shiraz_edelstein_braid": {
+      "name": "'Shiraz' Edelstein's Braid",
+      "description": "A single, stylish braided hair extension. Shirelle 'Shiraz' Edelstein survived the yacht foundering but was later internally decapitated on the set of a music video after her hair got caught in the spokes of a spinning prop car's tire.",
+      "examine_details": "A long, tightly woven hair extension. There's a dark stain near one end.",
+      "character_connection": "Shirelle 'Shiraz' Edelstein",
+      "found_date": "2025-10-17T18:48:22.889841",
+      "type": "evidence"
+    },
+    "cigarette_lighter": {
+      "name": "Cigarette Lighter",
+      "description": "A heavy cigarette lighter. Sebastian Lebecque survived the Club Kitty collapse but was killed when his motorcycle exploded from a thrown-away cigar.",
+      "examine_details": "A weighty, chrome-plated cigarette lighter. It still sparks when you flick it.",
+      "character_connection": "Sebastian Lebecque",
+      "found_date": "2025-10-17T18:48:22.890830",
+      "type": "evidence"
+    },
+    "small_mirror": {
+      "name": "Small Mirror",
+      "description": "A small handheld mirror. William 'Brut' Simms survived the yacht foundering and being swept away in a sewer flood, but was later run over when he was left suspended by his belt in a subway tunnel.",
+      "examine_details": "A small, pocket-sized mirror. Your reflection looks distorted and pale.",
+      "character_connection": "William 'Brut' Simms",
+      "found_date": "2025-10-17T18:48:22.891841",
+      "type": "evidence"
+    },
+    "septum_ring": {
+      "name": "Septum Ring",
+      "description": "A delicate body piercing, violently snapped from its home and bloodied. Erik Campbell's piercings were torn from his body by a malfunctioning MRI machine, leading to his impalement by a wheelchair.",
+      "examine_details": "The ring is bent and has dried blood on it. It was clearly torn out with great force.",
+      "character_connection": "Erik Campbell",
+      "found_date": "2025-10-17T18:48:22.892889",
+      "type": "evidence"
+    },
+    "blurry_photo": {
+      "name": "Blurry Photo",
+      "description": "A strip of four photos from a booth. The final picture is horribly distorted, showing what looks like a bull's horn, screaming faces, and fire.",
+      "examine_details": "The photos are faded and the last one is almost unrecognizable. The images seem to hint at something terrible.",
+      "character_connection": "Unknown Victim",
+      "found_date": "2025-10-17T18:48:22.893894",
+      "type": "evidence"
+    },
+    "used_syringe": {
+      "name": "Used syringe",
+      "description": "A used syringe. Kate Shelley had visions related to Death's design after surviving a Sux Racing incident at her college, and subsequently became a servant of Death; she ultimately died by suicide via syringe. Dont poke yourself!",
+      "examine_details": "A used syringe, its needle still attached. It's a biohazard and deeply unsettling.",
+      "character_connection": "Kate Shelley",
+      "found_date": "2025-10-17T18:48:22.895070",
+      "type": "evidence"
+    },
+    "spanish_phrasebook": {
+      "name": "Spanish Phrasebook",
+      "description": "A small, well-worn Spanish phrasebook. Bryan, a tough but calm college student... was later suffocated inside a trapped coffin.",
+      "examine_details": "A pocket Spanish phrasebook. The page for 'Help me' is bookmarked.",
+      "character_connection": "Bryan",
+      "found_date": "2025-10-17T18:48:22.896155",
+      "type": "evidence"
+    },
+    "cobra_totem": {
+      "name": "Cobra Totem",
+      "description": "A small wooden totem carved in the shape of a cobra. Andrew Caine survived the Mornington Crescent explosion but was later blinded and bitten repeatedly by cobras.",
+      "examine_details": "A hand-carved wooden cobra, coiled as if ready to strike. The craftsmanship is unsettling.",
+      "character_connection": "Andrew Caine",
+      "found_date": "2025-10-17T18:48:22.897263",
+      "type": "evidence"
+    },
+    "retractable_clothesline_piece": {
+      "name": "Retractable Clothesline Piece",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A piece of white, retractable clothesline, slightly frayed. Tod Waggner accidentally hanged himself with one after surviving Flight 180.",
+      "character_connection": "Tod Waggner",
+      "found_date": "2025-10-17T18:48:22.898298",
+      "type": "evidence"
+    },
+    "bridge_piece": {
+      "name": "Bridge Piece",
+      "description": "A small, splintered piece of wood from a bridge. Jeremy... later had his neck snapped in a bridge collapse.",
+      "examine_details": "A splinter of wood, smelling of creosote and salt. It looks like it came from a wooden bridge.",
+      "character_connection": "Jeremy",
+      "found_date": "2025-10-17T18:48:22.899339",
+      "type": "evidence"
+    },
+    "camera_lens_cap": {
+      "name": "Camera Lens Cap",
+      "description": "A plastic camera lens cap. Gunter Nonhoff survived the yacht foundering but was later slowly severed in half by an unattended delivery truck.",
+      "examine_details": "A standard black plastic lens cap. It has a small scratch on the front.",
+      "character_connection": "Gunter Nonhoff",
+      "found_date": "2025-10-17T18:48:22.904558",
+      "type": "evidence"
+    },
+    "damaged_police_badge": {
+      "name": "Damaged Police Badge",
+      "description": "A police detective's badge, dented and bearing a bullet hole. Agent Jim Block was investigating the bridge survivors when he was shot in the back and killed by a paranoid Peter Friedkin.",
+      "examine_details": "The badge is dented and has a small, round hole punched through it. The metal is tarnished around the bullet hole.",
+      "character_connection": "Agent Jim Block",
+      "found_date": "2025-10-17T18:48:22.906663",
+      "type": "evidence"
+    },
+    "broken_ivory_piano_key": {
+      "name": "Broken Ivory Piano Key",
+      "description": "A broken ivory piano key, with a tiny, faded fingerprint. A young guest, Penny, was envisioned to be crushed by a falling piano during the Skyview Tower disaster, and still wound up being run over by a piano moving truck.",
+      "examine_details": "The piano key is cracked down the middle, and you can see a small fingerprint - probably from a child.",
+      "character_connection": "Penny Kid",
+      "found_date": "2025-10-17T18:48:22.907735",
+      "type": "evidence"
+    },
+    "photo_of_julie_giving_the_finger": {
+      "name": "Photo of Julie Giving the Finger",
+      "description": "A photo of Julie Christensen giving the finger. Wendy's sister, she survived the Devil's Flight coaster premonition, but coincidentally she died with her sister, and friend, Kevin, in a subway crash months after.",
+      "examine_details": "Julie's defiant gesture in the photo seems to be aimed at Death itself. Unfortunately, Death had the last laugh.",
+      "character_connection": "Julie Christensen",
+      "found_date": "2025-10-17T18:48:22.909020",
+      "type": "evidence"
+    },
+    "accupuncture_needle": {
+      "name": "Accupuncture Needle",
+      "description": "A thick, long metal needle used for accupuncture, slightly bent. Isaac Palmer survived the bridge collapse but had his head crushed by a falling Buddha statue in a local spa after a fire started.",
+      "examine_details": "The needle is bent at an odd angle and has a dark stain near the tip.",
+      "character_connection": "Isaac Palmer",
+      "found_date": "2025-10-17T18:48:22.910229",
+      "type": "evidence"
+    },
+    "corkscrew": {
+      "name": "Corkscrew",
+      "description": "A small corkscrew. Jack Cohen, a 99-year-old man, survived the train crash but later died after falling on a corkscrew that impaled his eye.",
+      "examine_details": "A simple waiter's corkscrew. The tip is alarmingly sharp.",
+      "character_connection": "Jack Cohen",
+      "found_date": "2025-10-17T18:48:22.911423",
+      "type": "evidence"
+    },
+    "candy_wrapper": {
+      "name": "Candy Wrapper",
+      "description": "The wrapper of some peanut butter cups, boasting, 'Now More Nuts!', which you turn over and see is smeared with blood. Bobby Campbell, Erik's brother, was impaled through the forehead by a vending machine dispensing spring.",
+      "examine_details": "The wrapper's cheerful advertising contrasts horrifically with the blood stains on the back.",
+      "character_connection": "Bobby Campbell",
+      "found_date": "2025-10-17T18:48:22.912538",
+      "type": "evidence"
+    },
+    "small_microphone": {
+      "name": "Small Microphone",
+      "description": "A small, lapel microphone. Katie Astin, the representative of touch, survived but was later blinded and impaled by a lighting rig.",
+      "examine_details": "A tiny lapel microphone with a small clip. The foam cover is missing.",
+      "character_connection": "Katie Astin",
+      "found_date": "2025-10-17T18:48:22.913723",
+      "type": "evidence"
+    },
+    "bent_meat_skewer": {
+      "name": "Bent Meat Skewer",
+      "description": "A long, heavy-duty meat skewer, bent and bloodied. Peter Friedkin, driven mad by Death's design, was impaled through the back by Sam Lawton with this skewer from Le Café Miro 81's kitchen.",
+      "examine_details": "The skewer is bent at a sharp angle and has dried blood along its length.",
+      "character_connection": "Peter Friedkin",
+      "found_date": "2025-10-17T18:48:22.914815",
+      "type": "evidence"
+    },
+    "fuzzy_red_dice": {
+      "name": "Fuzzy Red Dice",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A pair of fuzzy red dice, like those Rory Peters hung in his car. He survived the Route 23 pile-up but was sliced apart by barbed wire fencing after Kat's accident.",
+      "character_connection": "Rory Peters",
+      "found_date": "2025-10-17T18:48:22.915973",
+      "type": "evidence"
+    },
+    "magnifying_glass": {
+      "name": "Magnifying Glass",
+      "description": "A small, portable magnifying glass. Hector Barnes survived the Mornington Crescent explosion but was later bitten on the wrist by a poisonous cobra.",
+      "examine_details": "A simple magnifying glass with a plastic handle. The lens is smudged.",
+      "character_connection": "Hector Barnes",
+      "found_date": "2025-10-17T18:48:22.917098",
+      "type": "evidence"
+    },
+    "baseball_bat": {
+      "name": "wooden baseball bat",
+      "description": "A solid wooden baseball bat, well-used but sturdy.",
+      "examine_details": "It's a standard wooden baseball bat, about 32 inches long. The wood is worn smooth from use, and it feels balanced in your hands.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:48:22.918236",
+      "type": "tool"
+    },
+    "photo_of_jason_on_devils_flight": {
+      "name": "Photo of Jason on Devil's Flight",
+      "description": "A photo of Jason Wise posing in front of the Devil's Flight roller coaster; the tram of cars caught in time blurring into frame looks as though it's about to bury itself in his head. He died in the initial crash.",
+      "examine_details": "The timing of this photo is chilling - it almost looks like the coaster cars are about to crash into Jason's head in the image.",
+      "character_connection": "Jason Wise",
+      "found_date": "2025-10-17T18:48:22.919384",
+      "type": "evidence"
+    },
+    "womans_shoe": {
+      "name": "Woman's Shoe",
+      "description": "A single woman's tennis shoe, one of the laces badly frayed. Lori Milligan, Nick's girlfriend, died a horrific death, internally decapitated by being crushed between a pillar and a truck.",
+      "examine_details": "The shoe is worn and the lace is frayed almost to the breaking point, just like its owner's life.",
+      "character_connection": "Lori Milligan",
+      "found_date": "2025-10-17T18:48:22.921963",
+      "type": "evidence"
+    },
+    "tattered_book": {
+      "name": "Tattered Book",
+      "description": "A worn copy of 'Murder on the Orient Express'. Peter Hoffman survived the train crash but later died after being impaled through his torso by the horns of a gazelle.",
+      "examine_details": "A paperback copy of 'Murder on the Orient Express'. The pages are dog-eared and stained.",
+      "character_connection": "Peter Hoffman",
+      "found_date": "2025-10-17T18:48:22.923146",
+      "type": "evidence"
+    },
+    "officer_hewlett_badge": {
+      "name": "Officer Hewlett's Badge",
+      "description": "A police officer's badge. Officer Marina Hewlett survived the Club Kitty collapse (that she unknowingly helped happen) but later died after being bitten by a black widow.",
+      "examine_details": "A tarnished police badge. The name 'M. Hewlett' is engraved below the seal.",
+      "character_connection": "Officer Marina Hewlett",
+      "found_date": "2025-10-17T18:48:22.924316",
+      "type": "evidence"
+    },
+    "bent_elevator_call_button": {
+      "name": "Bent Elevator Call Button",
+      "description": "A brass elevator call button, characteristic of 1960s architecture, severely dented. Mr. Fuller was premonitioned to be crushed in the Skyview Tower's elevator, and still wound up being crushed.",
+      "examine_details": "The brass button is severely dented, as if crushed by enormous pressure.",
+      "character_connection": "Mr. Fuller",
+      "found_date": "2025-10-17T18:48:22.925546",
+      "type": "evidence"
+    },
+    "bandages": {
+      "name": "bandages",
+      "description": "A roll of sterile medical bandages.",
+      "examine_details": "A standard roll of gauze bandages in sterile packaging. The medical-grade material is soft yet durable, perfect for treating minor to moderate wounds.",
+      "character_connection": "",
+      "found_date": "2025-10-17T18:48:22.927941",
+      "type": "medical_supply"
+    },
+    "seashell_necklace_fragment": {
+      "name": "Seashell Necklace Fragment",
+      "description": "Part of a broken seashell necklace, sharp edges stained dark. Kim... was later decapitated by a boat propeller...",
+      "examine_details": "A few small seashells still strung on a broken cord. One of the shells is cracked and has a dark stain.",
+      "character_connection": "Kim Rachelle",
+      "found_date": "2025-10-17T18:48:22.929090",
+      "type": "evidence"
+    },
+    "wrench": {
+      "name": "Wrench",
+      "description": "A small, greasy wrench. Susan Fries survived the train bombing but later had her chest incinerated by thermite.",
+      "examine_details": "A small adjustable wrench, covered in a thin layer of grease.",
+      "character_connection": "Susan Fries",
+      "found_date": "2025-10-17T18:48:22.930254",
+      "type": "evidence"
+    },
+    "bicycle_brake_handle": {
+      "name": "Bicycle Brake Handle",
+      "description": "A severely damaged handbrake (usually) found on mountain bikes. Danny King survived a train crash after a premonition but was later accidentally killed by his sister being unknowingly used as a servant of Death.",
+      "examine_details": "The metal of the brake handle is bent and twisted, as if from a powerful impact.",
+      "character_connection": "Danny King",
+      "found_date": "2025-10-17T18:48:22.932659",
+      "type": "evidence"
+    },
+    "macys_name_tag": {
+      "name": "Macy's Name Tag",
+      "description": "A 'Club Kitty' name tag. Macy survived the club collapse but was later sliced (mostly) in half by a fallen metal pane.",
+      "examine_details": "A plastic name tag for 'Club Kitty'. The name 'Macy' is printed on it, slightly smeared.",
+      "character_connection": "Macy",
+      "found_date": "2025-10-17T18:48:22.936388",
+      "type": "evidence"
+    },
+    "ipod": {
+      "name": "iPod",
+      "description": "An iPod with white earphones. Aldis Escobar survived a near-fatal casino elevator incident, but his ribcage was later crushed by his steering wheel in a car crash that same afternoon.",
+      "examine_details": "An old model iPod. The screen is cracked and it won't turn on.",
+      "character_connection": "Aldis Escobar",
+      "found_date": "2025-10-17T18:48:22.939039",
+      "type": "evidence"
+    },
+    "metal_spike": {
+      "name": "Metal Spike",
+      "description": "A long metal spike, like from an industrial machine. Roy Carson was impaled by a hook through the chin at the factory where he worked after Death came for Nathan. Nathan took Roy's remaining time, which, unfortunately, was not much longer than Nathan already had.",
+      "examine_details": "The spike is long and sharp, with what looks like dried blood on the pointed end.",
+      "character_connection": "Roy Carson",
+      "found_date": "2025-10-17T18:48:22.941109",
+      "type": "evidence"
+    },
+    "circuit_city_name_tag": {
+      "name": "Circuit City Name Tag",
+      "description": "A plastic name tag with the Circuit City logo. Will Sax survived the train bombing but was later decapitated by a flying CD.",
+      "examine_details": "A vintage Circuit City name tag. The name 'Will' is printed on it.",
+      "character_connection": "Will Sax",
+      "found_date": "2025-10-17T18:48:22.942419",
+      "type": "evidence"
+    },
+    "tacky_souvenir_tshirt": {
+      "name": "Tacky Souvenir T-Shirt",
+      "description": "A brightly colored, tacky tourist t-shirt ('I Got Leid in Hawaii!'), ripped and burned. Brett... was later incinerated when a propane tank for a luau barbecue exploded.",
+      "examine_details": "A singed and torn souvenir t-shirt. The garish print is partially blackened by soot.",
+      "character_connection": "Brett O'Connel",
+      "found_date": "2025-10-17T18:48:22.944726",
+      "type": "evidence"
+    },
+    "train_ticket": {
+      "name": "Train Ticket",
+      "description": "A creased train ticket stub. The fourth factory worker... was later run over by a speeding train while fleeing.",
+      "examine_details": "A ticket for a commuter train. The destination is McKinley Central.",
+      "character_connection": "Unnamed Factory Worker (Train)",
+      "found_date": "2025-10-17T18:48:22.948025",
+      "type": "evidence"
+    },
+    "bloody_arm_cast": {
+      "name": "Bloody Arm Cast",
+      "description": "A section of a fiberglass arm cast, stained with dried blood. Nick O'Bannon, who had the premonition of the speedway disaster, ultimately had his head smashed into a wall by a semi crashing into a coffee shop.",
+      "examine_details": "The cast is cracked and stained with dark blood. A grim reminder of the injuries that preceded death.",
+      "character_connection": "Nick O'Bannon",
+      "found_date": "2025-10-17T18:48:22.949306",
+      "type": "evidence"
+    },
+    "binocular_flask": {
+      "name": "Binocular Flask",
+      "description": "A pair of seemingly ordinary binoculars that cleverly conceals a flask. Nadia Monroy had taken this from Hunt Wynorski before she was gruesomely decapitated by a tire that flew out of the speedway.",
+      "examine_details": "A clever drinking device disguised as binoculars. The flask compartment still smells of alcohol.",
+      "character_connection": "Nadia Monroy",
+      "found_date": "2025-10-17T18:48:22.950554",
+      "type": "evidence"
+    },
+    "pair_of_glasses": {
+      "name": "Pair of Glasses",
+      "description": "A black framed pair of glasses, one lens shattered. Olivia Castle survived the North Bay Bridge collapse but, after a mishap during laser eye surgery, fell from a high-rise window, her other eye graphically popping out upon impact with a car windshield below.",
+      "examine_details": "One lens is completely shattered, creating a spider web of cracks. Fitting, considering what happened to the wearer's eye.",
+      "character_connection": "Olivia Castle",
+      "found_date": "2025-10-17T18:48:22.952336",
+      "type": "evidence"
+    },
+    "picket_fence_splinter": {
+      "name": "Picket Fence Splinter",
+      "description": "A sharp splinter of wood, possibly from a picket fence. One of the factory workers heeded the narrator's warning... but later died.",
+      "examine_details": "A large, sharp splinter of white-painted wood. It's stained dark at the tip.",
+      "character_connection": "Unnamed Factory Worker (Fence)",
+      "found_date": "2025-10-17T18:48:22.954783",
+      "type": "evidence"
+    },
+    "poker_chip": {
+      "name": "Poker Chip",
+      "description": "A well-worn poker chip. Arlen Ploog survived the casino elevator crash, but had his penis bitten off by a startled prostitute and succumbed to blood loss.",
+      "examine_details": "A heavy clay poker chip from a high-stakes casino. The edges are worn smooth.",
+      "character_connection": "Arlen Ploog",
+      "found_date": "2025-10-17T18:48:22.958459",
+      "type": "evidence"
+    },
+    "nipple_ring": {
+      "name": "Nipple Ring",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A cheap metal nipple ring. Evan Lewis survived the Route 23 pile-up, then died after a fire escape ladder impaled his eye.",
+      "character_connection": "Evan Lewis",
+      "found_date": "2025-10-17T18:48:22.961000",
+      "type": "evidence"
+    },
+    "wine_bottle_stopper": {
+      "name": "Wine Bottle Stopper",
+      "description": "An ornate wine bottle stopper. Dominique Swann, the representative of taste, survived but later died of asphyxiation on a glass shard from an exploding bottle.",
+      "examine_details": "An ornate, heavy wine bottle stopper made of metal and cork.",
+      "character_connection": "Dominique Swann",
+      "found_date": "2025-10-17T18:48:22.963869",
+      "type": "evidence"
+    },
+    "car_keys": {
+      "name": "Car Keys",
+      "description": "A set of car keys.\nCharlie Delgado survived the Club Kitty collapse. While trying to help Jess, Charlie finds himself in a security building where Eric had previously sabotaged an elevator.\nBelieving it to be working, he steps backward into the open shaft without looking and plunges ten feet to the ground before the broken elevator car falls on top of him, crushing him.",
+      "examine_details": "A single car key on a simple ring. The logo on the key is for a vintage muscle car.",
+      "character_connection": "Charlie Delgado",
+      "found_date": "2025-10-18T19:38:23.948764",
+      "type": "evidence"
+    },
+    "surfboard_fin": {
+      "name": "Surfboard Fin",
+      "description": "A metal-tipped surfboard fin, bent and stained.\nEric survived the Club Kitty collapse but was fatally impaled by a surfer's metal tipped board after falling from the Santa Monica Pier.",
+      "examine_details": "The fin is sharp and slightly bent, with a dark stain near the tip. It looks like it was torn from a surfboard by a violent impact.",
+      "character_connection": "Eric",
+      "found_date": "2025-10-18T19:38:23.953306",
+      "type": "evidence"
+    },
+    "cowboy_hat": {
+      "name": "Cowboy Hat",
+      "description": "A slightly crushed cowboy hat. Jonathan Groves, the 'Cowboy', was killed when a hospital bathtub fell through the ceiling and crushed him in his room below.",
+      "examine_details": "The hat is crushed and dusty, probably from the building collapse that killed its owner.",
+      "character_connection": "Jonathan Groves",
+      "found_date": "2025-10-18T20:16:33.165991",
+      "type": "evidence"
+    },
+    "confederate_flag_patch": {
+      "name": "Confederate Flag Patch",
+      "description": "A small, dirty Confederate flag patch, possibly torn from a piece of clothing. Cynthia Daniels, married to the racist Carter, was bisected by the hood of a race car at the speedway.",
+      "examine_details": "The patch is torn and dirty, reflecting the ugliness of the ideology it represents.",
+      "character_connection": "Cynthia Daniels",
+      "found_date": "2025-10-18T20:16:33.169927",
+      "type": "evidence"
+    },
+    "horseshoe_ornament": {
+      "name": "Horseshoe Ornament",
+      "description": "A tarnished metal horseshoe ornament, bent out of shape. Carter Daniels had one hanging from his rearview mirror before his tow truck exploded.",
+      "examine_details": "The horseshoe is supposed to bring good luck, but this one is bent and tarnished. Clearly didn't work.",
+      "character_connection": "Carter Daniels",
+      "found_date": "2025-10-18T20:16:33.171399",
+      "type": "evidence"
+    },
+    "bloody_brick": {
+      "name": "Bloody Brick",
+      "description": "A piece of evidence related to a past victim.",
+      "examine_details": "A dirty brick, one corner covered with dried blood, hair and chunks of gore. Writing scratched into it reads: 'Alex B. - Didn't see it coming.' Well, shit. ..if HE didn't make it...",
+      "character_connection": "Alex Browning",
+      "found_date": "2025-10-18T22:31:23.910359",
+      "type": "evidence"
+    },
+    "loose_brick": {
+      "name": "loose brick",
+      "description": "A brick that feels loose in the fireplace cavity. It's heavy and rough.",
+      "examine_details": "This brick is definitely not set properly. It's covered in soot and bits of old mortar. Something about it seems... significant. There are dark stains that look like they might be more than just soot.",
+      "character_connection": "",
+      "found_date": "2025-10-19T13:34:30.212289",
+      "type": "tool"
+    }
+  },
+  "unlocked_stories": [
+    "Book: Destination Zero",
+    "Final Destination 2",
+    "Final Destination 1",
+    "Final Destination 6: Bloodlines",
+    "Comic: Sacrifice",
+    "Final Destination 5",
+    "Book: Looks Could Kill",
+    "Final Destination 3",
+    "Book: Dead Reckoning",
+    "The Final Destination",
+    "Book: Wipeout (Unreleased)",
+    "Book: Dead Man's Hand",
+    "Book: End of the Line",
+    "Book: Death of the Senses",
+    "Comic: Spring Break"
+  ],
+  "last_updated": "2025-11-05T15:59:57.637992"
+}

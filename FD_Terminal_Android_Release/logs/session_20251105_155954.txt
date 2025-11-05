@@ -1,0 +1,79 @@
+2025-11-05 15:59:54,341 - FinalDestinationApp - INFO - Logging configured. Session log: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\logs\session_20251105_155954.txt
+2025-11-05 15:59:54,342 - fd_terminal.resource_manager - INFO - ResourceManager initialized with app_root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR
+2025-11-05 15:59:54,342 - fd_terminal.resource_manager - INFO - Loading and validating all master data...
+2025-11-05 15:59:54,342 - fd_terminal.resource_manager - INFO - Discovering data directory...
+2025-11-05 15:59:54,342 - fd_terminal.resource_manager - INFO - Found data directory at app root: c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\data
+2025-11-05 15:59:54,342 - fd_terminal.resource_manager - INFO - Validating 'character_classes.json' against schema 'CharacterClassTypedDict'...
+2025-11-05 15:59:54,343 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'character_classes.json'.
+2025-11-05 15:59:54,344 - fd_terminal.resource_manager - INFO - Validating 'constants.json' against schema 'ConstantsTypedDict'...
+2025-11-05 15:59:54,344 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'constants.json'.
+2025-11-05 15:59:54,344 - fd_terminal.resource_manager - INFO - Validating 'disasters.json' against schema 'DisasterTypedDict'...
+2025-11-05 15:59:54,346 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'disasters.json'.
+2025-11-05 15:59:54,347 - fd_terminal.resource_manager - INFO - Validating 'evidence_by_source.json' against schema 'EvidenceSourceTypedDict'...
+2025-11-05 15:59:54,347 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'evidence_by_source.json'.
+2025-11-05 15:59:54,348 - fd_terminal.resource_manager - INFO - Validating 'furniture.json' against schema 'FurnitureTypedDict'...
+2025-11-05 15:59:54,351 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'furniture.json'.
+2025-11-05 15:59:54,351 - fd_terminal.resource_manager - INFO - Validating 'game_config.json' against schema 'GameConfigTypedDict'...
+2025-11-05 15:59:54,352 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'game_config.json'.
+2025-11-05 15:59:54,353 - fd_terminal.resource_manager - INFO - Validating 'hazards.json' against schema 'HazardTypedDict'...
+2025-11-05 15:59:54,362 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazards.json'.
+2025-11-05 15:59:54,362 - fd_terminal.resource_manager - INFO - Validating 'hazard_synergies.json' against schema 'HazardSynergiesTypedDict'...
+2025-11-05 15:59:54,362 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'hazard_synergies.json'.
+2025-11-05 15:59:54,364 - fd_terminal.resource_manager - INFO - Validating 'items.json' against schema 'ItemTypedDict'...
+2025-11-05 15:59:54,380 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'items.json'.
+2025-11-05 15:59:54,381 - fd_terminal.resource_manager - WARNING - No schema defined for 'level_ambiance.json'. Skipping validation.
+2025-11-05 15:59:54,381 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_ambiance.json'.
+2025-11-05 15:59:54,381 - fd_terminal.resource_manager - INFO - Validating 'level_requirements.json' against schema 'LevelRequirementTypedDict'...
+2025-11-05 15:59:54,381 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'level_requirements.json'.
+2025-11-05 15:59:54,382 - fd_terminal.resource_manager - INFO - Validating 'npcs.json' against schema 'NPCTypedDict'...
+2025-11-05 15:59:54,382 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'npcs.json'.
+2025-11-05 15:59:54,383 - fd_terminal.resource_manager - INFO - Validating 'player_achievements.json' against schema 'PlayerAchievementsFileTypedDict'...
+2025-11-05 15:59:54,383 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'player_achievements.json'.
+2025-11-05 15:59:54,384 - fd_terminal.resource_manager - INFO - Validating 'qte_definitions.json' against schema 'QTEDefinitionTypedDict'...
+2025-11-05 15:59:54,385 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'qte_definitions.json'.
+2025-11-05 15:59:54,385 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_1.json' against schema 'RoomTypedDict'...
+2025-11-05 15:59:54,388 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_1.json'.
+2025-11-05 15:59:54,388 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_2.json' against schema 'RoomTypedDict'...
+2025-11-05 15:59:54,390 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_2.json'.
+2025-11-05 15:59:54,391 - fd_terminal.resource_manager - INFO - Validating 'rooms_level_3.json' against schema 'RoomTypedDict'...
+2025-11-05 15:59:54,396 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'rooms_level_3.json'.
+2025-11-05 15:59:54,397 - fd_terminal.resource_manager - INFO - Validating 'status_effects.json' against schema 'StatusEffectsFileTypedDict'...
+2025-11-05 15:59:54,397 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'status_effects.json'.
+2025-11-05 15:59:54,398 - fd_terminal.resource_manager - INFO - Validating 'survivor_fates.json' against schema 'SurvivorFatesFileTypedDict'...
+2025-11-05 15:59:54,398 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'survivor_fates.json'.
+2025-11-05 15:59:54,399 - fd_terminal.resource_manager - INFO - Validating 'temperature_mappings.json' against schema 'TemperatureMappingsFileTypedDict'...
+2025-11-05 15:59:54,399 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'temperature_mappings.json'.
+2025-11-05 15:59:54,399 - fd_terminal.resource_manager - INFO - Validating 'visionaries.json' against schema 'VisionariesFileTypedDict'...
+2025-11-05 15:59:54,399 - fd_terminal.resource_manager - INFO - Successfully loaded and validated 'visionaries.json'.
+2025-11-05 15:59:54,399 - fd_terminal.resource_manager - INFO - All master data has been successfully loaded and validated.
+2025-11-05 15:59:54,400 - AchievementsSystem - INFO - Chronicler of Deeds initialized.
+2025-11-05 15:59:54,400 - HazardEngine - INFO - Engine of Calamity initialized.
+2025-11-05 15:59:54,401 - root - INFO - Registered thematic font: 'coldnightforalligators'
+2025-11-05 15:59:54,401 - root - INFO - Selected thematic font: coldnightforalligators
+2025-11-05 15:59:54,406 - kivy - DEBUG - App: Loading configuration <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.ini>
+2025-11-05 15:59:54,407 - kivy - DEBUG - App: Loading kv <c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.kv>
+2025-11-05 15:59:54,407 - kivy - WARNING - Lang: The file c:\Users\Korbe\OneDrive\Documents\GitHub\FDT_Variant_Packaging\FD_Terminal_AR\fd_terminal\finaldestination.kv is loaded multiples times, you might have unwanted behaviors.
+2025-11-05 15:59:54,420 - kivy - DEBUG - Resource: add <C:\windows\Fonts> in path list
+2025-11-05 15:59:54,421 - kivy - DEBUG - Resource: add <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\fonts> in path list
+2025-11-05 15:59:54,432 - fd_terminal.main - INFO - App.reset_session: wiping current session state.
+2025-11-05 15:59:54,432 - QTE_Engine - INFO - QTE Engine forged and definitions loaded.
+2025-11-05 15:59:54,432 - fd_terminal.main - INFO - App.reset_session: done.
+2025-11-05 15:59:54,437 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme.atlas>
+2025-11-05 15:59:54,438 - kivy - DEBUG - Atlas: Need to load 1 images
+2025-11-05 15:59:54,438 - kivy - DEBUG - Atlas: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-05 15:59:54,439 - kivy - DEBUG - ImageSDL2: Load <C:\Users\Korbe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\kivy\data\images\defaulttheme-0.png>
+2025-11-05 15:59:54,448 - root - INFO - IntroScreen initializing
+2025-11-05 15:59:54,484 - fd_terminal.main - INFO - FinalDestinationApp build() completed successfully.
+2025-11-05 15:59:54,484 - fd_terminal.main - INFO - Application starting.
+2025-11-05 15:59:54,485 - fd_terminal.main - INFO - Checking for corrupted save files...
+2025-11-05 15:59:54,500 - AchievementsSystem - INFO - Loaded 5 achievements, 165 evidence pieces, 15 unlocked stories
+2025-11-05 15:59:54,501 - kivy - DEBUG - Base: Create provider from mouse,disable_multitouch
+2025-11-05 15:59:54,501 - kivy - DEBUG - Base: Create provider from 
+2025-11-05 15:59:54,501 - kivy - WARNING - Base: Unknown <> provider
+2025-11-05 15:59:54,501 - kivy - DEBUG - Base: Create provider from 
+2025-11-05 15:59:54,501 - kivy - WARNING - Base: Unknown <> provider
+2025-11-05 15:59:54,501 - kivy - INFO - Base: Start application main loop
+2025-11-05 15:59:54,517 - kivy - INFO - GL: NPOT texture support is available
+2025-11-05 15:59:57,637 - kivy - INFO - Base: Leaving application in progress...
+2025-11-05 15:59:57,637 - fd_terminal.main - INFO - Application stopping.
+2025-11-05 15:59:57,639 - AchievementsSystem - INFO - Achievements saved successfully.

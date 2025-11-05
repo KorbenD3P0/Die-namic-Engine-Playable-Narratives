@@ -1,0 +1,12 @@
+{
+  "You": {
+    "description": "\nAn ordinary person just out to enjoy a movie\n-but you have been noticing some weird stuff today.\nIt's probably nothing.",
+    "intuition": 2,
+    "max_hp": 28,
+    "observations": {
+      "inter_level_thought": "I just wanted a quiet night at the movies. Why do I feel like something bad is about to happen?"
+    },
+    "perception": 2,
+    "strength": 4
+  }
+}

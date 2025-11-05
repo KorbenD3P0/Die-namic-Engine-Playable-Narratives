@@ -1,0 +1,59 @@
+{
+  "1": {
+    "entry_room": "MRI Scan Room",
+    "exit_room": "Hospital Morgue Exit",
+    "exit_unlocked_popup_title": "Time to hit it!",
+    "description": "You've found everything you need. Make your way to the Hospital Morgue Exit to escape!",
+    "items_needed": [
+      "bludworths_house_key"
+    ],
+    "evidence_needed": [
+      "bludworths_final_notes"
+    ],
+    "name": "Hope River Hospital",
+    "completion_hazard": "hospital_exit",
+    "completion_hazard_initial_state": "off",
+    "completion_narratives_by_state": {
+      "safe_exit_ending": "You sidestep along the building wall; the sign crashes down where you just were and an ambulance recklessly barrels over the spot you would have landed if you jumped forward! You are shaken as hell, but alive. \n\nSuck on that, Death, you Fuck!",
+      "narrow_escape_ending": "You scramble away from the horrifyingly fast revolving door. It continues to spin itself to pieces, but you are clear. You are safe. You have survived.",
+      "blast_wave_ending": "You lie panting on the asphalt, the smell of diesel fumes filling your lungs. You survived. The sign is rubble, the door is silent. You've made it out."
+    },
+    "next_level_id": null,
+    "next_level_start_room": null
+  },
+  "2": {
+    "entry_room": "Front Porch",
+    "exit_room": "Boarded Back Door",
+    "exit_unlocked_popup_title": "Ready to Escape!",
+    "exit_unlocked_popup_text": "All objectives complete. Head to the Boarded Back Door with a crowbar!",
+    "items_needed": ["newspaper_clipping"],
+    "evidence_needed": [],
+    "name": "Bludworth's House",
+    "next_level_id": 3,
+    "next_level_start_room": "Fairgrounds Entrance",
+    "completion_hazard": "wrecking_ball",
+    "completion_hazard_initial_state": "swinging_for_qte",
+    "completion_narratives_by_state": {
+      "impact_floor_break": "Your combined weight is too much for the rotted porch! With a sharp crack, the floorboards give way and you stumble into the space beneath. As you look up, dazed, you see the massive wrecking ball swing silently through the space you just occupied... directly into you. The collapsing porch didn't kill you, but it put you right in Death's path. The wrecking ball finishes the job.",
+      "level_complete_survival": "You stand panting, adrenaline coursing through you, amid the wreckage of Bludworth's porch. The crane operator, horrified, quickly secures the crane and drives away before anyone can ask questions. You're alive... and you have a new destination in mind.",
+      "obliterated_by_first_swing": "Your hesitation was fatal. The world dissolves into a symphony of crushing force and blinding pain. Obliterated by the initial swing of the wrecking ball.",
+      "impact_return_swing_death": "The return swing was faster, more brutal. You couldn't react in time. You cheated death for a second, but it always comes back around. The returning wrecking ball obliterates you.",
+      "death_by_falling_debris": "After all that, it wasn't the ball that got you. A jagged piece of the house's own facade, shaken loose by the chaos, plummets down and ends your story with an abrupt, brutal impact. Killed by falling debris after surviving the wrecking ball.",
+      "death_by_falling_ball": "The massive wrecking ball plummets from the broken crane, crushing you beneath its tremendous weight. So close to escape, yet Death found a way. Crushed by a falling wrecking ball after the crane cable snapped."
+    }
+  },
+  "3": {
+    "entry_room": "Fairgrounds Entrance",
+    "exit_room": "Midway (East)",
+    "exit_unlocked_popup_title": "Let's Get Out of Here!",
+    "exit_unlocked_popup_text": "You've got what you need. Make your way to the Midway (East) to escape!",
+    "items_needed": [
+      "teenagers_dropped_phone"
+    ],
+    "evidence_needed": [],
+    "name": "McKinley County Fair",
+    "next_level_id": null,
+    "next_level_start_room": null,
+    "completion_hazard": ""
+  }
+}

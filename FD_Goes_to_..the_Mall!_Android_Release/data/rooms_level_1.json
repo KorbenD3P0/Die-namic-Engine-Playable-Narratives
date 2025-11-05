@@ -1,0 +1,463 @@
+{
+  "Cineplex Lobby": {
+    "description": "A wide, glossy lobby plastered with movie posters. An enormous marquee sign hangs overhead, some letters flickering uncertainly. Crowds drift between ticket kiosks and the concession line. The smell of buttered popcorn hangs heavy. An overhead TV plays trailers.",
+    "first_entry_text": "It’s supposed to be a normal night at the movies. The lights hum. Somewhere, a poster frame ticks as it settles. You try to shake off a strange feeling of unease.",
+    "exits": {
+      "east": "Concessions",
+      "north": "Hallway to Theater 7"
+    },
+    "entry_room": true,
+    "furniture": [
+      { "name": "Ticket Kiosk", "description": "A self-serve ticket kiosk with a touchscreen and card reader. The screen is smudged with fingerprints." },
+      { "name": "Poster Frames", "description": "Glass-fronted frames displaying colorful movie posters. One of the frames ticks as it settles." },
+      { "name": "Lobby Bench", "description": "A padded bench for waiting moviegoers, slightly worn from use." }
+    ],
+    "hazards_present": [
+      "falling_marquee_letters"    
+    ],
+    "objects": [
+      {"name": "Neon Marquee", "description": "The huge cineplex marquee. The letter 'X' in 'Cineplex' buzzes loudly and flickers.", "aliases": ["marquee", "sign"]},
+      {"name": "Overhead TV", "description": "A CRT television mounted high on the wall, cycling through movie trailers. It occasionally flickers with static.", "is_omen_provider": "television", "aliases": ["tv", "television", "monitor"]},
+      {"name": "Loose Screws", "description": "A few metal screws scattered on the ground beneath the marquee. They look freshly fallen, as if something overhead is coming loose.", "aliases": ["screws", "loose screws", "fallen screws"]}
+    ],
+    "npcs": [
+      {
+      "id": "usher_maya",
+      "name": "Maya (Usher)",
+      "description": "Young, diligent, keeps glancing up nervously at the marquee.",
+      "examinable": true,
+      "initial_state": "greeting",
+      "dialogue_states": {
+      "greeting": {
+        "text": "Welcome to the McKineplex! Enjoy the show... and please don't stand directly under the marquee.\n*points up*",
+        "options": [
+        { "text": "Is something wrong with the sign?", "target_state": "marquee_note" },
+        { "text": "Busy night?", "target_state": "busy" },
+        { "text": "One for 'DeadNecks 3D' please", "target_state": "give_ticket" }
+        ]
+      },
+      "marquee_note": {
+        "text": "Maintenance said it’s fine, but I heard screws falling earlier. Makes me nervous. If you hear a loud SNAP... run.",
+        "options": [
+          { "text": "Busy night?", "target_state": "busy" },
+          { "text": "One for 'Dead Bitches 3D' please", "target_state": "give_ticket" }
+        ]
+      },
+      "busy": {
+        "text": "Yeah, packed. Plus, that sign about to kill someone, Ted's popcorn machine is acting up again, and someone spilled a whole giant soda down by Theater 7. Fun times.",
+        "options": [
+          { "text": "Sounds like fun! One for 'Pliers 3D' please", "target_state": "give_ticket" },
+          { "text": "Is something wrong with the sign?", "target_state": "marquee_note" }
+        ]
+      },
+      "greeting_repeat": {
+        "text": "Anything else I can help with?",
+        "options": [
+        { "text": "Is something wrong with the sign?", "target_state": "marquee_note" },
+        { "text": "Busy night?", "target_state": "busy" },
+        { "text": "One for 'DilDon't Do That 3D' please", "target_state": "give_ticket" }
+        ]
+      },
+      "give_ticket": {
+        "text": "Oh! Right, your ticket. Here you go — enjoy the movie!",
+        "on_talk_action": { "gives_item": "movie_ticket" },
+        "next_state": "greeting_repeat_after_ticket"
+      },
+      "greeting_repeat_after_ticket": {
+        "text": "Let me know if you need anything else. Enjoy the show!",
+        "options": [
+        { "text": "Is something wrong with the sign?", "target_state": "marquee_note" },
+        { "text": "Busy night?", "target_state": "busy" }
+        ]
+      },
+      "marquee_event_seen": {
+        "text": "Oh my god, are you okay!? I saw the marquee— that was way too close.\n\nPlease, take this ticket on the house. And, uh, maybe don't mention this to corporate? *nervous laugh*",
+        "on_talk_action": { "gives_item": "movie_ticket" },
+        "next_state": "marquee_event_repeat"
+      },
+      "marquee_event_repeat": {
+        "text": "Seriously, I'm so sorry about the sign. If you need anything, let me know.\nEnjoy the movie and please-\n\nbe careful.",
+        "options": [
+        { "text": "Busy night?", "target_state": "busy" }
+        ]
+      }
+      },
+      "conditional_entry_state": [
+      {
+        "condition": {
+          "or": [
+        { "falling_marquee_letters_state": ["settled", "near_miss"] },
+        { "falling_marquee_letters_activated": true }
+          ]
+        },
+        "state": "marquee_event_seen"
+      }
+      ]
+      }
+    ],
+    "environmental_omens_config": {
+        "falling_marquee_letters": {
+            "television": "A commercial shows a sign falling off a building.",
+            "radio": "Sound of metal groaning and snapping.",
+            "window": "Reflection of the ceiling looks cracked."
+        }
+    }
+  },
+
+  "Concessions": {
+    "description": "Stainless steel counters gleam under harsh lights. A noisy soda fountain drips steadily, forming a small puddle.\nThe popcorn machine churns, occasionally spitting sparks from its heating element.\nTed, the concessionist, looks stressed. A radio plays pop music.",
+    "exits": {
+      "west": "Cineplex Lobby",
+      "north": "Hallway to Theater 7"
+    },
+    "furniture": [
+      { "name": "Concession Counter", "description": "A long stainless steel counter where snacks and drinks are served." },
+      { "name": "Soda Fountain", "description": "A multi-nozzle soda dispenser, dripping with condensation." },
+      { 
+        "name": "First Aid Station", 
+        "description": "A small wall-mounted cabinet labeled 'First Aid'.",
+        "is_container": true,
+        "items": ["first_aid_kit", "flashlight"]
+      }
+    ],
+    "hazards_present": [
+      { "type": "popcorn_oil_flareup", "initial_state": "thermostat_stick" }
+    ],
+    "objects": [
+      {"name": "Popcorn Machine", "description": "A large, industrial popcorn machine. The glass is fogged with steam, and the heating element occasionally spits sparks. The thermostat looks old and unreliable.", "aliases": ["popcorn maker", "machine"]},
+      {"name": "Grease Tray", "description": "A tray under the popcorn machine, slick with oil."},
+      {"name": "Napkin Dispenser", "description": "A standard napkin dispenser."},
+      {"name": "Counter Radio", "description": "A small radio playing music through bursts of static.", "is_omen_provider": "radio", "aliases": ["radio"]}
+    ],
+    "items_present": [
+    ],
+    "npcs": [
+      {
+      "id": "concessionist_ted",
+      "name": "Ted (Concessions)",
+      "description": "Harried, sweating slightly, wiping grease off the counter.",
+      "examinable": true,
+      "initial_state": "default",
+      "dialogue_states": {
+        "default": {
+        "text": "What can I getcha? Careful near the kettle, thing's been flaring up. And watch your step near Theater 7, heard there's a major spill.",
+        "options": [
+          { "text": "Is the popcorn machine safe?", "target_state": "about_machine" },
+          { "text": "Do you have a first aid kit?", "target_state": "first_aid" },
+          { "text": "Can I get some popcorn?", "target_state": "order_popcorn" }
+        ]
+        },
+        "about_machine": {
+        "text": "Safe? Probably. Reliable? Hell no. Thermostat sticks, then *WHOOSH*. Nearly lost my eyebrows this morning. Told the manager, but you know...",
+        "next_state": "default_repeat"
+        },
+        "first_aid": {
+        "text": "Yeah, kit's mounted on the wall back there. Help yourself. Knowing this place, you might need it.",
+        "on_talk_action": { "reveal_item": { "item_name": "first_aid_kit", "location": "Concessions"} },
+        "next_state": "default_repeat"
+        },
+        "order_popcorn": {
+        "text": "Sure thing! One popcorn, coming right up. Careful, it's hot.",
+        "on_talk_action": { "gives_item": "popcorn" },
+        "next_state": "default_repeat_after_popcorn"
+        },
+        "default_repeat_after_popcorn": {
+        "text": "Anything else for you?",
+        "options": [
+          { "text": "Is the popcorn machine safe?", "target_state": "about_machine" },
+          { "text": "Do you have a first aid kit?", "target_state": "first_aid" }
+        ]
+        },
+        "default_repeat": {
+        "text": "Need anything else?",
+        "options": [
+          { "text": "Is the popcorn machine safe?", "target_state": "about_machine" },
+          { "text": "Do you have a first aid kit?", "target_state": "first_aid" },
+          { "text": "Can I get some popcorn?", "target_state": "order_popcorn" }
+        ]
+        },
+        "popcorn_event_seen": {
+        "text": "Whoa, that was a close one! You alright? That kettle's a deathtrap. Here— take some popcorn, on the house. And, uh, maybe don't tell the health inspector?",
+        "on_talk_action": { "gives_item": "popcorn"},
+        "next_state": "popcorn_event_repeat"
+        },
+        "popcorn_event_repeat": {
+        "text": "Sorry again about that! If you need anything else, just holler. And seriously, be careful around that machine.",
+        "options": [
+          { "text": "Is the popcorn machine safe?", "target_state": "about_machine" },
+          { "text": "Do you have a first aid kit?", "target_state": "first_aid" }
+        ]
+        }
+      },
+      "conditional_entry_state": [
+        {
+        "condition": {
+          "or": [
+          { "popcorn_oil_flareup_state": "simmer_down" },
+          { "popcorn_oil_flareup_activated": true }
+          ]
+        },
+        "state": "popcorn_event_seen"
+        }
+      ]
+      }
+    ],
+    "environmental_omens_config": {
+        "popcorn_oil_flareup": {
+            "television": "A cooking show demonstrates flambé, the flames leap unnaturally high.",
+            "radio": "Sound of a sudden 'WHOOSH' of fire.",
+            "window": "Reflection of lights momentarily looks like a burst of flame."
+        }
+    }
+  },
+
+  "Projection Corridor": {
+    "description": "A dim, narrow staff hallway above the theaters. It hums with the sound of old projectors and smells faintly of ozone and hot dust. An old neon transformer on the wall crackles intermittently. Narrow stairs descend to Theater 7.",
+    "exits": {
+      "down": "Theater 7"
+    },
+    "furniture": [
+      { 
+      "name": "Maintenance Cabinet", 
+      "description": "A locked metal cabinet labeled 'Electrical Maintenance'.",
+      "is_container": true,
+      "items": [
+        "note_from_concessions"
+      ]
+      }
+    ],
+    "hazards_present": [
+      { "type": "sparking_neon_transformer", "initial_state": "occasional_arc", "chance": 0.5 }
+    ],
+    "objects": [
+      {"name": "Extension Cord", "description": "A tangled mess of old extension cords lies on the floor and lead under the door into the Projectionist Booth."},
+      {"name": "Projector Window", "description": "A small, thick glass window looking down into Theater 7. You can see the top of the screen rig.", "is_omen_provider": "window", "aliases": ["window"]},
+      {"name": "Neon Transformer", "description": "An old neon transformer mounted on the wall, crackling and occasionally sparking with blue light.", "aliases": ["transformer", "neon transformer"]},
+      {"name": "Projectionist Booth", "description": "Through a narrow window, you can peer into the projectionist booth. The room is dim, illuminated only by the flicker of the projector.\nOn the far wall, you notice what looks disturbingly like a dark spatter, and just visible near the base of the console are a pair of shoes-\n\n-and you wonder to yourself if those are actually feet still in them, unmoving, or if it's your imagination.", "aliases": ["booth", "projection booth", "projectionist booth", "window to booth"],
+        "use_item_interaction": [
+          {"item_names_required": ["flashlight"],
+          "action_effect": "trigger_game_over_projectionist_booth",
+          "message_success": "Through a narrow window, you can peer into the projectionist booth. The room is dim, illuminated only by the flicker of the projector, but it looks like a small commotion took place.\nOn the far wall, you notice what looks disturbingly like a dark spatter, and just visible near the base of the console are a pair of shoes-\n\n-with what might be the owner still be in them.",
+          "message_fail_item": "You can't see anything more with that."
+          }
+      ]
+    }
+    ],
+    "environmental_omens_config": {
+        "sparking_neon_transformer": {
+            "television": "Screen fills with violent blue static.",
+            "radio": "Loud electrical ZAP sound.",
+            "window": "Reflection shows blue sparks dancing on the wall."
+        },
+        "overheating_projector": {
+            "television": "Trailer glitches, shows brief flash of fire.",
+            "radio": "Static sounds like crackling flames.",
+            "window": "Reflection of lights looks like flickering fire."
+        }
+    }
+  },
+
+  "Hallway to Theater 7": {
+    "description": "Theater posters line the walls, casting long shadows. The air-conditioning unit overhead groans loudly.\n\nThe tile here is damp and sticky; it's too dark to tell but didn't someone mention a spill was around here?",
+    "first_entry_text": "You see a crumpled note on the floor near the entrance to Theater 7.",
+    "exits": {
+      "south": "Cineplex Lobby",
+      "north": "Theater 7"
+    },
+    "furniture": [],
+    "hazards_present": [
+      { "type": "soda_spill_slip", "initial_state": "glossy_spread", "chance": 1.0 }
+    ],
+    "objects": [
+      {"name": "Groaning AC Unit", "description": "The air conditioning unit struggles, making loud mechanical noises."},
+      {"name": "Crumpled Note", "description": "You squint and can barely make out:\n'MGR - Projector bulb in #7 is overheating AGAIN. Smells like burning plastic.\n\nThis is a fire hazard waiting to happen.\n\n-Glen'.", "id": "note_from_glen", "aliases": ["note", "crumpled note", "note from Glen"]}
+    ],
+    "npcs": [
+      {
+      "id": "ticket_taker_ron",
+      "name": "Ron (Ticket Taker)",
+      "description": "Middle-aged, wearing a faded vest and a lanyard of ticket stubs. He stands by the velvet rope, scanning tickets with a practiced motion.",
+      "examinable": true,
+      "initial_state": "awaiting_ticket",
+      "dialogue_states": {
+        "awaiting_ticket": {
+        "text": "Tickets, please! Theater 7's just up ahead. Got your ticket ready?",
+        "options": [
+          { "text": "Here's my ticket.", "target_state": "check_ticket" },
+          { "text": "Remind me which movie is playing?", "target_state": "movie_info" }
+        ]
+        },
+        "check_ticket": {
+        "text": "Let me see...$ticket_check_result$",
+        "on_talk_action": { "check_for_item": { "item": "movie_ticket", "success_state": "unlock_and_welcome", "failure_state": "no_ticket" } }
+        },
+        "unlock_and_welcome": {
+        "text": "Perfect, enjoy the show!",
+        "on_talk_action": { "unlock_exit": { "direction": "north", "target_room": "Theater 7" } },
+        "next_state": "repeat"
+        },
+        "no_ticket": {
+        "text": "Sorry, can't let you in without a ticket. Box office is back in the lobby.",
+        "next_state": "awaiting_ticket"
+        },
+        "movie_info": {
+        "text": "Silly goose, you picked it. Supposed to be a real crowd-pleaser. Hope you like jump scares.",
+        "next_state": "awaiting_ticket"
+        },
+        "repeat": {
+        "text": "Enjoy the movie! If you need help, just ask.",
+        "options": [
+          { "text": "Remind me which movie is playing?", "target_state": "movie_info" }
+        ]
+        },
+        "slip_sticky_save": {
+        "text": "Whoa! You alright? Careful there— that floor's a mess but goddamn Randy was supposed to clean that up after he booted up the movie here in 7.\n\nMaybe stick to the dry tiles next time, dipshit.",
+        "target_state": "check_ticket"},
+
+        "slip_hard_fall": {
+        "text": "Yikes! That looked like it hurt.\nYou okay? Goddamn Randy was supposed to clean that up after he booted up the movie here in 7.\n\nHe was talking how he felt unsafe but *shrugs*.",
+        "target_state": "check_ticket"}
+      },
+      "conditional_entry_state": [
+        {
+        "condition": { "soda_spill_slip_state": "sticky_save" },
+        "state": "slip_sticky_save"
+        },
+        {
+        "condition": { "soda_spill_slip_state": "hard_fall" },
+        "state": "slip_hard_fall"
+        }
+      ]
+      }
+    ],
+    "environmental_omens_config": {
+        "soda_spill_slip": {
+            "television": "Scene shows someone slipping dramatically on a wet floor.",
+            "radio": "Sound of someone falling with a splash.",
+            "window": "Reflection makes the floor look wet and treacherous."
+        }
+    }
+  },
+
+  "Theater 7": {
+    "description": "You're in the packed theater. Previews drone on the massive screen. High above, a heavy lighting rig for movie parties creaks ominously.\nA faint smell of burning plastic drifts from the projection booth window high on the back wall. An emergency exit is visible to the east.",
+    "first_entry_text": "You find your seat. The air feels strangely heavy in here. A faint smell, like burning plastic, seems to waft from the projection booth high above.\n\nYou remember Glen's note and Ted's warning, when the projector light jostles and flickers before returning to focus...\na sudden, irrational spike of anxiety makes your heart pound.\nYou shake your head.\n\nYou're just anxious to start the movie... right?",    
+    "exits": {
+      "south": "Hallway to Theater 7",
+      "up": "Projection Corridor",
+      "east": "Emergency Exit Corridor"
+    },
+    "locked": true,
+    "key_item": "movie_ticket",
+    "furniture": [
+      "plastic_chairs"
+    ],
+    "hazards_present": [
+      {"type": "overheating_projector_chain", "initial_state": "flickering"}
+    ],
+    "objects": [
+      {
+      "name": "Film Projector",
+      "description": "The massive digital projector sits high in the projection booth, visible through the small window at the back of the theater. Its cooling fan whines loudly, and a faint, acrid smell of burning plastic drifts down. The lens flickers with unstable light, and you can see heat rippling in the air above it.",
+      "id": "overheating_projector_chain",
+      "aliases": ["projector", "digital projector", "booth projector"]
+      },
+      {"name": "Sticky Armrest", "description": "The armrest of your chair is coated in something sticky."},
+      {"name": "Projection Booth Window", "description": "A small window high on the back wall. You think you see a faint haze behind the glass."}
+    ],
+     "environmental_omens_config": { 
+        "overheating_projector": { 
+            "television": "Trailer glitches, shows brief flash of fire.",
+            "radio": "Static sounds like crackling flames.",
+            "window": "Reflection of booth window looks like flickering fire."
+        },
+        "short_circuiting_light_rig": {
+             "television": "Screen fills with violent static.",
+             "radio": "Loud electrical ZAP sound.",
+             "window": "Reflection shows sparks dancing on the ceiling rig."
+        },
+        "collapsing_screen_rig": {
+             "television": "Image shakes violently as if from an impact.",
+             "radio": "Sound of groaning, tearing metal.",
+             "window": "Reflection of the ceiling rig seems to buckle downwards."
+        }
+    }
+  },
+
+  "Emergency Exit Corridor": {
+    "description": "A narrow concrete tunnel, cold and echoing. The crash bar on the exit door looks stiff and possibly painted shut. The city air beyond smells like rain.",
+    "exits": {
+      "west": "Theater 7",
+      "east": "Cineplex Parking Lot" 
+    },
+    "furniture": [
+      "emergency_exit_door"
+    ],
+    "hazards_present": [
+      { "type": "jammed_exit_bar", "initial_state": "stuck_paint", "chance": 0.9 }
+    ],
+    "objects": [
+      {"name": "Scuffed Crash Bar", "description": "The metal bar shows signs of wear and multiple layers of paint."}
+    ]
+  },
+
+  "Cineplex Parking Lot": {
+    "description": "Slick asphalt glitters under the neon glow, reflecting puddles from an earlier rain. Discarded popcorn boxes litter the ground. Sirens echo faintly in the distance. The main entrance is north, an emergency exit corridor west.",
+    "exits": {
+      "west": "Emergency Exit Corridor"
+    },
+    "special_exits": {
+        "leave": "LEVEL_TRANSITION_TRIGGER" 
+     },
+    "furniture": [
+      "ambulance_bay_marker"
+    ],
+    "objects": [
+      {"name": "Puddle", "description": "A murky puddle reflecting the neon lights."},
+      {"name": "Oil Sheen", "description": "An iridescent slick of oil on the wet asphalt."}
+    ],
+    "npcs": [
+      {
+      "id": "security_jansen",
+      "name": "Jansen (Security)",
+      "description": "A grim-faced security guard, radio crackling, directing people away from the building.",
+      "examinable": true,
+      "initial_state": "intercept",
+      "dialogue_states": {
+        "intercept": {
+        "text": "Whoa, hold up! You— yeah, you look rough. Paramedics are just ahead, they're setting up triage by the ambulance bay.",
+        "options": [
+          { "text": "I'm fine, just let me go.", "target_state": "insist_check" },
+          { "text": "Is everyone else okay?", "target_state": "status_report" }
+        ]
+        },
+        "insist_check": {
+        "text": "Listen, you’re bleeding and your arm is pretty banged up. Paramedics want to check everyone coming out— protocol.\n\nIf you need a hospital, they’ll get you there fast.",
+        "options": [
+          { "text": "Alright, lead the way.", "target_state": "escort" }
+        ]
+        },
+        "status_report": {
+        "text": "We’re still getting people out but it sounds like two people for sure.\n\nMost are shaken up, a few banged up pretty bad. You’re one of the lucky ones— but you still need to get checked out.",
+        "options": [
+          { "text": "Okay, I’ll go.", "target_state": "escort" }
+        ]
+        },
+        "escort": {
+        "text": "You are escorted past a stunned Maya, who sold you your ticket to this mayhem, towards paramedics who assess your damage and then arrange transport to the hospital to treat your arm.\n\nDespite the rush of events, you take time in the ambulance to grieve your friend, and can't help but reflect on the chaos that unfolded.\n\nThat could have just as easily have been you...\nand soon, it very may well be.",
+        "options": [
+          { "text": "To Hope River Hospital.", "target_state": "to_the_hospital" }
+        ]
+        },
+        "to_the_hospital": {
+        "text": "You are taken to the hospital for treatment. As you sit in the waiting room, you can't help but think about the strange events that led you here. The flickering marquee, the overheating projector, the slippery hallway— it all seemed to culminate in that terrifying moment.\n\nYou vow to be more cautious in the future, and perhaps avoid late-night movie screenings altogether.",
+        "on_talk_action": {
+          "trigger_win_screen": "true"
+        },
+        "next_state": "to_the_hospital"
+      }
+      }
+    }
+    ]
+  }
+}

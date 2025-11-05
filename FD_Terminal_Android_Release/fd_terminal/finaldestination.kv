@@ -1,0 +1,166 @@
+# finaldestination.kv
+#:kivy 2.1.0
+#:import responsive fd_terminal.responsive
+
+# --- THE RITE OF NAMING ---
+#:import TitleScreen fd_terminal.ui.TitleScreen
+#:import GameScreen fd_terminal.ui.GameScreen
+#:import StatusDisplayWidget fd_terminal.widgets.StatusDisplayWidget
+#:import OutputPanelWidget fd_terminal.widgets.OutputPanelWidget
+#:import ActionInputWidget fd_terminal.widgets.ActionInputWidget
+#:import ContextualActionsWidget fd_terminal.widgets.ContextualActionsWidget
+#:import MapDisplayWidget fd_terminal.widgets.MapDisplayWidget
+
+<TitleScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(50)
+        spacing: dp(20)
+
+        Label:
+            text: f"[b][color={root.color_white}]Final Destination[/color] [color={root.color_red}]Terminal[/color][/b]"
+            font_name: app.thematic_font_name
+            font_size: responsive.title_sp()
+            markup: True
+            size_hint_y: None
+            height: self.texture_size[1] + dp(20)
+            halign: 'center'
+            valign: 'middle'
+            text_size: self.width * 0.94, None
+            shorten: False
+            on_width: self.text_size = (self.width * 0.94, None)
+            on_texture_size: self.height = self.texture_size[1] + dp(20)
+
+        BoxLayout:
+            size_hint_y: 0.2
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: dp(10)
+            size_hint_y: None
+            height: min(root.height * 0.45, dp(320))
+
+            Button:
+                text: "New Game"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                valign: 'middle'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_width: self.text_size = (self.width - dp(24), None)
+                on_release: root.start_new_game_flow()
+
+            Button:
+                text: "Load Game"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_release: root.go_to_screen('load_game')
+
+            Button:
+                text: "Achievements"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_release: root.go_to_screen('achievements')
+
+            Button:
+                text: "Journal"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_release: root.go_to_screen('journal')
+
+
+            Button:
+                text: "How to Play"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_release: root.go_to_screen('tutorial')
+
+            Button:
+                text: "Settings"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_release: root.go_to_screen('settings')
+
+            Button:
+                text: "Exit Game"
+                font_name: 'RobotoMonoBold'
+                font_size: responsive.button_sp()
+                halign: 'center'
+                text_size: self.width - dp(24), None
+                shorten: True
+                on_release: app.stop()
+
+        BoxLayout:
+            size_hint_y: 0.3 # Spacer
+
+<GameScreen>:
+    status_display: status_display_id
+    output_panel: output_panel_id
+    action_input: action_input_id
+    main_actions: main_actions_id
+    contextual_actions: contextual_actions_id
+    map_display: map_display_id
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(5)
+
+        StatusDisplayWidget:
+            id: status_display_id
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(10)
+
+            OutputPanelWidget:
+                id: output_panel_id
+                size_hint_x: 0.60
+
+            BoxLayout:
+                id: sidebar_layout
+                orientation: 'vertical'
+                spacing: dp(5)
+                size_hint_x: 0.40
+
+                MapDisplayWidget:
+                    id: map_display_id
+                    size_hint_y: 1
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: dp(5)
+
+            BoxLayout:
+                id: main_actions_id
+                orientation: 'vertical'
+                size_hint_y: None
+                height: dp(180)
+
+            ContextualActionsWidget:
+                id: contextual_actions_id
+                size_hint_y: None
+                height: dp(50)
+
+            ActionInputWidget:
+                id: action_input_id
+                size_hint_y: None
+                height: dp(50)

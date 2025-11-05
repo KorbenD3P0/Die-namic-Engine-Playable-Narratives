@@ -1,0 +1,51 @@
+{
+  "1": {
+    "name": "McKinley Cineplex - The McKineplex",
+    "entry_room": "Cineplex Lobby",
+    "exit_room": "Cineplex Parking Lot", 
+    "description": "Just a normal night at the movies... or is it?",
+    "items_needed": [], 
+    "evidence_needed": [], 
+    "next_level_id": null,
+    "next_level_start_room": null,
+    "evidence_collection": [] 
+  },
+  "2": { 
+    "name": "Hope River Hospital",
+    "entry_room": "Player's Hospital Room", 
+    "exit_room": "Hospital Morgue Exit",
+    "exit_unlocked_popup_title": "Time to hit it!",
+    "exit_unlocked_popup_text": "You've found everything you need. Make your way to the Hospital Morgue Exit to escape!",
+    "description": "You survived the cineplex, but Death isn't done. The hospital holds answers... and new dangers.",
+    "items_needed": [
+      "Bludworth's House Key"
+    ],
+    "evidence_needed": [
+      "Bludworth's Final Notes"
+    ],
+    "completion_hazard": "hospital_exit",
+    "completion_hazard_initial_state": "off",
+    "completion_narratives_by_state": {
+      "safe_exit_ending": "You sidestep along the building wall as the sign crashes down and an ambulance recklessly barrels over the spot you just vacated, showering you with concrete dust but leaving you unharmed. The crisis is over. You've escaped.",
+      "narrow_escape_ending": "You scramble away from the horrifyingly fast revolving door. It continues to spin itself to pieces, but you are clear. You are safe. You have survived.",
+      "blast_wave_ending": "You lie panting on the asphalt, the smell of diesel fumes filling your lungs. You survived. The sign is rubble, the door is silent. You've made it out."
+    },
+    "next_level_id": 3,
+    "next_level_start_room": "Front Porch",
+    "evidence_collection": [] 
+  },
+  "3": { 
+    "entry_room": "Fairgrounds Entrance",
+    "exit_room": "Midway (East)",
+    "exit_unlocked_popup_title": "Let's Get Out of Here!",
+    "exit_unlocked_popup_text": "You've got what you need. Make your way to the Midway (East) to escape!",
+    "items_needed": [
+      "Teenagers' Dropped Phone" 
+    ],
+    "evidence_needed": [],
+    "name": "McKinley County Fair",
+    "next_level_id": null,
+    "next_level_start_room": null,
+    "completion_hazard": ""
+  }
+}

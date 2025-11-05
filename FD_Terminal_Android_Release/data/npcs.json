@@ -1,0 +1,172 @@
+{
+  "alex_visionary": {
+    "id": "alex_visionary",
+    "name": "Alex",
+    "description": "A nervous-looking teenager, constantly glancing around as if expecting the sky to fall. He seems deeply troubled.",
+    "examinable": true,
+    "initial_state": "warning",
+    "dialogue_states": {
+      "warning": {
+        "text": "'We shouldn't be here... I saw it. The bull, the lights... something terrible is going to happen. You have to believe me!'",
+        "next_state": "ignored"
+      },
+      "ignored": {
+        "text": "'Why won't anyone listen? It's not just a feeling! It's real!' He drops his phone in his agitation and doesn't notice.",
+      "on_talk_action": {
+        "gives_item": {"item_id": "teenagers_dropped_phone"}
+        },
+        "next_state": "desperate"
+      },
+      "desperate": {
+        "text": "'It's too late... it's already started...'"
+      }
+    }
+  },
+  "chad_jock": {
+    "id": "chad_jock",
+    "name": "Chad",
+    "description": "A tall, athletic guy with an air of arrogance. He's trying to look cool for his girlfriend, flexing his muscles near the game stalls.",
+    "examinable": true,
+    "initial_state": "boasting",
+    "dialogue_states": {
+      "boasting": {
+        "text": "'Dude, check it out. I'm gonna smash this strength-tester. Brittany loves a guy who can ring the bell. Alex is just paranoid.'",
+        "next_state": "dismissive"
+      },
+      "dismissive": {
+        "text": "'Visions? Yeah, right. He probably just ate some bad funnel cake. Watch and learn, bro.'"
+      }
+    }
+  },
+  "brittany_girlfriend": {
+    "id": "brittany_girlfriend",
+    "name": "Brittany",
+    "description": "A teenage girl who seems more interested in her phone than her surroundings or her boyfriend. She occasionally looks up to roll her eyes.",
+    "examinable": true,
+    "initial_state": "bored",
+    "dialogue_states": {
+      "bored": {
+        "text": "'Ugh, is he done yet? This is so boring. I'm missing, like, a million updates. Did you see what Tiffany posted?'",
+        "next_state": "annoyed"
+      },
+      "annoyed": {
+        "text": "'Alex is such a freak. Can we just go to the Ferris wheel already?'"
+      }
+    }
+  },
+  "kevin_friend": {
+    "id": "kevin_friend",
+    "name": "Kevin",
+    "description": "A loyal-looking friend, standing by Alex's side, though he seems skeptical. He's trying to be supportive but is clearly uncomfortable.",
+    "examinable": true,
+    "initial_state": "skeptical",
+    "dialogue_states": {
+      "skeptical": {
+        "text": "'Look, man, I don't know about all this vision stuff... but Alex is my friend. If he says something's wrong, I'm sticking with him.'",
+        "next_state": "watchful"
+      },
+      "watchful": {
+        "text": "'Just... keep an eye out, okay? Maybe he's right.'"
+      }
+    }
+  },
+  "rusty_carny": {
+    "id": "rusty_carny",
+    "name": "Rusty",
+    "description": "A cynical, world-weary carny with grease-stained hands and a bored expression, leaning against his 'Test-Your-Strength' game.",
+    "examinable": true,
+    "initial_state": "cynical",
+    "dialogue_states": {
+      "cynical": {
+        "text": "'Step right up, kid. Think you got what it takes? (He mutters under his breath)...probably not. Nobody ever does.'",
+        "next_state": "resigned"
+      },
+      "resigned": {
+        "text": "'Seen it all. Watched guys twice your size walk away with nothin' but sore hands. Game's rigged, just like everything else.'"
+      }
+    }
+  },
+  "dr_marcus_hall": {
+    "id": "dr_marcus_hall",
+    "name": "Dr. Marcus Hall",
+    "examinable": true,
+    "description": "A young, slightly anxious coroner in a rumpled lab coat.",
+    "initial_state": "greeting",
+    "dialogue_states": {
+      "greeting": {
+        "text": "Hello there. What brings you to the morgue? I just took over after Dr. Bludworth passed away.",
+        "options": [
+          {
+            "text": "I'm looking for information about Death's List.",
+            "target_state": "about_deaths_list"
+          },
+          {
+            "text": "Tell me about Dr. Bludworth.",
+            "target_state": "about_bludworth"
+          },
+          {
+            "text": "Do you have anything that might help me?",
+            "target_state": "helpful_items"
+          }
+        ]
+      },
+      "about_deaths_list": {
+        "text": "Death's List? That's... that's not medical terminology. Bludworth mentioned something like that once, but I thought it was just folklore. You might find more in his personal effects.",
+        "options": [
+          {
+            "text": "Where are his personal effects?",
+            "target_state": "bludworth_house"
+          },
+          {
+            "text": "Tell me more about Bludworth.",
+            "target_state": "about_bludworth"
+          }
+        ]
+      },
+      "about_bludworth": {
+        "text": "Dr. Bludworth was... unusual. Brilliant, but he had theories about death that went beyond medicine. He kept most of his research at his house, not here.",
+        "options": [
+          {
+            "text": "Can I access his house?",
+            "target_state": "bludworth_house"
+          },
+          {
+            "text": "What kind of theories?",
+            "target_state": "bludworth_theories"
+          }
+        ]
+      },
+      "bludworth_house": {
+        "text": "His house is scheduled for demolition soon. If you're going to find answers, you need to get there fast. He'd mentioned keeping a spare key somewhere in his old desk, but I can't find the key to unlock it.",
+        "on_talk_action": {
+          "gives_item": "bludworths_house_address"
+        },
+        "options": [
+          {
+            "text": "Thank you for the information.",
+            "target_state": "farewell"
+          },
+          {
+            "text": "Anything else you can tell me?",
+            "target_state": "final_warnings"
+          }
+        ]
+      },
+      "bludworth_theories": {
+        "text": "He believed death wasn't random - that there was a design, a pattern. He said some people could 'see' it coming. Honestly, it gave me the creeps.",
+        "next_state": "bludworth_house"
+      },
+      "helpful_items": {
+        "text": "I don't have much that would help with... whatever you're investigating. But Dr. Bludworth's house might have what you need. The demolition crew arrives tomorrow.",
+        "next_state": "bludworth_house"
+      },
+      "final_warnings": {
+        "text": "Just... be careful. After what happened to the others on that 'list' you mentioned... I'm hopeful people go back to having regular ass heart attacks and not whatever the hell is going on here.",
+        "next_state": "farewell"
+      },
+      "farewell": {
+        "text": "Good luck. I hope you find what you're looking for before it's too late."
+      }
+    }
+  }
+}
